@@ -49,7 +49,7 @@ namespace AppBTS
             this.PanelMenu.Controls.Add(this.btEntrar);
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
-            this.PanelMenu.Name = "PanelMenu";
+            this.PanelMenu.Name = "Panel";
             this.PanelMenu.Size = new System.Drawing.Size(350, 245);
             this.PanelMenu.TabIndex = 0;
             this.PanelMenu.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMenu_Paint);
