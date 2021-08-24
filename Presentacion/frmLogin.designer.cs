@@ -32,11 +32,11 @@ namespace AppBTS
             this.PanelMenu = new System.Windows.Forms.Panel();
             this.btSalir = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.txtUsuario = new System.Windows.Forms.TextBox();
             this.lblContraseña = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.btEntrar = new System.Windows.Forms.Button();
-            this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
             this.PanelMenu.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -66,6 +66,7 @@ namespace AppBTS
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Aqua;
             this.panel1.Controls.Add(this.txtContraseña);
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Controls.Add(this.lblContraseña);
@@ -75,6 +76,21 @@ namespace AppBTS
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(350, 140);
             this.panel1.TabIndex = 0;
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Location = new System.Drawing.Point(139, 73);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(100, 20);
+            this.txtContraseña.TabIndex = 5;
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.Location = new System.Drawing.Point(139, 43);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
+            this.txtUsuario.TabIndex = 4;
             // 
             // lblContraseña
             // 
@@ -107,21 +123,6 @@ namespace AppBTS
             this.btEntrar.Text = "Entrar";
             this.btEntrar.UseVisualStyleBackColor = true;
             this.btEntrar.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.Location = new System.Drawing.Point(139, 43);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Size = new System.Drawing.Size(100, 20);
-            this.txtUsuario.TabIndex = 4;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Location = new System.Drawing.Point(139, 73);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(100, 20);
-            this.txtContraseña.TabIndex = 5;
             // 
             // frmLogin
             // 
