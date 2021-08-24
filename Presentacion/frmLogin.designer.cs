@@ -129,7 +129,7 @@ namespace AppBTS
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(350, 245);
             this.Controls.Add(this.PanelMenu);
-            this.Name = "frmLogin";
+            this.Name = "frmIngreso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Login";
             this.PanelMenu.ResumeLayout(false);
