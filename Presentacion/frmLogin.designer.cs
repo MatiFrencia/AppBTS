@@ -107,7 +107,7 @@ namespace AppBTS
             this.btEntrar.Name = "btEntrar";
             this.btEntrar.Size = new System.Drawing.Size(75, 23);
             this.btEntrar.TabIndex = 1;
-            this.btEntrar.Text = "Entrar";
+            this.btEntrar.Text = "Ingresar";
             this.btEntrar.UseVisualStyleBackColor = true;
             this.btEntrar.Click += new System.EventHandler(this.button1_Click);
             // 
