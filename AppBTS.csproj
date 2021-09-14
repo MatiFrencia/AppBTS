@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F377799A-D1DB-4AC3-9C49-1E3E3F97ACD6}</ProjectGuid>
+    <ProjectGuid>{D828DE2A-4275-4CD1-9B52-5FCB4B355494}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>AppBTS</RootNamespace>
     <AssemblyName>AppBTS</AssemblyName>
@@ -47,7 +47,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\BDHelper.cs" />
+    <Compile Include="masterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Negocio\Reservas.cs" />
+    <Compile Include="Negocio\Mesas.cs" />
     <Compile Include="Negocio\Usuario.cs" />
+    <Compile Include="Presentacion\frmConsultaReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaReservas.Designer.cs">
+      <DependentUpon>frmConsultaReservas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +75,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\frmConsultaReservas.resx">
+      <DependentUpon>frmConsultaReservas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -70,17 +86,29 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
+    <None Include="masterDataSet.xsc">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="masterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>masterDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="masterDataSet.xss">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -89,6 +117,46 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\actualizar.png" />
+    <Content Include="Imagenes\buscar1.png" />
+    <Content Include="Imagenes\buscar2.png" />
+    <Content Include="Imagenes\buscar3.png" />
+    <Content Include="Imagenes\cancelar1.png" />
+    <Content Include="Imagenes\cancelar2.png" />
+    <Content Include="Imagenes\Cancelar3.png" />
+    <Content Include="Imagenes\cancelar4.png" />
+    <Content Include="Imagenes\candado.png" />
+    <Content Include="Imagenes\configuration.png" />
+    <Content Include="Imagenes\delete_exit.png" />
+    <Content Include="Imagenes\edit_file.png" />
+    <Content Include="Imagenes\logout_door.png" />
+    <Content Include="Imagenes\new_add_user.png" />
+    <Content Include="Imagenes\ok_accept.png" />
+    <None Include="Imagenes\search-file.png" />
+    <None Include="Imagenes\documentediting.png" />
+    <None Include="Imagenes\new-file.png" />
+    <Content Include="Imagenes\Excel1.ico" />
+    <Content Include="Imagenes\excel3.ico" />
+    <Content Include="Imagenes\excel4.bmp" />
+    <Content Include="Imagenes\grabar1.png" />
+    <Content Include="Imagenes\grabar2.png" />
+    <Content Include="Imagenes\grabar3.png" />
+    <Content Include="Imagenes\grabar4.png" />
+    <Content Include="Imagenes\i-info.jpg" />
+    <Content Include="Imagenes\i-info2.jpg" />
+    <Content Include="Imagenes\nuevo1.png" />
+    <Content Include="Imagenes\nuevo2.png" />
+    <Content Include="Imagenes\pregunta.jpg" />
+    <Content Include="Imagenes\preview1.png" />
+    <Content Include="Imagenes\preview2.png" />
+    <Content Include="Imagenes\print1.png" />
+    <Content Include="Imagenes\print2.png" />
+    <Content Include="Imagenes\print3.png" />
+    <Content Include="Imagenes\print4.png" />
+    <Content Include="Imagenes\puerta2.bmp" />
+    <Content Include="Imagenes\salir1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
