@@ -139,6 +139,11 @@ namespace AppBTS.Presentacion
             this.cboHora.SelectedIndex = -1;
         }
 
-
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmAltaReserva formulario = new frmAltaReserva();
+            formulario.ShowDialog();
+            btnConsultar_Click(sender, e);
+        }
     }
 }

@@ -55,6 +55,12 @@
     <Compile Include="Negocio\Reservas.cs" />
     <Compile Include="Negocio\Mesas.cs" />
     <Compile Include="Negocio\Usuario.cs" />
+    <Compile Include="Presentacion\frmAltaReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAltaReserva.Designer.cs">
+      <DependentUpon>frmAltaReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmConsultaReservas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\frmAltaReserva.resx">
+      <DependentUpon>frmAltaReserva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmConsultaReservas.resx">
       <DependentUpon>frmConsultaReservas.cs</DependentUpon>
     </EmbeddedResource>

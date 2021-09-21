@@ -31,9 +31,17 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaReservas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtHora = new System.Windows.Forms.Label();
+            this.cboHora = new System.Windows.Forms.ComboBox();
             this.dgvReservas = new System.Windows.Forms.DataGridView();
-            this.bugsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.masterDataSet = new AppBTS.masterDataSet();
+            this.nroReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nroMesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fechaReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cantidadComensales = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.borrado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.cboComensales = new System.Windows.Forms.ComboBox();
             this.cboTelefono = new System.Windows.Forms.ComboBox();
@@ -49,6 +57,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.bugsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.masterDataSet = new AppBTS.masterDataSet();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
@@ -56,16 +66,6 @@
             this.btnAsignar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.bugsTableAdapter = new AppBTS.masterDataSetTableAdapters.BugsTableAdapter();
-            this.cboHora = new System.Windows.Forms.ComboBox();
-            this.txtHora = new System.Windows.Forms.Label();
-            this.nroReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nroMesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fechaReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombreCliente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cantidadComensales = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.borrado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
@@ -99,6 +99,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Criterios";
             // 
+            // txtHora
+            // 
+            this.txtHora.AutoSize = true;
+            this.txtHora.Location = new System.Drawing.Point(467, 126);
+            this.txtHora.Name = "txtHora";
+            this.txtHora.Size = new System.Drawing.Size(33, 13);
+            this.txtHora.TabIndex = 17;
+            this.txtHora.Text = "Hora:";
+            // 
+            // cboHora
+            // 
+            this.cboHora.FormattingEnabled = true;
+            this.cboHora.Location = new System.Drawing.Point(528, 118);
+            this.cboHora.Name = "cboHora";
+            this.cboHora.Size = new System.Drawing.Size(134, 21);
+            this.cboHora.TabIndex = 16;
+            // 
             // dgvReservas
             // 
             this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -117,15 +134,49 @@
             this.dgvReservas.Size = new System.Drawing.Size(766, 210);
             this.dgvReservas.TabIndex = 15;
             // 
-            // bugsBindingSource
+            // nroReserva
             // 
-            this.bugsBindingSource.DataMember = "Bugs";
-            this.bugsBindingSource.DataSource = this.masterDataSet;
+            this.nroReserva.HeaderText = "# Reserva";
+            this.nroReserva.Name = "nroReserva";
+            this.nroReserva.Width = 60;
             // 
-            // masterDataSet
+            // nroMesa
             // 
-            this.masterDataSet.DataSetName = "masterDataSet";
-            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.nroMesa.HeaderText = "# Mesa";
+            this.nroMesa.Name = "nroMesa";
+            this.nroMesa.Width = 60;
+            // 
+            // fechaReserva
+            // 
+            this.fechaReserva.HeaderText = "Fecha de Reserva";
+            this.fechaReserva.Name = "fechaReserva";
+            // 
+            // horaReserva
+            // 
+            this.horaReserva.HeaderText = "Hora de Reserva";
+            this.horaReserva.Name = "horaReserva";
+            // 
+            // nombreCliente
+            // 
+            this.nombreCliente.HeaderText = "Cliente";
+            this.nombreCliente.Name = "nombreCliente";
+            // 
+            // telefono
+            // 
+            this.telefono.HeaderText = "telefono";
+            this.telefono.Name = "telefono";
+            this.telefono.Width = 150;
+            // 
+            // cantidadComensales
+            // 
+            this.cantidadComensales.HeaderText = "Comensales";
+            this.cantidadComensales.Name = "cantidadComensales";
+            // 
+            // borrado
+            // 
+            this.borrado.HeaderText = "Borrado";
+            this.borrado.Name = "borrado";
+            this.borrado.Width = 50;
             // 
             // btnConsultar
             // 
@@ -258,6 +309,16 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Fecha Desde:";
             // 
+            // bugsBindingSource
+            // 
+            this.bugsBindingSource.DataMember = "Bugs";
+            this.bugsBindingSource.DataSource = this.masterDataSet;
+            // 
+            // masterDataSet
+            // 
+            this.masterDataSet.DataSetName = "masterDataSet";
+            this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // btnSalir
             // 
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
@@ -308,71 +369,11 @@
             this.btnNuevo.TabIndex = 1;
             this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo");
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // bugsTableAdapter
             // 
             this.bugsTableAdapter.ClearBeforeFill = true;
-            // 
-            // cboHora
-            // 
-            this.cboHora.FormattingEnabled = true;
-            this.cboHora.Location = new System.Drawing.Point(528, 118);
-            this.cboHora.Name = "cboHora";
-            this.cboHora.Size = new System.Drawing.Size(134, 21);
-            this.cboHora.TabIndex = 16;
-            // 
-            // txtHora
-            // 
-            this.txtHora.AutoSize = true;
-            this.txtHora.Location = new System.Drawing.Point(467, 126);
-            this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(33, 13);
-            this.txtHora.TabIndex = 17;
-            this.txtHora.Text = "Hora:";
-            // 
-            // nroReserva
-            // 
-            this.nroReserva.HeaderText = "# Reserva";
-            this.nroReserva.Name = "nroReserva";
-            this.nroReserva.Width = 60;
-            // 
-            // nroMesa
-            // 
-            this.nroMesa.HeaderText = "# Mesa";
-            this.nroMesa.Name = "nroMesa";
-            this.nroMesa.Width = 60;
-            // 
-            // fechaReserva
-            // 
-            this.fechaReserva.HeaderText = "Fecha de Reserva";
-            this.fechaReserva.Name = "fechaReserva";
-            // 
-            // horaReserva
-            // 
-            this.horaReserva.HeaderText = "Hora de Reserva";
-            this.horaReserva.Name = "horaReserva";
-            // 
-            // nombreCliente
-            // 
-            this.nombreCliente.HeaderText = "Cliente";
-            this.nombreCliente.Name = "nombreCliente";
-            // 
-            // telefono
-            // 
-            this.telefono.HeaderText = "telefono";
-            this.telefono.Name = "telefono";
-            this.telefono.Width = 150;
-            // 
-            // cantidadComensales
-            // 
-            this.cantidadComensales.HeaderText = "Comensales";
-            this.cantidadComensales.Name = "cantidadComensales";
-            // 
-            // borrado
-            // 
-            this.borrado.HeaderText = "Borrado";
-            this.borrado.Name = "borrado";
-            this.borrado.Width = 50;
             // 
             // frmConsultaReservas
             // 
