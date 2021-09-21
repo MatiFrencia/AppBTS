@@ -26,7 +26,6 @@ namespace AppBTS.Presentacion
         {
             limpiar();
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Bugs' Puede moverla o quitarla según sea necesario.
-            this.bugsTableAdapter.Fill(this.masterDataSet.Bugs);
             this.dtpFechaDesde.Value = DateTime.Today.AddDays(-7);
             this.dtpFechaHasta.Value = DateTime.Today;
 
@@ -144,6 +143,11 @@ namespace AppBTS.Presentacion
             frmAltaReserva formulario = new frmAltaReserva();
             formulario.ShowDialog();
             btnConsultar_Click(sender, e);
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

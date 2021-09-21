@@ -328,6 +328,7 @@
             this.btnSalir.TabIndex = 5;
             this.toolTip1.SetToolTip(this.btnSalir, "Salir");
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnDetalle
             // 
@@ -379,7 +380,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(847, 516);
+            this.ClientSize = new System.Drawing.Size(796, 481);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEditar);
