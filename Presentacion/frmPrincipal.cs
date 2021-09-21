@@ -25,7 +25,7 @@ namespace AppBTS
             fl.ShowDialog();
 
             if (fl.MiUsuario.Id_usuario == 0)
-                this.Close();
+                this.Dispose();
             else
                 this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
 
@@ -46,16 +46,7 @@ namespace AppBTS
 
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Está seguro de abandorar la aplicación...",
-                "SALIENDO",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button1)
-                == DialogResult.Yes)
 
-                e.Cancel = false;
-            else
-                e.Cancel = true;
         }
     }
 }

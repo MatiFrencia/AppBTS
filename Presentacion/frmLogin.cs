@@ -70,10 +70,13 @@ namespace AppBTS
                 this.txtClave.Text = string.Empty;
                 this.txtUsuario.Focus();
             }
-
-
-
-
+        }
+        private void frmLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Está seguro que desea Salir?", "SALIENDO", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)== DialogResult.Yes)
+                e.Cancel = false;
+            else
+                e.Cancel = true;
         }
     }
 }

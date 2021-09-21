@@ -69,31 +69,31 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             // 
             // estadosToolStripMenuItem
             // 
             this.estadosToolStripMenuItem.Name = "estadosToolStripMenuItem";
-            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.estadosToolStripMenuItem.Text = "Estados";
             // 
             // prioridadesToolStripMenuItem
             // 
             this.prioridadesToolStripMenuItem.Name = "prioridadesToolStripMenuItem";
-            this.prioridadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.prioridadesToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.prioridadesToolStripMenuItem.Text = "Prioridades";
             // 
             // criticidadesToolStripMenuItem
             // 
             this.criticidadesToolStripMenuItem.Name = "criticidadesToolStripMenuItem";
-            this.criticidadesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.criticidadesToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.criticidadesToolStripMenuItem.Text = "Criticidades";
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.productosToolStripMenuItem.Text = "Productos";
             // 
             // bugsToolStripMenuItem
@@ -108,14 +108,14 @@
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.consultasToolStripMenuItem.Text = "Consultas";
             this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
             // informesToolStripMenuItem
             // 
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.informesToolStripMenuItem.Text = "Informes";
             // 
             // salirToolStripMenuItem
