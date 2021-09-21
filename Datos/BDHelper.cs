@@ -14,7 +14,7 @@ namespace AppBTS.Datos
         private SqlCommand comando = new SqlCommand();
         private string cadenaConexion = @"Data Source=DESKTOP-LK4PK50\SQLEXPRESS;Initial Catalog=BAR_PAV;Integrated Security=True";
         //private string cadenaConexion = @"Data Source=DESKTOP-GO2FK90;Initial Catalog=BAR_PAV;Integrated Security=True";
-        //
+        //private string cadenaConexion = @"Data Source=localhost;Initial Catalog=BAR_PAV;Integrated Security=True";
         public DataTable consultar(string consultaSQL)
         {
             DataTable tabla = new DataTable();
