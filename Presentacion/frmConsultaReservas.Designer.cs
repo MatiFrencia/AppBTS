@@ -110,6 +110,9 @@
             // 
             // cboHora
             // 
+            this.cboHora.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboHora.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboHora.FormattingEnabled = true;
             this.cboHora.Location = new System.Drawing.Point(528, 118);
             this.cboHora.Name = "cboHora";
@@ -118,6 +121,8 @@
             // 
             // dgvReservas
             // 
+            this.dgvReservas.BackgroundColor = System.Drawing.SystemColors.WindowFrame;
+            this.dgvReservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nroReserva,
@@ -180,6 +185,9 @@
             // 
             // btnConsultar
             // 
+            this.btnConsultar.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnConsultar.Location = new System.Drawing.Point(528, 145);
@@ -187,11 +195,14 @@
             this.btnConsultar.Size = new System.Drawing.Size(134, 35);
             this.btnConsultar.TabIndex = 14;
             this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // cboComensales
             // 
+            this.cboComensales.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboComensales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboComensales.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboComensales.FormattingEnabled = true;
             this.cboComensales.Location = new System.Drawing.Point(528, 91);
             this.cboComensales.Name = "cboComensales";
@@ -200,6 +211,9 @@
             // 
             // cboTelefono
             // 
+            this.cboTelefono.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboTelefono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboTelefono.FormattingEnabled = true;
             this.cboTelefono.Location = new System.Drawing.Point(528, 60);
             this.cboTelefono.Name = "cboTelefono";
@@ -208,6 +222,9 @@
             // 
             // cboNombreCliente
             // 
+            this.cboNombreCliente.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboNombreCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboNombreCliente.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNombreCliente.FormattingEnabled = true;
             this.cboNombreCliente.Location = new System.Drawing.Point(151, 134);
             this.cboNombreCliente.Name = "cboNombreCliente";
@@ -216,6 +233,9 @@
             // 
             // cboNroMesa
             // 
+            this.cboNroMesa.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboNroMesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboNroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroMesa.FormattingEnabled = true;
             this.cboNroMesa.Location = new System.Drawing.Point(151, 98);
             this.cboNroMesa.Name = "cboNroMesa";
@@ -224,6 +244,9 @@
             // 
             // cboNroReserva
             // 
+            this.cboNroReserva.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboNroReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboNroReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroReserva.FormattingEnabled = true;
             this.cboNroReserva.Location = new System.Drawing.Point(151, 62);
             this.cboNroReserva.Name = "cboNroReserva";
@@ -232,6 +255,7 @@
             // 
             // dtpFechaHasta
             // 
+            this.dtpFechaHasta.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechaHasta.Location = new System.Drawing.Point(528, 26);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
@@ -321,17 +345,23 @@
             // 
             // btnSalir
             // 
+            this.btnSalir.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
             this.btnSalir.Location = new System.Drawing.Point(716, 416);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(72, 56);
             this.btnSalir.TabIndex = 5;
             this.toolTip1.SetToolTip(this.btnSalir, "Salir");
-            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnDetalle
             // 
+            this.btnDetalle.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnDetalle.FlatAppearance.BorderSize = 0;
+            this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalle.Image = ((System.Drawing.Image)(resources.GetObject("btnDetalle.Image")));
             this.btnDetalle.Location = new System.Drawing.Point(377, 416);
             this.btnDetalle.Name = "btnDetalle";
@@ -339,37 +369,46 @@
             this.btnDetalle.TabIndex = 4;
             this.btnDetalle.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.toolTip1.SetToolTip(this.btnDetalle, "Detalle de Bugs");
-            this.btnDetalle.UseVisualStyleBackColor = true;
+            this.btnDetalle.UseVisualStyleBackColor = false;
             // 
             // btnEditar
             // 
+            this.btnEditar.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.Location = new System.Drawing.Point(184, 416);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(72, 56);
             this.btnEditar.TabIndex = 3;
             this.toolTip1.SetToolTip(this.btnEditar, "Editar");
-            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
             // btnAsignar
             // 
+            this.btnAsignar.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAsignar.FlatAppearance.BorderSize = 0;
+            this.btnAsignar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsignar.Image = global::AppBTS.Properties.Resources.new_add_user;
             this.btnAsignar.Location = new System.Drawing.Point(103, 416);
             this.btnAsignar.Name = "btnAsignar";
             this.btnAsignar.Size = new System.Drawing.Size(72, 56);
             this.btnAsignar.TabIndex = 2;
             this.toolTip1.SetToolTip(this.btnAsignar, "Asignar");
-            this.btnAsignar.UseVisualStyleBackColor = true;
+            this.btnAsignar.UseVisualStyleBackColor = false;
             // 
             // btnNuevo
             // 
+            this.btnNuevo.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnNuevo.FlatAppearance.BorderSize = 0;
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.Location = new System.Drawing.Point(22, 416);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(72, 56);
             this.btnNuevo.TabIndex = 1;
             this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo");
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // bugsTableAdapter
@@ -380,6 +419,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(796, 481);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDetalle);

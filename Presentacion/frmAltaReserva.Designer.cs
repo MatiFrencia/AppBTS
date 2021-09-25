@@ -113,6 +113,9 @@ namespace AppBTS.Presentacion
             // 
             // txtbCantidadComensales
             // 
+            this.txtbCantidadComensales.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtbCantidadComensales.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtbCantidadComensales.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbCantidadComensales.Location = new System.Drawing.Point(173, 225);
             this.txtbCantidadComensales.Name = "txtbCantidadComensales";
             this.txtbCantidadComensales.Size = new System.Drawing.Size(100, 20);
@@ -120,6 +123,9 @@ namespace AppBTS.Presentacion
             // 
             // txtbTelefono
             // 
+            this.txtbTelefono.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtbTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtbTelefono.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbTelefono.Location = new System.Drawing.Point(173, 196);
             this.txtbTelefono.Name = "txtbTelefono";
             this.txtbTelefono.Size = new System.Drawing.Size(100, 20);
@@ -127,6 +133,9 @@ namespace AppBTS.Presentacion
             // 
             // txtbCliente
             // 
+            this.txtbCliente.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtbCliente.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtbCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbCliente.Location = new System.Drawing.Point(173, 163);
             this.txtbCliente.Name = "txtbCliente";
             this.txtbCliente.Size = new System.Drawing.Size(100, 20);
@@ -134,6 +143,9 @@ namespace AppBTS.Presentacion
             // 
             // txtbHoraReserva
             // 
+            this.txtbHoraReserva.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtbHoraReserva.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtbHoraReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbHoraReserva.Location = new System.Drawing.Point(173, 130);
             this.txtbHoraReserva.Name = "txtbHoraReserva";
             this.txtbHoraReserva.Size = new System.Drawing.Size(100, 20);
@@ -141,6 +153,9 @@ namespace AppBTS.Presentacion
             // 
             // txtbFechaReserva
             // 
+            this.txtbFechaReserva.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtbFechaReserva.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtbFechaReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbFechaReserva.Location = new System.Drawing.Point(173, 99);
             this.txtbFechaReserva.Name = "txtbFechaReserva";
             this.txtbFechaReserva.Size = new System.Drawing.Size(100, 20);
@@ -148,6 +163,9 @@ namespace AppBTS.Presentacion
             // 
             // txtbNumeroMesa
             // 
+            this.txtbNumeroMesa.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtbNumeroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtbNumeroMesa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbNumeroMesa.Location = new System.Drawing.Point(173, 65);
             this.txtbNumeroMesa.Name = "txtbNumeroMesa";
             this.txtbNumeroMesa.Size = new System.Drawing.Size(100, 20);
@@ -155,6 +173,9 @@ namespace AppBTS.Presentacion
             // 
             // txtbNumeroReserva
             // 
+            this.txtbNumeroReserva.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.txtbNumeroReserva.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtbNumeroReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbNumeroReserva.Location = new System.Drawing.Point(173, 32);
             this.txtbNumeroReserva.Name = "txtbNumeroReserva";
             this.txtbNumeroReserva.Size = new System.Drawing.Size(100, 20);
@@ -162,21 +183,25 @@ namespace AppBTS.Presentacion
             // 
             // btnAceptar
             // 
+            this.btnAceptar.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Location = new System.Drawing.Point(91, 305);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 14;
             this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Location = new System.Drawing.Point(198, 305);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 15;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             // 
             // lblCamposObligatorios
             // 
@@ -191,6 +216,7 @@ namespace AppBTS.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.ClientSize = new System.Drawing.Size(366, 363);
             this.Controls.Add(this.lblCamposObligatorios);
             this.Controls.Add(this.btnCancelar);
@@ -210,7 +236,8 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblNroMesa);
             this.Controls.Add(this.lblNroReserva);
             this.Name = "frmAltaReserva";
-            this.Text = "Form1";
+            this.ShowIcon = false;
+            this.Text = "Registrar Reserva";
             this.ResumeLayout(false);
             this.PerformLayout();
 

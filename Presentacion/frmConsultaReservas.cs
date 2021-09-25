@@ -140,9 +140,8 @@ namespace AppBTS.Presentacion
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmAltaReserva formulario = new frmAltaReserva();
-            formulario.ShowDialog();
-            btnConsultar_Click(sender, e);
+            frmAltaReserva far = new frmAltaReserva();
+            far.ShowDialog();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
