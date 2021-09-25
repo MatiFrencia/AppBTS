@@ -110,7 +110,7 @@
             // 
             // cboHora
             // 
-            this.cboHora.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboHora.BackColor = System.Drawing.Color.DarkKhaki;
             this.cboHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboHora.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboHora.FormattingEnabled = true;
@@ -185,7 +185,7 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnConsultar.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
@@ -200,7 +200,7 @@
             // 
             // cboComensales
             // 
-            this.cboComensales.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboComensales.BackColor = System.Drawing.Color.DarkKhaki;
             this.cboComensales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboComensales.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboComensales.FormattingEnabled = true;
@@ -211,7 +211,7 @@
             // 
             // cboTelefono
             // 
-            this.cboTelefono.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboTelefono.BackColor = System.Drawing.Color.DarkKhaki;
             this.cboTelefono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboTelefono.FormattingEnabled = true;
@@ -222,7 +222,7 @@
             // 
             // cboNombreCliente
             // 
-            this.cboNombreCliente.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboNombreCliente.BackColor = System.Drawing.Color.DarkKhaki;
             this.cboNombreCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNombreCliente.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNombreCliente.FormattingEnabled = true;
@@ -233,7 +233,7 @@
             // 
             // cboNroMesa
             // 
-            this.cboNroMesa.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboNroMesa.BackColor = System.Drawing.Color.DarkKhaki;
             this.cboNroMesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroMesa.FormattingEnabled = true;
@@ -244,7 +244,7 @@
             // 
             // cboNroReserva
             // 
-            this.cboNroReserva.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.cboNroReserva.BackColor = System.Drawing.Color.DarkKhaki;
             this.cboNroReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroReserva.FormattingEnabled = true;
@@ -345,7 +345,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnSalir.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
@@ -359,7 +359,7 @@
             // 
             // btnDetalle
             // 
-            this.btnDetalle.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnDetalle.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnDetalle.FlatAppearance.BorderSize = 0;
             this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalle.Image = ((System.Drawing.Image)(resources.GetObject("btnDetalle.Image")));
@@ -373,7 +373,7 @@
             // 
             // btnEditar
             // 
-            this.btnEditar.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnEditar.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
@@ -386,7 +386,7 @@
             // 
             // btnAsignar
             // 
-            this.btnAsignar.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnAsignar.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnAsignar.FlatAppearance.BorderSize = 0;
             this.btnAsignar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAsignar.Image = global::AppBTS.Properties.Resources.new_add_user;
@@ -399,7 +399,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btnNuevo.BackColor = System.Drawing.Color.DarkKhaki;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
@@ -419,7 +419,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.BackColor = System.Drawing.Color.DarkKhaki;
             this.ClientSize = new System.Drawing.Size(796, 481);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDetalle);
