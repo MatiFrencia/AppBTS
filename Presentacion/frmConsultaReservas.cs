@@ -142,6 +142,7 @@ namespace AppBTS.Presentacion
         {
             frmAltaReserva far = new frmAltaReserva();
             far.ShowDialog();
+            far.Dispose();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

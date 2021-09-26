@@ -33,8 +33,6 @@ namespace AppBTS
         {
             if (MessageBox.Show("Está seguro que desea Salir?", "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 this.Close();
-            else
-                this.Focus();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -72,6 +70,5 @@ namespace AppBTS
                 this.txtUsuario.Focus();
             }
         }
-
     }
 }
