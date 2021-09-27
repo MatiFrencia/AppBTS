@@ -150,10 +150,6 @@ namespace AppBTS.Presentacion
             far.Dispose();
         }
 
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
         private void dgvReservas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -164,7 +160,56 @@ namespace AppBTS.Presentacion
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             oReservas.Borrar(Global.IdReserva);
-            oReservas.RecuperarTodos();
+            string _nroReserva, _nroMesa, _telefono, _cantidadComensales, _nombreCliente, _horaReserva;
+            _nroReserva = _nroMesa = _cantidadComensales = _telefono = _nombreCliente = _horaReserva = string.Empty;
+            if (dtpFechaDesde.Value > dtpFechaHasta.Value)
+            {
+                MessageBox.Show("Fechas erroneas!!!");
+                dtpFechaDesde.Focus();
+                return;
+            }
+
+            if (cboNroReserva.SelectedIndex != -1)
+                _nroReserva = cboNroReserva.SelectedValue.ToString();
+            if (cboTelefono.SelectedIndex != -1)
+                _telefono = cboTelefono.SelectedValue.ToString();
+            if (cboComensales.SelectedIndex != -1)
+                _cantidadComensales = cboComensales.SelectedValue.ToString();
+            if (cboNroMesa.SelectedIndex != -1)
+                _nroMesa = cboNroMesa.SelectedValue.ToString();
+            if (cboNombreCliente.SelectedIndex != -1)
+                _nombreCliente = cboNombreCliente.SelectedValue.ToString();
+            if (cboHora.SelectedIndex != -1)
+                _horaReserva = cboHora.SelectedValue.ToString();
+
+            /*this.dgvReservas.DataSource = oReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
+                                                              dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
+                                                              _nroReserva,
+                                                              _nroMesa,
+                                                              _telefono,
+                                                              _cantidadComensales,
+                                                              _nombreCliente);*/
+
+            this.CargarGrilla(dgvReservas, oReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
+                                                              dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
+                                                              _nroReserva,
+                                                              _nroMesa,
+                                                              _telefono,
+                                                              _cantidadComensales,
+                                                              _nombreCliente,
+                                                              _horaReserva));
+
+            limpiar();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -91,6 +91,16 @@ namespace AppBTS.Properties {
         }
         
         /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Dutch801_XBd_BT_Extra_Bold {
+            get {
+                object obj = ResourceManager.GetObject("Dutch801_XBd_BT_Extra_Bold", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logout_door {

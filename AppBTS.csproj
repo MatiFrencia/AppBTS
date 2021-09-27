@@ -98,6 +98,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Content Include="Fonts\Dutch801 XBd BT Extra Bold.ttf" />
     <None Include="masterDataSet.xsc">
       <DependentUpon>masterDataSet.xsd</DependentUpon>
     </None>
@@ -167,5 +168,6 @@
     <Content Include="Imagenes\puerta2.bmp" />
     <Content Include="Imagenes\salir1.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
