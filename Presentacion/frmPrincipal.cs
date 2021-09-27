@@ -60,6 +60,16 @@ namespace AppBTS
             frmMesas fcb = new frmMesas();
             fcb.ShowDialog();
             fcb.Dispose();
+        private void articuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistrarArticulo fra = new frmRegistrarArticulo();
+            fra.ShowDialog();
+            fra.Dispose();
+        }
+
+        private void registrarReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

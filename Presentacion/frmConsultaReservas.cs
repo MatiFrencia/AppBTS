@@ -16,15 +16,16 @@ namespace AppBTS.Presentacion
         Reservas oReservas = new Reservas();
         Mesas oMesas= new Mesas();
         Usuario oUsuario = new Usuario();
+        
+        public frmConsultaReservas()
+        {
+            InitializeComponent();
+        }
+        
         public class Global
         {
             private static string idReserva;
             public static string IdReserva { get => idReserva; set => idReserva = value; }
-        }
-
-        public frmConsultaReservas()
-        {
-            InitializeComponent();
         }
 
         private void frmConsultaReservas_Load(object sender, EventArgs e)
@@ -34,7 +35,7 @@ namespace AppBTS.Presentacion
             this.dtpFechaDesde.Value = DateTime.Today.AddDays(-7);
             this.dtpFechaHasta.Value = DateTime.Today;
 
-            this.CargarCombo(cboNroReserva, oReservas.RecuperarTodosConParametro( "nroReserva"));
+            this.CargarCombo(cboNroReserva, oReservas.RecuperarTodosConParametro("nroReserva"));
             this.CargarCombo(cboNroMesa, oMesas.RecuperarTodos());
             this.CargarCombo(cboNombreCliente, oReservas.RecuperarTodosConParametro("nombreCliente"));
             this.CargarCombo(cboTelefono, oReservas.RecuperarTodosConParametro("telefono"));
@@ -44,6 +45,7 @@ namespace AppBTS.Presentacion
             this.btnConsultar.Enabled = true;
             this.btnNuevo.Enabled = true;
             this.btnBorrar.Enabled = false;
+            this.btnAsignar.Enabled = false;
             this.btnEditar.Enabled = false;
             this.btnDetalle.Enabled = false;
             this.btnSalir.Enabled = true;
@@ -111,6 +113,14 @@ namespace AppBTS.Presentacion
             if (cboHora.SelectedIndex != -1)
                 _horaReserva = cboHora.SelectedValue.ToString();
 
+            /*this.dgvReservas.DataSource = oReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
+                                                              dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
+                                                              _nroReserva,
+                                                              _nroMesa,
+                                                              _telefono,
+                                                              _cantidadComensales,
+                                                              _nombreCliente);*/
+
             this.CargarGrilla(dgvReservas, oReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
                                                               dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
                                                               _nroReserva,
@@ -121,6 +131,7 @@ namespace AppBTS.Presentacion
                                                               _horaReserva));
 
             limpiar();
+            //limpiar();
         }
 
 
