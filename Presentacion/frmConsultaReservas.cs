@@ -16,6 +16,11 @@ namespace AppBTS.Presentacion
         Reservas oReservas = new Reservas();
         Mesas oMesas= new Mesas();
         Usuario oUsuario = new Usuario();
+        public class Global
+        {
+            private static string idReserva;
+            public static string IdReserva { get => idReserva; set => idReserva = value; }
+        }
 
         public frmConsultaReservas()
         {
@@ -38,7 +43,7 @@ namespace AppBTS.Presentacion
 
             this.btnConsultar.Enabled = true;
             this.btnNuevo.Enabled = true;
-            this.btnAsignar.Enabled = false;
+            this.btnBorrar.Enabled = false;
             this.btnEditar.Enabled = false;
             this.btnDetalle.Enabled = false;
             this.btnSalir.Enabled = true;
@@ -148,6 +153,18 @@ namespace AppBTS.Presentacion
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvReservas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Global.IdReserva = dgvReservas.Rows[e.RowIndex].Cells[0].Value.ToString();
+            btnBorrar.Enabled = true;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            oReservas.Borrar(Global.IdReserva);
+            oReservas.RecuperarTodos();
         }
     }
 }

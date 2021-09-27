@@ -42,7 +42,6 @@
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadComensales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borrado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btnConsultar = new System.Windows.Forms.Button();
             this.cboComensales = new System.Windows.Forms.ComboBox();
             this.cboTelefono = new System.Windows.Forms.ComboBox();
             this.cboNombreCliente = new System.Windows.Forms.ComboBox();
@@ -60,12 +59,13 @@
             this.bugsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.masterDataSet = new AppBTS.masterDataSet();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.bugsTableAdapter = new AppBTS.masterDataSetTableAdapters.BugsTableAdapter();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            this.btnAsignar = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.bugsTableAdapter = new AppBTS.masterDataSetTableAdapters.BugsTableAdapter();
+            this.btnConsultar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
@@ -133,6 +133,7 @@
             this.dgvReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvReservas.Size = new System.Drawing.Size(766, 210);
             this.dgvReservas.TabIndex = 15;
+            this.dgvReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellClick);
             // 
             // nroReserva
             // 
@@ -177,18 +178,6 @@
             this.borrado.HeaderText = "Borrado";
             this.borrado.Name = "borrado";
             this.borrado.Width = 50;
-            // 
-            // btnConsultar
-            // 
-            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
-            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(528, 145);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(134, 35);
-            this.btnConsultar.TabIndex = 14;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
-            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // cboComensales
             // 
@@ -319,6 +308,10 @@
             this.masterDataSet.DataSetName = "masterDataSet";
             this.masterDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // bugsTableAdapter
+            // 
+            this.bugsTableAdapter.ClearBeforeFill = true;
+            // 
             // btnSalir
             // 
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
@@ -351,15 +344,16 @@
             this.toolTip1.SetToolTip(this.btnEditar, "Editar");
             this.btnEditar.UseVisualStyleBackColor = true;
             // 
-            // btnAsignar
+            // btnBorrar
             // 
-            this.btnAsignar.Image = global::AppBTS.Properties.Resources.new_add_user;
-            this.btnAsignar.Location = new System.Drawing.Point(103, 416);
-            this.btnAsignar.Name = "btnAsignar";
-            this.btnAsignar.Size = new System.Drawing.Size(72, 56);
-            this.btnAsignar.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.btnAsignar, "Asignar");
-            this.btnAsignar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Image = global::AppBTS.Properties.Resources.delete_exit;
+            this.btnBorrar.Location = new System.Drawing.Point(103, 416);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(72, 56);
+            this.btnBorrar.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btnBorrar, "Asignar");
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnNuevo
             // 
@@ -372,9 +366,17 @@
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // bugsTableAdapter
+            // btnConsultar
             // 
-            this.bugsTableAdapter.ClearBeforeFill = true;
+            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
+            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultar.Location = new System.Drawing.Point(528, 145);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(134, 35);
+            this.btnConsultar.TabIndex = 14;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // frmConsultaReservas
             // 
@@ -384,7 +386,7 @@
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnAsignar);
+            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmConsultaReservas";
@@ -419,7 +421,7 @@
         private System.Windows.Forms.DateTimePicker dtpFechaHasta;
         private System.Windows.Forms.DateTimePicker dtpFechaDesde;
         private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnAsignar;
+        private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.Button btnSalir;
