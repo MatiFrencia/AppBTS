@@ -16,6 +16,7 @@ namespace AppBTS
         public frmPrincipal()
         {
             InitializeComponent();
+            this.Opacity = 0;
         }
 
         private void frmPrincipal_Load(object sender, EventArgs e)
@@ -24,12 +25,14 @@ namespace AppBTS
             fl = new frmLogin();
             fl.ShowDialog();
 
-            if (fl.MiUsuario.Id_usuario == 0)
-                this.Close();
-            else
+            if (fl.MiUsuario.Id_usuario == 0) {
+                this.Dispose();
+            }
+            else { 
                 this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
-
-            fl.Dispose();
+                fl.Dispose();
+                this.Opacity = 100;
+            }
         }
 
         private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
@@ -46,13 +49,7 @@ namespace AppBTS
 
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Está seguro de abandorar la aplicación...",
-                "SALIENDO",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button1)
-                == DialogResult.Yes)
-
+            if (MessageBox.Show("Está seguro que desea Salir?", "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 e.Cancel = false;
             else
                 e.Cancel = true;
