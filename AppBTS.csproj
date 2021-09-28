@@ -166,6 +166,9 @@
     <EmbeddedResource Include="Presentacion\frmRegistrarArticulo.resx">
       <DependentUpon>frmRegistrarArticulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmRegistrarReserva.resx">
+      <DependentUpon>frmRegistrarReserva.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
