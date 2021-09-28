@@ -33,9 +33,8 @@
             this.soporteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.prioridadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.criticidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mesasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -62,9 +61,8 @@
             this.soporteToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.usuariosToolStripMenuItem,
             this.estadosToolStripMenuItem,
-            this.prioridadesToolStripMenuItem,
-            this.criticidadesToolStripMenuItem,
-            this.productosToolStripMenuItem});
+            this.productosToolStripMenuItem,
+            this.mesasToolStripMenuItem});
             this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
             this.soporteToolStripMenuItem.Size = new System.Drawing.Size(76, 23);
             this.soporteToolStripMenuItem.Text = "Soporte";
@@ -72,32 +70,27 @@
             // usuariosToolStripMenuItem
             // 
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             // 
             // estadosToolStripMenuItem
             // 
             this.estadosToolStripMenuItem.Name = "estadosToolStripMenuItem";
-            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
+            this.estadosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.estadosToolStripMenuItem.Text = "Estados";
-            // 
-            // prioridadesToolStripMenuItem
-            // 
-            this.prioridadesToolStripMenuItem.Name = "prioridadesToolStripMenuItem";
-            this.prioridadesToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
-            this.prioridadesToolStripMenuItem.Text = "Prioridades";
-            // 
-            // criticidadesToolStripMenuItem
-            // 
-            this.criticidadesToolStripMenuItem.Name = "criticidadesToolStripMenuItem";
-            this.criticidadesToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
-            this.criticidadesToolStripMenuItem.Text = "Criticidades";
             // 
             // productosToolStripMenuItem
             // 
             this.productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            this.productosToolStripMenuItem.Size = new System.Drawing.Size(161, 24);
+            this.productosToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.productosToolStripMenuItem.Text = "Productos";
+            // 
+            // mesasToolStripMenuItem
+            // 
+            this.mesasToolStripMenuItem.Name = "mesasToolStripMenuItem";
+            this.mesasToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
+            this.mesasToolStripMenuItem.Text = "Mesas";
+            this.mesasToolStripMenuItem.Click += new System.EventHandler(this.mesasToolStripMenuItem_Click);
             // 
             // bugsToolStripMenuItem
             // 
@@ -105,20 +98,20 @@
             this.consultasToolStripMenuItem,
             this.informesToolStripMenuItem});
             this.bugsToolStripMenuItem.Name = "bugsToolStripMenuItem";
-            this.bugsToolStripMenuItem.Size = new System.Drawing.Size(56, 23);
-            this.bugsToolStripMenuItem.Text = "Bugs";
+            this.bugsToolStripMenuItem.Size = new System.Drawing.Size(105, 23);
+            this.bugsToolStripMenuItem.Text = "Información";
             // 
             // consultasToolStripMenuItem
             // 
             this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
+            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.consultasToolStripMenuItem.Text = "Consultas";
             this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
             // 
             // informesToolStripMenuItem
             // 
             this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
+            this.informesToolStripMenuItem.Size = new System.Drawing.Size(180, 24);
             this.informesToolStripMenuItem.Text = "Informes";
             // 
             // salirToolStripMenuItem
@@ -157,13 +150,12 @@
         private System.Windows.Forms.ToolStripMenuItem soporteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem prioridadesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem criticidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bugsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mesasToolStripMenuItem;
     }
 }
 

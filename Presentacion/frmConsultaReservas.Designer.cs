@@ -498,7 +498,7 @@
             this.Name = "frmConsultaReservas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Consulta General de Bugs";
-            this.Load += new System.EventHandler(this.frmConsultaBugs_Load);
+            this.Load += new System.EventHandler(this.frmConsultaReservas_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).EndInit();

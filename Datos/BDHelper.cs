@@ -5,7 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using AppBTS.Negocio;
 namespace AppBTS.Datos
 {
     class BDHelper
@@ -28,6 +28,21 @@ namespace AppBTS.Datos
             
             conexion.Close();
             return tabla;
+        }
+        public void insertarMesa(Mesas mesa, string altaSQL)
+        {
+            conexion.ConnectionString = cadenaConexion;
+            conexion.Open();
+
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = altaSQL;
+            comando.Parameters.AddWithValue("@nroMesa", mesa.NroMesa);
+            comando.Parameters.AddWithValue("@cantidadSillas", mesa.CantidadSillas);
+            comando.Parameters.AddWithValue("@borrado", false);
+            comando.ExecuteNonQuery();
+
+            conexion.Close();
         }
     }
 }

@@ -54,5 +54,12 @@ namespace AppBTS
             else
                 e.Cancel = true;
         }
+
+        private void mesasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMesas fcb = new frmMesas();
+            fcb.ShowDialog();
+            fcb.Dispose();
+        }
     }
 }

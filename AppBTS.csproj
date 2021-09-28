@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BAR_PAVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAR_PAVDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Datos\BDHelper.cs" />
     <Compile Include="masterDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -55,6 +60,24 @@
     <Compile Include="Negocio\Reservas.cs" />
     <Compile Include="Negocio\Mesas.cs" />
     <Compile Include="Negocio\Usuario.cs" />
+    <Compile Include="Presentacion\frmAltaMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAltaMesa.Designer.cs">
+      <DependentUpon>frmAltaMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmDetallesMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmDetallesMesa.Designer.cs">
+      <DependentUpon>frmDetallesMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmMesas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmMesas.Designer.cs">
+      <DependentUpon>frmMesas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmAltaReserva.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +104,15 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\frmAltaMesa.resx">
+      <DependentUpon>frmAltaMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmDetallesMesa.resx">
+      <DependentUpon>frmDetallesMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmMesas.resx">
+      <DependentUpon>frmMesas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmAltaReserva.resx">
       <DependentUpon>frmAltaReserva.cs</DependentUpon>
     </EmbeddedResource>
@@ -99,6 +131,17 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Content Include="Fonts\Dutch801 XBd BT Extra Bold.ttf" />
+    <None Include="BAR_PAVDataSet.xsc">
+      <DependentUpon>BAR_PAVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BAR_PAVDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAR_PAVDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAR_PAVDataSet.xss">
+      <DependentUpon>BAR_PAVDataSet.xsd</DependentUpon>
+    </None>
     <None Include="masterDataSet.xsc">
       <DependentUpon>masterDataSet.xsd</DependentUpon>
     </None>
@@ -142,6 +185,7 @@
     <Content Include="Imagenes\delete_exit.png" />
     <Content Include="Imagenes\edit_file.png" />
     <Content Include="Imagenes\logout_door.png" />
+    <None Include="Imagenes\Mesa1.jpg" />
     <Content Include="Imagenes\new_add_user.png" />
     <Content Include="Imagenes\ok_accept.png" />
     <None Include="Imagenes\search-file.png" />
