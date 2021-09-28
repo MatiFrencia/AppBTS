@@ -112,9 +112,9 @@ namespace AppBTS.Presentacion
             this.Nombre,
             this.Precio,
             this.TipoArticulo});
-            this.dgvArticulo.Location = new System.Drawing.Point(32, 221);
+            this.dgvArticulo.Location = new System.Drawing.Point(12, 221);
             this.dgvArticulo.Name = "dgvArticulo";
-            this.dgvArticulo.Size = new System.Drawing.Size(494, 84);
+            this.dgvArticulo.Size = new System.Drawing.Size(516, 84);
             this.dgvArticulo.TabIndex = 6;
             // 
             // IdArticulo
@@ -157,7 +157,7 @@ namespace AppBTS.Presentacion
             // btnCancelar
             // 
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(32, 338);
+            this.btnCancelar.Location = new System.Drawing.Point(12, 329);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 33);
             this.btnCancelar.TabIndex = 8;
@@ -168,7 +168,7 @@ namespace AppBTS.Presentacion
             // btnGuardar
             // 
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(437, 338);
+            this.btnGuardar.Location = new System.Drawing.Point(439, 329);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 33);
             this.btnGuardar.TabIndex = 9;
@@ -210,7 +210,7 @@ namespace AppBTS.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(558, 396);
+            this.ClientSize = new System.Drawing.Size(540, 380);
             this.Controls.Add(this.btnEditarTipo);
             this.Controls.Add(this.btnEditarPrecio);
             this.Controls.Add(this.btnEditarNombre);

@@ -52,5 +52,40 @@ namespace AppBTS.Negocio
             DataTable tabla = oDatos.consultar(consulta);
             return tabla;
         }
+        public void Modificar(bool mNombre, bool mPrecio, bool mTipo)
+        {
+            string modificacion = "UPDATE Articulos SET ";
+            if (mNombre)
+            {
+                modificacion += "nombre = '" + Nombre + "'";
+                if (mPrecio||mTipo)
+                    modificacion += ", ";
+            }
+            if (mPrecio)
+            {
+                modificacion += "pcioUnitario = " + PrecioUnitario.ToString();
+                if (mTipo)
+                    modificacion += ", ";
+            }
+            if (mTipo)
+                modificacion += "idTipoArticulo = " + IdTipoArticulo.ToString();
+            modificacion += " WHERE idArticulo=" + IdArticulo.ToString();
+            BDHelper oModificacion = new BDHelper();
+            oModificacion.actualizarArticulo(modificacion);
+        }
+        public DataTable RecuperarTodos()
+        {
+            string consulta = "SELECT a.idArticulo,a.nombre,a.pcioUnitario,t.nombre AS nombreTipo FROM Articulos a,TipoArticulo t WHERE a.borrado=0" +
+                              " AND a.idTipoArticulo=t.idTipoArticulo";
+            BDHelper oDatos = new BDHelper();
+            DataTable tabla = oDatos.consultar(consulta);
+            return tabla;
+        }
+        public void Eliminar()
+        {
+            string baja = "UPDATE Articulos SET borrado = 1 WHERE idArticulo=" + IdArticulo.ToString();
+            BDHelper oBaja = new BDHelper();
+            oBaja.actualizarArticulo(baja);
+        }
     }
 }

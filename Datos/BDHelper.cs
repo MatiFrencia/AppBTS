@@ -51,6 +51,20 @@ namespace AppBTS.Datos
 
             conexion.Close();
         }
+
+        public void actualizarArticulo(string modificacionSQL)
+        {
+            conexion.ConnectionString = cadenaConexion;
+            conexion.Open();
+
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = modificacionSQL;
+
+            comando.ExecuteNonQuery();
+
+            conexion.Close();
+        }
     }
 }
 

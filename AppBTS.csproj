@@ -137,6 +137,12 @@
     <Compile Include="Presentacion\frmRegistrarArticulo.Designer.cs">
       <DependentUpon>frmRegistrarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmRegistrarReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistrarReserva.Designer.cs">
+      <DependentUpon>frmRegistrarReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Presentacion\frmConsultarArticulo.resx">

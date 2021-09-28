@@ -204,7 +204,13 @@ namespace AppBTS.Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-
+            
+        }
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmRegistrarReserva frr = new frmRegistrarReserva();
+            frr.ShowDialog();
+            frr.Dispose();
         }
     }
 }

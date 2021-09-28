@@ -41,13 +41,18 @@ namespace AppBTS.Presentacion
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            string idArticulo = txtIdArtículo.Text;
-            string nombre = txtNombre.Text;
-            string idTipoArticulo = "";
-            if (cboTipo.SelectedIndex != -1)
-                idTipoArticulo = cboTipo.SelectedValue.ToString();
-            CargarGrilla(dgvArticulos, oArticulo.RecuperarFiltrados(idArticulo, nombre, idTipoArticulo));
-            cboTipo.SelectedIndex = -1;
+            if (chkTodos.Checked)
+                CargarGrilla(dgvArticulos, oArticulo.RecuperarTodos());
+            else
+            {
+                string idArticulo = txtIdArtículo.Text;
+                string nombre = txtNombre.Text;
+                string idTipoArticulo = "";
+                if (cboTipo.SelectedIndex != -1)
+                    idTipoArticulo = cboTipo.SelectedValue.ToString();
+                CargarGrilla(dgvArticulos, oArticulo.RecuperarFiltrados(idArticulo, nombre, idTipoArticulo));
+                cboTipo.SelectedIndex = -1;
+            }
         }
 
         private void CargarGrilla(DataGridView grilla, DataTable tabla)
@@ -86,6 +91,35 @@ namespace AppBTS.Presentacion
             frmModificarArticulo fma = new frmModificarArticulo(seleccionado);
             fma.ShowDialog();
             fma.Dispose();
+        }
+
+        private void chkTodos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkTodos.Checked)
+            {
+                cboTipo.Enabled = false;
+                txtIdArtículo.Enabled = false;
+                txtNombre.Enabled = false;
+            }
+            else
+            {
+                cboTipo.Enabled = true;
+                txtIdArtículo.Enabled = true;
+                txtNombre.Enabled = true;
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Articulo seleccionado = new Articulo();
+            string nombre = dgvArticulos.SelectedCells[1].Value.ToString();
+            if (MessageBox.Show("¿Está seguro de que desea borrar '"+nombre+"'?","Eliminar Artículo",
+                MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+            {
+                seleccionado.IdArticulo = Convert.ToInt32(dgvArticulos.SelectedCells[0].Value);
+                seleccionado.Eliminar();
+                MessageBox.Show("'" + nombre + "' eliminado con éxito.");
+            }
         }
     }
 }

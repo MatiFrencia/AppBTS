@@ -99,13 +99,31 @@ namespace AppBTS.Presentacion
         {
             string nombre = txtNombre.Text;
             string precio = txtPrecio.Text;
+            bool mNombre = false;
+            bool mPrecio = false;
+            bool mTipo = false;
             if (nombre == "" || precio == "")
                 MessageBox.Show("Por favor, no deje campos en blanco.", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                articulo.Nombre = nombre;
-                articulo.PrecioUnitario = Convert.ToDouble(precio);
-                //ACÁ FALTA COMPLETAR
+                if (txtNombre.Enabled == true)
+                {
+                    articulo.Nombre = nombre;
+                    mNombre = true;
+                }
+                if (txtPrecio.Enabled == true)
+                {
+                    articulo.PrecioUnitario = Convert.ToDouble(precio);
+                    mPrecio = true;
+                }
+                if (cboTipo.Enabled == true)
+                {
+                    articulo.IdTipoArticulo = oTipo.RecuperarPorNombre(cboTipo.Text);
+                    mTipo = true;
+                }
+                articulo.Modificar(mNombre, mPrecio, mTipo);
+                MessageBox.Show("Cambios registrados con éxito.", "Modificar artículo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
         }
     }
