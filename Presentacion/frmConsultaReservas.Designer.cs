@@ -63,13 +63,13 @@
             this.masterDataSet = new AppBTS.masterDataSet();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnAsignar = new System.Windows.Forms.Button();
             this.lbTitle = new System.Windows.Forms.Label();
             this.bugsTableAdapter = new AppBTS.masterDataSetTableAdapters.BugsTableAdapter();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
-            this.btnAsignar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
@@ -390,7 +390,6 @@
             // 
             this.bugsBindingSource.DataMember = "Bugs";
             this.bugsBindingSource.DataSource = this.masterDataSet;
-            this.bugsBindingSource.Position = 0;
             // 
             // masterDataSet
             // 
@@ -403,14 +402,24 @@
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(28, 550);
+            this.btnNuevo.Location = new System.Drawing.Point(22, 558);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(96, 69);
+            this.btnNuevo.Size = new System.Drawing.Size(72, 56);
             this.btnNuevo.TabIndex = 1;
             this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo");
-            this.btnNuevo.UseVisualStyleBackColor = false;
+            this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
+            // 
+            // btnAsignar
+            // 
+            this.btnAsignar.Image = global::AppBTS.Properties.Resources.new_add_user;
+            this.btnAsignar.Location = new System.Drawing.Point(103, 416);
+            this.btnAsignar.Name = "btnAsignar";
+            this.btnAsignar.Size = new System.Drawing.Size(72, 56);
+            this.btnAsignar.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btnAsignar, "Asignar");
+            this.btnAsignar.UseVisualStyleBackColor = true;
             // 
             // lbTitle
             // 
@@ -468,27 +477,6 @@
             this.btnEditar.TabIndex = 21;
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnAsignar
-            // 
-            this.btnAsignar.Image = global::AppBTS.Properties.Resources.new_add_user;
-            this.btnAsignar.Location = new System.Drawing.Point(103, 416);
-            this.btnAsignar.Name = "btnAsignar";
-            this.btnAsignar.Size = new System.Drawing.Size(72, 56);
-            this.btnAsignar.TabIndex = 2;
-            this.toolTip1.SetToolTip(this.btnAsignar, "Asignar");
-            this.btnAsignar.UseVisualStyleBackColor = true;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(22, 416);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(72, 56);
-            this.btnNuevo.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo");
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnDetalle
             // 
