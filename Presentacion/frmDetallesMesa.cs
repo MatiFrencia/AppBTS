@@ -58,7 +58,7 @@ namespace AppBTS.Presentacion
         {
             if (MessageBox.Show("Está seguro que desea Borrarla?", "ATENCION, Está a punto de borrar la MESA", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 oMesas.Borrar(botonClickeado.Text);
-                botonClickeado.Dispose();
+                this.DialogResult = DialogResult.OK;
                 this.Close();
 
         }

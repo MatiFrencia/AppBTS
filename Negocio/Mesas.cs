@@ -22,13 +22,36 @@ namespace AppBTS.Negocio
             return oDatos.consultar(consulta);
         }
 
-        public void AgregarMesa()
+        public void AgregarMesa(string nroMesa)
         {
-            string alta = "INSERT INTO Mesas"
-                            + " VALUES"
-                            + " (@nroMesa, + @cantidadSillas, @borrado)";
-            BDHelper oAlta = new BDHelper();
-            oAlta.insertarMesa(this, alta);
+            if (VerificarExistencia(nroMesa).Rows.Count == 0) 
+            { 
+                string alta = "INSERT INTO Mesas"
+                                + " VALUES"
+                                + " (" + nroMesa + ", @cantidadSillas, @borrado)";
+                BDHelper oAlta = new BDHelper();
+                oAlta.insertarMesa(this, alta);
+            }
+            else
+            {
+                LevantarMesa(nroMesa);
+            }
+        }
+
+        public DataTable VerificarExistencia(string nroMesa)
+        { 
+            string verificacion = "SELECT 1 FROM Mesas WHERE nroMesa = " + nroMesa;
+            BDHelper oVerificacion = new BDHelper();
+            return oVerificacion.consultar(verificacion);
+        }
+        public void LevantarMesa(string nroMesa)
+        {
+            string consulta = " UPDATE Mesas"
+                            + " SET borrado = 0"
+                            + " WHERE nroMesa = " + nroMesa;
+
+            BDHelper oDatos = new BDHelper();
+            oDatos.consultar(consulta);
         }
         public void Borrar(string mesaClickeada)
         {
@@ -38,8 +61,15 @@ namespace AppBTS.Negocio
 
             BDHelper oDatos = new BDHelper();
             oDatos.consultar(consulta);
+        }
 
-
+        public int IdSiguiente()
+        {
+            string consulta = "SELECT MAX(nroMesa) FROM Mesas WHERE borrado = 0";
+            BDHelper oDatos = new BDHelper();
+            DataTable idmax = oDatos.consultar(consulta);
+            int id = Convert.ToInt32(idmax.Rows[0][0].ToString());
+            return id + 1;
         }
     }
 }

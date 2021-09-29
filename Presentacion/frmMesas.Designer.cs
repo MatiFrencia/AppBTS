@@ -61,6 +61,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.menuStrip1);
             this.Name = "frmMesas";
             this.Text = "Mesas";
+            this.Load += new System.EventHandler(this.frmMesas_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
