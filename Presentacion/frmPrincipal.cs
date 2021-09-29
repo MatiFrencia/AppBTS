@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AppBTS.Presentacion;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,7 +28,46 @@ namespace AppBTS
                 this.Close();
             else
                 this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
+
             fl.Dispose();
+        }
+
+        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaReservas fcb = new frmConsultaReservas();
+            fcb.ShowDialog();
+            fcb.Dispose();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (MessageBox.Show("Está seguro de abandorar la aplicación...",
+                "SALIENDO",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question,
+                MessageBoxDefaultButton.Button1)
+                == DialogResult.Yes)
+
+                e.Cancel = false;
+            else
+                e.Cancel = true;
+        }
+
+        private void articuloToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRegistrarArticulo fra = new frmRegistrarArticulo();
+            fra.ShowDialog();
+            fra.Dispose();
+        }
+
+        private void registrarReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
