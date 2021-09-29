@@ -200,13 +200,36 @@ namespace AppBTS.Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            
+            frmModificarReserva fmr = new frmModificarReserva();
+            fmr.NumReserva = (int)dgvReservas.CurrentRow.Cells[0].Value;
+            fmr.NumMesa = (int)dgvReservas.CurrentRow.Cells[0].Value;
+            fmr.FechaReserva = (DateTime)dgvReservas.CurrentRow.Cells[0].Value;
+            fmr.HoraReserva = (TimeSpan)dgvReservas.CurrentRow.Cells[0].Value;
+            fmr.NomCliente = dgvReservas.CurrentRow.Cells[0].Value.ToString();
+            fmr.TelCliente = dgvReservas.CurrentRow.Cells[0].Value.ToString();
+            fmr.CantComensales = (int)dgvReservas.CurrentRow.Cells[0].Value;
+            fmr.ShowDialog();
+            fmr.Dispose();
+        }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            frmDetalleReserva fdr = new frmDetalleReserva();
+            fdr.NumReserva = (int)dgvReservas.CurrentRow.Cells[0].Value;
+            fdr.NumMesa = (int)dgvReservas.CurrentRow.Cells[0].Value;
+            fdr.FechaReserva = (DateTime)dgvReservas.CurrentRow.Cells[0].Value;
+            fdr.HoraReserva = (TimeSpan)dgvReservas.CurrentRow.Cells[0].Value;
+            fdr.NomCliente = dgvReservas.CurrentRow.Cells[0].Value.ToString();
+            fdr.TelCliente = dgvReservas.CurrentRow.Cells[0].Value.ToString();
+            fdr.CantComensales = (int)dgvReservas.CurrentRow.Cells[0].Value;
+            fdr.ShowDialog();
+            fdr.Dispose();
         }
         //private void btnNuevo_Click(object sender, EventArgs e)
         //{
-            //frmRegistrarReserva frr = new frmRegistrarReserva();
-            //frr.ShowDialog();
-            //frr.Dispose();
+        //frmRegistrarReserva frr = new frmRegistrarReserva();
+        //frr.ShowDialog();
+        //frr.Dispose();
         //}
     }
 }
