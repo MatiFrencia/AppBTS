@@ -58,6 +58,7 @@
       <DependentUpon>masterDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Negocio\Mesas.cs" />
+    <Compile Include="Negocio\Mozo.cs" />
     <Compile Include="Negocio\Usuario.cs" />
     <Compile Include="Presentacion\frmAltaMesa.cs">
       <SubType>Form</SubType>
@@ -124,6 +125,12 @@
     <Compile Include="Presentacion\frmModificarArticulo.Designer.cs">
       <DependentUpon>frmModificarArticulo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmMozos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmMozos.Designer.cs">
+      <DependentUpon>frmMozos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmModificarArticulo.resx">
       <DependentUpon>frmModificarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmMozos.resx">
+      <DependentUpon>frmMozos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>

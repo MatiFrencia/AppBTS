@@ -62,6 +62,7 @@ namespace AppBTS.Datos
 
             conexion.Close();
         }
+
         public void insertarMesa(Mesas mesa, string altaSQL)
         {
             conexion.ConnectionString = cadenaConexion;
@@ -76,6 +77,16 @@ namespace AppBTS.Datos
             comando.ExecuteNonQuery();
 
             conexion.Close();
+        }
+        public void actualizar(string consulta) {
+            //conexion.ConnectionString = cadenaConexion;
+            //conexion.Open();
+
+            //comando.Connection = conexion;
+            //comando.CommandType = CommandType.Text;
+            //comando.CommandText = consulta;
+            //comando.ExecuteNonQuery();
+            //conexion.Close();
         }
     }
 }

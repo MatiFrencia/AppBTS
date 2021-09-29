@@ -121,9 +121,6 @@ namespace AppBTS.Presentacion
                                                               _cantidadComensales,
                                                               _nombreCliente,
                                                               _horaReserva));
-
-            limpiar();
-            //limpiar();
         }
 
         private void limpiar()
@@ -201,13 +198,6 @@ namespace AppBTS.Presentacion
         private void btnEditar_Click(object sender, EventArgs e)
         {
             frmModificarReserva fmr = new frmModificarReserva();
-            fmr.NumReserva = (int)dgvReservas.CurrentRow.Cells[0].Value;
-            fmr.NumMesa = (int)dgvReservas.CurrentRow.Cells[1].Value;
-            fmr.FechaReserva = (DateTime)dgvReservas.CurrentRow.Cells[2].Value;
-            fmr.HoraReserva = (TimeSpan)dgvReservas.CurrentRow.Cells[3].Value;
-            fmr.NomCliente = dgvReservas.CurrentRow.Cells[4].Value.ToString();
-            fmr.TelCliente = dgvReservas.CurrentRow.Cells[5].Value.ToString();
-            fmr.CantComensales = (int)dgvReservas.CurrentRow.Cells[6].Value;
             fmr.ShowDialog();
             fmr.Dispose();
         }
@@ -224,6 +214,11 @@ namespace AppBTS.Presentacion
             fdr.CantComensales = (int)dgvReservas.CurrentRow.Cells[6].Value;
             fdr.ShowDialog();
             fdr.Dispose();
+        }
+
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            limpiar();
         }
         //private void btnNuevo_Click(object sender, EventArgs e)
         //{

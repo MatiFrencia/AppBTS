@@ -90,6 +90,12 @@ namespace AppBTS.Negocio
   
 
         }
+        public void Modificar(int numReserva, int numMesa, DateTime dateReserva, TimeSpan hourReserva, string cliente, string tel, int cantComensales)
+        {
+            string modificacion = "UPDATE Reservas SET nroMesa = " + numMesa.ToString() + ", fechaReserva = " + dateReserva + ", horaReserva = " + hourReserva + ", nombreCliente = " + cliente + ", telefono = " + tel + ", cantidadComensales = " + cantComensales.ToString() + " WHERE nroReserva = " + nroReserva.ToString();
+            BDHelper oModificacion = new BDHelper();
+            oModificacion.actualizarArticulo(modificacion);
+        }
     }   
     
 }
