@@ -414,12 +414,12 @@
             // 
             this.lbTitle.AutoSize = true;
             this.lbTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbTitle.Font = new System.Drawing.Font("Dubai", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitle.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbTitle.Location = new System.Drawing.Point(16, 11);
             this.lbTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(94, 36);
+            this.lbTitle.Size = new System.Drawing.Size(111, 25);
             this.lbTitle.TabIndex = 18;
             this.lbTitle.Text = "Reservas";
             // 
@@ -477,6 +477,7 @@
             this.btnDetalle.Size = new System.Drawing.Size(53, 40);
             this.btnDetalle.TabIndex = 22;
             this.btnDetalle.UseVisualStyleBackColor = false;
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // frmConsultaReservas
             // 

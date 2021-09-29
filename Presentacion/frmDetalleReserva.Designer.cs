@@ -1,7 +1,7 @@
 ﻿
 namespace AppBTS.Presentacion
 {
-    partial class frmAltaReserva
+    partial class frmDetalleReserva
     {
         /// <summary>
         /// Required designer variable.
@@ -44,8 +44,6 @@ namespace AppBTS.Presentacion
             this.txtbNumeroMesa = new System.Windows.Forms.TextBox();
             this.txtbNumeroReserva = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.lblCamposObligatorios = new System.Windows.Forms.Label();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -201,7 +199,7 @@ namespace AppBTS.Presentacion
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.Sienna;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Location = new System.Drawing.Point(201, 437);
+            this.btnAceptar.Location = new System.Drawing.Point(122, 429);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(112, 35);
@@ -209,30 +207,6 @@ namespace AppBTS.Presentacion
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Sienna;
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Location = new System.Drawing.Point(74, 437);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(112, 35);
-            this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = false;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // lblCamposObligatorios
-            // 
-            this.lblCamposObligatorios.AutoSize = true;
-            this.lblCamposObligatorios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCamposObligatorios.Location = new System.Drawing.Point(71, 397);
-            this.lblCamposObligatorios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCamposObligatorios.Name = "lblCamposObligatorios";
-            this.lblCamposObligatorios.Size = new System.Drawing.Size(236, 16);
-            this.lblCamposObligatorios.TabIndex = 16;
-            this.lblCamposObligatorios.Text = "(*) Todos los campos son obligatorios";
             // 
             // lbTitulo
             // 
@@ -242,19 +216,17 @@ namespace AppBTS.Presentacion
             this.lbTitulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbTitulo.Location = new System.Drawing.Point(13, 9);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(181, 25);
+            this.lbTitulo.Size = new System.Drawing.Size(161, 25);
             this.lbTitulo.TabIndex = 17;
-            this.lbTitulo.Text = "Registrar Reserva";
+            this.lbTitulo.Text = "Detalle Reserva";
             // 
-            // frmAltaReserva
+            // frmDetalleReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Sienna;
             this.ClientSize = new System.Drawing.Size(371, 491);
             this.Controls.Add(this.lbTitulo);
-            this.Controls.Add(this.lblCamposObligatorios);
-            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtbNumeroReserva);
             this.Controls.Add(this.txtbNumeroMesa);
@@ -274,7 +246,7 @@ namespace AppBTS.Presentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(1180, 128);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmAltaReserva";
+            this.Name = "frmDetalleReserva";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Registrar Reserva";
@@ -301,8 +273,6 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.TextBox txtbNumeroMesa;
         private System.Windows.Forms.TextBox txtbNumeroReserva;
         private System.Windows.Forms.Button btnAceptar;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label lblCamposObligatorios;
         private System.Windows.Forms.Label lbTitulo;
     }
 }

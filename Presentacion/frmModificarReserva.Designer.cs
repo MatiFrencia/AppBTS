@@ -1,7 +1,7 @@
 ﻿
 namespace AppBTS.Presentacion
 {
-    partial class frmAltaReserva
+    partial class frmModificarReserva
     {
         /// <summary>
         /// Required designer variable.
