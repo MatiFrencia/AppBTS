@@ -73,10 +73,30 @@ namespace AppBTS.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete_exit {
+            get {
+                object obj = ResourceManager.GetObject("delete_exit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap documentediting {
             get {
                 object obj = ResourceManager.GetObject("documentediting", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Byte[].
+        /// </summary>
+        internal static byte[] Dutch801_XBd_BT_Extra_Bold {
+            get {
+                object obj = ResourceManager.GetObject("Dutch801_XBd_BT_Extra_Bold", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -86,6 +106,16 @@ namespace AppBTS.Properties {
         internal static System.Drawing.Bitmap logout_door {
             get {
                 object obj = ResourceManager.GetObject("logout_door", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Mesa1 {
+            get {
+                object obj = ResourceManager.GetObject("Mesa1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

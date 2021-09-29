@@ -16,13 +16,19 @@ namespace AppBTS.Presentacion
         Reservas oReservas = new Reservas();
         Mesas oMesas= new Mesas();
         Usuario oUsuario = new Usuario();
-
+        
         public frmConsultaReservas()
         {
             InitializeComponent();
         }
+        
+        public class Global
+        {
+            private static string idReserva;
+            public static string IdReserva { get => idReserva; set => idReserva = value; }
+        }
 
-        private void frmConsultaBugs_Load(object sender, EventArgs e)
+        private void frmConsultaReservas_Load(object sender, EventArgs e)
         {
             limpiar();
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Bugs' Puede moverla o quitarla según sea necesario.
@@ -38,6 +44,7 @@ namespace AppBTS.Presentacion
 
             this.btnConsultar.Enabled = true;
             this.btnNuevo.Enabled = true;
+            this.btnBorrar.Enabled = false;
             this.btnAsignar.Enabled = false;
             this.btnEditar.Enabled = false;
             this.btnDetalle.Enabled = false;
@@ -123,6 +130,7 @@ namespace AppBTS.Presentacion
                                                               _nombreCliente,
                                                               _horaReserva));
 
+            limpiar();
             //limpiar();
         }
 
@@ -138,11 +146,66 @@ namespace AppBTS.Presentacion
             this.cboHora.SelectedIndex = -1;
         }
 
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            frmAltaReserva far = new frmAltaReserva();
+            far.ShowDialog();
+            far.Dispose();
+        }
+
+
+        private void dgvReservas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Global.IdReserva = dgvReservas.Rows[e.RowIndex].Cells[0].Value.ToString();
+            btnBorrar.Enabled = true;
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            oReservas.Borrar(Global.IdReserva);
+            string _nroReserva, _nroMesa, _telefono, _cantidadComensales, _nombreCliente, _horaReserva;
+            _nroReserva = _nroMesa = _cantidadComensales = _telefono = _nombreCliente = _horaReserva = string.Empty;
+            if (dtpFechaDesde.Value > dtpFechaHasta.Value)
+            {
+                MessageBox.Show("Fechas erroneas!!!");
+                dtpFechaDesde.Focus();
+                return;
+            }
+
+            if (cboNroReserva.SelectedIndex != -1)
+                _nroReserva = cboNroReserva.SelectedValue.ToString();
+            if (cboTelefono.SelectedIndex != -1)
+                _telefono = cboTelefono.SelectedValue.ToString();
+            if (cboComensales.SelectedIndex != -1)
+                _cantidadComensales = cboComensales.SelectedValue.ToString();
+            if (cboNroMesa.SelectedIndex != -1)
+                _nroMesa = cboNroMesa.SelectedValue.ToString();
+            if (cboNombreCliente.SelectedIndex != -1)
+                _nombreCliente = cboNombreCliente.SelectedValue.ToString();
+            if (cboHora.SelectedIndex != -1)
+                _horaReserva = cboHora.SelectedValue.ToString();
+
+            this.CargarGrilla(dgvReservas, oReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
+                                                              dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
+                                                              _nroReserva,
+                                                              _nroMesa,
+                                                              _telefono,
+                                                              _cantidadComensales,
+                                                              _nombreCliente,
+                                                              _horaReserva));
+
+            limpiar();
+        }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            
+        }
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             frmRegistrarReserva frr = new frmRegistrarReserva();

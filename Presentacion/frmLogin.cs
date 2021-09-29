@@ -27,13 +27,15 @@ namespace AppBTS
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
+
             //this.Text = "Logeo!!!";
             //this.BackColor = Color.Green;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (MessageBox.Show("Está seguro que desea Salir?", "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                this.Close();
         }
 
         private void btnIngresar_Click(object sender, EventArgs e)
@@ -61,7 +63,8 @@ namespace AppBTS
             if (miUsuario.Id_usuario!=0)
             {
                 MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                this.Dispose();
+
             }
             else
             {

@@ -78,6 +78,19 @@ namespace AppBTS.Negocio
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);
         }
-    }
+
+        public void Borrar(string nroReserva)
+        {
+            string consulta = " UPDATE Reservas"
+                            + " SET borrado = 1"
+                            + " WHERE nroReserva = " + nroReserva;
+
+            BDHelper oDatos = new BDHelper();
+            oDatos.consultar(consulta);
+  
+
+        }
+    }   
+    
 }
 

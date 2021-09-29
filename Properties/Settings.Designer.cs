@@ -33,5 +33,16 @@ namespace AppBTS.Properties {
                 return ((string)(this["masterConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-LK4PK50\\SQLEXPRESS;Initial Catalog=BAR_PAV;Integrated Securit" +
+            "y=True")]
+        public string BAR_PAVConnectionString {
+            get {
+                return ((string)(this["BAR_PAVConnectionString"]));
+            }
+        }
     }
 }
