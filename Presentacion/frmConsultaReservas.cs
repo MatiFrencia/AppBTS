@@ -206,11 +206,11 @@ namespace AppBTS.Presentacion
         {
             
         }
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            frmRegistrarReserva frr = new frmRegistrarReserva();
-            frr.ShowDialog();
-            frr.Dispose();
-        }
+        //private void btnNuevo_Click(object sender, EventArgs e)
+        //{
+            //frmRegistrarReserva frr = new frmRegistrarReserva();
+            //frr.ShowDialog();
+            //frr.Dispose();
+        //}
     }
 }

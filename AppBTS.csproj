@@ -83,6 +83,7 @@
     </Compile>
     <Compile Include="Presentacion\frmAltaReserva.Designer.cs">
       <DependentUpon>frmAltaReserva.cs</DependentUpon>
+    </Compile>
     <Compile Include="Negocio\Articulo.cs" />
     <Compile Include="Negocio\Reservas.cs" />
     <Compile Include="Negocio\Mesas.cs" />
@@ -143,6 +144,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmAltaReserva.resx">
       <DependentUpon>frmAltaReserva.cs</DependentUpon>
+    </EmbeddedResource>
     <Compile Include="Presentacion\frmRegistrarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,12 +167,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmModificarArticulo.resx">
-      <DependentUpon>frmModificarArticulo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
-      <DependentUpon>frmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmModificarArticulo.resx">
       <DependentUpon>frmModificarArticulo.cs</DependentUpon>

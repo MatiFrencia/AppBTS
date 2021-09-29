@@ -60,54 +60,27 @@ namespace AppBTS
             frmMesas fcb = new frmMesas();
             fcb.ShowDialog();
             fcb.Dispose();
-        private void articuloToolStripMenuItem_Click(object sender, EventArgs e)
+        }
+
+        private void registrarReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAltaReserva far = new frmAltaReserva();
+            far.ShowDialog();
+            far.Dispose();
+        }
+
+        private void articuloToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmRegistrarArticulo fra = new frmRegistrarArticulo();
             fra.ShowDialog();
             fra.Dispose();
         }
 
-        private void registrarReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void artículosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void consultasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmConsultaReservas fcb = new frmConsultaReservas();
-            fcb.ShowDialog();
-            fcb.Dispose();
-        }
-
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (MessageBox.Show("Está seguro de abandorar la aplicación...",
-                "SALIENDO",
-                MessageBoxButtons.YesNo,
-                MessageBoxIcon.Question,
-                MessageBoxDefaultButton.Button1)
-                == DialogResult.Yes)
-
-                e.Cancel = false;
-            else
-                e.Cancel = true;
-        }
-
-        private void articuloToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmRegistrarArticulo fra = new frmRegistrarArticulo();
-            fra.ShowDialog();
-            fra.Dispose();
-        }
-
-        private void registrarReservaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            frmConsultarArticulo fca = new frmConsultarArticulo();
+            fca.ShowDialog();
+            fca.Dispose();
         }
     }
 }

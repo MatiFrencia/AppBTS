@@ -69,12 +69,7 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnDetalle = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
             this.btnAsignar = new System.Windows.Forms.Button();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.bugsTableAdapter = new AppBTS.masterDataSetTableAdapters.BugsTableAdapter();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
@@ -579,8 +574,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadComensales;
         private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnDetalle;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn borrado;
     }
 }
