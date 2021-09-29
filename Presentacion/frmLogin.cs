@@ -13,9 +13,6 @@ namespace AppBTS
 {
     public partial class frmLogin : Form
     {
-        //private string user = "admin";
-        //private string pass = "1234";
-
         private Usuario miUsuario = new Usuario();
         
         internal Usuario MiUsuario { get => miUsuario; set => miUsuario = value; }
@@ -27,9 +24,6 @@ namespace AppBTS
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
-            //this.Text = "Logeo!!!";
-            //this.BackColor = Color.Green;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -40,16 +34,16 @@ namespace AppBTS
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            //if (this.txtUsuario.Text=="")
             if (string.IsNullOrEmpty(this.txtUsuario.Text)) 
             {
-                MessageBox.Show("Debe ingresar un Usuario...");
+                MessageBox.Show("Debe ingresar un nombre de Usuario.");
+                this.txtClave.Text = string.Empty;
                 this.txtUsuario.Focus();
                 return;
             }
             if (this.txtClave.Text==string.Empty)
             {
-                MessageBox.Show("Debe ingresar una Contraseña...");
+                MessageBox.Show("Debe ingresar una Contraseña.");
                 this.txtClave.Focus();
                 return;
             }
@@ -62,21 +56,16 @@ namespace AppBTS
             //if (this.txtUsuario.Text==this.user && this.txtClave.Text==this.pass)
             if (miUsuario.Id_usuario!=0)
             {
-                MessageBox.Show("Login OK", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Inicio de sesion satisfactorio!", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
 
             }
             else
             {
                 MessageBox.Show("Usuario y/o contraseña incorrectos", "Validación de Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                this.txtUsuario.Text = "";
                 this.txtClave.Text = string.Empty;
                 this.txtUsuario.Focus();
             }
-
-
-
-
         }
     }
 }
