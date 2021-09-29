@@ -18,6 +18,8 @@ namespace AppBTS
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmPrincipal());
             //Application.Run(new AppBTS.Presentacion.frmConsultaReservas());
+            //Application.Run(new AppBTS.Presentacion.frmMesas());
+            //Application.Run(new AppBTS.Presentacion.frmConsultarArticulo());
         }
     }
 }

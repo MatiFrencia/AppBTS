@@ -54,5 +54,33 @@ namespace AppBTS
             else
                 e.Cancel = true;
         }
+
+        private void mesasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMesas fcb = new frmMesas();
+            fcb.ShowDialog();
+            fcb.Dispose();
+        }
+
+        private void registrarReservaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAltaReserva far = new frmAltaReserva();
+            far.ShowDialog();
+            far.Dispose();
+        }
+
+        private void articuloToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmRegistrarArticulo fra = new frmRegistrarArticulo();
+            fra.ShowDialog();
+            fra.Dispose();
+        }
+
+        private void artículosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultarArticulo fca = new frmConsultarArticulo();
+            fca.ShowDialog();
+            fca.Dispose();
+        }
     }
 }

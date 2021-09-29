@@ -13,10 +13,11 @@ namespace AppBTS
 {
     public partial class frmLogin : Form
     {
+        //private string user = "admin";
+        //private string pass = "1234";
 
         private Usuario miUsuario = new Usuario();
-
-
+        
         internal Usuario MiUsuario { get => miUsuario; set => miUsuario = value; }
 
         public frmLogin()
@@ -27,6 +28,8 @@ namespace AppBTS
         private void frmLogin_Load(object sender, EventArgs e)
         {
 
+            //this.Text = "Logeo!!!";
+            //this.BackColor = Color.Green;
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -40,17 +43,17 @@ namespace AppBTS
             //if (this.txtUsuario.Text=="")
             if (string.IsNullOrEmpty(this.txtUsuario.Text)) 
             {
-                MessageBox.Show("Debe ingresar un Usuario.");
+                MessageBox.Show("Debe ingresar un Usuario...");
                 this.txtUsuario.Focus();
                 return;
             }
             if (this.txtClave.Text==string.Empty)
             {
-                MessageBox.Show("Debe ingresar una Contraseña.");
+                MessageBox.Show("Debe ingresar una Contraseña...");
                 this.txtClave.Focus();
                 return;
             }
-            frmPrincipal fp = new frmPrincipal();
+
             this.miUsuario.Nombre = this.txtUsuario.Text;
             this.miUsuario.Password = this.txtClave.Text;
 
@@ -66,9 +69,14 @@ namespace AppBTS
             else
             {
                 MessageBox.Show("Usuario y/o contraseña incorrectos", "Validación de Datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                this.txtUsuario.Text = "";
                 this.txtClave.Text = string.Empty;
                 this.txtUsuario.Focus();
             }
+
+
+
+
         }
     }
 }

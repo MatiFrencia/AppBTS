@@ -124,6 +124,15 @@
   <data name="buscar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\buscar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logout_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\logout_door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+	<data name="delete_exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+		<value>..\Imagenes\delete_exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+	</data>
+  <data name="new_add_user" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\new_add_user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="new-file" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\new-file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -133,13 +142,22 @@
   <data name="search-file" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\search-file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Dutch801_XBd_BT_Extra_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Fonts\Dutch801 XBd BT Extra Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Mesa1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\Mesa1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="search-file" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\search-file.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="documentediting" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\documentediting.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logout_door" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Imagenes\logout_door.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete_exit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Imagenes\delete_exit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Dutch801_XBd_BT_Extra_Bold" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Fonts\Dutch801 XBd BT Extra Bold.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="buscar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagenes\buscar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
