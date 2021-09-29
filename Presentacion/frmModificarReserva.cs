@@ -42,6 +42,8 @@ namespace AppBTS.Presentacion
 
         private void frmAltaReserva_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'bAR_PAVDataSet.Reservas' Puede moverla o quitarla según sea necesario.
+            this.reservasTableAdapter.Fill(this.bAR_PAVDataSet.Reservas);
             actualizarCampos();
         }
         private void actualizarCampos() {
@@ -56,7 +58,14 @@ namespace AppBTS.Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            if (this.txtbNumeroReserva.Text == "" || this.txtbNumeroMesa.Text == "" || this.txtbFechaReserva.Text == "" || this.txtbHoraReserva.Text == "" || this.txtbCliente.Text == "" || this.txtbTelefono.Text == "" || this.txtbCantidadComensales.Text == "")
+                MessageBox.Show("Por favor, no deje campos en blanco.", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
 
+                MessageBox.Show("Cambios registrados con éxito.", "Modificar Reserva", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
         }
     }
 }
