@@ -21,5 +21,25 @@ namespace AppBTS.Negocio
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);
         }
+
+        public void AgregarMesa()
+        {
+            string alta = "INSERT INTO Mesas"
+                            + " VALUES"
+                            + " (@nroMesa, + @cantidadSillas, @borrado)";
+            BDHelper oAlta = new BDHelper();
+            oAlta.insertarMesa(this, alta);
+        }
+        public void Borrar(string mesaClickeada)
+        {
+            string consulta = " UPDATE Mesas"
+                            + " SET borrado = 1"
+                            + " WHERE nroMesa = " + mesaClickeada;
+
+            BDHelper oDatos = new BDHelper();
+            oDatos.consultar(consulta);
+
+
+        }
     }
 }
