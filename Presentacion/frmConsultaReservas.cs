@@ -31,7 +31,7 @@ namespace AppBTS.Presentacion
         {
             limpiar();
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Bugs' Puede moverla o quitarla según sea necesario.
-            this.dtpFechaDesde.Value = DateTime.Today.AddYears(-1);
+            this.dtpFechaDesde.Value = DateTime.Today.AddDays(-7);
             this.dtpFechaHasta.Value = DateTime.Today;
 
             this.CargarCombo(cboNroReserva, oReservas.RecuperarTodosConParametro( "nroReserva"));
@@ -159,20 +159,47 @@ namespace AppBTS.Presentacion
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Está seguro que desea Eliminar esta Reserva?", "CONFIRMACION PARA ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes) { 
-                oReservas.Borrar(Global.IdReserva);
-                string _nroReserva, _nroMesa, _telefono, _cantidadComensales, _nombreCliente, _horaReserva;
-                _nroReserva = _nroMesa = _cantidadComensales = _telefono = _nombreCliente = _horaReserva = string.Empty;
-                this.CargarGrilla(dgvReservas, oReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
-                                                                  dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
-                                                                  _nroReserva,
-                                                                  _nroMesa,
-                                                                  _telefono,
-                                                                  _cantidadComensales,
-                                                                  _nombreCliente,
-                                                                  _horaReserva));
-                limpiar();
+            oReservas.Borrar(Global.IdReserva);
+            string _nroReserva, _nroMesa, _telefono, _cantidadComensales, _nombreCliente, _horaReserva;
+            _nroReserva = _nroMesa = _cantidadComensales = _telefono = _nombreCliente = _horaReserva = string.Empty;
+            if (dtpFechaDesde.Value > dtpFechaHasta.Value)
+            {
+                MessageBox.Show("Fechas erroneas!!!");
+                dtpFechaDesde.Focus();
+                return;
             }
+
+            if (cboNroReserva.SelectedIndex != -1)
+                _nroReserva = cboNroReserva.SelectedValue.ToString();
+            if (cboTelefono.SelectedIndex != -1)
+                _telefono = cboTelefono.SelectedValue.ToString();
+            if (cboComensales.SelectedIndex != -1)
+                _cantidadComensales = cboComensales.SelectedValue.ToString();
+            if (cboNroMesa.SelectedIndex != -1)
+                _nroMesa = cboNroMesa.SelectedValue.ToString();
+            if (cboNombreCliente.SelectedIndex != -1)
+                _nombreCliente = cboNombreCliente.SelectedValue.ToString();
+            if (cboHora.SelectedIndex != -1)
+                _horaReserva = cboHora.SelectedValue.ToString();
+
+            /*this.dgvReservas.DataSource = oReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
+                                                              dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
+                                                              _nroReserva,
+                                                              _nroMesa,
+                                                              _telefono,
+                                                              _cantidadComensales,
+                                                              _nombreCliente);*/
+
+            this.CargarGrilla(dgvReservas, oReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
+                                                              dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
+                                                              _nroReserva,
+                                                              _nroMesa,
+                                                              _telefono,
+                                                              _cantidadComensales,
+                                                              _nombreCliente,
+                                                              _horaReserva));
+
+            limpiar();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
