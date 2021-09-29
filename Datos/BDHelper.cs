@@ -30,6 +30,8 @@ namespace AppBTS.Datos
             return tabla;
         }
         public void insertarMesa(Mesas mesa, string altaSQL)
+
+        public void insertarArticulo(Articulo art, string altaSQL)
         {
             conexion.ConnectionString = cadenaConexion;
             conexion.Open();
@@ -40,9 +42,29 @@ namespace AppBTS.Datos
             comando.Parameters.AddWithValue("@nroMesa", mesa.NroMesa);
             comando.Parameters.AddWithValue("@cantidadSillas", mesa.CantidadSillas);
             comando.Parameters.AddWithValue("@borrado", false);
+            comando.Parameters.AddWithValue("@idArticulo", art.IdSiguiente());
+            comando.Parameters.AddWithValue("@nombre", art.Nombre);
+            comando.Parameters.AddWithValue("@precioUnitario", art.PrecioUnitario);
+            comando.Parameters.AddWithValue("@borrado", false);
+            comando.Parameters.AddWithValue("@idTipoArticulo", art.IdTipoArticulo);
+            comando.ExecuteNonQuery();
+
+            conexion.Close();
+        }
+
+        public void actualizarArticulo(string modificacionSQL)
+        {
+            conexion.ConnectionString = cadenaConexion;
+            conexion.Open();
+
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = modificacionSQL;
+
             comando.ExecuteNonQuery();
 
             conexion.Close();
         }
     }
 }
+
