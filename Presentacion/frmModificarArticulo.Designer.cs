@@ -210,6 +210,7 @@ namespace AppBTS.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Sienna;
             this.ClientSize = new System.Drawing.Size(540, 380);
             this.Controls.Add(this.btnEditarTipo);
             this.Controls.Add(this.btnEditarPrecio);
