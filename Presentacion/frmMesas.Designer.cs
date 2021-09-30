@@ -31,13 +31,15 @@ namespace AppBTS.Presentacion
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.añadirMesaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.recuperarMesasBorradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.añadirMesaToolStripMenuItem});
+            this.añadirMesaToolStripMenuItem,
+            this.recuperarMesasBorradaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -50,6 +52,13 @@ namespace AppBTS.Presentacion
             this.añadirMesaToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.añadirMesaToolStripMenuItem.Text = "Añadir Mesa...";
             this.añadirMesaToolStripMenuItem.Click += new System.EventHandler(this.añadirMesaToolStripMenuItem_Click);
+            // 
+            // recuperarMesasBorradaToolStripMenuItem
+            // 
+            this.recuperarMesasBorradaToolStripMenuItem.Name = "recuperarMesasBorradaToolStripMenuItem";
+            this.recuperarMesasBorradaToolStripMenuItem.Size = new System.Drawing.Size(157, 20);
+            this.recuperarMesasBorradaToolStripMenuItem.Text = "Recuperar Mesas Borradas";
+            this.recuperarMesasBorradaToolStripMenuItem.Click += new System.EventHandler(this.recuperarMesasBorradaToolStripMenuItem_Click);
             // 
             // frmMesas
             // 
@@ -72,5 +81,6 @@ namespace AppBTS.Presentacion
         #endregion
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem añadirMesaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem recuperarMesasBorradaToolStripMenuItem;
     }
 }

@@ -22,6 +22,14 @@ namespace AppBTS.Negocio
             return oDatos.consultar(consulta);
         }
 
+        public DataTable RecuperarBorrados()
+        {
+            string consulta = "SELECT * FROM Mesas WHERE borrado = 1 order by nroMesa";
+
+            BDHelper oDatos = new BDHelper();
+            return oDatos.consultar(consulta);
+        }
+
         public void AgregarMesa(string nroMesa)
         {
             if (VerificarExistencia(nroMesa).Rows.Count == 0) 

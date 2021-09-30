@@ -45,7 +45,7 @@ namespace AppBTS.Presentacion
                             Image = AppBTS.Properties.Resources.Mesa1,
                             Width = 221,
                             Height = 176,
-                            Text = String.Format("{0}", j + 1 + 3 * i),
+                            Text = tabla.Rows[cantBotones]["nroMesa"].ToString(),
                             TextAlign = System.Drawing.ContentAlignment.BottomRight,
                             Top = i * 176 + 30,
                             Left = j * 221 + 70,
@@ -103,6 +103,35 @@ namespace AppBTS.Presentacion
         private void frmMesas_Load(object sender, EventArgs e)
         {
             ActualizarMesas();
+        }
+
+        private void recuperarMesasBorradaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRecuperarMesas frmb = new frmRecuperarMesas();
+            frmb.FormClosed += frmb_FormClosed;
+            frmb.Show();
+        }
+
+        private void frm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form frm = sender as Form;
+            if (frm.DialogResult == DialogResult.OK)
+            {
+                this.Controls.Clear();
+                InitializeComponent();
+                ActualizarMesas();
+            }
+        }
+
+        private void frmb_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form frm = sender as Form;
+            if (frm.DialogResult == DialogResult.OK)
+            {
+                this.Controls.Clear();
+                InitializeComponent();
+                ActualizarMesas();
+            }
         }
     }
 }
