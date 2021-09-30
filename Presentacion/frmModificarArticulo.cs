@@ -21,6 +21,8 @@ namespace AppBTS.Presentacion
             articulo = seleccionado;
         }
 
+        //Carga el combo de Tipos de Artículo con todos los tipos y lo deja seleccionado en el tipo del artículo que se quiere modificar.
+        //Carga el nombre del artículo en el textbox de nombre y su precio en el textbox de precio.
         private void frmModificarArticulo_Load(object sender, EventArgs e)
         {
             CargarCombo(cboTipo, oTipo.RecuperarTodos());
@@ -47,6 +49,8 @@ namespace AppBTS.Presentacion
             combo.SelectedIndex = -1;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
+
+        //Muestra el artículo cargado para modificación en una grilla de 1 fila.
         private void CargarGrilla(DataGridView grilla, Articulo art)
         {
             grilla.Rows.Add(art.IdArticulo, art.Nombre, art.PrecioUnitario, oTipo.RecuperarPorId(art.IdTipoArticulo));
@@ -55,6 +59,8 @@ namespace AppBTS.Presentacion
         {
             this.Close();
         }
+
+        //Muestra los valores ingresados en la grilla, reemplazando a los originales, cuando se hace click en el botón de previsualizar cambios. No modifica el artículo.
         private void btnPrevisualizar_Click(object sender, EventArgs e)
         {
             dgvArticulo.Rows[0].Cells[1].Value = txtNombre.Text;
@@ -95,6 +101,7 @@ namespace AppBTS.Presentacion
             btnGuardar.Enabled = true;
         }
 
+        //Cambia en el objeto artículo los atributos que se hayan decidido editar, y le pide al objeto que se modifique en la BD con sus valores nuevos.
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             string nombre = txtNombre.Text;

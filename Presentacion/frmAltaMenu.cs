@@ -38,6 +38,7 @@ namespace AppBTS.Presentacion
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
 
+        //Cuando se elige un tipo de artículo en el combo de Tipos, carga los artículos de ese tipo en el combo de Artículos.
         private void cboTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboTipo.SelectedIndex != -1 & cboTipo.ValueMember != "")
@@ -48,6 +49,7 @@ namespace AppBTS.Presentacion
             }
         }
 
+        //Habilita el botón para agregar un detalle una vez que se eligió un artículo.
         private void cboArticulos_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cboArticulos.SelectedIndex != -1 & cboArticulos.ValueMember != "")
@@ -56,8 +58,10 @@ namespace AppBTS.Presentacion
             }
         }
 
+        //Agrega un detalle a la grilla cuando se hace click en el botón.
         private void btnAgregar_Click(object sender, EventArgs e)
         {
+            //Se fija si ya hay un detalle con el artículo elegido que esté cargado en la grilla.
             bool noRepetido = true;
             int repetido = 0;
             for (int i = 0; i < dgvDetallesMenu.Rows.Count; i++)
@@ -73,6 +77,7 @@ namespace AppBTS.Presentacion
             double precio = Convert.ToDouble(oArticulo.RecuperarPrecio(cboArticulos.SelectedValue.ToString()));
             if (noRepetido)
             {
+                //Si no está el artículo ya cargado, agrega el detalle normalmente.
                 double subtotal = cantidad * precio;
                 dgvDetallesMenu.Rows.Add(cboArticulos.SelectedValue, cboArticulos.Text, precio, cantidad, subtotal);
                 btnBorrar.Enabled = true;
@@ -81,6 +86,8 @@ namespace AppBTS.Presentacion
             }
             else
             {
+                //Si ya hay un detalle cargado con ese artículo, pregunta si quiere agregar la cantidad ingresada al detalle ya existente. (Si ya cargué 2 milanesas,
+                //y ahora intento cargar 2 más, me pregunta si quiero en realidad cargar 4). Si elige sí, se agregan. Si elige no, queda el detalle como estaba.
                 if (MessageBox.Show("Artículo ya agregado en el menú. ¿Desea aumentar la cantidad de este artículo en " + cantidad.ToString() + "?", "Nuevo Menú", 
                     MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
                 {
@@ -95,6 +102,7 @@ namespace AppBTS.Presentacion
             btnAgregar.Enabled = false;
         }
 
+        //Elimina los detalles seleccionados en la grilla cuando hace click en el botón de borrar.
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             if (dgvDetallesMenu.SelectedRows.Count > 0)
@@ -117,6 +125,7 @@ namespace AppBTS.Presentacion
             this.Close();
         }
 
+        //Hace validaciones y si todo está en orden, guarda el menú creado.
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             if (ValidarNombre())
@@ -171,6 +180,8 @@ namespace AppBTS.Presentacion
             }
             return true;
         }
+
+        //Crea un objeto menú con los atributos asignados en el formulario, y le pide que se registre en la BD.
         private void GuardarMenu()
         {
             oMenu.IdMenu = oMenu.IdSiguiente();
@@ -182,6 +193,8 @@ namespace AppBTS.Presentacion
             MessageBox.Show("Menú registrado con éxito.", "Nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Limpiar();
         }
+        
+        //Genera los objetos detalles de menú correspondientes a cada fila de la grilla.
         private DetalleMenu[] GenerarDetalles(int idMenu)
         {
             DetalleMenu[] detalles = new DetalleMenu[dgvDetallesMenu.RowCount - 1];

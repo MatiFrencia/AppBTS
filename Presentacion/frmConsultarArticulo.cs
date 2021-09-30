@@ -39,6 +39,7 @@ namespace AppBTS.Presentacion
             this.Close();
         }
 
+        //Cuando se hace click en el botón de consultar. Si se marcó la opción de ver todos, trae todos los artículos. Si no, filtra por los parámetros ingresados.
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             if (chkTodos.Checked)
@@ -67,6 +68,7 @@ namespace AppBTS.Presentacion
             }
         }
 
+        //Llama al form de Registrar Artículo cuando se hace click en el botón de "Nuevo".
         private void btnNuevo_Click(object sender, EventArgs e)
         {
             frmRegistrarArticulo fra = new frmRegistrarArticulo();
@@ -74,12 +76,14 @@ namespace AppBTS.Presentacion
             fra.Dispose();
         }
 
+        //Permite eliminar o modificar un artículo una vez que se lo selecciona en la grilla.
         private void dgvArticulos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             btnEliminar.Enabled = true;
             btnModificar.Enabled = true;
         }
 
+        //Si hace click en el botón de modificar, arma un objeto correspondiente al artículo seleccionado y se lo pasa por parámetro al form de Modificar Artículo.
         private void btnModificar_Click(object sender, EventArgs e)
         {
             Articulo seleccionado = new Articulo();
@@ -93,6 +97,8 @@ namespace AppBTS.Presentacion
             fma.Dispose();
         }
 
+        //Habilita o deshabilita los combo y textbox según si se marca o desmarca la opción de Ver todos, ya que si se eligen ver todos los artículos, no se va a
+        //filtrar por ningún criterio.
         private void chkTodos_CheckedChanged(object sender, EventArgs e)
         {
             if (chkTodos.Checked)
@@ -109,6 +115,7 @@ namespace AppBTS.Presentacion
             }
         }
 
+        //Pide confirmación si se hace click en el botón de eliminar un artículo, y si se confirma le hace borrado lógico.
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             Articulo seleccionado = new Articulo();
