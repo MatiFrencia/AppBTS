@@ -169,7 +169,7 @@
             // 
             this.dgvReservas.AllowUserToAddRows = false;
             this.dgvReservas.AllowUserToDeleteRows = false;
-            this.dgvReservas.BackgroundColor = System.Drawing.Color.Sienna;
+            this.dgvReservas.BackgroundColor = System.Drawing.Color.Tan;
             this.dgvReservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {

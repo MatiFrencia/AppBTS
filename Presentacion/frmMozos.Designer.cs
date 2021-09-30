@@ -333,6 +333,7 @@ namespace AppBTS.Presentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMozos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMozos";
             this.Load += new System.EventHandler(this.frmMozos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMozos)).EndInit();
