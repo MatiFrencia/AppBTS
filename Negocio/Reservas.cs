@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace AppBTS.Negocio
 {
@@ -15,7 +16,7 @@ namespace AppBTS.Negocio
         private DateTime fechaReserva;
         private TimeSpan horaReserva;
         private string  nombreCliente;
-        private int telefono;
+        private string telefono;
         private int cantidadComensales;
         private bool borrado;
 
@@ -24,7 +25,7 @@ namespace AppBTS.Negocio
         public DateTime FechaReserva { get => fechaReserva; set => fechaReserva = value; }
         public TimeSpan HoraReserva { get => horaReserva; set => horaReserva = value; }
         public string NombreCliente { get => nombreCliente; set => nombreCliente = value; }
-        public int Telefono { get => telefono; set => telefono = value; }
+        public string Telefono { get => telefono; set => telefono = value; }
         public int CantidadComensales { get => cantidadComensales; set => cantidadComensales = value; }
         public bool Borrado { get => borrado; set => borrado = value; }
 
@@ -97,37 +98,46 @@ namespace AppBTS.Negocio
             oModificacion.actualizarArticulo(modificacion);
         }
 
-        /*public void AgregarMesa(string nroMesa)
+        public void AgregarReserva(string nroReserva)
         {
-            if (VerificarExistencia(nroMesa).Rows.Count == 0)
+            if (VerificarExistencia(nroReserva).Rows.Count == 0)
             {
-                string alta = "INSERT INTO Mesas"
+                string alta = "INSERT INTO Reservas"
                                 + " VALUES"
-                                + " (" + nroMesa + ", @cantidadSillas, @borrado)";
+                                + " (" + Convert.ToInt32(nroReserva) + ", @nroMesa, @fechaReserva, @horaReserva, @nombreCliente, @telefono, @cantidadComensales, @borrado)";
                 BDHelper oAlta = new BDHelper();
-                oAlta.insertarMesa(this, alta);
+                oAlta.insertarReserva(this, alta);
             }
             else
             {
-                LevantarMesa(nroMesa);
+                if (MessageBox.Show("Actualmente existe una reserva borrada con dicho número de Reserva, desea crearla nuevamente?", "Reserva existente", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                        LevantarReserva(nroReserva);
             }
         }
 
-        public DataTable VerificarExistencia(string nroMesa)
+        public DataTable VerificarExistencia(string nroReserva)
         {
-            string verificacion = "SELECT 1 FROM Mesas WHERE nroMesa = " + nroMesa;
+            string verificacion = "SELECT 1 FROM Reservas WHERE nroReserva = " + nroReserva;
             BDHelper oVerificacion = new BDHelper();
             return oVerificacion.consultar(verificacion);
         }
-        public void LevantarMesa(string nroMesa)
+        public void LevantarReserva(string nroReserva)
         {
-            string consulta = " UPDATE Mesas"
+            string consulta = " UPDATE Reservas"
                             + " SET borrado = 0"
-                            + " WHERE nroMesa = " + nroMesa;
+                            + " WHERE nroReserva = " + nroReserva;
 
             BDHelper oDatos = new BDHelper();
             oDatos.consultar(consulta);
-        }*/
+        }
+        public int IdSiguiente()
+        {
+            string consulta = "SELECT MAX(nroReserva) FROM Reservas WHERE borrado = 0";
+            BDHelper oDatos = new BDHelper();
+            DataTable idmax = oDatos.consultar(consulta);
+            int id = Convert.ToInt32(idmax.Rows[0][0].ToString());
+            return id + 1;
+        }
     }   
     
 }

@@ -49,6 +49,9 @@ namespace AppBTS.Presentacion
                 limpiar();
                 campos(true);
                 this.txtbNumeroReserva.Enabled = false;
+                string numReserva = oReserva.IdSiguiente().ToString();
+                this.txtbNumeroReserva.Text = numReserva;
+                
             }
             if (tipos == "Edit")
             {
@@ -101,26 +104,28 @@ namespace AppBTS.Presentacion
                 oReserva.Modificar(numReserva,Convert.ToInt32(txtbNumeroMesa.Text),txtbFechaReserva.Text, txtbHoraReserva.Text,
                                    txtbCliente.Text,txtbTelefono.Text,Convert.ToInt32(txtbCantidadComensales.Text));
             }
+
+            if (tipos == "New")
+            {
+                oReserva.NroReserva = Convert.ToInt32(txtbNumeroReserva.Text);
+                oReserva.NroMesa = Convert.ToInt32(txtbNumeroMesa.Text);
+                oReserva.FechaReserva = Convert.ToDateTime(txtbFechaReserva.Text);
+                oReserva.HoraReserva = TimeSpan.Parse(txtbHoraReserva.Text);
+                oReserva.NombreCliente = txtbCliente.Text;
+                oReserva.Telefono = txtbTelefono.Text;
+                oReserva.CantidadComensales = Convert.ToInt32(txtbCantidadComensales.Text);
+                numReserva = Convert.ToInt32(txtbNumeroReserva.Text);
+                oReserva.AgregarReserva(numReserva.ToString());
+            }
+
             this.Close();
         }
 
-        private void btnConfirmarMesa_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-            /*string nroMesa = oReservas.IdSiguiente().ToString();
-            string nroSillas = nmrNroSillas.Text;
-            if (nroMesa == "" || nroSillas == "")
-                MessageBox.Show("Por favor, complete todos los campos requeridos.", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
-            else
-            {
-                oMesas.NroMesa = Convert.ToInt32(nroMesa);
-                oMesas.CantidadSillas = nroSillas;
-                oMesas.AgregarMesa(nroMesa.ToString());
-                MessageBox.Show("Mesa registrada con éxito.", "Nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }*/
-
+            if (MessageBox.Show("Está seguro que desea Salir?", "ATENCION, NO se guardaran los cambios", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                this.DialogResult = DialogResult.Cancel;
+            this.Close();
         }
     }
 
