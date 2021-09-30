@@ -10,12 +10,6 @@ namespace AppBTS.Negocio
 {
     public class Articulo
     {
-        private int idArticulo;
-        private string nombre;
-        private double precioUnitario;
-        private bool borrado;
-        private int idTipoArticulo;
-
         public int IdArticulo { get; set; }
         public string Nombre { get; set; }
         public double PrecioUnitario { get; set; }
@@ -36,6 +30,15 @@ namespace AppBTS.Negocio
             DataTable ids = oDatos.consultar(consulta);
             int ultimo = Convert.ToInt32(ids.Rows[0][0]);
             return ultimo + 1;
+        }
+
+        public double RecuperarPrecio(string idArticulo)
+        {
+            string consulta = "SELECT pcioUnitario FROM Articulos WHERE idArticulo=" + idArticulo;
+            BDHelper oDatos = new BDHelper();
+            DataTable pcio = oDatos.consultar(consulta);
+            double precio = Convert.ToDouble(pcio.Rows[0]["pcioUnitario"]);
+            return precio;
         }
 
         public DataTable RecuperarFiltrados(string idArticulo, string nombre, string idTipoArticulo)

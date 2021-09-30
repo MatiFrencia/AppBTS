@@ -229,7 +229,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblIdArticulo);
             this.Controls.Add(this.dgvArticulos);
             this.Name = "frmConsultarArticulo";
-            this.Text = "frmConsultarArticulo";
+            this.Text = "Artículos";
             this.Load += new System.EventHandler(this.frmConsultarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);

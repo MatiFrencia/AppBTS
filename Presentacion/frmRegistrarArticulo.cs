@@ -23,6 +23,7 @@ namespace AppBTS.Presentacion
         private void frmRegistrarArticulo_Load(object sender, EventArgs e)
         {
             CargarCombo(cboTipo, oTipo.RecuperarTodos());
+            
             btnGuardar.Enabled = false;
         }
 
