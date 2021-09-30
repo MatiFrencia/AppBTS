@@ -79,6 +79,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Tan;
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.lblFechaDesde);
             this.groupBox1.Controls.Add(this.lblFechaHasta);
@@ -154,7 +155,7 @@
             // 
             // cboHora
             // 
-            this.cboHora.BackColor = System.Drawing.Color.Sienna;
+            this.cboHora.BackColor = System.Drawing.Color.Tan;
             this.cboHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboHora.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboHora.FormattingEnabled = true;
@@ -243,7 +244,7 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.BackColor = System.Drawing.Color.Sienna;
+            this.btnConsultar.BackColor = System.Drawing.Color.Tan;
             this.btnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -255,12 +256,12 @@
             this.btnConsultar.Size = new System.Drawing.Size(134, 35);
             this.btnConsultar.TabIndex = 14;
             this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // cboComensales
             // 
-            this.cboComensales.BackColor = System.Drawing.Color.Sienna;
+            this.cboComensales.BackColor = System.Drawing.Color.Tan;
             this.cboComensales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboComensales.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboComensales.FormattingEnabled = true;
@@ -272,7 +273,7 @@
             // 
             // cboTelefono
             // 
-            this.cboTelefono.BackColor = System.Drawing.Color.Sienna;
+            this.cboTelefono.BackColor = System.Drawing.Color.Tan;
             this.cboTelefono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboTelefono.FormattingEnabled = true;
@@ -284,7 +285,7 @@
             // 
             // cboNombreCliente
             // 
-            this.cboNombreCliente.BackColor = System.Drawing.Color.Sienna;
+            this.cboNombreCliente.BackColor = System.Drawing.Color.Tan;
             this.cboNombreCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNombreCliente.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNombreCliente.FormattingEnabled = true;
@@ -296,7 +297,7 @@
             // 
             // cboNroMesa
             // 
-            this.cboNroMesa.BackColor = System.Drawing.Color.Sienna;
+            this.cboNroMesa.BackColor = System.Drawing.Color.Tan;
             this.cboNroMesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroMesa.FormattingEnabled = true;
@@ -308,7 +309,7 @@
             // 
             // cboNroReserva
             // 
-            this.cboNroReserva.BackColor = System.Drawing.Color.Sienna;
+            this.cboNroReserva.BackColor = System.Drawing.Color.Tan;
             this.cboNroReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroReserva.FormattingEnabled = true;
@@ -416,7 +417,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Sienna;
+            this.btnNuevo.BackColor = System.Drawing.Color.Tan;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
@@ -426,7 +427,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(72, 56);
             this.btnNuevo.TabIndex = 1;
             this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo");
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnAsignar
@@ -458,7 +459,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Sienna;
+            this.btnSalir.BackColor = System.Drawing.Color.Tan;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
@@ -487,7 +488,7 @@
             // btnEditar
             // 
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.ForeColor = System.Drawing.Color.Sienna;
+            this.btnEditar.ForeColor = System.Drawing.Color.Tan;
             this.btnEditar.Image = global::AppBTS.Properties.Resources.documentediting;
             this.btnEditar.Location = new System.Drawing.Point(135, 565);
             this.btnEditar.Name = "btnEditar";
@@ -512,7 +513,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Sienna;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(914, 624);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEditar);

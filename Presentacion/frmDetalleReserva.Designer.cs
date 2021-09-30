@@ -119,7 +119,7 @@ namespace AppBTS.Presentacion
             // 
             // txtbCantidadComensales
             // 
-            this.txtbCantidadComensales.BackColor = System.Drawing.Color.Sienna;
+            this.txtbCantidadComensales.BackColor = System.Drawing.Color.Tan;
             this.txtbCantidadComensales.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbCantidadComensales.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbCantidadComensales.Location = new System.Drawing.Point(207, 362);
@@ -130,7 +130,7 @@ namespace AppBTS.Presentacion
             // 
             // txtbTelefono
             // 
-            this.txtbTelefono.BackColor = System.Drawing.Color.Sienna;
+            this.txtbTelefono.BackColor = System.Drawing.Color.Tan;
             this.txtbTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbTelefono.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbTelefono.Location = new System.Drawing.Point(207, 310);
@@ -141,7 +141,7 @@ namespace AppBTS.Presentacion
             // 
             // txtbCliente
             // 
-            this.txtbCliente.BackColor = System.Drawing.Color.Sienna;
+            this.txtbCliente.BackColor = System.Drawing.Color.Tan;
             this.txtbCliente.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbCliente.Location = new System.Drawing.Point(207, 258);
@@ -152,7 +152,7 @@ namespace AppBTS.Presentacion
             // 
             // txtbHoraReserva
             // 
-            this.txtbHoraReserva.BackColor = System.Drawing.Color.Sienna;
+            this.txtbHoraReserva.BackColor = System.Drawing.Color.Tan;
             this.txtbHoraReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbHoraReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbHoraReserva.Location = new System.Drawing.Point(207, 206);
@@ -164,7 +164,7 @@ namespace AppBTS.Presentacion
             // 
             // txtbFechaReserva
             // 
-            this.txtbFechaReserva.BackColor = System.Drawing.Color.Sienna;
+            this.txtbFechaReserva.BackColor = System.Drawing.Color.Tan;
             this.txtbFechaReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbFechaReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbFechaReserva.Location = new System.Drawing.Point(207, 154);
@@ -175,7 +175,7 @@ namespace AppBTS.Presentacion
             // 
             // txtbNumeroMesa
             // 
-            this.txtbNumeroMesa.BackColor = System.Drawing.Color.Sienna;
+            this.txtbNumeroMesa.BackColor = System.Drawing.Color.Tan;
             this.txtbNumeroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbNumeroMesa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbNumeroMesa.Location = new System.Drawing.Point(207, 102);
@@ -186,7 +186,7 @@ namespace AppBTS.Presentacion
             // 
             // txtbNumeroReserva
             // 
-            this.txtbNumeroReserva.BackColor = System.Drawing.Color.Sienna;
+            this.txtbNumeroReserva.BackColor = System.Drawing.Color.Tan;
             this.txtbNumeroReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbNumeroReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.txtbNumeroReserva.Location = new System.Drawing.Point(207, 50);
@@ -197,7 +197,7 @@ namespace AppBTS.Presentacion
             // 
             // btnAceptar
             // 
-            this.btnAceptar.BackColor = System.Drawing.Color.Sienna;
+            this.btnAceptar.BackColor = System.Drawing.Color.Tan;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Location = new System.Drawing.Point(122, 429);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -224,7 +224,7 @@ namespace AppBTS.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Sienna;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(371, 491);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnAceptar);

@@ -20,7 +20,7 @@ namespace AppBTS
             //Application.Run(new AppBTS.Presentacion.frmConsultaReservas());
             //Application.Run(new AppBTS.Presentacion.frmMesas());
             //Application.Run(new AppBTS.Presentacion.frmConsultarArticulo());
-            Application.Run(new AppBTS.Presentacion.frmMozos());
+            //Application.Run(new AppBTS.Presentacion.frmMozos());
         }
     }
 }

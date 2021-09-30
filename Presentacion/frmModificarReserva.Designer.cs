@@ -38,6 +38,8 @@ namespace AppBTS.Presentacion
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lblCantidadComensales = new System.Windows.Forms.Label();
             this.txtbCantidadComensales = new System.Windows.Forms.TextBox();
+            this.reservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bAR_PAVDataSet = new AppBTS.BAR_PAVDataSet();
             this.txtbTelefono = new System.Windows.Forms.TextBox();
             this.txtbCliente = new System.Windows.Forms.TextBox();
             this.txtbHoraReserva = new System.Windows.Forms.TextBox();
@@ -48,11 +50,9 @@ namespace AppBTS.Presentacion
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblCamposObligatorios = new System.Windows.Forms.Label();
             this.lbTitulo = new System.Windows.Forms.Label();
-            this.bAR_PAVDataSet = new AppBTS.BAR_PAVDataSet();
-            this.reservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reservasTableAdapter = new AppBTS.BAR_PAVDataSetTableAdapters.ReservasTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.bAR_PAVDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bAR_PAVDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNroReserva
@@ -127,7 +127,8 @@ namespace AppBTS.Presentacion
             // 
             // txtbCantidadComensales
             // 
-            this.txtbCantidadComensales.BackColor = System.Drawing.Color.Sienna;
+            this.txtbCantidadComensales.BackColor = System.Drawing.Color.Tan;
+            this.txtbCantidadComensales.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbCantidadComensales.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "cantidadComensales", true));
             this.txtbCantidadComensales.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbCantidadComensales.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -137,9 +138,20 @@ namespace AppBTS.Presentacion
             this.txtbCantidadComensales.Size = new System.Drawing.Size(28, 26);
             this.txtbCantidadComensales.TabIndex = 6;
             // 
+            // reservasBindingSource
+            // 
+            this.reservasBindingSource.DataMember = "Reservas";
+            this.reservasBindingSource.DataSource = this.bAR_PAVDataSet;
+            // 
+            // bAR_PAVDataSet
+            // 
+            this.bAR_PAVDataSet.DataSetName = "BAR_PAVDataSet";
+            this.bAR_PAVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // txtbTelefono
             // 
-            this.txtbTelefono.BackColor = System.Drawing.Color.Sienna;
+            this.txtbTelefono.BackColor = System.Drawing.Color.Tan;
+            this.txtbTelefono.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbTelefono.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "telefono", true));
             this.txtbTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbTelefono.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -151,7 +163,8 @@ namespace AppBTS.Presentacion
             // 
             // txtbCliente
             // 
-            this.txtbCliente.BackColor = System.Drawing.Color.Sienna;
+            this.txtbCliente.BackColor = System.Drawing.Color.Tan;
+            this.txtbCliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbCliente.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "nombreCliente", true));
             this.txtbCliente.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -163,7 +176,8 @@ namespace AppBTS.Presentacion
             // 
             // txtbHoraReserva
             // 
-            this.txtbHoraReserva.BackColor = System.Drawing.Color.Sienna;
+            this.txtbHoraReserva.BackColor = System.Drawing.Color.Tan;
+            this.txtbHoraReserva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbHoraReserva.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "horaReserva", true));
             this.txtbHoraReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbHoraReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -176,7 +190,8 @@ namespace AppBTS.Presentacion
             // 
             // txtbFechaReserva
             // 
-            this.txtbFechaReserva.BackColor = System.Drawing.Color.Sienna;
+            this.txtbFechaReserva.BackColor = System.Drawing.Color.Tan;
+            this.txtbFechaReserva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbFechaReserva.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "fechaReserva", true));
             this.txtbFechaReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbFechaReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -188,7 +203,8 @@ namespace AppBTS.Presentacion
             // 
             // txtbNumeroMesa
             // 
-            this.txtbNumeroMesa.BackColor = System.Drawing.Color.Sienna;
+            this.txtbNumeroMesa.BackColor = System.Drawing.Color.Tan;
+            this.txtbNumeroMesa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbNumeroMesa.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "nroMesa", true));
             this.txtbNumeroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbNumeroMesa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -200,7 +216,8 @@ namespace AppBTS.Presentacion
             // 
             // txtbNumeroReserva
             // 
-            this.txtbNumeroReserva.BackColor = System.Drawing.Color.Sienna;
+            this.txtbNumeroReserva.BackColor = System.Drawing.Color.Tan;
+            this.txtbNumeroReserva.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtbNumeroReserva.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.reservasBindingSource, "nroReserva", true, System.Windows.Forms.DataSourceUpdateMode.OnValidation, null, "N2"));
             this.txtbNumeroReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbNumeroReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
@@ -212,7 +229,7 @@ namespace AppBTS.Presentacion
             // 
             // btnAceptar
             // 
-            this.btnAceptar.BackColor = System.Drawing.Color.Sienna;
+            this.btnAceptar.BackColor = System.Drawing.Color.Tan;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAceptar.Location = new System.Drawing.Point(201, 437);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -225,7 +242,7 @@ namespace AppBTS.Presentacion
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Sienna;
+            this.btnCancelar.BackColor = System.Drawing.Color.Tan;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Location = new System.Drawing.Point(74, 437);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -259,16 +276,6 @@ namespace AppBTS.Presentacion
             this.lbTitulo.TabIndex = 17;
             this.lbTitulo.Text = "Modificar Reserva";
             // 
-            // bAR_PAVDataSet
-            // 
-            this.bAR_PAVDataSet.DataSetName = "BAR_PAVDataSet";
-            this.bAR_PAVDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // reservasBindingSource
-            // 
-            this.reservasBindingSource.DataMember = "Reservas";
-            this.reservasBindingSource.DataSource = this.bAR_PAVDataSet;
-            // 
             // reservasTableAdapter
             // 
             this.reservasTableAdapter.ClearBeforeFill = true;
@@ -277,7 +284,7 @@ namespace AppBTS.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Sienna;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(371, 491);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.lblCamposObligatorios);
@@ -306,8 +313,8 @@ namespace AppBTS.Presentacion
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Registrar Reserva";
             this.Load += new System.EventHandler(this.frmAltaReserva_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.bAR_PAVDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bAR_PAVDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

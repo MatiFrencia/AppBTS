@@ -61,7 +61,7 @@ namespace AppBTS.Presentacion
             // 
             this.dgvMozos.AllowUserToAddRows = false;
             this.dgvMozos.AllowUserToDeleteRows = false;
-            this.dgvMozos.BackgroundColor = System.Drawing.Color.Sienna;
+            this.dgvMozos.BackgroundColor = System.Drawing.Color.Tan;
             this.dgvMozos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMozos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMozos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -109,7 +109,7 @@ namespace AppBTS.Presentacion
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Sienna;
+            this.btnAdd.BackColor = System.Drawing.Color.Tan;
             this.btnAdd.BackgroundImage = global::AppBTS.Properties.Resources.new_add_user;
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -127,7 +127,7 @@ namespace AppBTS.Presentacion
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Sienna;
+            this.btnDelete.BackColor = System.Drawing.Color.Tan;
             this.btnDelete.BackgroundImage = global::AppBTS.Properties.Resources.delete_exit;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -144,7 +144,7 @@ namespace AppBTS.Presentacion
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.Sienna;
+            this.btnEdit.BackColor = System.Drawing.Color.Tan;
             this.btnEdit.BackgroundImage = global::AppBTS.Properties.Resources.documentediting;
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -161,7 +161,7 @@ namespace AppBTS.Presentacion
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Sienna;
+            this.btnCancel.BackColor = System.Drawing.Color.Tan;
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -178,7 +178,7 @@ namespace AppBTS.Presentacion
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Sienna;
+            this.btnSave.BackColor = System.Drawing.Color.Tan;
             this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -243,7 +243,7 @@ namespace AppBTS.Presentacion
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Sienna;
+            this.btnExit.BackColor = System.Drawing.Color.Tan;
             this.btnExit.BackgroundImage = global::AppBTS.Properties.Resources.logout_door;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -310,7 +310,7 @@ namespace AppBTS.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Sienna;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(664, 382);
             this.Controls.Add(this.numeric);
             this.Controls.Add(this.label3);
