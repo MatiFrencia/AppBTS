@@ -16,7 +16,8 @@ namespace AppBTS.Presentacion
         Reservas oReservas = new Reservas();
         Mesas oMesas= new Mesas();
         Usuario oUsuario = new Usuario();
-        
+
+
         public frmConsultaReservas()
         {
             InitializeComponent();
@@ -28,8 +29,10 @@ namespace AppBTS.Presentacion
             public static string IdReserva { get => idReserva; set => idReserva = value; }
         }
 
+        
         private void frmConsultaReservas_Load(object sender, EventArgs e)
         {
+            
             limpiar();
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Bugs' Puede moverla o quitarla según sea necesario.
             this.dtpFechaDesde.Value = DateTime.Today.AddYears(-1);
@@ -136,7 +139,9 @@ namespace AppBTS.Presentacion
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            frmAltaReserva far = new frmAltaReserva();
+            
+            frmDetalleReserva far = new frmDetalleReserva();
+            far.Tipos = "New";
             far.ShowDialog();
             far.Dispose();
         }
@@ -197,23 +202,26 @@ namespace AppBTS.Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            frmModificarReserva fmr = new frmModificarReserva();
-            fmr.ShowDialog();
-            fmr.Dispose();
+
+            frmDetalleReserva far = new frmDetalleReserva();
+            far.Tipos = "Edit";
+            far.ShowDialog();
+            far.Dispose();
         }
 
         private void btnDetalle_Click(object sender, EventArgs e)
         {
-            frmDetalleReserva fdr = new frmDetalleReserva();
-            fdr.NumReserva = (int)dgvReservas.CurrentRow.Cells[0].Value;
-            fdr.NumMesa = (int)dgvReservas.CurrentRow.Cells[1].Value;
-            fdr.FechaReserva = (DateTime)dgvReservas.CurrentRow.Cells[2].Value;
-            fdr.HoraReserva = (TimeSpan)dgvReservas.CurrentRow.Cells[3].Value;
-            fdr.NomCliente = dgvReservas.CurrentRow.Cells[4].Value.ToString();
-            fdr.TelCliente = dgvReservas.CurrentRow.Cells[5].Value.ToString();
-            fdr.CantComensales = (int)dgvReservas.CurrentRow.Cells[6].Value;
-            fdr.ShowDialog();
-            fdr.Dispose();
+            frmDetalleReserva far = new frmDetalleReserva();
+            far.Tipos = "Detail";
+            far.NumReserva = (int)dgvReservas.CurrentRow.Cells[0].Value;
+            far.NumMesa = (int)dgvReservas.CurrentRow.Cells[1].Value;
+            far.FechaReserva = (DateTime)dgvReservas.CurrentRow.Cells[2].Value;
+            far.HoraReserva = (TimeSpan)dgvReservas.CurrentRow.Cells[3].Value;
+            far.NomCliente = dgvReservas.CurrentRow.Cells[4].Value.ToString();
+            far.TelCliente = dgvReservas.CurrentRow.Cells[5].Value.ToString();
+            far.CantComensales = (int)dgvReservas.CurrentRow.Cells[6].Value;
+            far.ShowDialog();
+            far.Dispose();
         }
 
         private void btnClear_Click(object sender, EventArgs e)

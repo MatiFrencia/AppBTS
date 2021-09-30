@@ -98,18 +98,6 @@
     <Compile Include="Presentacion\frmDetalleReserva.Designer.cs">
       <DependentUpon>frmDetalleReserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="Presentacion\frmModificarReserva.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frmModificarReserva.Designer.cs">
-      <DependentUpon>frmModificarReserva.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Presentacion\frmAltaReserva.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Presentacion\frmAltaReserva.Designer.cs">
-      <DependentUpon>frmAltaReserva.cs</DependentUpon>
-    </Compile>
     <Compile Include="Negocio\Articulo.cs" />
     <Compile Include="Negocio\Reservas.cs" />
     <Compile Include="Negocio\Mesas.cs" />
@@ -182,12 +170,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmDetalleReserva.resx">
       <DependentUpon>frmDetalleReserva.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmModificarReserva.resx">
-      <DependentUpon>frmModificarReserva.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Presentacion\frmAltaReserva.resx">
-      <DependentUpon>frmAltaReserva.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Presentacion\frmRegistrarArticulo.cs">
       <SubType>Form</SubType>
