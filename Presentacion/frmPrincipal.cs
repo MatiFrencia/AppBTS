@@ -94,5 +94,12 @@ namespace AppBTS
             fam.ShowDialog();
             fam.Dispose();
         }
+
+        private void mozosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMozos fm = new frmMozos();
+            fm.ShowDialog();
+            fm.Dispose();
+        }
     }
 }
