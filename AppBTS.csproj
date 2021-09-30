@@ -74,6 +74,12 @@
     <Compile Include="Presentacion\frmAltaMesa.Designer.cs">
       <DependentUpon>frmAltaMesa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmConsultarMenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultarMenus.Designer.cs">
+      <DependentUpon>frmConsultarMenus.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmDetallesMesa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmAltaMesa.resx">
       <DependentUpon>frmAltaMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmConsultarMenus.resx">
+      <DependentUpon>frmConsultarMenus.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmDetallesMesa.resx">
       <DependentUpon>frmDetallesMesa.cs</DependentUpon>
