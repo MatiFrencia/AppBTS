@@ -39,7 +39,6 @@ namespace AppBTS.Presentacion
             this.lblId = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
@@ -51,7 +50,9 @@ namespace AppBTS.Presentacion
             this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeric = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMozos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMozos
@@ -184,15 +185,6 @@ namespace AppBTS.Presentacion
             this.lblApellido.TabIndex = 8;
             this.lblApellido.Text = "Apeliido:";
             // 
-            // txtId
-            // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(468, 75);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(48, 24);
-            this.txtId.TabIndex = 5;
-            // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(468, 133);
@@ -293,12 +285,20 @@ namespace AppBTS.Presentacion
             this.borrado.ReadOnly = true;
             this.borrado.Visible = false;
             // 
+            // numeric
+            // 
+            this.numeric.Location = new System.Drawing.Point(467, 76);
+            this.numeric.Name = "numeric";
+            this.numeric.Size = new System.Drawing.Size(50, 24);
+            this.numeric.TabIndex = 23;
+            // 
             // frmMozos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Sienna;
             this.ClientSize = new System.Drawing.Size(664, 382);
+            this.Controls.Add(this.numeric);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -306,7 +306,6 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblId);
@@ -323,6 +322,7 @@ namespace AppBTS.Presentacion
             this.Text = "frmMozos";
             this.Load += new System.EventHandler(this.frmMozos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMozos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +339,6 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Button btnExit;
@@ -351,5 +350,6 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn borrado;
+        private System.Windows.Forms.NumericUpDown numeric;
     }
 }

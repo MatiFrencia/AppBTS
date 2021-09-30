@@ -15,7 +15,8 @@ namespace AppBTS.Negocio
         public string nombre { get; set; }
         public string apellido { get; set; }
         public bool Borrado { get; set; }
-        public DataTable traerTodos() {
+        public DataTable traerTodos()
+        {
             string consulta = "SELECT m.idMozo,m.nombre,m.apellido FROM Mozos m WHERE m.borrado=0";
             BDHelper oDatos = new BDHelper();
             DataTable tabla = oDatos.consultar(consulta);
@@ -29,11 +30,31 @@ namespace AppBTS.Negocio
             DataTable tabla = oDatos.consultar(consulta);
             return tabla;
         }
-        public void Eliminar()
+        public void Eliminar(int id)
         {
-            string baja = "UPDATE Mozos SET borrado = 1 WHERE idMozo=" + idMozo.ToString();
+            string baja = "UPDATE Mozos SET borrado = 1 WHERE idMozo=" + id.ToString();
             BDHelper oBaja = new BDHelper();
             oBaja.actualizarArticulo(baja);
+        }
+        public void Modificar(int id, string nombre, string apellido)
+        {
+            string modificacion = "UPDATE Mozos SET nombre = '" + nombre + "' ,apellido = '" + apellido + "' WHERE idMozo= '" + id.ToString() + "'";
+            BDHelper oModificacion = new BDHelper();
+            oModificacion.actualizarArticulo(modificacion);
+        }
+        public void Insertar(int id, string nombre, string apellido)
+        {
+            string modificacion = "INSERT INTO Mozos VALUES('" + id.ToString() + "','" + nombre + "','" + apellido + "',0)";
+            BDHelper oModificacion = new BDHelper();
+            oModificacion.actualizarArticulo(modificacion);
+        }
+        public int IdSiguiente()
+        {
+            string consulta = "SELECT m.idMozo FROM Mozos m ORDER BY m.idMozo DESC";
+            BDHelper oDatos = new BDHelper();
+            DataTable ids = oDatos.consultar(consulta);
+            int ultimo = Convert.ToInt32(ids.Rows[0][0]);
+            return ultimo + 1;
         }
     }
 }
