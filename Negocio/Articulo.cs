@@ -74,7 +74,7 @@ namespace AppBTS.Negocio
                 modificacion += "idTipoArticulo = " + IdTipoArticulo.ToString();
             modificacion += " WHERE idArticulo=" + IdArticulo.ToString();
             BDHelper oModificacion = new BDHelper();
-            oModificacion.actualizarArticulo(modificacion);
+            oModificacion.actualizar(modificacion);
         }
         public DataTable RecuperarTodos()
         {
@@ -88,7 +88,7 @@ namespace AppBTS.Negocio
         {
             string baja = "UPDATE Articulos SET borrado = 1 WHERE idArticulo=" + IdArticulo.ToString();
             BDHelper oBaja = new BDHelper();
-            oBaja.actualizarArticulo(baja);
+            oBaja.actualizar(baja);
         }
     }
 }

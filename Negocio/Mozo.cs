@@ -34,19 +34,19 @@ namespace AppBTS.Negocio
         {
             string baja = "UPDATE Mozos SET borrado = 1 WHERE idMozo=" + id.ToString();
             BDHelper oBaja = new BDHelper();
-            oBaja.actualizarArticulo(baja);
+            oBaja.actualizar(baja);
         }
         public void Modificar(int id, string nombre, string apellido)
         {
             string modificacion = "UPDATE Mozos SET nombre = '" + nombre + "' ,apellido = '" + apellido + "' WHERE idMozo= '" + id.ToString() + "'";
             BDHelper oModificacion = new BDHelper();
-            oModificacion.actualizarArticulo(modificacion);
+            oModificacion.actualizar(modificacion);
         }
         public void Insertar(int id, string nombre, string apellido)
         {
             string modificacion = "INSERT INTO Mozos VALUES('" + id.ToString() + "','" + nombre + "','" + apellido + "',0)";
             BDHelper oModificacion = new BDHelper();
-            oModificacion.actualizarArticulo(modificacion);
+            oModificacion.actualizar(modificacion);
         }
         public int IdSiguiente()
         {
