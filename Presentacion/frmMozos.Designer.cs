@@ -29,8 +29,13 @@ namespace AppBTS.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMozos));
             this.dgvMozos = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.borrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -39,7 +44,6 @@ namespace AppBTS.Presentacion
             this.lblId = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.btnExit = new System.Windows.Forms.Button();
@@ -47,17 +51,18 @@ namespace AppBTS.Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.borrado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numeric = new System.Windows.Forms.NumericUpDown();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMozos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvMozos
             // 
             this.dgvMozos.AllowUserToAddRows = false;
             this.dgvMozos.AllowUserToDeleteRows = false;
+            this.dgvMozos.BackgroundColor = System.Drawing.Color.Tan;
+            this.dgvMozos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvMozos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMozos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -71,11 +76,40 @@ namespace AppBTS.Presentacion
             this.dgvMozos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMozos.Size = new System.Drawing.Size(345, 261);
             this.dgvMozos.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.dgvMozos, "Mozos.");
             this.dgvMozos.SelectionChanged += new System.EventHandler(this.dgvMozos_SelectionChanged);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Width = 50;
+            // 
+            // nombre
+            // 
+            this.nombre.HeaderText = "Nombre";
+            this.nombre.Name = "nombre";
+            this.nombre.ReadOnly = true;
+            this.nombre.Width = 125;
+            // 
+            // apellido
+            // 
+            this.apellido.HeaderText = "Apellido";
+            this.apellido.Name = "apellido";
+            this.apellido.ReadOnly = true;
+            this.apellido.Width = 125;
+            // 
+            // borrado
+            // 
+            this.borrado.HeaderText = "Borrado";
+            this.borrado.Name = "borrado";
+            this.borrado.ReadOnly = true;
+            this.borrado.Visible = false;
             // 
             // btnAdd
             // 
-            this.btnAdd.BackColor = System.Drawing.Color.Sienna;
+            this.btnAdd.BackColor = System.Drawing.Color.Tan;
             this.btnAdd.BackgroundImage = global::AppBTS.Properties.Resources.new_add_user;
             this.btnAdd.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -87,12 +121,13 @@ namespace AppBTS.Presentacion
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(76, 68);
             this.btnAdd.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.btnAdd, "Añadir un nuevo Mozo.");
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDelete
             // 
-            this.btnDelete.BackColor = System.Drawing.Color.Sienna;
+            this.btnDelete.BackColor = System.Drawing.Color.Tan;
             this.btnDelete.BackgroundImage = global::AppBTS.Properties.Resources.delete_exit;
             this.btnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -103,12 +138,13 @@ namespace AppBTS.Presentacion
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(76, 68);
             this.btnDelete.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btnDelete, "Eliminar un Mozo.");
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnEdit
             // 
-            this.btnEdit.BackColor = System.Drawing.Color.Sienna;
+            this.btnEdit.BackColor = System.Drawing.Color.Tan;
             this.btnEdit.BackgroundImage = global::AppBTS.Properties.Resources.documentediting;
             this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -119,12 +155,13 @@ namespace AppBTS.Presentacion
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(76, 68);
             this.btnEdit.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btnEdit, "Editar un nuevo Mozo.");
             this.btnEdit.UseVisualStyleBackColor = false;
             this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.BackColor = System.Drawing.Color.Sienna;
+            this.btnCancel.BackColor = System.Drawing.Color.Tan;
             this.btnCancel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCancel.BackgroundImage")));
             this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -135,12 +172,13 @@ namespace AppBTS.Presentacion
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(76, 68);
             this.btnCancel.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.btnCancel, "Cancelar cambios.");
             this.btnCancel.UseVisualStyleBackColor = false;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
-            this.btnSave.BackColor = System.Drawing.Color.Sienna;
+            this.btnSave.BackColor = System.Drawing.Color.Tan;
             this.btnSave.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSave.BackgroundImage")));
             this.btnSave.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -151,6 +189,7 @@ namespace AppBTS.Presentacion
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(76, 68);
             this.btnSave.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.btnSave, "Guardar Cambios.");
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -184,15 +223,6 @@ namespace AppBTS.Presentacion
             this.lblApellido.TabIndex = 8;
             this.lblApellido.Text = "Apeliido:";
             // 
-            // txtId
-            // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(468, 75);
-            this.txtId.Margin = new System.Windows.Forms.Padding(4);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(48, 24);
-            this.txtId.TabIndex = 5;
-            // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(468, 133);
@@ -200,6 +230,7 @@ namespace AppBTS.Presentacion
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(148, 24);
             this.txtNombre.TabIndex = 6;
+            this.toolTip1.SetToolTip(this.txtNombre, "Nombre del Mozo.");
             // 
             // txtApellido
             // 
@@ -208,10 +239,11 @@ namespace AppBTS.Presentacion
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(148, 24);
             this.txtApellido.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.txtApellido, "Apellido del Mozo.");
             // 
             // btnExit
             // 
-            this.btnExit.BackColor = System.Drawing.Color.Sienna;
+            this.btnExit.BackColor = System.Drawing.Color.Tan;
             this.btnExit.BackgroundImage = global::AppBTS.Properties.Resources.logout_door;
             this.btnExit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -222,6 +254,7 @@ namespace AppBTS.Presentacion
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(76, 68);
             this.btnExit.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btnExit, "Salir.");
             this.btnExit.UseVisualStyleBackColor = false;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
@@ -265,40 +298,21 @@ namespace AppBTS.Presentacion
             this.label3.TabIndex = 22;
             this.label3.Text = "|";
             // 
-            // id
+            // numeric
             // 
-            this.id.HeaderText = "Id";
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Width = 50;
-            // 
-            // nombre
-            // 
-            this.nombre.HeaderText = "Nombre";
-            this.nombre.Name = "nombre";
-            this.nombre.ReadOnly = true;
-            this.nombre.Width = 125;
-            // 
-            // apellido
-            // 
-            this.apellido.HeaderText = "Apellido";
-            this.apellido.Name = "apellido";
-            this.apellido.ReadOnly = true;
-            this.apellido.Width = 125;
-            // 
-            // borrado
-            // 
-            this.borrado.HeaderText = "Borrado";
-            this.borrado.Name = "borrado";
-            this.borrado.ReadOnly = true;
-            this.borrado.Visible = false;
+            this.numeric.Location = new System.Drawing.Point(467, 76);
+            this.numeric.Name = "numeric";
+            this.numeric.Size = new System.Drawing.Size(50, 24);
+            this.numeric.TabIndex = 23;
+            this.toolTip1.SetToolTip(this.numeric, "Id del Mozo.");
             // 
             // frmMozos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Sienna;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(664, 382);
+            this.Controls.Add(this.numeric);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -306,7 +320,6 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblApellido);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblId);
@@ -320,9 +333,11 @@ namespace AppBTS.Presentacion
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMozos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmMozos";
             this.Load += new System.EventHandler(this.frmMozos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMozos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -339,7 +354,6 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.Label lblId;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblApellido;
-        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Button btnExit;
@@ -351,5 +365,7 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn borrado;
+        private System.Windows.Forms.NumericUpDown numeric;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

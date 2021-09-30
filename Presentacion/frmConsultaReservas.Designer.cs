@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaReservas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.lblFechaHasta = new System.Windows.Forms.Label();
             this.txtHora = new System.Windows.Forms.Label();
@@ -70,7 +71,6 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
-            this.btnClear = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
@@ -79,6 +79,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Tan;
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.lblFechaDesde);
             this.groupBox1.Controls.Add(this.lblFechaHasta);
@@ -110,6 +111,20 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Criterios";
             // 
+            // btnClear
+            // 
+            this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
+            this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Location = new System.Drawing.Point(845, 178);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(36, 35);
+            this.btnClear.TabIndex = 22;
+            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // lblFechaDesde
             // 
             this.lblFechaDesde.AutoSize = true;
@@ -140,7 +155,7 @@
             // 
             // cboHora
             // 
-            this.cboHora.BackColor = System.Drawing.Color.Sienna;
+            this.cboHora.BackColor = System.Drawing.Color.Tan;
             this.cboHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboHora.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboHora.FormattingEnabled = true;
@@ -154,7 +169,7 @@
             // 
             this.dgvReservas.AllowUserToAddRows = false;
             this.dgvReservas.AllowUserToDeleteRows = false;
-            this.dgvReservas.BackgroundColor = System.Drawing.Color.Sienna;
+            this.dgvReservas.BackgroundColor = System.Drawing.Color.Tan;
             this.dgvReservas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvReservas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvReservas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -229,7 +244,7 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.BackColor = System.Drawing.Color.Sienna;
+            this.btnConsultar.BackColor = System.Drawing.Color.Tan;
             this.btnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText;
@@ -241,12 +256,12 @@
             this.btnConsultar.Size = new System.Drawing.Size(134, 35);
             this.btnConsultar.TabIndex = 14;
             this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = true;
+            this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
             // cboComensales
             // 
-            this.cboComensales.BackColor = System.Drawing.Color.Sienna;
+            this.cboComensales.BackColor = System.Drawing.Color.Tan;
             this.cboComensales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboComensales.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboComensales.FormattingEnabled = true;
@@ -258,7 +273,7 @@
             // 
             // cboTelefono
             // 
-            this.cboTelefono.BackColor = System.Drawing.Color.Sienna;
+            this.cboTelefono.BackColor = System.Drawing.Color.Tan;
             this.cboTelefono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboTelefono.FormattingEnabled = true;
@@ -270,7 +285,7 @@
             // 
             // cboNombreCliente
             // 
-            this.cboNombreCliente.BackColor = System.Drawing.Color.Sienna;
+            this.cboNombreCliente.BackColor = System.Drawing.Color.Tan;
             this.cboNombreCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNombreCliente.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNombreCliente.FormattingEnabled = true;
@@ -282,7 +297,7 @@
             // 
             // cboNroMesa
             // 
-            this.cboNroMesa.BackColor = System.Drawing.Color.Sienna;
+            this.cboNroMesa.BackColor = System.Drawing.Color.Tan;
             this.cboNroMesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroMesa.FormattingEnabled = true;
@@ -294,7 +309,7 @@
             // 
             // cboNroReserva
             // 
-            this.cboNroReserva.BackColor = System.Drawing.Color.Sienna;
+            this.cboNroReserva.BackColor = System.Drawing.Color.Tan;
             this.cboNroReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroReserva.FormattingEnabled = true;
@@ -402,7 +417,7 @@
             // 
             // btnNuevo
             // 
-            this.btnNuevo.BackColor = System.Drawing.Color.Sienna;
+            this.btnNuevo.BackColor = System.Drawing.Color.Tan;
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
@@ -412,7 +427,7 @@
             this.btnNuevo.Size = new System.Drawing.Size(72, 56);
             this.btnNuevo.TabIndex = 1;
             this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo");
-            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnAsignar
@@ -444,14 +459,14 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.BackColor = System.Drawing.Color.Sienna;
+            this.btnSalir.BackColor = System.Drawing.Color.Tan;
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
             this.btnSalir.Location = new System.Drawing.Point(818, 566);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(53, 40);
-            this.btnSalir.TabIndex = 19;
+            this.btnSalir.TabIndex = 5;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -462,23 +477,23 @@
             this.btnBorrar.FlatAppearance.BorderSize = 0;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Image = global::AppBTS.Properties.Resources.delete_exit;
-            this.btnBorrar.Location = new System.Drawing.Point(152, 564);
+            this.btnBorrar.Location = new System.Drawing.Point(251, 566);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(0);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(53, 40);
-            this.btnBorrar.TabIndex = 20;
+            this.btnBorrar.TabIndex = 3;
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.ForeColor = System.Drawing.Color.Sienna;
+            this.btnEditar.ForeColor = System.Drawing.Color.Tan;
             this.btnEditar.Image = global::AppBTS.Properties.Resources.documentediting;
-            this.btnEditar.Location = new System.Drawing.Point(254, 565);
+            this.btnEditar.Location = new System.Drawing.Point(135, 565);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(53, 40);
-            this.btnEditar.TabIndex = 21;
+            this.btnEditar.TabIndex = 2;
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -490,29 +505,15 @@
             this.btnDetalle.Location = new System.Drawing.Point(446, 565);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(53, 40);
-            this.btnDetalle.TabIndex = 22;
+            this.btnDetalle.TabIndex = 4;
             this.btnDetalle.UseVisualStyleBackColor = false;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
-            // 
-            // btnClear
-            // 
-            this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
-            this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnClear.FlatAppearance.BorderSize = 0;
-            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(845, 178);
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(36, 35);
-            this.btnClear.TabIndex = 22;
-            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnClear.UseVisualStyleBackColor = true;
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // frmConsultaReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Sienna;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(914, 624);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEditar);

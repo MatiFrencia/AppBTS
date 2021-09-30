@@ -61,14 +61,6 @@ namespace AppBTS
             fcb.ShowDialog();
             fcb.Dispose();
         }
-
-        private void registrarReservaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAltaReserva far = new frmAltaReserva();
-            far.ShowDialog();
-            far.Dispose();
-        }
-
         private void articuloToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmRegistrarArticulo fra = new frmRegistrarArticulo();
@@ -81,6 +73,25 @@ namespace AppBTS
             frmConsultarArticulo fca = new frmConsultarArticulo();
             fca.ShowDialog();
             fca.Dispose();
+        }
+
+        private void menúsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menúToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAltaMenu fam = new frmAltaMenu();
+            fam.ShowDialog();
+            fam.Dispose();
+        }
+
+        private void mozosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMozos fm = new frmMozos();
+            fm.ShowDialog();
+            fm.Dispose();
         }
     }
 }

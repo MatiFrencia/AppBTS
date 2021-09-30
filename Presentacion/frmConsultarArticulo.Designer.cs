@@ -213,7 +213,7 @@ namespace AppBTS.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Sienna;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(535, 515);
             this.Controls.Add(this.chkTodos);
             this.Controls.Add(this.btnEliminar);
@@ -229,7 +229,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblIdArticulo);
             this.Controls.Add(this.dgvArticulos);
             this.Name = "frmConsultarArticulo";
-            this.Text = "frmConsultarArticulo";
+            this.Text = "Artículos";
             this.Load += new System.EventHandler(this.frmConsultarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             this.ResumeLayout(false);

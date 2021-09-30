@@ -210,7 +210,7 @@ namespace AppBTS.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Sienna;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(540, 380);
             this.Controls.Add(this.btnEditarTipo);
             this.Controls.Add(this.btnEditarPrecio);
@@ -226,7 +226,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblNombre);
             this.Name = "frmModificarArticulo";
-            this.Text = "frmModificarArticulo";
+            this.Text = "Editar Artículo";
             this.Load += new System.EventHandler(this.frmModificarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();
             this.ResumeLayout(false);

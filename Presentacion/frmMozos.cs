@@ -58,12 +58,13 @@ namespace AppBTS.Presentacion
             }
         }
         private void campos(bool x){
-            this.txtId.Enabled = x;
+            this.numeric.Enabled = false;
             this.txtNombre.Enabled = x;
             this.txtApellido.Enabled = x;
         }
         private void limpiar() {
-            this.txtId.Clear();
+            //ACA ESTA EL ERROR
+            this.numeric.Text = "";
             this.txtNombre.Clear();
             this.txtApellido.Clear();
         }
@@ -82,9 +83,8 @@ namespace AppBTS.Presentacion
             limpiar();
             vista(true);
             buttons(false);
+            this.numeric.Value = oMozo.IdSiguiente();
             campos(true);
-            this.txtId.Focus();
-            
             nuevo = true;
         }
 
@@ -100,44 +100,41 @@ namespace AppBTS.Presentacion
             vista(true);
             if (MessageBox.Show("Esta seguro de eliminar a: "+txtNombre.Text+" "+txtApellido.Text, "ELIMINANDO", MessageBoxButtons.YesNo,MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                oMozo.Eliminar();
+                oMozo.Eliminar((int)this.numeric.Value);
+                CargarGrilla(dgvMozos, oMozo.traerTodos());
             }
-            CargarGrilla(dgvMozos, oMozo.traerTodos());
+            
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             buttons(true);
             vista(false);
-            CargarGrilla(dgvMozos, oMozo.traerTodos());
+            campos(false);
             //validar
-            if (txtId.Text == string.Empty)
-            {
-                MessageBox.Show("Debe ingresar un ID.", "Error en la carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtId.Focus();
-            }
             if (txtNombre.Text == string.Empty)
             {
                 MessageBox.Show("Debe ingresar un Nombre.", "Error en la carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNombre.Focus();
             }
-            if (txtId.Text == string.Empty)
+            if (txtApellido.Text == string.Empty)
             {
                 MessageBox.Show("Debe ingresar un Apellido.", "Error en la carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtApellido.Focus();
             }
-            //oMozo.idMozo = txtId.Text;
+            oMozo.idMozo = (int)numeric.Value;
             oMozo.nombre = txtNombre.Text;
             oMozo.apellido = txtApellido.Text;
             if (nuevo)
             {
-                //instert
+                oMozo.Insertar(oMozo.idMozo, oMozo.nombre, oMozo.apellido);
             }
             else
             {
-                //update
+                oMozo.Modificar(oMozo.idMozo, oMozo.nombre, oMozo.apellido);
             }
             nuevo = false;
+            CargarGrilla(dgvMozos, oMozo.traerTodos());
 
         }
 
@@ -148,7 +145,6 @@ namespace AppBTS.Presentacion
             campos(false);
             this.actualizarCampos((int)dgvMozos.CurrentRow.Cells[0].Value);
             nuevo = false;
-
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -159,17 +155,24 @@ namespace AppBTS.Presentacion
 
         private void dgvMozos_SelectionChanged(object sender, EventArgs e)
         {
-            this.actualizarCampos((int)dgvMozos.CurrentRow.Cells[0].Value);
-            vista(true);
+            try
+            {
+                this.actualizarCampos((int)dgvMozos.CurrentRow.Cells[0].Value);
+                vista(true);
+            }
+            catch (Exception)
+            {
+                limpiar();
+            }
         }
 
         private void actualizarCampos(int id)
         {
             DataTable tabla = new DataTable();
             tabla = oMozo.traerSegunId(id);
-            this.txtId.Text = tabla.Rows[0][0].ToString();
-            this.txtNombre.Text = tabla.Rows[0][1].ToString();
-            this.txtApellido.Text = tabla.Rows[0][2].ToString();
+            this.numeric.Value = (int)tabla.Rows[0]["idMozo"];
+            this.txtNombre.Text = tabla.Rows[0]["nombre"].ToString();
+            this.txtApellido.Text = tabla.Rows[0]["apellido"].ToString();
         }
     }
 }
