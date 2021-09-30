@@ -57,9 +57,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>masterDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Negocio\DetalleMenu.cs" />
+    <Compile Include="Negocio\Menu.cs" />
     <Compile Include="Negocio\Mesas.cs" />
     <Compile Include="Negocio\Mozo.cs" />
     <Compile Include="Negocio\Usuario.cs" />
+    <Compile Include="Presentacion\frmAltaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAltaMenu.Designer.cs">
+      <DependentUpon>frmAltaMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmAltaMesa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +159,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\frmAltaMenu.resx">
+      <DependentUpon>frmAltaMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmAltaMesa.resx">
       <DependentUpon>frmAltaMesa.cs</DependentUpon>
     </EmbeddedResource>

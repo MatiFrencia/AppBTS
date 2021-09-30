@@ -67,5 +67,13 @@ namespace AppBTS
                 this.txtUsuario.Focus();
             }
         }
+
+        private void txtClave_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.btnIngresar.PerformClick();
+            }
+        }
     }
 }

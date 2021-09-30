@@ -31,6 +31,18 @@ namespace AppBTS.Datos
             return tabla;
         }
 
+        public int consultaSumaria(string consultaSQL)
+        {
+            conexion.ConnectionString = cadenaConexion;
+            conexion.Open();
+
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = consultaSQL;
+            int resultado = (int)comando.ExecuteScalar();
+            return resultado;
+        }
+
         public void insertarArticulo(Articulo art, string altaSQL)
         {
             conexion.ConnectionString = cadenaConexion;
@@ -87,6 +99,39 @@ namespace AppBTS.Datos
             //comando.CommandText = consulta;
             //comando.ExecuteNonQuery();
             //conexion.Close();
+        }
+
+        public void insertarMenu(Menus menu, string altaSQL)
+        {
+            conexion.ConnectionString = cadenaConexion;
+            conexion.Open();
+
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = altaSQL;
+            comando.Parameters.AddWithValue("@idMenu", menu.IdMenu);
+            comando.Parameters.AddWithValue("@nombre", menu.Nombre);
+            comando.Parameters.AddWithValue("@pcioUnitario", menu.PrecioUnitario);
+            comando.Parameters.AddWithValue("@borrado", menu.Borrado);
+            comando.ExecuteNonQuery();
+
+            conexion.Close();
+        }
+        public void insertarDetalleMenu(DetalleMenu detalle, string altaSQL)
+        {
+            conexion.ConnectionString = cadenaConexion;
+            conexion.Open();
+
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = altaSQL;
+            comando.Parameters.AddWithValue("@idMenu", detalle.IdMenu);
+            comando.Parameters.AddWithValue("@idArticulo", detalle.IdArticulo);
+            comando.Parameters.AddWithValue("@cantidad", detalle.Cantidad);
+            comando.Parameters.AddWithValue("@borrado", detalle.Borrado);
+            comando.ExecuteNonQuery();
+
+            conexion.Close();
         }
     }
 }

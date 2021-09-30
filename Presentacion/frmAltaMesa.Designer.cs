@@ -86,8 +86,15 @@ namespace AppBTS.Presentacion
             // 
             // nmrNroMesa
             // 
+            this.nmrNroMesa.Increment = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.nmrNroMesa.InterceptArrowKeys = false;
             this.nmrNroMesa.Location = new System.Drawing.Point(92, 24);
             this.nmrNroMesa.Name = "nmrNroMesa";
+            this.nmrNroMesa.ReadOnly = true;
             this.nmrNroMesa.Size = new System.Drawing.Size(39, 20);
             this.nmrNroMesa.TabIndex = 2;
             // 

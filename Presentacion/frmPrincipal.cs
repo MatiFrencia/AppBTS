@@ -82,5 +82,17 @@ namespace AppBTS
             fca.ShowDialog();
             fca.Dispose();
         }
+
+        private void menúsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menúToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAltaMenu fam = new frmAltaMenu();
+            fam.ShowDialog();
+            fam.Dispose();
+        }
     }
 }

@@ -81,6 +81,7 @@
             this.txtClave.PasswordChar = '•';
             this.txtClave.Size = new System.Drawing.Size(177, 26);
             this.txtClave.TabIndex = 1;
+            this.txtClave.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtClave_KeyUp);
             // 
             // btnIngresar
             // 

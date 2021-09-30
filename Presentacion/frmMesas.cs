@@ -17,7 +17,6 @@ namespace AppBTS.Presentacion
         public frmMesas()
         {
             InitializeComponent();
-            ActualizarMesas();
         }
         public string NroMesa { get; set; }
         public string BotonClickeado { get; set; }
@@ -77,6 +76,8 @@ namespace AppBTS.Presentacion
             Form fam = sender as Form;
             if (fam.DialogResult == DialogResult.OK)
             {
+                this.Controls.Clear();
+                InitializeComponent();
                 ActualizarMesas();
             }
         }
@@ -85,9 +86,23 @@ namespace AppBTS.Presentacion
         {
             var button = (Button)sender; //obtenemos el botón clickeado
             frmDetallesMesa fdm = new frmDetallesMesa(button);
+            fdm.FormClosed += fdm_FormClosed;
             fdm.ShowDialog();
         }
+        private void fdm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Form fdm = sender as Form;
+            if (fdm.DialogResult == DialogResult.OK)
+            {
+                this.Controls.Clear();
+                InitializeComponent();
+                ActualizarMesas();
+            }
+        }
 
-
+        private void frmMesas_Load(object sender, EventArgs e)
+        {
+            ActualizarMesas();
+        }
     }
 }

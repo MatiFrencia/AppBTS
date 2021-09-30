@@ -226,7 +226,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblNombre);
             this.Name = "frmModificarArticulo";
-            this.Text = "frmModificarArticulo";
+            this.Text = "Editar Artículo";
             this.Load += new System.EventHandler(this.frmModificarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();
             this.ResumeLayout(false);
