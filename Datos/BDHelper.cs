@@ -108,7 +108,7 @@ namespace AppBTS.Datos
 
             conexion.Close();
         }
-        public void actualizar(string consulta) {
+        //public void actualizar(string consulta) {
             //conexion.ConnectionString = cadenaConexion;
             //conexion.Open();
 
@@ -117,7 +117,7 @@ namespace AppBTS.Datos
             //comando.CommandText = consulta;
             //comando.ExecuteNonQuery();
             //conexion.Close();
-        }
+        //}
 
         public void insertarMenu(Menus menu, string altaSQL)
         {
