@@ -35,11 +35,14 @@ namespace AppBTS.Datos
         {
             conexion.ConnectionString = cadenaConexion;
             conexion.Open();
-
+            int resultado = 0;
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
             comando.CommandText = consultaSQL;
-            int resultado = (int)comando.ExecuteScalar();
+            if (comando.ExecuteScalar().ToString() != "") 
+            {
+                resultado = (int)comando.ExecuteScalar();
+            }
             return resultado;
         }
 

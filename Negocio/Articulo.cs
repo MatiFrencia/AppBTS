@@ -27,8 +27,12 @@ namespace AppBTS.Negocio
         {
             string consulta = "SELECT a.idArticulo FROM Articulos a ORDER BY a.idArticulo DESC";
             BDHelper oDatos = new BDHelper();
+            int ultimo = 0;
             DataTable ids = oDatos.consultar(consulta);
-            int ultimo = Convert.ToInt32(ids.Rows[0][0]);
+            if (ids.Rows.Count != 0)
+            { 
+                ultimo = Convert.ToInt32(ids.Rows[0][0]);
+            }
             return ultimo + 1;
         }
 

@@ -122,9 +122,9 @@ namespace AppBTS.Presentacion
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            if (MessageBox.Show("Está seguro que desea Salir?", "ATENCION, NO se guardaran los cambios", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-                this.DialogResult = DialogResult.Cancel;
+        {   if (tipos != "Detail")
+                if (MessageBox.Show("Está seguro que desea Salir?", "ATENCION, NO se guardaran los cambios", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                    this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
     }

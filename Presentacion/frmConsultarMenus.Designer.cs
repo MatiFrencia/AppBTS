@@ -38,21 +38,21 @@ namespace AppBTS.Presentacion
             this.cboArticulo = new System.Windows.Forms.ComboBox();
             this.chkTodos = new System.Windows.Forms.CheckBox();
             this.dgvMenus = new System.Windows.Forms.DataGridView();
+            this.IdMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PcioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblId = new System.Windows.Forms.Label();
             this.txtIdMenu = new System.Windows.Forms.TextBox();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnVisualizar = new System.Windows.Forms.Button();
             this.dgvDetalles = new System.Windows.Forms.DataGridView();
+            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.NombreArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
-            this.IdMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreMenu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PcioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.SuspendLayout();
@@ -133,6 +133,27 @@ namespace AppBTS.Presentacion
             this.dgvMenus.TabIndex = 7;
             this.dgvMenus.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenus_CellClick);
             // 
+            // IdMenu
+            // 
+            this.IdMenu.HeaderText = "Id del Menú";
+            this.IdMenu.Name = "IdMenu";
+            this.IdMenu.ReadOnly = true;
+            this.IdMenu.Width = 50;
+            // 
+            // NombreMenu
+            // 
+            this.NombreMenu.HeaderText = "Nombre";
+            this.NombreMenu.Name = "NombreMenu";
+            this.NombreMenu.ReadOnly = true;
+            this.NombreMenu.Width = 200;
+            // 
+            // PcioUnitario
+            // 
+            this.PcioUnitario.HeaderText = "Precio Unitario";
+            this.PcioUnitario.Name = "PcioUnitario";
+            this.PcioUnitario.ReadOnly = true;
+            this.PcioUnitario.Width = 125;
+            // 
             // lblId
             // 
             this.lblId.AutoSize = true;
@@ -181,6 +202,27 @@ namespace AppBTS.Presentacion
             this.dgvDetalles.Size = new System.Drawing.Size(431, 188);
             this.dgvDetalles.TabIndex = 12;
             // 
+            // TipoArticulo
+            // 
+            this.TipoArticulo.HeaderText = "Tipo de Artículo";
+            this.TipoArticulo.Name = "TipoArticulo";
+            this.TipoArticulo.ReadOnly = true;
+            this.TipoArticulo.Width = 150;
+            // 
+            // NombreArticulo
+            // 
+            this.NombreArticulo.HeaderText = "Artículo";
+            this.NombreArticulo.Name = "NombreArticulo";
+            this.NombreArticulo.ReadOnly = true;
+            this.NombreArticulo.Width = 175;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            this.Cantidad.Width = 50;
+            // 
             // btnSalir
             // 
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
@@ -209,6 +251,7 @@ namespace AppBTS.Presentacion
             this.btnModificar.Size = new System.Drawing.Size(65, 39);
             this.btnModificar.TabIndex = 15;
             this.btnModificar.UseVisualStyleBackColor = true;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
             // btnNuevo
             // 
@@ -219,48 +262,6 @@ namespace AppBTS.Presentacion
             this.btnNuevo.TabIndex = 16;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
-            // IdMenu
-            // 
-            this.IdMenu.HeaderText = "Id del Menú";
-            this.IdMenu.Name = "IdMenu";
-            this.IdMenu.ReadOnly = true;
-            this.IdMenu.Width = 50;
-            // 
-            // NombreMenu
-            // 
-            this.NombreMenu.HeaderText = "Nombre";
-            this.NombreMenu.Name = "NombreMenu";
-            this.NombreMenu.ReadOnly = true;
-            this.NombreMenu.Width = 200;
-            // 
-            // PcioUnitario
-            // 
-            this.PcioUnitario.HeaderText = "Precio Unitario";
-            this.PcioUnitario.Name = "PcioUnitario";
-            this.PcioUnitario.ReadOnly = true;
-            this.PcioUnitario.Width = 125;
-            // 
-            // TipoArticulo
-            // 
-            this.TipoArticulo.HeaderText = "Tipo de Artículo";
-            this.TipoArticulo.Name = "TipoArticulo";
-            this.TipoArticulo.ReadOnly = true;
-            this.TipoArticulo.Width = 150;
-            // 
-            // NombreArticulo
-            // 
-            this.NombreArticulo.HeaderText = "Artículo";
-            this.NombreArticulo.Name = "NombreArticulo";
-            this.NombreArticulo.ReadOnly = true;
-            this.NombreArticulo.Width = 175;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 50;
             // 
             // frmConsultarMenus
             // 

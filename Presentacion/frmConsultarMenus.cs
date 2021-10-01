@@ -146,5 +146,16 @@ namespace AppBTS.Presentacion
             fam.ShowDialog();
             fam.Dispose();
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            frmDetalleMenu fdm = new frmDetalleMenu();
+            fdm.IdMenu = Convert.ToInt32(dgvMenus.SelectedCells[0].Value);
+            fdm.Nombre = dgvMenus.SelectedCells[1].Value.ToString();
+            fdm.PcioUnitario = Convert.ToInt32(dgvMenus.SelectedCells[2].Value);
+            fdm.Tipos = "Edit";
+            fdm.ShowDialog();
+            fdm.Dispose();
+        }
     }
 }

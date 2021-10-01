@@ -81,6 +81,12 @@
     <Compile Include="Presentacion\frmConsultarMenus.Designer.cs">
       <DependentUpon>frmConsultarMenus.cs</DependentUpon>
     </Compile>
+    <Compile Include="Presentacion\frmDetalleMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmDetalleMenu.Designer.cs">
+      <DependentUpon>frmDetalleMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmDetallesMesa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmConsultarMenus.resx">
       <DependentUpon>frmConsultarMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmDetalleMenu.resx">
+      <DependentUpon>frmDetalleMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmDetallesMesa.resx">
       <DependentUpon>frmDetallesMesa.cs</DependentUpon>

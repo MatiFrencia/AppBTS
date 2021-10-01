@@ -30,7 +30,7 @@ namespace AppBTS.Presentacion
             // TODO: esta línea de código carga datos en la tabla 'bAR_PAVDataSet.Reservas' Puede moverla o quitarla según sea necesario.
             //this.reservasTableAdapter.Fill(this.bAR_PAVDataSet.Reservas);
             this.CargarGrilla(dgvReservasMesa,oReservas.RecuperarFiltrados(DateTime.Today.AddDays(-1).ToString("yyyy/MM/dd"), 
-                                                                           DateTime.Today.ToString("yyyy/MM/dd"), string.Empty, botonClickeado.Text,
+                                                                           DateTime.Today.AddDays(+7).ToString("yyyy/MM/dd"), string.Empty, botonClickeado.Text,
                                                                            string.Empty, string.Empty, string.Empty, string.Empty));
         }
         private void CargarGrilla(DataGridView grilla, DataTable tabla)

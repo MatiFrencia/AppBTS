@@ -74,5 +74,11 @@ namespace AppBTS.Negocio
             BDHelper oBaja = new BDHelper();
             oBaja.actualizar(baja);
         }
+        public void Modificar(int idMenu, string nombre, int pcioUnitario)
+        {
+            string modificacion = "UPDATE Menus SET nombre = '" + nombre + "', pcioUnitario = " + pcioUnitario.ToString() + " WHERE idMenu = " + idMenu.ToString();
+            BDHelper oModificacion = new BDHelper();
+            oModificacion.actualizar(modificacion);
+        }
     }
 }
