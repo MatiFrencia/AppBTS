@@ -117,25 +117,28 @@ namespace AppBTS.Presentacion
                 MessageBox.Show("Debe ingresar un Nombre.", "Error en la carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNombre.Focus();
             }
+            else { 
             if (txtApellido.Text == string.Empty)
             {
                 MessageBox.Show("Debe ingresar un Apellido.", "Error en la carga", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtApellido.Focus();
             }
-            oMozo.idMozo = (int)numeric.Value;
-            oMozo.nombre = txtNombre.Text;
-            oMozo.apellido = txtApellido.Text;
-            if (nuevo)
-            {
-                oMozo.Insertar(oMozo.idMozo, oMozo.nombre, oMozo.apellido);
+            else {
+                oMozo.idMozo = (int)numeric.Value;
+                oMozo.nombre = txtNombre.Text;
+                oMozo.apellido = txtApellido.Text;
+                if (nuevo)
+                {
+                    oMozo.Insertar(oMozo.idMozo, oMozo.nombre, oMozo.apellido);
+                }
+                else
+                {
+                    oMozo.Modificar(oMozo.idMozo, oMozo.nombre, oMozo.apellido);
+                }
+                nuevo = false;
+                CargarGrilla(dgvMozos, oMozo.traerTodos());
             }
-            else
-            {
-                oMozo.Modificar(oMozo.idMozo, oMozo.nombre, oMozo.apellido);
-            }
-            nuevo = false;
-            CargarGrilla(dgvMozos, oMozo.traerTodos());
-
+           }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
