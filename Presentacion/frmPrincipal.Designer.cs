@@ -38,17 +38,10 @@
             this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menúsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mozosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bugsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.registrarTicketToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.nuevoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.articuloToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.menúToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.articuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,9 +51,6 @@
             this.menuStrip1.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.soporteToolStripMenuItem,
-            this.bugsToolStripMenuItem,
-            this.registrarToolStripMenuItem,
-            this.nuevoToolStripMenuItem1,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -77,10 +67,11 @@
             this.mesasToolStripMenuItem,
             this.artículosToolStripMenuItem,
             this.menúsToolStripMenuItem,
-            this.mozosToolStripMenuItem});
+            this.mozosToolStripMenuItem,
+            this.reservasToolStripMenuItem});
             this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
-            this.soporteToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.soporteToolStripMenuItem.Text = "Soporte";
+            this.soporteToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
+            this.soporteToolStripMenuItem.Text = "Consultas";
             // 
             // usuariosToolStripMenuItem
             // 
@@ -128,65 +119,6 @@
             this.mozosToolStripMenuItem.Text = "Mozos";
             this.mozosToolStripMenuItem.Click += new System.EventHandler(this.mozosToolStripMenuItem_Click);
             // 
-            // bugsToolStripMenuItem
-            // 
-            this.bugsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.consultasToolStripMenuItem,
-            this.informesToolStripMenuItem});
-            this.bugsToolStripMenuItem.Name = "bugsToolStripMenuItem";
-            this.bugsToolStripMenuItem.Size = new System.Drawing.Size(93, 21);
-            this.bugsToolStripMenuItem.Text = "Información";
-            // 
-            // consultasToolStripMenuItem
-            // 
-            this.consultasToolStripMenuItem.Name = "consultasToolStripMenuItem";
-            this.consultasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.consultasToolStripMenuItem.Text = "Consultas";
-            this.consultasToolStripMenuItem.Click += new System.EventHandler(this.consultasToolStripMenuItem_Click);
-            // 
-            // informesToolStripMenuItem
-            // 
-            this.informesToolStripMenuItem.Name = "informesToolStripMenuItem";
-            this.informesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.informesToolStripMenuItem.Text = "Informes";
-            // 
-            // registrarToolStripMenuItem
-            // 
-            this.registrarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.registrarTicketToolStripMenuItem});
-            this.registrarToolStripMenuItem.Name = "registrarToolStripMenuItem";
-            this.registrarToolStripMenuItem.Size = new System.Drawing.Size(74, 21);
-            this.registrarToolStripMenuItem.Text = "Registrar";
-            // 
-            // registrarTicketToolStripMenuItem
-            // 
-            this.registrarTicketToolStripMenuItem.Name = "registrarTicketToolStripMenuItem";
-            this.registrarTicketToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.registrarTicketToolStripMenuItem.Text = "Ticket";
-            // 
-            // nuevoToolStripMenuItem1
-            // 
-            this.nuevoToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.articuloToolStripMenuItem1,
-            this.menúToolStripMenuItem});
-            this.nuevoToolStripMenuItem1.Name = "nuevoToolStripMenuItem1";
-            this.nuevoToolStripMenuItem1.Size = new System.Drawing.Size(60, 21);
-            this.nuevoToolStripMenuItem1.Text = "Nuevo";
-            // 
-            // articuloToolStripMenuItem1
-            // 
-            this.articuloToolStripMenuItem1.Name = "articuloToolStripMenuItem1";
-            this.articuloToolStripMenuItem1.Size = new System.Drawing.Size(123, 22);
-            this.articuloToolStripMenuItem1.Text = "Articulo";
-            this.articuloToolStripMenuItem1.Click += new System.EventHandler(this.articuloToolStripMenuItem1_Click);
-            // 
-            // menúToolStripMenuItem
-            // 
-            this.menúToolStripMenuItem.Name = "menúToolStripMenuItem";
-            this.menúToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
-            this.menúToolStripMenuItem.Text = "Menú";
-            this.menúToolStripMenuItem.Click += new System.EventHandler(this.menúToolStripMenuItem_Click);
-            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
@@ -207,6 +139,12 @@
             this.articuloToolStripMenuItem.Name = "articuloToolStripMenuItem";
             this.articuloToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.articuloToolStripMenuItem.Text = "Articulo";
+            // 
+            // reservasToolStripMenuItem
+            // 
+            this.reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
+            this.reservasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reservasToolStripMenuItem.Text = "Reservas";
             // 
             // frmPrincipal
             // 
@@ -238,21 +176,14 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estadosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem bugsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem informesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mesasToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem registrarTicketToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem articuloToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem nuevoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem articuloToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem artículosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menúsToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem menúToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mozosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
     }
 }
 
