@@ -45,7 +45,8 @@ namespace AppBTS.Presentacion
                             Image = AppBTS.Properties.Resources.Mesa1,
                             Width = 221,
                             Height = 176,
-                            Text = tabla.Rows[cantBotones]["nroMesa"].ToString(),
+                            Text = "MESA: " + tabla.Rows[cantBotones]["nroMesa"].ToString() + "\n Sillas: " 
+                                    + tabla.Rows[cantBotones]["cantidadSillas"].ToString(),
                             TextAlign = System.Drawing.ContentAlignment.BottomRight,
                             Top = i * 176 + 30,
                             Left = j * 221 + 70,
