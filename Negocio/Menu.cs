@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace AppBTS.Negocio
 {
-    class Menus
+    public class Menus
     {
         public int IdMenu { get; set; }
         public string Nombre { get; set; }
@@ -32,6 +32,47 @@ namespace AppBTS.Negocio
             BDHelper oDatos = new BDHelper();
             int maxId = oDatos.consultaSumaria(consulta);
             return maxId + 1;
+        }
+        public DataTable RecuperarTodos()
+        {
+            string consulta = "SELECT m.idMenu,m.nombre,m.pcioUnitario FROM Menus m WHERE m.borrado=0";
+            BDHelper oDatos = new BDHelper();
+            DataTable tabla = oDatos.consultar(consulta);
+            return tabla;
+        }
+        public DataTable RecuperarFiltrados(string idMenu, string nombre, string idTipoArticulo, string idArticulo)
+        {
+            string consulta = "SELECT DISTINCT m.idMenu,m.nombre,m.pcioUnitario";
+            if (idArticulo != "")
+                consulta += " FROM Menus m INNER JOIN DetallesMenu d ON m.idMenu=d.idMenu WHERE m.borrado=0";
+            else
+            {
+                if (idTipoArticulo != "")
+                    consulta += " FROM Menus m INNER JOIN DetallesMenu d ON m.idMenu=d.idMenu INNER JOIN Articulos a ON d.idArticulo=a.idArticulo WHERE m.borrado=0";
+                else
+                    consulta += " FROM Menus m WHERE m.borrado=0";
+            }
+            if (idMenu != "")
+                consulta += " AND m.idMenu=" + idMenu;
+            if (nombre != "")
+                consulta += " AND m.nombre LIKE '%" + nombre + "%'";
+            if (idTipoArticulo != "")
+            {
+                if (idArticulo != "")
+                    consulta += " AND d.idArticulo=" + idArticulo;
+                else
+                    consulta += " AND a.idTipoArticulo=" + idTipoArticulo;
+            }
+            BDHelper oDatos = new BDHelper();
+            DataTable tabla = oDatos.consultar(consulta);
+            return tabla;
+        }
+
+        public void Eliminar()
+        {
+            string baja = "UPDATE Menus SET borrado = 1 WHERE idMenu=" + IdMenu.ToString();
+            BDHelper oBaja = new BDHelper();
+            oBaja.actualizar(baja);
         }
     }
 }

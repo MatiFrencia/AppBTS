@@ -77,7 +77,9 @@ namespace AppBTS
 
         private void menúsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmConsultarMenus fcm = new frmConsultarMenus();
+            fcm.ShowDialog();
+            fcm.Dispose();
         }
 
         private void menúToolStripMenuItem_Click(object sender, EventArgs e)

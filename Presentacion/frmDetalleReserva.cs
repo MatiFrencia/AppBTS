@@ -38,6 +38,7 @@ namespace AppBTS.Presentacion
             InitializeComponent();
         }
 
+        Reservas oReserva = new Reservas();
         private void frmAltaReserva_Load(object sender, EventArgs e)
         {
             frmConsultaReservas frm = new frmConsultaReservas();
@@ -47,11 +48,17 @@ namespace AppBTS.Presentacion
                 this.lbTitulo.Text = "Crear Reserva";
                 limpiar();
                 campos(true);
+                this.txtbNumeroReserva.Enabled = false;
+                string numReserva = oReserva.IdSiguiente().ToString();
+                this.txtbNumeroReserva.Text = numReserva;
+                
             }
             if (tipos == "Edit")
             {
                 this.lbTitulo.Text = "Editar Reserva";
                 campos(true);
+                actualizarCampos();
+                this.txtbNumeroReserva.Enabled = false;
             }
             if (tipos == "Detail")
             {
@@ -74,7 +81,7 @@ namespace AppBTS.Presentacion
         {
             this.txtbNumeroReserva.Text = numReserva.ToString();
             this.txtbNumeroMesa.Text = numMesa.ToString();
-            this.txtbFechaReserva.Text = fechaReserva.ToString();
+            this.txtbFechaReserva.Text = fechaReserva.ToString("yyyy/MM/dd");
             this.txtbHoraReserva.Text = horaReserva.ToString();
             this.txtbCliente.Text = nomCliente;
             this.txtbTelefono.Text = telCliente.ToString();
@@ -92,7 +99,34 @@ namespace AppBTS.Presentacion
         }
         private void btnAceptar_Click_1(object sender, EventArgs e)
         {
+            if (tipos == "Edit")
+            {
+                oReserva.Modificar(numReserva,Convert.ToInt32(txtbNumeroMesa.Text),txtbFechaReserva.Text, txtbHoraReserva.Text,
+                                   txtbCliente.Text,txtbTelefono.Text,Convert.ToInt32(txtbCantidadComensales.Text));
+            }
+
+            if (tipos == "New")
+            {
+                oReserva.NroReserva = Convert.ToInt32(txtbNumeroReserva.Text);
+                oReserva.NroMesa = Convert.ToInt32(txtbNumeroMesa.Text);
+                oReserva.FechaReserva = Convert.ToDateTime(txtbFechaReserva.Text);
+                oReserva.HoraReserva = TimeSpan.Parse(txtbHoraReserva.Text);
+                oReserva.NombreCliente = txtbCliente.Text;
+                oReserva.Telefono = txtbTelefono.Text;
+                oReserva.CantidadComensales = Convert.ToInt32(txtbCantidadComensales.Text);
+                numReserva = Convert.ToInt32(txtbNumeroReserva.Text);
+                oReserva.AgregarReserva(numReserva.ToString());
+            }
+
+            this.Close();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Está seguro que desea Salir?", "ATENCION, NO se guardaran los cambios", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                this.DialogResult = DialogResult.Cancel;
             this.Close();
         }
     }
+
 }
