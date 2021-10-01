@@ -53,7 +53,14 @@ namespace AppBTS.Negocio
             string consulta = "SELECT m.idMozo FROM Mozos m ORDER BY m.idMozo DESC";
             BDHelper oDatos = new BDHelper();
             DataTable ids = oDatos.consultar(consulta);
-            int ultimo = Convert.ToInt32(ids.Rows[0][0]);
+            int ultimo;
+            if (ids.Rows.Count == 0) {
+                ultimo = 0;
+            }
+            else
+            {
+                ultimo = Convert.ToInt32(ids.Rows[0][0]);
+            }
             return ultimo + 1;
         }
     }
