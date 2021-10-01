@@ -45,6 +45,7 @@ namespace AppBTS.Presentacion
             this.txtbNumeroReserva = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lbTitulo = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblNroReserva
@@ -199,7 +200,7 @@ namespace AppBTS.Presentacion
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.Tan;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Location = new System.Drawing.Point(122, 429);
+            this.btnAceptar.Location = new System.Drawing.Point(60, 432);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(112, 35);
@@ -212,13 +213,24 @@ namespace AppBTS.Presentacion
             // 
             this.lbTitulo.AutoSize = true;
             this.lbTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbTitulo.Font = new System.Drawing.Font("Dutch801 XBd BT", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbTitulo.Location = new System.Drawing.Point(13, 9);
             this.lbTitulo.Name = "lbTitulo";
-            this.lbTitulo.Size = new System.Drawing.Size(161, 25);
+            this.lbTitulo.Size = new System.Drawing.Size(165, 25);
             this.lbTitulo.TabIndex = 17;
             this.lbTitulo.Text = "Detalle Reserva";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Location = new System.Drawing.Point(207, 432);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(112, 35);
+            this.btnCancelar.TabIndex = 18;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmDetalleReserva
             // 
@@ -226,6 +238,7 @@ namespace AppBTS.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(371, 491);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtbNumeroReserva);
@@ -274,5 +287,6 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.TextBox txtbNumeroReserva;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label lbTitulo;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

@@ -88,6 +88,36 @@ namespace AppBTS.Datos
             
             conexion.Close();
         }
+        public void insertarReserva(Reservas res, string altaSQL)
+        {
+            conexion.ConnectionString = cadenaConexion;
+            conexion.Open();
+
+            comando.Connection = conexion;
+            comando.CommandType = CommandType.Text;
+            comando.CommandText = altaSQL;
+            comando.Parameters.AddWithValue("@nroReserva", res.NroReserva);
+            comando.Parameters.AddWithValue("@nroMesa", res.NroMesa);
+            comando.Parameters.AddWithValue("@fechaReserva", res.FechaReserva);
+            comando.Parameters.AddWithValue("@horaReserva", res.HoraReserva);
+            comando.Parameters.AddWithValue("@nombreCliente", res.NombreCliente);
+            comando.Parameters.AddWithValue("@telefono", res.Telefono);
+            comando.Parameters.AddWithValue("@cantidadComensales", res.CantidadComensales);
+            comando.Parameters.AddWithValue("@borrado", false);
+            comando.ExecuteNonQuery();
+
+            conexion.Close();
+        }
+        public void actualizar(string consulta) {
+            //conexion.ConnectionString = cadenaConexion;
+            //conexion.Open();
+
+            //comando.Connection = conexion;
+            //comando.CommandType = CommandType.Text;
+            //comando.CommandText = consulta;
+            //comando.ExecuteNonQuery();
+            //conexion.Close();
+        }
 
         public void insertarMenu(Menus menu, string altaSQL)
         {
