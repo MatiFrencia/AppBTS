@@ -14,26 +14,23 @@ namespace AppBTS.Presentacion
     public partial class frmConsultaReservas : Form
     {
         Reservas oReservas = new Reservas();
-        Mesas oMesas= new Mesas();
+        Mesas oMesas = new Mesas();
         Usuario oUsuario = new Usuario();
-
-        dtpHora.Format = DateTimePickerFormat.Time;
-        dtpHora.ShowUpDown = true;
         public frmConsultaReservas()
         {
             InitializeComponent();
         }
-        
+
         public class Global
         {
             private static string idReserva;
             public static string IdReserva { get => idReserva; set => idReserva = value; }
         }
 
-        
+
         private void frmConsultaReservas_Load(object sender, EventArgs e)
         {
-            
+
             limpiar();
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Bugs' Puede moverla o quitarla según sea necesario.
             this.dtpFechaDesde.Value = DateTime.Today.AddYears(-1);
@@ -71,7 +68,7 @@ namespace AppBTS.Presentacion
                                 tabla.Rows[i]["telefono"],
                                 tabla.Rows[i]["cantidadComensales"]);
             }
-            
+
         }
 
         private void CargarCombo(ComboBox combo, DataTable tabla)
@@ -82,7 +79,7 @@ namespace AppBTS.Presentacion
             combo.SelectedIndex = -1;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-        private void CargarCombo(ComboBox combo, DataTable tabla,string campoMostrar,string campoValor)
+        private void CargarCombo(ComboBox combo, DataTable tabla, string campoMostrar, string campoValor)
         {
             combo.DataSource = tabla;
             combo.DisplayMember = campoMostrar;
@@ -140,7 +137,7 @@ namespace AppBTS.Presentacion
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            
+
             frmDetalleReserva far = new frmDetalleReserva();
             far.Tipos = "New";
             far.ShowDialog();
@@ -158,11 +155,11 @@ namespace AppBTS.Presentacion
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de eliminar esta reserva?", "CONFIRMACION", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes) 
+            if (MessageBox.Show("Esta seguro de eliminar esta reserva?", "CONFIRMACION", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 oReservas.Borrar(Global.IdReserva);
-                btnBorrar.Enabled = false;
-                btnEditar.Enabled = false;
-                btnDetalle.Enabled = false;
+            btnBorrar.Enabled = false;
+            btnEditar.Enabled = false;
+            btnDetalle.Enabled = false;
             string _nroReserva, _nroMesa, _telefono, _cantidadComensales, _nombreCliente, _horaReserva;
             _nroReserva = _nroMesa = _cantidadComensales = _telefono = _nombreCliente = _horaReserva = string.Empty;
             if (dtpFechaDesde.Value > dtpFechaHasta.Value)

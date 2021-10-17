@@ -71,7 +71,6 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
-            this.dtpHora = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
@@ -81,7 +80,6 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Tan;
-            this.groupBox1.Controls.Add(this.dtpHora);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.lblFechaDesde);
             this.groupBox1.Controls.Add(this.lblFechaHasta);
@@ -511,15 +509,6 @@
             this.btnDetalle.UseVisualStyleBackColor = false;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
-            // dtpHora
-            // 
-            this.dtpHora.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHora.Location = new System.Drawing.Point(434, 146);
-            this.dtpHora.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpHora.Name = "dtpHora";
-            this.dtpHora.Size = new System.Drawing.Size(177, 22);
-            this.dtpHora.TabIndex = 23;
-            // 
             // frmConsultaReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -594,6 +583,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadComensales;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.DateTimePicker dtpHora;
     }
 }
