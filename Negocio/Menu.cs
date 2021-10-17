@@ -44,7 +44,7 @@ namespace AppBTS.Negocio
         {
             string consulta = "SELECT DISTINCT m.idMenu,m.nombre,m.pcioUnitario";
             if (idArticulo != "")
-                consulta += " FROM Menus m INNER JOIN DetallesMenu d ON m.idMenu=d.idMenu WHERE m.borrado=0";
+                consulta += " FROM Menus m INNER JOIN DetallesMenu d ON m.idMenu=d.idMenu WHERE m.borrado=0 AND idArticulo = " + idArticulo;
             else
             {
                 if (idTipoArticulo != "")

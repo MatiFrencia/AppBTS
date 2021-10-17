@@ -135,7 +135,11 @@ namespace AppBTS.Negocio
             string consulta = "SELECT MAX(nroReserva) FROM Reservas WHERE borrado = 0";
             BDHelper oDatos = new BDHelper();
             DataTable idmax = oDatos.consultar(consulta);
-            int id = Convert.ToInt32(idmax.Rows[0][0].ToString());
+            int id = 0;
+            if (idmax.Rows[0][0].ToString() != "")
+            {
+                id = Convert.ToInt32(idmax.Rows[0][0].ToString());
+            }
             return id + 1;
         }
     }   

@@ -25,6 +25,7 @@ namespace AppBTS.Presentacion
         private void frmConsultarMenus_Load(object sender, EventArgs e)
         {
             CargarCombo(cboTipo, oTipo.RecuperarTodos());
+            CargarCombo(cboArticulo, oArticulo.RecuperarTodos());
             btnVisualizar.Enabled = false;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
@@ -95,7 +96,7 @@ namespace AppBTS.Presentacion
                     idArticulo = cboArticulo.SelectedValue.ToString();
                 CargarGrillaMenus(dgvMenus, oMenu.RecuperarFiltrados(idMenu, nombre, idTipoArticulo, idArticulo));
                 cboTipo.SelectedIndex = -1;
-                cboArticulo.DataSource = null;
+                cboArticulo.SelectedIndex = -1;
             }
         }
         private void CargarGrillaMenus(DataGridView grilla, DataTable tabla)
