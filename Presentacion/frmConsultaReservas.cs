@@ -17,7 +17,8 @@ namespace AppBTS.Presentacion
         Mesas oMesas= new Mesas();
         Usuario oUsuario = new Usuario();
 
-
+        dtpHora.Format = DateTimePickerFormat.Time;
+        dtpHora.ShowUpDown = true;
         public frmConsultaReservas()
         {
             InitializeComponent();

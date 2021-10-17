@@ -72,9 +72,9 @@ namespace AppBTS.Negocio
             return oDatos.consultar(consulta);
         }
 
-        public DataTable RecuperarTodosConParametro( string filtro)
+        public DataTable RecuperarTodosConParametro(string filtro)
         {
-            string consulta = "SELECT r." + filtro +" FROM Reservas r WHERE borrado = 0 order by " + filtro;
+            string consulta = "SELECT DISTINCT r." + filtro +" FROM Reservas r WHERE borrado = 0 order by " + filtro;
 
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);
