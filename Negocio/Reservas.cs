@@ -45,7 +45,7 @@ namespace AppBTS.Negocio
             BDHelper oDatos = new BDHelper();
             return oDatos.consultar(consulta);
         }
-        public DataTable RecuperarFiltrados(string desde, string hasta, string nroReserva, string nroMesa, string telefono, string comensales, string nombreCliente, string horaReserva)
+        public DataTable RecuperarFiltrados(string desde, string hasta, string nroReserva, string nroMesa, string telefono, string comensales, string nombreCliente, string horaDesde, string horaHasta)
         {
             string consulta = "SELECT r.nroReserva,m.nroMesa,r.fechaReserva,r.horaReserva,r.nombreCliente,r.telefono,r.cantidadComensales"
                                         + " FROM Reservas r, Mesas m"
@@ -53,7 +53,7 @@ namespace AppBTS.Negocio
                                         + " AND r.nroMesa=m.nroMesa"
                                         + " AND r.borrado=0";
             consulta += " AND r.fechaReserva BETWEEN '" + desde + "' AND '" + hasta + "'";
-
+            consulta += " AND r.horaReserva BETWEEN '" + horaDesde + "' AND '" + horaHasta + "'";
             if (nroReserva != "")
                 consulta += " AND r.nroReserva=" + nroReserva;
             if (nroMesa != "")
@@ -64,8 +64,6 @@ namespace AppBTS.Negocio
                 consulta += " AND r.telefono=" + telefono;
             if (comensales != "")
                 consulta += " AND r.cantidadComensales=" + comensales;
-            if (horaReserva != "")
-                consulta += " AND r.horaReserva='" + horaReserva + "'";
 
             consulta += " ORDER BY r.fechaReserva DESC";
             BDHelper oDatos = new BDHelper();
