@@ -17,8 +17,7 @@ namespace AppBTS.Presentacion
         Mesas oMesas= new Mesas();
         Usuario oUsuario = new Usuario();
 
-        dtpHora.Format = DateTimePickerFormat.Time;
-        dtpHora.ShowUpDown = true;
+       
         public frmConsultaReservas()
         {
             InitializeComponent();
@@ -38,6 +37,8 @@ namespace AppBTS.Presentacion
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Bugs' Puede moverla o quitarla según sea necesario.
             this.dtpFechaDesde.Value = DateTime.Today.AddYears(-1);
             this.dtpFechaHasta.Value = DateTime.Today;
+            dtpHora.Format = DateTimePickerFormat.Time;
+            dtpHora.ShowUpDown = true;
 
             this.CargarCombo(cboNroReserva, oReservas.RecuperarTodosConParametro("nroReserva"));
             this.CargarCombo(cboNroMesa, oMesas.RecuperarTodos());
