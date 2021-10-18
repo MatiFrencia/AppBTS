@@ -39,13 +39,13 @@ namespace AppBTS.Presentacion
             this.txtbCantidadComensales = new System.Windows.Forms.TextBox();
             this.txtbTelefono = new System.Windows.Forms.TextBox();
             this.txtbCliente = new System.Windows.Forms.TextBox();
-            this.txtbHoraReserva = new System.Windows.Forms.TextBox();
-            this.txtbFechaReserva = new System.Windows.Forms.TextBox();
             this.txtbNumeroMesa = new System.Windows.Forms.TextBox();
             this.txtbNumeroReserva = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.lbTitulo = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.dtpFechaReserva = new System.Windows.Forms.DateTimePicker();
+            this.dtpHoraReserva = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // lblNroReserva
@@ -151,29 +151,6 @@ namespace AppBTS.Presentacion
             this.txtbCliente.Size = new System.Drawing.Size(148, 26);
             this.txtbCliente.TabIndex = 4;
             // 
-            // txtbHoraReserva
-            // 
-            this.txtbHoraReserva.BackColor = System.Drawing.Color.Tan;
-            this.txtbHoraReserva.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtbHoraReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtbHoraReserva.Location = new System.Drawing.Point(207, 206);
-            this.txtbHoraReserva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbHoraReserva.Name = "txtbHoraReserva";
-            this.txtbHoraReserva.Size = new System.Drawing.Size(71, 26);
-            this.txtbHoraReserva.TabIndex = 3;
-            this.txtbHoraReserva.Tag = "";
-            // 
-            // txtbFechaReserva
-            // 
-            this.txtbFechaReserva.BackColor = System.Drawing.Color.Tan;
-            this.txtbFechaReserva.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtbFechaReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtbFechaReserva.Location = new System.Drawing.Point(207, 154);
-            this.txtbFechaReserva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtbFechaReserva.Name = "txtbFechaReserva";
-            this.txtbFechaReserva.Size = new System.Drawing.Size(89, 26);
-            this.txtbFechaReserva.TabIndex = 2;
-            // 
             // txtbNumeroMesa
             // 
             this.txtbNumeroMesa.BackColor = System.Drawing.Color.Tan;
@@ -232,19 +209,35 @@ namespace AppBTS.Presentacion
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // dtpFechaReserva
+            // 
+            this.dtpFechaReserva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpFechaReserva.Location = new System.Drawing.Point(207, 157);
+            this.dtpFechaReserva.Name = "dtpFechaReserva";
+            this.dtpFechaReserva.Size = new System.Drawing.Size(148, 26);
+            this.dtpFechaReserva.TabIndex = 19;
+            // 
+            // dtpHoraReserva
+            // 
+            this.dtpHoraReserva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHoraReserva.Location = new System.Drawing.Point(207, 209);
+            this.dtpHoraReserva.Name = "dtpHoraReserva";
+            this.dtpHoraReserva.Size = new System.Drawing.Size(148, 26);
+            this.dtpHoraReserva.TabIndex = 20;
+            // 
             // frmDetalleReserva
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(371, 491);
+            this.Controls.Add(this.dtpHoraReserva);
+            this.Controls.Add(this.dtpFechaReserva);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtbNumeroReserva);
             this.Controls.Add(this.txtbNumeroMesa);
-            this.Controls.Add(this.txtbFechaReserva);
-            this.Controls.Add(this.txtbHoraReserva);
             this.Controls.Add(this.txtbCliente);
             this.Controls.Add(this.txtbTelefono);
             this.Controls.Add(this.txtbCantidadComensales);
@@ -281,12 +274,12 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.TextBox txtbCantidadComensales;
         private System.Windows.Forms.TextBox txtbTelefono;
         private System.Windows.Forms.TextBox txtbCliente;
-        private System.Windows.Forms.TextBox txtbHoraReserva;
-        private System.Windows.Forms.TextBox txtbFechaReserva;
         private System.Windows.Forms.TextBox txtbNumeroMesa;
         private System.Windows.Forms.TextBox txtbNumeroReserva;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label lbTitulo;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.DateTimePicker dtpFechaReserva;
+        private System.Windows.Forms.DateTimePicker dtpHoraReserva;
     }
 }

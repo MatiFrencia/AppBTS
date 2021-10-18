@@ -43,6 +43,9 @@ namespace AppBTS.Presentacion
         {
             frmConsultaReservas frm = new frmConsultaReservas();
             frmPrincipal frmp = new frmPrincipal();
+            this.dtpHoraReserva.Format = DateTimePickerFormat.Custom;
+            this.dtpHoraReserva.CustomFormat = "HH':'mm";
+            this.dtpHoraReserva.ShowUpDown = true;
             if (tipos == "New")
             {
                 this.lbTitulo.Text = "Crear Reserva";
@@ -71,8 +74,8 @@ namespace AppBTS.Presentacion
         { 
                 this.txtbNumeroReserva.Enabled = x;
                 this.txtbNumeroMesa.Enabled = x;
-                this.txtbFechaReserva.Enabled = x;
-                this.txtbHoraReserva.Enabled = x;
+                this.dtpFechaReserva.Enabled = x;
+                this.dtpHoraReserva.Enabled = x;
                 this.txtbCliente.Enabled = x;
                 this.txtbTelefono.Enabled = x;
                 this.txtbCantidadComensales.Enabled = x;
@@ -81,8 +84,8 @@ namespace AppBTS.Presentacion
         {
             this.txtbNumeroReserva.Text = numReserva.ToString();
             this.txtbNumeroMesa.Text = numMesa.ToString();
-            this.txtbFechaReserva.Text = fechaReserva.ToString("yyyy/MM/dd");
-            this.txtbHoraReserva.Text = horaReserva.ToString();
+            this.dtpFechaReserva.Value = fechaReserva;
+            this.dtpHoraReserva.Text = horaReserva.ToString();
             this.txtbCliente.Text = nomCliente;
             this.txtbTelefono.Text = telCliente.ToString();
             this.txtbCantidadComensales.Text = cantComensales.ToString();
@@ -91,8 +94,8 @@ namespace AppBTS.Presentacion
         private void limpiar() {
             this.txtbNumeroReserva.Text = "";
             this.txtbNumeroMesa.Text = "";
-            this.txtbFechaReserva.Text = "";
-            this.txtbHoraReserva.Text = "";
+            this.dtpFechaReserva.Value = DateTime.Today;
+            this.dtpHoraReserva.Value = DateTime.Now;
             this.txtbCliente.Text = "";
             this.txtbTelefono.Text = "";
             this.txtbCantidadComensales.Text = "";
@@ -101,7 +104,7 @@ namespace AppBTS.Presentacion
         {
             if (tipos == "Edit")
             {
-                miGestorReservas.Modificar(numReserva,Convert.ToInt32(txtbNumeroMesa.Text),txtbFechaReserva.Text, txtbHoraReserva.Text,
+                miGestorReservas.Modificar(numReserva,Convert.ToInt32(txtbNumeroMesa.Text),dtpFechaReserva.Value.ToString(), dtpHoraReserva.Value.ToString(),
                                    txtbCliente.Text,txtbTelefono.Text,Convert.ToInt32(txtbCantidadComensales.Text));
             }
 
@@ -109,8 +112,8 @@ namespace AppBTS.Presentacion
             {
                 oReserva.NroReserva = Convert.ToInt32(txtbNumeroReserva.Text);
                 oReserva.NroMesa = Convert.ToInt32(txtbNumeroMesa.Text);
-                oReserva.FechaReserva = Convert.ToDateTime(txtbFechaReserva.Text);
-                oReserva.HoraReserva = TimeSpan.Parse(txtbHoraReserva.Text);
+                oReserva.FechaReserva = dtpFechaReserva.Value;
+                oReserva.HoraReserva = TimeSpan.Parse(dtpHoraReserva.Value.ToString());
                 oReserva.NombreCliente = txtbCliente.Text;
                 oReserva.Telefono = txtbTelefono.Text;
                 oReserva.CantidadComensales = Convert.ToInt32(txtbCantidadComensales.Text);
