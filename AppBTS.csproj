@@ -53,16 +53,24 @@
       <DependentUpon>BAR_PAVDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Datos\BDHelper.cs" />
+    <Compile Include="Datos\Daos\ArticuloDao.cs" />
+    <Compile Include="Datos\Daos\DetalleMenuDao.cs" />
+    <Compile Include="Datos\Daos\MenuDao.cs" />
+    <Compile Include="Datos\Daos\ReservaDao.cs" />
+    <Compile Include="Datos\Interfaces\IArticulo.cs" />
+    <Compile Include="Datos\Interfaces\IDetalleMenu.cs" />
+    <Compile Include="Datos\Interfaces\IMenu.cs" />
+    <Compile Include="Datos\Interfaces\IReserva.cs" />
     <Compile Include="masterDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>masterDataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Negocio\DetalleMenu.cs" />
-    <Compile Include="Negocio\Menu.cs" />
-    <Compile Include="Negocio\Mesas.cs" />
-    <Compile Include="Negocio\Mozo.cs" />
-    <Compile Include="Negocio\Usuario.cs" />
+    <Compile Include="Entidades\DetalleMenu.cs" />
+    <Compile Include="Entidades\Menu.cs" />
+    <Compile Include="Entidades\Mesas.cs" />
+    <Compile Include="Entidades\Mozo.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Presentacion\frmAltaMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,11 +113,11 @@
     <Compile Include="Presentacion\frmDetalleReserva.Designer.cs">
       <DependentUpon>frmDetalleReserva.cs</DependentUpon>
     </Compile>
-    <Compile Include="Negocio\Articulo.cs" />
-    <Compile Include="Negocio\Reservas.cs" />
-    <Compile Include="Negocio\Mesas.cs" />
-    <Compile Include="Negocio\TipoArticulo.cs" />
-    <Compile Include="Negocio\Usuario.cs" />
+    <Compile Include="Entidades\Articulo.cs" />
+    <Compile Include="Entidades\Reservas.cs" />
+    <Compile Include="Entidades\Mesas.cs" />
+    <Compile Include="Entidades\TipoArticulo.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Presentacion\frmConsultarArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +168,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\ArticuloService.cs" />
+    <Compile Include="Servicios\DetalleMenuService.cs" />
+    <Compile Include="Servicios\MenuService.cs" />
+    <Compile Include="Servicios\ReservaService.cs" />
     <EmbeddedResource Include="Presentacion\frmAltaMenu.resx">
       <DependentUpon>frmAltaMenu.cs</DependentUpon>
     </EmbeddedResource>

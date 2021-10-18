@@ -18,16 +18,16 @@ namespace AppBTS.Negocio
         {
             string consulta = "SELECT * FROM Mesas WHERE borrado = 0 order by nroMesa";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public DataTable RecuperarBorrados()
         {
             string consulta = "SELECT * FROM Mesas WHERE borrado = 1 order by nroMesa";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public void AgregarMesa(string nroMesa)
@@ -37,8 +37,8 @@ namespace AppBTS.Negocio
                 string alta = "INSERT INTO Mesas"
                                 + " VALUES"
                                 + " (" + nroMesa + ", @cantidadSillas, @borrado)";
-                BDHelper oAlta = new BDHelper();
-                oAlta.insertarMesa(this, alta);
+                //BDHelper oAlta = new BDHelper();
+                BDHelper.obtenerInstancia().insertarMesa(this, alta);
             }
             else
             {
@@ -49,8 +49,8 @@ namespace AppBTS.Negocio
         public DataTable VerificarExistencia(string nroMesa)
         { 
             string verificacion = "SELECT 1 FROM Mesas WHERE nroMesa = " + nroMesa;
-            BDHelper oVerificacion = new BDHelper();
-            return oVerificacion.consultar(verificacion);
+            //BDHelper oVerificacion = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(verificacion);
         }
         public void LevantarMesa(string nroMesa)
         {
@@ -58,8 +58,8 @@ namespace AppBTS.Negocio
                             + " SET borrado = 0"
                             + " WHERE nroMesa = " + nroMesa;
 
-            BDHelper oDatos = new BDHelper();
-            oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            BDHelper.obtenerInstancia().consultar(consulta);
         }
         public void Borrar(string mesaClickeada)
         {
@@ -67,15 +67,15 @@ namespace AppBTS.Negocio
                             + " SET borrado = 1"
                             + " WHERE nroMesa = " + mesaClickeada;
 
-            BDHelper oDatos = new BDHelper();
-            oDatos.consultar(consulta);
+           // BDHelper oDatos = new BDHelper();
+            BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public int IdSiguiente()
         {
             string consulta = "SELECT MAX(nroMesa) FROM Mesas WHERE borrado = 0";
-            BDHelper oDatos = new BDHelper();
-            DataTable idmax = oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            DataTable idmax = BDHelper.obtenerInstancia().consultar(consulta);
             int id = 0;
             if (idmax.Rows[0][0].ToString() != "")
             { 

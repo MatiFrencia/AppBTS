@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AppBTS.Negocio;
 using System.Windows.Forms;
+using AppBTS.Servicios;
 
 namespace AppBTS.Presentacion
 {
@@ -15,6 +16,7 @@ namespace AppBTS.Presentacion
     {
         Articulo articulo;
         TipoArticulo oTipo = new TipoArticulo();
+        private ArticuloService miGestor = new ArticuloService();
         public frmModificarArticulo(Articulo seleccionado)
         {
             InitializeComponent();
@@ -128,7 +130,7 @@ namespace AppBTS.Presentacion
                     articulo.IdTipoArticulo = oTipo.RecuperarPorNombre(cboTipo.Text);
                     mTipo = true;
                 }
-                articulo.Modificar(mNombre, mPrecio, mTipo);
+                miGestor.Modificar(mNombre, mPrecio, mTipo, articulo);
                 MessageBox.Show("Cambios registrados con éxito.", "Modificar artículo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

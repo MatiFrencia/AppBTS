@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppBTS.Negocio;
+using AppBTS.Servicios;
 
 namespace AppBTS.Presentacion
 {
@@ -17,6 +18,9 @@ namespace AppBTS.Presentacion
         Articulo oArticulo = new Articulo();
         Menus oMenu = new Menus();
         DetalleMenu oDetalle = new DetalleMenu();
+        private ArticuloService miGestorArticulos = new ArticuloService();
+        private DetalleMenuService miGestorDetallesMenu = new DetalleMenuService();
+        private MenuService miGestorMenus = new MenuService();
         public frmConsultarMenus()
         {
             InitializeComponent();
@@ -25,7 +29,7 @@ namespace AppBTS.Presentacion
         private void frmConsultarMenus_Load(object sender, EventArgs e)
         {
             CargarCombo(cboTipo, oTipo.RecuperarTodos());
-            CargarCombo(cboArticulo, oArticulo.RecuperarTodos());
+            CargarCombo(cboArticulo, miGestorArticulos.RecuperarTodos());
             btnVisualizar.Enabled = false;
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
@@ -44,7 +48,7 @@ namespace AppBTS.Presentacion
             if (dgvMenus.SelectedRows.Count == 1)
             {
                 string idMenu = dgvMenus.SelectedCells[0].Value.ToString();
-                CargarGrillaDetalles(dgvDetalles, oDetalle.RecuperarPorMenu(idMenu));
+                CargarGrillaDetalles(dgvDetalles, miGestorDetallesMenu.RecuperarPorMenu(idMenu));
             }
         }
 
@@ -76,14 +80,14 @@ namespace AppBTS.Presentacion
             if (cboTipo.SelectedIndex != -1 & cboTipo.ValueMember != "")
             {
                 string idSeleccionado = cboTipo.SelectedValue.ToString();
-                CargarCombo(cboArticulo, oArticulo.RecuperarFiltrados("", "", idSeleccionado));
+                CargarCombo(cboArticulo, miGestorArticulos.RecuperarFiltrados("", "", idSeleccionado));
             }
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             if (chkTodos.Checked)
-                CargarGrillaMenus(dgvMenus, oMenu.RecuperarTodos());
+                CargarGrillaMenus(dgvMenus, miGestorMenus.RecuperarTodos());
             else
             {
                 string idMenu = txtIdMenu.Text;
@@ -94,7 +98,7 @@ namespace AppBTS.Presentacion
                 string idArticulo = "";
                 if (cboArticulo.SelectedIndex != -1)
                     idArticulo = cboArticulo.SelectedValue.ToString();
-                CargarGrillaMenus(dgvMenus, oMenu.RecuperarFiltrados(idMenu, nombre, idTipoArticulo, idArticulo));
+                CargarGrillaMenus(dgvMenus, miGestorMenus.RecuperarFiltrados(idMenu, nombre, idTipoArticulo, idArticulo));
                 cboTipo.SelectedIndex = -1;
                 cboArticulo.SelectedIndex = -1;
             }
@@ -136,7 +140,7 @@ namespace AppBTS.Presentacion
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 seleccionado.IdMenu = Convert.ToInt32(dgvMenus.SelectedCells[0].Value);
-                seleccionado.Eliminar();
+                miGestorMenus.Eliminar(seleccionado);
                 MessageBox.Show("'" + nombre + "' eliminado con éxito.");
             }
         }

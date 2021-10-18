@@ -28,8 +28,8 @@ namespace AppBTS.Negocio
         {
             string consulta = "SELECT * FROM Usuarios WHERE usuario='" + nombre + "' AND password='" + clave+"'";
             
-            BDHelper oDatos = new BDHelper();
-            DataTable tabla = oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
             if (tabla.Rows.Count > 0)
                 return (int)tabla.Rows[0][0];
             else
@@ -39,8 +39,8 @@ namespace AppBTS.Negocio
         {
             string consulta = "SELECT * FROM Usuarios WHERE borrado = 0 order by usuario";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
     }
 }

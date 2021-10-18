@@ -1,4 +1,5 @@
 ﻿using AppBTS.Negocio;
+using AppBTS.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,6 +20,7 @@ namespace AppBTS.Presentacion
         }
         private Button botonClickeado = null;
         Mesas oMesas = new Mesas();
+        private ReservaService miGestorReservas = new ReservaService();
         public frmDetallesMesa(Button botonClickeado) : this()
         {
             this.botonClickeado = botonClickeado;
@@ -29,7 +31,7 @@ namespace AppBTS.Presentacion
             Reservas oReservas = new Reservas();
             // TODO: esta línea de código carga datos en la tabla 'bAR_PAVDataSet.Reservas' Puede moverla o quitarla según sea necesario.
             //this.reservasTableAdapter.Fill(this.bAR_PAVDataSet.Reservas);
-            this.CargarGrilla(dgvReservasMesa,oReservas.RecuperarFiltrados(DateTime.Today.AddDays(-1).ToString("yyyy/MM/dd"), 
+            this.CargarGrilla(dgvReservasMesa, miGestorReservas.RecuperarFiltrados(DateTime.Today.AddDays(-1).ToString("yyyy/MM/dd"), 
                                                                            DateTime.Today.AddDays(+7).ToString("yyyy/MM/dd"), string.Empty, botonClickeado.Text,
                                                                            string.Empty, string.Empty, string.Empty, string.Empty));
         }

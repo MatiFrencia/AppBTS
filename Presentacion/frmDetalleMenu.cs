@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppBTS.Negocio;
+using AppBTS.Servicios;
 
 namespace AppBTS.Presentacion
 {
@@ -22,6 +23,7 @@ namespace AppBTS.Presentacion
         public int IdMenu { get => idMenu; set => idMenu = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public int PcioUnitario { get => pcioUnitario; set => pcioUnitario = value; }
+        private MenuService miGestorMenus = new MenuService();
 
         public frmDetalleMenu()
         {
@@ -79,7 +81,7 @@ namespace AppBTS.Presentacion
         {
             if (tipos == "Edit")
             {
-                oMenu.Modificar(idMenu, txtbNombre.Text, Convert.ToInt32(txtbPrecio.Text));
+                miGestorMenus.Modificar(idMenu, txtbNombre.Text, Convert.ToInt32(txtbPrecio.Text));
             }
 
             this.Close();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppBTS.Negocio;
+using AppBTS.Servicios;
 
 namespace AppBTS.Presentacion
 {
@@ -30,8 +31,7 @@ namespace AppBTS.Presentacion
         public string NomCliente { get => nomCliente; set => nomCliente = value; }
         public string TelCliente { get => telCliente; set => telCliente = value; }
         public int CantComensales { get => cantComensales; set => cantComensales = value; }
-
-
+        private ReservaService miGestorReservas = new ReservaService();
 
         public frmDetalleReserva()
         {
@@ -49,7 +49,7 @@ namespace AppBTS.Presentacion
                 limpiar();
                 campos(true);
                 this.txtbNumeroReserva.Enabled = false;
-                string numReserva = oReserva.IdSiguiente().ToString();
+                string numReserva = miGestorReservas.IdSiguiente().ToString();
                 this.txtbNumeroReserva.Text = numReserva;
                 
             }
@@ -101,7 +101,7 @@ namespace AppBTS.Presentacion
         {
             if (tipos == "Edit")
             {
-                oReserva.Modificar(numReserva,Convert.ToInt32(txtbNumeroMesa.Text),txtbFechaReserva.Text, txtbHoraReserva.Text,
+                miGestorReservas.Modificar(numReserva,Convert.ToInt32(txtbNumeroMesa.Text),txtbFechaReserva.Text, txtbHoraReserva.Text,
                                    txtbCliente.Text,txtbTelefono.Text,Convert.ToInt32(txtbCantidadComensales.Text));
             }
 
@@ -115,7 +115,7 @@ namespace AppBTS.Presentacion
                 oReserva.Telefono = txtbTelefono.Text;
                 oReserva.CantidadComensales = Convert.ToInt32(txtbCantidadComensales.Text);
                 numReserva = Convert.ToInt32(txtbNumeroReserva.Text);
-                oReserva.AgregarReserva(numReserva.ToString());
+                miGestorReservas.AgregarReserva(oReserva);
             }
 
             this.Close();
