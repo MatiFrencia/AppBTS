@@ -113,7 +113,7 @@ namespace AppBTS.Presentacion
                 oReserva.NroReserva = Convert.ToInt32(txtbNumeroReserva.Text);
                 oReserva.NroMesa = Convert.ToInt32(txtbNumeroMesa.Text);
                 oReserva.FechaReserva = dtpFechaReserva.Value;
-                oReserva.HoraReserva = TimeSpan.Parse(dtpHoraReserva.Value.ToString());
+                oReserva.HoraReserva = TimeSpan.Parse(dtpHoraReserva.Value.ToString("HH:mm"));
                 oReserva.NombreCliente = txtbCliente.Text;
                 oReserva.Telefono = txtbTelefono.Text;
                 oReserva.CantidadComensales = Convert.ToInt32(txtbCantidadComensales.Text);
