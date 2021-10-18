@@ -33,7 +33,7 @@ namespace AppBTS.Presentacion
             //this.reservasTableAdapter.Fill(this.bAR_PAVDataSet.Reservas);
             this.CargarGrilla(dgvReservasMesa, miGestorReservas.RecuperarFiltrados(DateTime.Today.AddDays(-1).ToString("yyyy/MM/dd"), 
                                                                            DateTime.Today.AddDays(+7).ToString("yyyy/MM/dd"), string.Empty, botonClickeado.Text,
-                                                                           string.Empty, string.Empty, string.Empty, string.Empty));
+                                                                           string.Empty, string.Empty, string.Empty, "00:00", "23:59"));
         }
         private void CargarGrilla(DataGridView grilla, DataTable tabla)
         {
