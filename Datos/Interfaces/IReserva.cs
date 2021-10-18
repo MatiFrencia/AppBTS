@@ -11,7 +11,7 @@ namespace AppBTS.Datos.Interfaces
     interface IReserva
     {
         DataTable RecuperarTodos();
-        DataTable RecuperarFiltrados(string desde, string hasta, string nroReserva, string nroMesa, string telefono, string comensales, string nombreCliente, string horaReserva);
+        DataTable RecuperarFiltrados(string desde, string hasta, string nroReserva, string nroMesa, string telefono, string comensales, string nombreCliente, string desdeHora, string hastaHora);
         DataTable RecuperarTodosConParametro(string filtro);
         void Borrar(string nroReserva);
         void Modificar(int numReserva, int numMesa, string dateReserva, string hourReserva, string cliente, string tel, int cantComensales);      

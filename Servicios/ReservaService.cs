@@ -21,9 +21,9 @@ namespace AppBTS.Servicios
         {
             return dao.RecuperarTodos();
         }
-        public DataTable RecuperarFiltrados(string desde, string hasta, string nroReserva, string nroMesa, string telefono, string comensales, string nombreCliente, string horaReserva)
+        public DataTable RecuperarFiltrados(string desde, string hasta, string nroReserva, string nroMesa, string telefono, string comensales, string nombreCliente, string desdeHora, string hastaHora)
         {
-            return dao.RecuperarFiltrados(desde, hasta, nroReserva, nroMesa, telefono, comensales, nombreCliente, horaReserva);
+            return dao.RecuperarFiltrados(desde, hasta, nroReserva, nroMesa, telefono, comensales, nombreCliente, desdeHora, hastaHora);
         }
         public DataTable RecuperarTodosConParametro(string filtro)
         {
