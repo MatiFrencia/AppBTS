@@ -56,11 +56,19 @@
     <Compile Include="Datos\Daos\ArticuloDao.cs" />
     <Compile Include="Datos\Daos\DetalleMenuDao.cs" />
     <Compile Include="Datos\Daos\MenuDao.cs" />
+    <Compile Include="Datos\Daos\MesasDao.cs" />
+    <Compile Include="Datos\Daos\MozoDao.cs" />
     <Compile Include="Datos\Daos\ReservaDao.cs" />
+    <Compile Include="Datos\Daos\TipoArticuloDao.cs" />
+    <Compile Include="Datos\Daos\UsuarioDao.cs" />
     <Compile Include="Datos\Interfaces\IArticulo.cs" />
     <Compile Include="Datos\Interfaces\IDetalleMenu.cs" />
     <Compile Include="Datos\Interfaces\IMenu.cs" />
+    <Compile Include="Datos\Interfaces\IMesas.cs" />
+    <Compile Include="Datos\Interfaces\IMozo.cs" />
     <Compile Include="Datos\Interfaces\IReserva.cs" />
+    <Compile Include="Datos\Interfaces\ITipoArticulo.cs" />
+    <Compile Include="Datos\Interfaces\IUsuario.cs" />
     <Compile Include="masterDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -171,7 +179,11 @@
     <Compile Include="Servicios\ArticuloService.cs" />
     <Compile Include="Servicios\DetalleMenuService.cs" />
     <Compile Include="Servicios\MenuService.cs" />
+    <Compile Include="Servicios\MesasService.cs" />
+    <Compile Include="Servicios\MozoService.cs" />
     <Compile Include="Servicios\ReservaService.cs" />
+    <Compile Include="Servicios\TipoArticuloService.cs" />
+    <Compile Include="Servicios\UsuarioService.cs" />
     <EmbeddedResource Include="Presentacion\frmAltaMenu.resx">
       <DependentUpon>frmAltaMenu.cs</DependentUpon>
     </EmbeddedResource>

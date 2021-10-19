@@ -17,6 +17,7 @@ namespace AppBTS.Presentacion
         TipoArticulo oTipo = new TipoArticulo();
         Articulo oArticulo = new Articulo();
         private ArticuloService miGestor = new ArticuloService();
+        private TipoArticuloService miGestorTipoArticulo = new TipoArticuloService();
         public frmRegistrarArticulo()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace AppBTS.Presentacion
 
         private void frmRegistrarArticulo_Load(object sender, EventArgs e)
         {
-            CargarCombo(cboTipo, oTipo.RecuperarTodos());
+            CargarCombo(cboTipo, miGestorTipoArticulo.RecuperarTodos());
             
             btnGuardar.Enabled = false;
         }
