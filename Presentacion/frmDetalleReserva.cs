@@ -104,7 +104,7 @@ namespace AppBTS.Presentacion
         {
             if (tipos == "Edit")
             {
-                miGestorReservas.Modificar(numReserva,Convert.ToInt32(txtbNumeroMesa.Text),dtpFechaReserva.Value.ToString(), dtpHoraReserva.Value.ToString(),
+                miGestorReservas.Modificar(numReserva,Convert.ToInt32(txtbNumeroMesa.Text),dtpFechaReserva.Value.ToString("yyyy-MM-dd"), dtpHoraReserva.Value.ToString("HH:mm:ss"),
                                    txtbCliente.Text,txtbTelefono.Text,Convert.ToInt32(txtbCantidadComensales.Text));
             }
 
@@ -131,5 +131,4 @@ namespace AppBTS.Presentacion
             this.Close();
         }
     }
-
 }
