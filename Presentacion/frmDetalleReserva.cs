@@ -89,6 +89,7 @@ namespace AppBTS.Presentacion
             this.txtbCliente.Text = nomCliente;
             this.txtbTelefono.Text = telCliente.ToString();
             this.txtbCantidadComensales.Text = cantComensales.ToString();
+            
         }
 
         private void limpiar() {
