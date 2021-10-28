@@ -75,7 +75,8 @@ namespace AppBTS.Datos.Daos
         }
         public void Modificar(int numReserva, int numMesa, string dateReserva, string hourReserva, string cliente, string tel, int cantComensales)
         {
-            string modificacion = "UPDATE Reservas SET nroMesa = " + numMesa.ToString() + ", fechaReserva = '" + dateReserva + "', horaReserva = '" + hourReserva + "', nombreCliente = '" + cliente + "', telefono = " + tel + ", cantidadComensales = " + cantComensales.ToString() + " WHERE nroReserva = " + numReserva.ToString();
+            string modificacion = "UPDATE Reservas SET nroMesa = " + numMesa.ToString() + ", fechaReserva = '" + dateReserva + "', horaReserva = '" + hourReserva + "', " +
+                                  "nombreCliente = '" + cliente + "', telefono = " + tel + ", cantidadComensales = " + cantComensales.ToString() + " WHERE nroReserva = " + numReserva.ToString();
             //BDHelper oModificacion = new BDHelper();
             BDHelper.obtenerInstancia().actualizar(modificacion);
         }

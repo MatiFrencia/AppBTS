@@ -18,6 +18,7 @@ namespace AppBTS.Presentacion
         Mesas oMesas = new Mesas();
         Usuario oUsuario = new Usuario();
         private ReservaService miGestorReservas = new ReservaService();
+        MesasService miGestorMesas = new MesasService();
 
 
         public frmConsultaReservas()
@@ -47,7 +48,7 @@ namespace AppBTS.Presentacion
             this.dtpHoraHasta.ShowUpDown = true;
 
             this.CargarCombo(cboNroReserva, miGestorReservas.RecuperarTodosConParametro("nroReserva"));
-            this.CargarCombo(cboNroMesa, oMesas.RecuperarTodos());
+            this.CargarCombo(cboNroMesa, miGestorMesas.RecuperarTodos());
             this.CargarCombo(cboNombreCliente, miGestorReservas.RecuperarTodosConParametro("nombreCliente"));
             this.CargarCombo(cboTelefono, miGestorReservas.RecuperarTodosConParametro("telefono"));
             this.CargarCombo(cboComensales, miGestorReservas.RecuperarTodosConParametro("cantidadComensales"));

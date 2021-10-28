@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppBTS.Negocio;
+using AppBTS.Servicios;
 
 namespace AppBTS.Presentacion
 {
     public partial class frmRecuperarMesas : Form
     {
+        MesasService miGestorMesas = new MesasService();
         public frmRecuperarMesas()
         {
             InitializeComponent();
@@ -33,8 +35,8 @@ namespace AppBTS.Presentacion
 
         private void btnRecuperar_Click(object sender, EventArgs e)
         {
-            oMesas.LevantarMesa(Global.IdMesa);
-            this.CargarGrilla(dgvMesasBorradas, oMesas.RecuperarBorrados());
+            miGestorMesas.LevantarMesa(oMesas.NroMesa.ToString());
+            this.CargarGrilla(dgvMesasBorradas, miGestorMesas.RecuperarBorrados());
         }
 
         private void CargarGrilla(DataGridView grilla, DataTable tabla)
@@ -52,13 +54,13 @@ namespace AppBTS.Presentacion
 
         private void frmRecuperarMesas_Load(object sender, EventArgs e)
         {
-            this.CargarGrilla(dgvMesasBorradas, oMesas.RecuperarBorrados());
+            this.CargarGrilla(dgvMesasBorradas, miGestorMesas.RecuperarBorrados());
         }
 
         private void dgvMesasBorradas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             
-        Global.IdMesa = dgvMesasBorradas.Rows[e.RowIndex].Cells[0].Value.ToString();
+        oMesas.NroMesa = Convert.ToInt32(dgvMesasBorradas.Rows[e.RowIndex].Cells[0].Value);
 
         }
     }

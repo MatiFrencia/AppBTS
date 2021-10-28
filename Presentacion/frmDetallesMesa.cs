@@ -21,6 +21,7 @@ namespace AppBTS.Presentacion
         private Button botonClickeado = null;
         Mesas oMesas = new Mesas();
         private ReservaService miGestorReservas = new ReservaService();
+        MesasService miGestorMesas = new MesasService();
         public frmDetallesMesa(Button botonClickeado) : this()
         {
             this.botonClickeado = botonClickeado;
@@ -59,7 +60,7 @@ namespace AppBTS.Presentacion
         private void btnBorrarMesa_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Está seguro que desea Borrarla?", "ATENCION, Está a punto de borrar la MESA", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
-                oMesas.Borrar(botonClickeado.Text);
+                miGestorMesas.Borrar(botonClickeado.Text);
                 this.DialogResult = DialogResult.OK;
                 this.Close();
 

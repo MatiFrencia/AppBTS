@@ -21,6 +21,7 @@ namespace AppBTS.Presentacion
         private ArticuloService miGestorArticulos = new ArticuloService();
         private DetalleMenuService miGestorDetallesMenu = new DetalleMenuService();
         private MenuService miGestorMenus = new MenuService();
+        private TipoArticuloService miGestorTipoArticulo = new TipoArticuloService();
         public frmConsultarMenus()
         {
             InitializeComponent();
@@ -28,7 +29,7 @@ namespace AppBTS.Presentacion
 
         private void frmConsultarMenus_Load(object sender, EventArgs e)
         {
-            CargarCombo(cboTipo, oTipo.RecuperarTodos());
+            CargarCombo(cboTipo, miGestorTipoArticulo.RecuperarTodos());
             CargarCombo(cboArticulo, miGestorArticulos.RecuperarTodos());
             btnVisualizar.Enabled = false;
             btnEliminar.Enabled = false;

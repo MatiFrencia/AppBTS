@@ -19,6 +19,7 @@ namespace AppBTS.Presentacion
         Menus oMenu = new Menus();
         private ArticuloService miGestorArticulos = new ArticuloService();
         private MenuService miGestorMenus = new MenuService();
+        private TipoArticuloService miGestorTipoArticulo = new TipoArticuloService();
         public frmAltaMenu()
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace AppBTS.Presentacion
         private void frmAltaMenu_Load(object sender, EventArgs e)
         {
             lblTotal.Text = "0.00";
-            CargarCombo(cboTipo, oTipo.RecuperarTodos());
+            CargarCombo(cboTipo, miGestorTipoArticulo.RecuperarTodos());
             btnAgregar.Enabled = false;
             btnBorrar.Enabled = false;
             btnGuardar.Enabled = false;

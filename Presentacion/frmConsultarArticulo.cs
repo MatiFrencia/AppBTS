@@ -17,13 +17,14 @@ namespace AppBTS.Presentacion
         Articulo oArticulo = new Articulo();
         TipoArticulo oTipo = new TipoArticulo();
         private ArticuloService miGestor = new ArticuloService();
+        private TipoArticuloService miGestorTipoArticulo = new TipoArticuloService();
         public frmConsultarArticulo()
         {
             InitializeComponent();
         }
         private void frmConsultarArticulo_Load(object sender, EventArgs e)
         {
-            CargarCombo(cboTipo, oTipo.RecuperarTodos());
+            CargarCombo(cboTipo, miGestorTipoArticulo.RecuperarTodos());
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
         }
@@ -93,7 +94,7 @@ namespace AppBTS.Presentacion
             seleccionado.Nombre = dgvArticulos.SelectedCells[1].Value.ToString();
             seleccionado.PrecioUnitario = Convert.ToDouble(dgvArticulos.SelectedCells[2].Value);
             string tipoId = dgvArticulos.SelectedCells[3].Value.ToString();
-            seleccionado.IdTipoArticulo = oTipo.RecuperarPorNombre(tipoId);
+            seleccionado.IdTipoArticulo = miGestorTipoArticulo.RecuperarPorNombre(tipoId);
             frmModificarArticulo fma = new frmModificarArticulo(seleccionado);
             fma.ShowDialog();
             fma.Dispose();

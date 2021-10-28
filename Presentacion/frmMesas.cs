@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppBTS.Negocio;
+using AppBTS.Servicios;
 
 namespace AppBTS.Presentacion
 {
@@ -20,12 +21,13 @@ namespace AppBTS.Presentacion
         }
         public string NroMesa { get; set; }
         public string BotonClickeado { get; set; }
+        MesasService miGestorMesas = new MesasService();
         public void ActualizarMesas()
         {
             
             Button[,] boton = new Button[10, 10];
             Mesas oMesa = new Mesas();
-            DataTable tabla = oMesa.RecuperarTodos();
+            DataTable tabla = miGestorMesas.RecuperarTodos();
             //string nroMesa = tabla.Rows[i]["nroMesa"].ToString;
             int cantMesas = tabla.Rows.Count;
             int cantFilas = cantMesas / 3;
