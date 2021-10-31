@@ -39,6 +39,7 @@
             this.menúsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mozosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.reservasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cobrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nuevoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.articuloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -68,7 +69,8 @@
             this.artículosToolStripMenuItem,
             this.menúsToolStripMenuItem,
             this.mozosToolStripMenuItem,
-            this.reservasToolStripMenuItem});
+            this.reservasToolStripMenuItem,
+            this.cobrarToolStripMenuItem});
             this.soporteToolStripMenuItem.Name = "soporteToolStripMenuItem";
             this.soporteToolStripMenuItem.Size = new System.Drawing.Size(80, 21);
             this.soporteToolStripMenuItem.Text = "Consultas";
@@ -125,6 +127,13 @@
             this.reservasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reservasToolStripMenuItem.Text = "Reservas";
             this.reservasToolStripMenuItem.Click += new System.EventHandler(this.reservasToolStripMenuItem_Click);
+            // 
+            // cobrarToolStripMenuItem
+            // 
+            this.cobrarToolStripMenuItem.Name = "cobrarToolStripMenuItem";
+            this.cobrarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cobrarToolStripMenuItem.Text = "Cobrar";
+            this.cobrarToolStripMenuItem.Click += new System.EventHandler(this.cobrarToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -185,6 +194,7 @@
         private System.Windows.Forms.ToolStripMenuItem menúsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mozosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem reservasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cobrarToolStripMenuItem;
     }
 }
 

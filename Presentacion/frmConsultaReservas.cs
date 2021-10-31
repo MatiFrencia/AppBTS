@@ -89,14 +89,6 @@ namespace AppBTS.Presentacion
             combo.SelectedIndex = -1;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
-        private void CargarCombo(ComboBox combo, DataTable tabla, string campoMostrar, string campoValor)
-        {
-            combo.DataSource = tabla;
-            combo.DisplayMember = campoMostrar;
-            combo.ValueMember = campoValor;
-            combo.SelectedIndex = -1;
-            combo.DropDownStyle = ComboBoxStyle.DropDownList;
-        }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {

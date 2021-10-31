@@ -13,7 +13,7 @@ namespace AppBTS.Datos.Daos
     {
         public DataTable RecuperarTodos()
         {
-            string consulta = "SELECT * FROM Mesas WHERE borrado = 0 order by nroMesa";
+            string consulta = "SELECT DISTINCT m.nroMesa, m.cantidadSillas FROM Mesas m WHERE borrado = 0 order by nroMesa";
 
             //BDHelper oDatos = new BDHelper();
             return BDHelper.obtenerInstancia().consultar(consulta);
