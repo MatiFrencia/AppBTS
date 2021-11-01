@@ -267,7 +267,7 @@ namespace AppBTS.Presentacion
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Image = global::AppBTS.Properties.Resources.Cancelar3;
+            this.btnCancelar.Image = global::AppBTS.Properties.Resources.logout_door;
             this.btnCancelar.Location = new System.Drawing.Point(674, 399);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(39, 39);

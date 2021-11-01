@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <metadata name="dtTicketBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>118, 17</value>
+  </metadata>
+  <metadata name="dsTickets.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnClear.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -271,30 +277,6 @@
         AAAAAAAAAAAAAAAAAAAAAAAAAADAm7jggv8HX5Sp6T434vkAAAAASUVORK5CYII=
 </value>
   </data>
-  <metadata name="nroReserva.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="nroMesa.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="fechaReserva.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="horaReserva.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="nombreCliente.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="telefono.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="cantidadComensales.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="borrado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <data name="btnConsultar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAABDRJREFUSEut
@@ -319,38 +301,4 @@
         AElFTkSuQmCC
 </value>
   </data>
-  <metadata name="bugsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>245, 17</value>
-  </metadata>
-  <metadata name="masterDataSet.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>114, 17</value>
-  </metadata>
-  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="btnNuevo.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        xAAADsQBlSsOGwAAA69JREFUWEfFlMtvG1UUh82GBf8AiD0btpHi4pqO7RjHdeI8aEybLGADXaFuAhuq
-        IpKqHapWFagpJG2EKqoWRap4tFIRpI80kJJAnIA9Hjuxx3b8GDtvx27TJE7y48741tHgUe1JHXGkTxrN
-        Oef+Pmk0V7e2tvZaLpcbymazk8/L0Z/4EzqtRcJPkmVUg44bHOquuLvo0ZXVysoKS0A1kASsV9xg+scq
-        l1heXmYzmQyqwVMBU/8Y9veOVCZRXQFvUcDYOwJ9z4PyEpIAAdXgzKAXdZcfgvl6GMzFezBdGERr3+Bn
-        NEq9lpaWWAKqwfz8PGKJJJLJJERRRCqVQjqdztEo9SKL7OLiIvaQZwssLCz8/wIE7CHPFpibm2Olb7eH
-        lBcgYA8pLzA7O4tqEZ2N4J/03zLSc9m/gAw8t0AwPY1vEn04NnMU7ZFmBR/OvJ9vjzhPuiKOV2iksiQB
-        gmSqGek/H0hcw7uRNhyJNJXBmTsSbjxGY3eKXBisdJBWxJSI8zOf451wo4L3oi50p46jS/wEHZHWkj6h
-        XwfdCzS+ICDdWlq5FLsIV7ihhNFHI3haNzPfq860hRynaHxBQLo6tfAw/jtcQgMOCY4Spp74aTzwIHtP
-        deaQcHCzRbDVygKJREKzwPHwR3g7ZFdFKXBXdYbyc1GAgErh4l75gNZQvSqBJzyNB4aIgNqMREuwfqvJ
-        b31VF4vF2Hg8jkr5IXoDzUGbTIfQClbswhmxu0hyPU7jAW7Vo+idEj+FK9RQ3HdOWdtlAQIqpS/cg6Zp
-        q8z97B0aVXkNLF4r7jun607ootGoJoELwnlpUWb80Z/02Mrr9vLN4n5jwHJas0B/qBcNUxaZ71JXsbm5
-        qWB7e5tGAVtbW4pePp/Hl/FzxX2Hz/yxZoHbwi04AqYCfhMO8+SW41uKTK8GaDzwW2ZI0XPxzp1dgo1j
-        7JoFgtEgmnkb7AFGFf+qj8YDd1d+VZ2R4Q/kasZrXtIsIMEGulHvP6AKv8rReCKQ+UV1RsLmMfbI98Bu
-        BLwRD1p8dtj8xhL4xzsCd4iA2sxbXuOC5Q/9y7sWkLgV/JF8wzdh5fcruC5+i42NDaxvrOOL2NmSvpUz
-        5M1/GRxyuFQcx3UKgoBwOKyZAf467B4GdT7DDpwBBz2m0vcEi8fwmBl9o41GF4oIvDg5OfnBxMRE527o
-        G/+q0zyuHzJ79sHiU0fqmd377htHa1+nsdUv43CNnhmtPce49cOMuzZUQD9sGtOflXp07D+l0/0Lty0/
-        6K/tq2UAAAAASUVORK5CYII=
-</value>
-  </data>
-  <metadata name="bugsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>402, 17</value>
-  </metadata>
 </root>

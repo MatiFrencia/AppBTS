@@ -13,5 +13,7 @@ namespace AppBTS.Datos.Interfaces
     {
         DataTable RecuperarTodos();
         void Registrar(Ticket ticket);
+
+        DataTable RecuperarTodosConParametros(string nroTicket, string fechaDesde, string fechaHasta, string horaDesde, string horaHasta, string idMozo, string nroMesa, string idTipoPago, string Totaldesde, string Totalhasta);
     }
 }
