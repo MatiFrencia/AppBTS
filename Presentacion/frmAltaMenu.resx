@@ -132,6 +132,21 @@
   <metadata name="Subtotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <metadata name="IdArticulo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="NombreArticulo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PrecioUnitario.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Cantidad.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Subtotal.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnAgregar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -151,17 +166,6 @@
         al1kRtGBcPreKtuKpk6nM6X11NSkVFBQUJmO7sMHbIOyLf97YmIiic7MOOJGY9npbCiPDItPTOyZEhYN
         +bzNZpPnHI7peHV19dlsoEgGnL6/AubPjI6OsdZvJaPxRHU2TJlDw/yTtFgsbr1efzIblB4+Dv8/j+hY
         NiQzoD9yUYQtuiO+TgAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnSalir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        Qk2WAQAAAAAAAHYAAAAoAAAAGAAAABgAAAABAAQAAAAAAAAAAADEDgAAxA4AABAAAAAQAAAA//////7+
-        /v/AwMD/gICA/+WxXP+qnTr/u4Mo/w0bDf8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/xES
-        ERIRIhGIESERERIRIhEiESGEgRIhESERIRIhEiGEZoIRIhIhEiESERKEZmEiESESERIRIhGEZmgRIRER
-        EREXIRKEZmaDEREREREXEiGEZmaDEREREREXiIiEZmaDERERERgoMzOEZmaDERERERaIMzOEZmaDERER
-        ERZoMzOEaIaDERERIiRGgzOEgYaDERd4iIREaDOEaIaDERVmZmREZoOEZmaDERRBERERRGOEZmaDERZE
-        RERBRoOEZmaDERd3d3QUaDOEZmaDERERERRGMzOEZmaDERERERRoMzOEZmaDERERERV3MzM4RmaDERER
-        EREXMzMzhEaDEREREREXMzMzOEaDEREREREXMzMzM4RzEREREREREREREREREQ==
 </value>
   </data>
   <data name="btnGuardar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -191,4 +195,7 @@
         c3UAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

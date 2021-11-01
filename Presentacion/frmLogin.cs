@@ -49,8 +49,10 @@ namespace AppBTS
                 return;
             }
 
-            this.miUsuario.Nombre = this.txtUsuario.Text;
-            this.miUsuario.Password = this.txtClave.Text;
+            this.miUsuario.Nombre = this.txtUsuario.Text.Replace('\'', ' '); ;
+            MessageBox.Show(this.miUsuario.Nombre);
+            this.miUsuario.Password = this.txtClave.Text.Trim('\'');
+            MessageBox.Show(this.miUsuario.Nombre);
 
             this.miUsuario.Id_usuario = this.miGestorUsuarios.validarUsuario(miUsuario.Nombre, miUsuario.Password);
 

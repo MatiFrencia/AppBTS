@@ -258,7 +258,7 @@ namespace AppBTS.Presentacion
             // 
             // btnSalir
             // 
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
             this.btnSalir.Location = new System.Drawing.Point(54, 375);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(64, 42);
@@ -300,6 +300,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAltaMenu";
             this.Text = "Crear Nuevo Menú";
             this.Load += new System.EventHandler(this.frmAltaMenu_Load);

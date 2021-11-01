@@ -31,6 +31,9 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultaReservas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpHoraHasta = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtpHoraDesde = new System.Windows.Forms.DateTimePicker();
             this.btnClear = new System.Windows.Forms.Button();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.lblFechaHasta = new System.Windows.Forms.Label();
@@ -70,9 +73,6 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
-            this.dtpHoraDesde = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtpHoraHasta = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
@@ -114,6 +114,35 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Criterios";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // dtpHoraHasta
+            // 
+            this.dtpHoraHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHoraHasta.Location = new System.Drawing.Point(704, 182);
+            this.dtpHoraHasta.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpHoraHasta.Name = "dtpHoraHasta";
+            this.dtpHoraHasta.Size = new System.Drawing.Size(177, 22);
+            this.dtpHoraHasta.TabIndex = 25;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(611, 182);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 16);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Hora Hasta:";
+            // 
+            // dtpHoraDesde
+            // 
+            this.dtpHoraDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHoraDesde.Location = new System.Drawing.Point(704, 149);
+            this.dtpHoraDesde.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpHoraDesde.Name = "dtpHoraDesde";
+            this.dtpHoraDesde.Size = new System.Drawing.Size(177, 22);
+            this.dtpHoraDesde.TabIndex = 23;
             // 
             // btnClear
             // 
@@ -500,34 +529,6 @@
             this.btnDetalle.TabIndex = 4;
             this.btnDetalle.UseVisualStyleBackColor = false;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
-            // 
-            // dtpHoraDesde
-            // 
-            this.dtpHoraDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHoraDesde.Location = new System.Drawing.Point(704, 149);
-            this.dtpHoraDesde.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpHoraDesde.Name = "dtpHoraDesde";
-            this.dtpHoraDesde.Size = new System.Drawing.Size(177, 22);
-            this.dtpHoraDesde.TabIndex = 23;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(611, 182);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 16);
-            this.label8.TabIndex = 24;
-            this.label8.Text = "Hora Hasta:";
-            // 
-            // dtpHoraHasta
-            // 
-            this.dtpHoraHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHoraHasta.Location = new System.Drawing.Point(704, 182);
-            this.dtpHoraHasta.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpHoraHasta.Name = "dtpHoraHasta";
-            this.dtpHoraHasta.Size = new System.Drawing.Size(177, 22);
-            this.dtpHoraHasta.TabIndex = 25;
             // 
             // frmConsultaReservas
             // 
