@@ -72,20 +72,20 @@ namespace AppBTS.Presentacion
             // lblMesasBorradas
             // 
             this.lblMesasBorradas.AutoSize = true;
-            this.lblMesasBorradas.Font = new System.Drawing.Font("Dubai", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMesasBorradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMesasBorradas.Location = new System.Drawing.Point(12, 28);
             this.lblMesasBorradas.Name = "lblMesasBorradas";
-            this.lblMesasBorradas.Size = new System.Drawing.Size(220, 49);
+            this.lblMesasBorradas.Size = new System.Drawing.Size(241, 33);
             this.lblMesasBorradas.TabIndex = 1;
             this.lblMesasBorradas.Text = "Mesas Borradas";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Dubai", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDescripcion.Location = new System.Drawing.Point(12, 75);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(368, 72);
+            this.lblDescripcion.Size = new System.Drawing.Size(416, 50);
             this.lblDescripcion.TabIndex = 2;
             this.lblDescripcion.Text = "Seleccione la mesa que desee recuperar, \r\ny luego presione el botón \"RECUPERAR\"";
             // 
