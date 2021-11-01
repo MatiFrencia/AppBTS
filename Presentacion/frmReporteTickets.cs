@@ -62,7 +62,7 @@ namespace AppBTS.Presentacion
             this.cboNroMesa.SelectedIndex = -1;
             this.cboTipoPago.SelectedIndex = -1;
             this.cboMozo.SelectedIndex = -1;
-            this.nmrDesde.Text = "0";
+            this.txtDesde.Text = "0";
         }
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
@@ -100,17 +100,17 @@ namespace AppBTS.Presentacion
                 dtpHoraDesde.Focus();
                 return;
             }
-            if (Convert.ToInt32(nmrDesde.Text) > Convert.ToInt32(nmrHasta.Text))
+            if (Convert.ToInt32(txtDesde.Text) > Convert.ToInt32(txtHasta.Text))
             {
                 MessageBox.Show("Valores $ erroneos!!!");
-                nmrDesde.Focus();
+                txtDesde.Focus();
                 return;
             }
             this.dtTicketsBindingSource.DataSource = miGestorTickets.RecuperarTodosConParametros(_nroTicket,
                                                     dtpFechaDesde.Value.ToString("yyyy/MM/dd"), dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
                                                     dtpHoraDesde.Value.ToString("HH:mm"),dtpHoraHasta.Value.ToString("HH:mm"),
                                                     _idMozo, _nroMesa, _idTipoPago,
-                                                    nmrDesde.Text.ToString(),nmrHasta.Text.ToString());
+                                                    txtDesde.Text.ToString(),txtHasta.Text.ToString());
             this.reportViewer1.RefreshReport();
             limpiar();
         }
