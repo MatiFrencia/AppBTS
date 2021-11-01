@@ -109,6 +109,13 @@ namespace AppBTS
             fat.ShowDialog();
             fat.Dispose();
         }
+
+        private void ticketsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteTickets frt = new frmReporteTickets();
+            frt.ShowDialog();
+            frt.Dispose();
+        }
     }
  }
 

@@ -12,30 +12,20 @@
   <xs:element name="dsTickets" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsTickets" msprop:Generator_UserDSName="dsTickets">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="dtTicket" msprop:Generator_TableClassName="dtTicketDataTable" msprop:Generator_TableVarName="tabledtTicket" msprop:Generator_TablePropName="dtTicket" msprop:Generator_RowDeletingName="dtTicketRowDeleting" msprop:Generator_RowChangingName="dtTicketRowChanging" msprop:Generator_RowEvHandlerName="dtTicketRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTicketRowDeleted" msprop:Generator_UserTableName="dtTicket" msprop:Generator_RowChangedName="dtTicketRowChanged" msprop:Generator_RowEvArgName="dtTicketRowChangeEvent" msprop:Generator_RowClassName="dtTicketRow">
+        <xs:element name="dtTickets" msprop:Generator_TableClassName="dtTicketsDataTable" msprop:Generator_TableVarName="tabledtTickets" msprop:Generator_TablePropName="dtTickets" msprop:Generator_RowDeletingName="dtTicketsRowDeleting" msprop:Generator_RowChangingName="dtTicketsRowChanging" msprop:Generator_RowEvHandlerName="dtTicketsRowChangeEventHandler" msprop:Generator_RowDeletedName="dtTicketsRowDeleted" msprop:Generator_UserTableName="dtTickets" msprop:Generator_RowChangedName="dtTicketsRowChanged" msprop:Generator_RowEvArgName="dtTicketsRowChangeEvent" msprop:Generator_RowClassName="dtTicketsRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="nroTicket" msprop:Generator_ColumnVarNameInTable="columnnroTicket" msprop:Generator_ColumnPropNameInRow="nroTicket" msprop:Generator_ColumnPropNameInTable="nroTicketColumn" msprop:Generator_UserColumnName="nroTicket" type="xs:int" />
+              <xs:element name="nroTicket" msprop:Generator_ColumnVarNameInTable="columnnroTicket" msprop:Generator_ColumnPropNameInRow="nroTicket" msprop:Generator_ColumnPropNameInTable="nroTicketColumn" msprop:Generator_UserColumnName="nroTicket" type="xs:int" minOccurs="0" />
               <xs:element name="fecha" msprop:Generator_ColumnVarNameInTable="columnfecha" msprop:Generator_ColumnPropNameInRow="fecha" msprop:Generator_ColumnPropNameInTable="fechaColumn" msprop:Generator_UserColumnName="fecha" type="xs:dateTime" minOccurs="0" />
               <xs:element name="hora" msprop:Generator_ColumnVarNameInTable="columnhora" msprop:Generator_ColumnPropNameInRow="hora" msprop:Generator_ColumnPropNameInTable="horaColumn" msprop:Generator_UserColumnName="hora" type="xs:duration" minOccurs="0" />
-              <xs:element name="idMozo" msprop:Generator_ColumnVarNameInTable="columnidMozo" msprop:Generator_ColumnPropNameInRow="idMozo" msprop:Generator_ColumnPropNameInTable="idMozoColumn" msprop:Generator_UserColumnName="idMozo" type="xs:int" minOccurs="0" />
-              <xs:element name="nroMesa" msprop:Generator_ColumnVarNameInTable="columnnroMesa" msprop:Generator_ColumnPropNameInRow="nroMesa" msprop:Generator_ColumnPropNameInTable="nroMesaColumn" msprop:Generator_UserColumnName="nroMesa" type="xs:int" minOccurs="0" />
-              <xs:element name="idTipoPago" msprop:Generator_ColumnVarNameInTable="columnidTipoPago" msprop:Generator_ColumnPropNameInRow="idTipoPago" msprop:Generator_ColumnPropNameInTable="idTipoPagoColumn" msprop:Generator_UserColumnName="idTipoPago" type="xs:string" minOccurs="0" />
+              <xs:element name="nombreM" msdata:Caption="idMozo" msprop:Generator_ColumnVarNameInTable="columnnombreM" msprop:Generator_ColumnPropNameInRow="nombreM" msprop:Generator_ColumnPropNameInTable="nombreMColumn" msprop:Generator_UserColumnName="nombreM" type="xs:string" minOccurs="0" />
+              <xs:element name="nroMesa" msprop:Generator_ColumnVarNameInTable="columnnroMesa" msprop:Generator_ColumnPropNameInRow="nroMesa" msprop:Generator_ColumnPropNameInTable="nroMesaColumn" msprop:Generator_UserColumnName="nroMesa" type="xs:string" minOccurs="0" />
+              <xs:element name="nombreP" msdata:Caption="idTipoPago" msprop:Generator_ColumnVarNameInTable="columnnombreP" msprop:Generator_ColumnPropNameInRow="nombreP" msprop:Generator_ColumnPropNameInTable="nombrePColumn" msprop:Generator_UserColumnName="nombreP" type="xs:string" minOccurs="0" />
               <xs:element name="total" msprop:Generator_ColumnVarNameInTable="columntotal" msprop:Generator_ColumnPropNameInRow="total" msprop:Generator_ColumnPropNameInTable="totalColumn" msprop:Generator_UserColumnName="total" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:choice>
     </xs:complexType>
-    <xs:unique name="dtTicketKey1">
-      <xs:selector xpath=".//mstns:dtTicket" />
-      <xs:field xpath="mstns:idMozo" />
-      <xs:field xpath="mstns:nroMesa" />
-      <xs:field xpath="mstns:idTipoPago" />
-    </xs:unique>
-    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
-      <xs:selector xpath=".//mstns:dtTicket" />
-      <xs:field xpath="mstns:nroTicket" />
-    </xs:unique>
   </xs:element>
 </xs:schema>

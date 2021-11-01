@@ -39,12 +39,9 @@ namespace AppBTS.Presentacion
 
             this.btnConsultar.Enabled = true;
             this.btnSalir.Enabled = true;
-            this.dtTicketBindingSource.DataSource = miGestorTickets.RecuperarTodos();
+            this.dtTicketsBindingSource.DataSource = miGestorTickets.RecuperarTodos();
             this.reportViewer1.RefreshReport();
         }
-        Ticket oTicket = new Ticket();
-        Mesas oMesas = new Mesas();
-        Usuario oUsuario = new Usuario();
         TicketService miGestorTickets = new TicketService();
         MesasService miGestorMesas = new MesasService();
         MozoService miGestorMozos = new MozoService();
@@ -65,8 +62,7 @@ namespace AppBTS.Presentacion
             this.cboNroMesa.SelectedIndex = -1;
             this.cboTipoPago.SelectedIndex = -1;
             this.cboMozo.SelectedIndex = -1;
-            this.nmrDesde.Value = 0;
-            this.nmrHasta.Value = 0;
+            this.nmrDesde.Text = "0";
         }
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
@@ -80,33 +76,42 @@ namespace AppBTS.Presentacion
 
         private void btnConsultar_Click_1(object sender, EventArgs e)
         {
-            this.reportViewer1.RefreshReport();
+            
 
-            //string _nroTicket, _nroMesa, _idMozo, _cantidadComensales, _nombreCliente, _horaReserva;
-            //_nroReserva = _nroMesa = _cantidadComensales = _telefono = _nombreCliente = _horaReserva = string.Empty;
-            //if (dtpFechaDesde.Value > dtpFechaHasta.Value)
-            //{
-            //    MessageBox.Show("Fechas erroneas!!!");
-            //    dtpFechaDesde.Focus();
-            //    return;
-            //}
-            //if (cboNroReserva.SelectedIndex != -1)
-            //    _nroReserva = cboNroReserva.SelectedValue.ToString();
-            //if (cboTelefono.SelectedIndex != -1)
-            //    _telefono = cboTelefono.SelectedValue.ToString();
-            //if (cboComensales.SelectedIndex != -1)
-            //    _cantidadComensales = cboComensales.SelectedValue.ToString();
-            //if (cboNroMesa.SelectedIndex != -1)
-            //    _nroMesa = cboNroMesa.SelectedValue.ToString();
-            //if (cboNombreCliente.SelectedIndex != -1)
-            //    _nombreCliente = cboNombreCliente.SelectedValue.ToString();
-            //if (dtpHoraDesde.Value > dtpHoraHasta.Value)
-            //{
-            //    MessageBox.Show("Horas erroneas!!!");
-            //    dtpHoraDesde.Focus();
-            //    return;
-            //}
-            //this.dtTicketBindingSource.DataSource = miGestorTickets.RecuperarTodosConParametros(cboNroTicket.SelectedValue.ToString(), );
+            string _nroTicket, _nroMesa, _idMozo, _idTipoPago;
+            _nroTicket = _nroMesa = _idMozo = _idTipoPago = string.Empty;
+            if (dtpFechaDesde.Value > dtpFechaHasta.Value)
+            {
+                MessageBox.Show("Fechas erroneas!!!");
+                dtpFechaDesde.Focus();
+                return;
+            }
+            if (cboNroTicket.SelectedIndex != -1)
+                _nroTicket = cboNroTicket.SelectedValue.ToString();
+            if (cboMozo.SelectedIndex != -1)
+                _idMozo = cboMozo.SelectedValue.ToString();
+            if (cboTipoPago.SelectedIndex != -1)
+                _idTipoPago = cboTipoPago.SelectedValue.ToString();
+            if (cboNroMesa.SelectedIndex != -1)
+                _nroMesa = cboNroMesa.SelectedValue.ToString();
+            if (dtpHoraDesde.Value > dtpHoraHasta.Value)
+            {
+                MessageBox.Show("Horas erroneas!!!");
+                dtpHoraDesde.Focus();
+                return;
+            }
+            if (Convert.ToInt32(nmrDesde.Text) > Convert.ToInt32(nmrHasta.Text))
+            {
+                MessageBox.Show("Valores $ erroneos!!!");
+                nmrDesde.Focus();
+                return;
+            }
+            this.dtTicketsBindingSource.DataSource = miGestorTickets.RecuperarTodosConParametros(_nroTicket,
+                                                    dtpFechaDesde.Value.ToString("yyyy/MM/dd"), dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
+                                                    dtpHoraDesde.Value.ToString("HH:mm"),dtpHoraHasta.Value.ToString("HH:mm"),
+                                                    _idMozo, _nroMesa, _idTipoPago,
+                                                    nmrDesde.Text.ToString(),nmrHasta.Text.ToString());
+            this.reportViewer1.RefreshReport();
             limpiar();
         }
     }

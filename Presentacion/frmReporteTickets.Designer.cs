@@ -31,6 +31,7 @@ namespace AppBTS.Presentacion
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteTickets));
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.dtpHoraHasta = new System.Windows.Forms.DateTimePicker();
@@ -54,22 +55,23 @@ namespace AppBTS.Presentacion
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.nmrDesde = new System.Windows.Forms.NumericUpDown();
-            this.nmrHasta = new System.Windows.Forms.NumericUpDown();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.dtTicketBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.nmrDesde = new System.Windows.Forms.TextBox();
+            this.nmrHasta = new System.Windows.Forms.TextBox();
+            this.dtTicketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsTickets = new AppBTS.Reportes.dsTickets();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrDesde)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrHasta)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtTicketBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTicketsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsTickets)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.dtTicketBindingSource;
+            reportDataSource1.Value = this.dtTicketsBindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.dtTicketsBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppBTS.Reportes.rptTickets.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 259);
             this.reportViewer1.Name = "reportViewer1";
@@ -311,22 +313,6 @@ namespace AppBTS.Presentacion
             this.label2.TabIndex = 47;
             this.label2.Text = "$ Hasta:";
             // 
-            // nmrDesde
-            // 
-            this.nmrDesde.DecimalPlaces = 2;
-            this.nmrDesde.Location = new System.Drawing.Point(125, 123);
-            this.nmrDesde.Name = "nmrDesde";
-            this.nmrDesde.Size = new System.Drawing.Size(177, 20);
-            this.nmrDesde.TabIndex = 48;
-            // 
-            // nmrHasta
-            // 
-            this.nmrHasta.DecimalPlaces = 2;
-            this.nmrHasta.Location = new System.Drawing.Point(505, 123);
-            this.nmrHasta.Name = "nmrHasta";
-            this.nmrHasta.Size = new System.Drawing.Size(177, 20);
-            this.nmrHasta.TabIndex = 49;
-            // 
             // btnSalir
             // 
             this.btnSalir.BackColor = System.Drawing.Color.Tan;
@@ -340,10 +326,24 @@ namespace AppBTS.Presentacion
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
-            // dtTicketBindingSource
+            // nmrDesde
             // 
-            this.dtTicketBindingSource.DataMember = "dtTicket";
-            this.dtTicketBindingSource.DataSource = this.dsTickets;
+            this.nmrDesde.Location = new System.Drawing.Point(125, 122);
+            this.nmrDesde.Name = "nmrDesde";
+            this.nmrDesde.Size = new System.Drawing.Size(177, 20);
+            this.nmrDesde.TabIndex = 51;
+            // 
+            // nmrHasta
+            // 
+            this.nmrHasta.Location = new System.Drawing.Point(505, 123);
+            this.nmrHasta.Name = "nmrHasta";
+            this.nmrHasta.Size = new System.Drawing.Size(177, 20);
+            this.nmrHasta.TabIndex = 52;
+            // 
+            // dtTicketsBindingSource
+            // 
+            this.dtTicketsBindingSource.DataMember = "dtTickets";
+            this.dtTicketsBindingSource.DataSource = this.dsTickets;
             // 
             // dsTickets
             // 
@@ -356,9 +356,9 @@ namespace AppBTS.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(714, 691);
-            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.nmrHasta);
             this.Controls.Add(this.nmrDesde);
+            this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpHoraHasta);
@@ -384,9 +384,7 @@ namespace AppBTS.Presentacion
             this.Name = "frmReporteTickets";
             this.Text = "frmReporteTickets";
             this.Load += new System.EventHandler(this.frmReporteTickets_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.nmrDesde)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmrHasta)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtTicketBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtTicketsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsTickets)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -417,10 +415,10 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown nmrDesde;
-        private System.Windows.Forms.NumericUpDown nmrHasta;
-        private System.Windows.Forms.BindingSource dtTicketBindingSource;
         private Reportes.dsTickets dsTickets;
         private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.TextBox nmrDesde;
+        private System.Windows.Forms.TextBox nmrHasta;
+        private System.Windows.Forms.BindingSource dtTicketsBindingSource;
     }
 }

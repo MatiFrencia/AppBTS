@@ -106,14 +106,20 @@ namespace AppBTS.Datos.Daos
         }
         public DataTable RecuperarTodos()
         {
-            string consulta = "SELECT t.nroTicket,t.fecha,t.hora, t.idMozo, t.nroMesa, t.borrado, t.idTipoPago, t.total FROM Tickets t ";
+            string consulta = "SELECT t.nroTicket,t.fecha,t.hora,o.nombre as nombreM,m.nroMesa,p.nombre as nombreP,t.total"
+                                        + " FROM Tickets t, Mesas m, TipoPago p, Mozos o"
+                                        + " WHERE t.nroTicket=t.nroTicket"
+                                        + " AND t.nroMesa=m.nroMesa"
+                                        + " AND t.idMozo=o.idMozo"
+                                        + " AND t.idTipoPago=p.idTipoPago"
+                                        + " AND t.borrado=0";
             //BDHelper oDatos = new BDHelper();
             DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
             return tabla;
         }
         public DataTable RecuperarTodosConParametros(string nroTicket, string fechaDesde, string fechaHasta, string horaDesde, string horaHasta, string idMozo, string nroMesa, string idTipoPago, string Totaldesde, string Totalhasta)
         {
-            string consulta = "SELECT t.nroTicket,t.fecha,t.hora,o.idMozo,m.nroMesa,p.idTipoPago,t.total"
+            string consulta = "SELECT t.nroTicket,t.fecha,t.hora,o.nombre as nombreM,m.nroMesa,p.nombre as nombreP,t.total"
                                         + " FROM Tickets t, Mesas m, TipoPago p, Mozos o"
                                         + " WHERE t.nroTicket=t.nroTicket"
                                         + " AND t.nroMesa=m.nroMesa"
@@ -121,7 +127,7 @@ namespace AppBTS.Datos.Daos
                                         + " AND t.idTipoPago=p.idTipoPago"
                                         + " AND t.borrado=0";
             consulta += " AND t.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "'";
-            consulta += " AND t.horaReserva BETWEEN '" + horaDesde + "' AND '" + horaHasta + "'";
+            consulta += " AND t.hora BETWEEN '" + horaDesde + "' AND '" + horaHasta + "'";
             consulta += " AND t.total BETWEEN " + Totaldesde + " AND " + Totalhasta;
 
             if (nroTicket != "")
@@ -132,8 +138,7 @@ namespace AppBTS.Datos.Daos
                 consulta += " AND t.idMozo= '" + idMozo + "'";
             if (idTipoPago != "")
                 consulta += " AND t.idTipoPago=" + idTipoPago;
-            consulta += " ORDER BY r.fechaReserva DESC";
-            //BDHelper oDatos = new BDHelper();
+            consulta += " ORDER BY t.fecha DESC";
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
     }
