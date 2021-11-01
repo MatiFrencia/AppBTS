@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppBTS.Negocio;
+using AppBTS.Servicios;
 
 namespace AppBTS
 {
@@ -16,7 +17,7 @@ namespace AppBTS
         private Usuario miUsuario = new Usuario();
         
         internal Usuario MiUsuario { get => miUsuario; set => miUsuario = value; }
-
+        private UsuarioService miGestorUsuarios = new UsuarioService();
         public frmLogin()
         {
             InitializeComponent();
@@ -51,7 +52,7 @@ namespace AppBTS
             this.miUsuario.Nombre = this.txtUsuario.Text;
             this.miUsuario.Password = this.txtClave.Text;
 
-            this.miUsuario.Id_usuario = this.miUsuario.validarUsuario(miUsuario.Nombre, miUsuario.Password);
+            this.miUsuario.Id_usuario = this.miGestorUsuarios.validarUsuario(miUsuario.Nombre, miUsuario.Password);
 
             //if (this.txtUsuario.Text==this.user && this.txtClave.Text==this.pass)
             if (miUsuario.Id_usuario!=0)

@@ -8,6 +8,7 @@ using System.Text;
 using AppBTS.Negocio;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AppBTS.Servicios;
 
 namespace AppBTS.Presentacion
 {
@@ -16,6 +17,9 @@ namespace AppBTS.Presentacion
         TipoArticulo oTipo = new TipoArticulo();
         Articulo oArticulo = new Articulo();
         Menus oMenu = new Menus();
+        private ArticuloService miGestorArticulos = new ArticuloService();
+        private MenuService miGestorMenus = new MenuService();
+        private TipoArticuloService miGestorTipoArticulo = new TipoArticuloService();
         public frmAltaMenu()
         {
             InitializeComponent();
@@ -24,7 +28,7 @@ namespace AppBTS.Presentacion
         private void frmAltaMenu_Load(object sender, EventArgs e)
         {
             lblTotal.Text = "0.00";
-            CargarCombo(cboTipo, oTipo.RecuperarTodos());
+            CargarCombo(cboTipo, miGestorTipoArticulo.RecuperarTodos());
             btnAgregar.Enabled = false;
             btnBorrar.Enabled = false;
             btnGuardar.Enabled = false;
@@ -44,7 +48,7 @@ namespace AppBTS.Presentacion
             if (cboTipo.SelectedIndex != -1 & cboTipo.ValueMember != "")
             {
                 string idSeleccionado = cboTipo.SelectedValue.ToString();
-                CargarCombo(cboArticulos, oArticulo.RecuperarFiltrados("", "", idSeleccionado));
+                CargarCombo(cboArticulos, miGestorArticulos.RecuperarFiltrados("", "", idSeleccionado));
                 btnAgregar.Enabled = false;
             }
         }
@@ -74,7 +78,7 @@ namespace AppBTS.Presentacion
                 }
             }
             int cantidad = Convert.ToInt32(nudCantidad.Value);
-            double precio = Convert.ToDouble(oArticulo.RecuperarPrecio(cboArticulos.SelectedValue.ToString()));
+            double precio = Convert.ToDouble(miGestorArticulos.RecuperarPrecio(cboArticulos.SelectedValue.ToString()));
             if (noRepetido)
             {
                 //Si no está el artículo ya cargado, agrega el detalle normalmente.
@@ -184,12 +188,12 @@ namespace AppBTS.Presentacion
         //Crea un objeto menú con los atributos asignados en el formulario, y le pide que se registre en la BD.
         private void GuardarMenu()
         {
-            oMenu.IdMenu = oMenu.IdSiguiente();
+            oMenu.IdMenu = miGestorMenus.IdSiguiente();
             oMenu.Nombre = txtNombre.Text;
             oMenu.PrecioUnitario = Convert.ToDouble(txtPrecio.Text);
             oMenu.Borrado = false;
             oMenu.DetallesMenu = GenerarDetalles(oMenu.IdMenu);
-            oMenu.Registrar();
+            miGestorMenus.Registrar(oMenu);
             MessageBox.Show("Menú registrado con éxito.", "Nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Limpiar();
         }

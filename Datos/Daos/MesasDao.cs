@@ -1,4 +1,5 @@
-﻿using AppBTS.Datos;
+﻿using AppBTS.Datos.Interfaces;
+using AppBTS.Negocio;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -6,51 +7,47 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AppBTS.Negocio
+namespace AppBTS.Datos.Daos
 {
-    class Mesas
+    class MesasDao : IMesas
     {
-        public int NroMesa { get; set; }
-        public string CantidadSillas { get; set; }
-        public bool Borrado { get; set; }
-
         public DataTable RecuperarTodos()
         {
-            string consulta = "SELECT * FROM Mesas WHERE borrado = 0 order by nroMesa";
+            string consulta = "SELECT DISTINCT m.nroMesa, m.cantidadSillas FROM Mesas m WHERE borrado = 0 order by nroMesa";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public DataTable RecuperarBorrados()
         {
             string consulta = "SELECT * FROM Mesas WHERE borrado = 1 order by nroMesa";
 
-            BDHelper oDatos = new BDHelper();
-            return oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(consulta);
         }
 
-        public void AgregarMesa(string nroMesa)
+        public void AgregarMesa(Mesas mesa)
         {
-            if (VerificarExistencia(nroMesa).Rows.Count == 0) 
-            { 
+            if (VerificarExistencia(mesa.NroMesa.ToString()).Rows.Count == 0)
+            {
                 string alta = "INSERT INTO Mesas"
                                 + " VALUES"
-                                + " (" + nroMesa + ", @cantidadSillas, @borrado)";
-                BDHelper oAlta = new BDHelper();
-                oAlta.insertarMesa(this, alta);
+                                + " (" + mesa.NroMesa.ToString() + ", @cantidadSillas, @borrado)";
+                //BDHelper oAlta = new BDHelper();
+                BDHelper.obtenerInstancia().insertarMesa(mesa, alta);
             }
             else
             {
-                LevantarMesa(nroMesa);
+                LevantarMesa(mesa.NroMesa.ToString());
             }
         }
 
         public DataTable VerificarExistencia(string nroMesa)
-        { 
+        {
             string verificacion = "SELECT 1 FROM Mesas WHERE nroMesa = " + nroMesa;
-            BDHelper oVerificacion = new BDHelper();
-            return oVerificacion.consultar(verificacion);
+            //BDHelper oVerificacion = new BDHelper();
+            return BDHelper.obtenerInstancia().consultar(verificacion);
         }
         public void LevantarMesa(string nroMesa)
         {
@@ -58,8 +55,8 @@ namespace AppBTS.Negocio
                             + " SET borrado = 0"
                             + " WHERE nroMesa = " + nroMesa;
 
-            BDHelper oDatos = new BDHelper();
-            oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            BDHelper.obtenerInstancia().consultar(consulta);
         }
         public void Borrar(string mesaClickeada)
         {
@@ -67,18 +64,18 @@ namespace AppBTS.Negocio
                             + " SET borrado = 1"
                             + " WHERE nroMesa = " + mesaClickeada;
 
-            BDHelper oDatos = new BDHelper();
-            oDatos.consultar(consulta);
+            // BDHelper oDatos = new BDHelper();
+            BDHelper.obtenerInstancia().consultar(consulta);
         }
 
         public int IdSiguiente()
         {
             string consulta = "SELECT MAX(nroMesa) FROM Mesas WHERE borrado = 0";
-            BDHelper oDatos = new BDHelper();
-            DataTable idmax = oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            DataTable idmax = BDHelper.obtenerInstancia().consultar(consulta);
             int id = 0;
             if (idmax.Rows[0][0].ToString() != "")
-            { 
+            {
                 id = Convert.ToInt32(idmax.Rows[0][0].ToString());
             }
             return id + 1;

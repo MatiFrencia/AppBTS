@@ -95,5 +95,20 @@ namespace AppBTS
             fm.ShowDialog();
             fm.Dispose();
         }
+
+        private void reservasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmConsultaReservas fcb = new frmConsultaReservas();
+            fcb.ShowDialog();
+            fcb.Dispose();
+        }
+
+        private void cobrarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmAgregarDetalles fat = new frmAgregarDetalles();
+            fat.ShowDialog();
+            fat.Dispose();
+        }
     }
-}
+ }
+

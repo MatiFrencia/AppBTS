@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppBTS.Negocio;
+using AppBTS.Servicios;
 
 namespace AppBTS.Presentacion
 {
@@ -15,13 +16,14 @@ namespace AppBTS.Presentacion
     {
         Mozo oMozo = new Mozo();
         bool nuevo = false;
+        MozoService miGestorMozos = new MozoService();
         public frmMozos()
         {
             InitializeComponent();
         }
         private void frmMozos_Load(object sender, EventArgs e)
         {
-            CargarGrilla(dgvMozos, oMozo.traerTodos());
+            CargarGrilla(dgvMozos, miGestorMozos.traerTodos());
             buttons(true);
             campos(false);
             vista(false);
@@ -83,7 +85,7 @@ namespace AppBTS.Presentacion
             limpiar();
             vista(true);
             buttons(false);
-            this.numeric.Value = oMozo.IdSiguiente();
+            this.numeric.Value = miGestorMozos.IdSiguiente();
             campos(true);
             nuevo = true;
         }
@@ -100,8 +102,8 @@ namespace AppBTS.Presentacion
             vista(true);
             if (MessageBox.Show("Esta seguro de eliminar a: "+txtNombre.Text+" "+txtApellido.Text, "ELIMINANDO", MessageBoxButtons.YesNo,MessageBoxIcon.Warning,MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             {
-                oMozo.Eliminar((int)this.numeric.Value);
-                CargarGrilla(dgvMozos, oMozo.traerTodos());
+                miGestorMozos.Eliminar((int)this.numeric.Value);
+                CargarGrilla(dgvMozos, miGestorMozos.traerTodos());
             }
             
         }
@@ -129,14 +131,14 @@ namespace AppBTS.Presentacion
                 oMozo.apellido = txtApellido.Text;
                 if (nuevo)
                 {
-                    oMozo.Insertar(oMozo.idMozo, oMozo.nombre, oMozo.apellido);
+                        miGestorMozos.Insertar(oMozo.idMozo, oMozo.nombre, oMozo.apellido);
                 }
                 else
                 {
-                    oMozo.Modificar(oMozo.idMozo, oMozo.nombre, oMozo.apellido);
+                        miGestorMozos.Modificar(oMozo.idMozo, oMozo.nombre, oMozo.apellido);
                 }
                 nuevo = false;
-                CargarGrilla(dgvMozos, oMozo.traerTodos());
+                CargarGrilla(dgvMozos, miGestorMozos.traerTodos());
             }
            }
         }
@@ -172,7 +174,7 @@ namespace AppBTS.Presentacion
         private void actualizarCampos(int id)
         {
             DataTable tabla = new DataTable();
-            tabla = oMozo.traerSegunId(id);
+            tabla = miGestorMozos.traerSegunId(id);
             this.numeric.Value = (int)tabla.Rows[0]["idMozo"];
             this.txtNombre.Text = tabla.Rows[0]["nombre"].ToString();
             this.txtApellido.Text = tabla.Rows[0]["apellido"].ToString();

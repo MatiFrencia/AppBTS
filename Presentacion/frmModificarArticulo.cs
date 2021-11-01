@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AppBTS.Negocio;
 using System.Windows.Forms;
+using AppBTS.Servicios;
 
 namespace AppBTS.Presentacion
 {
@@ -15,6 +16,8 @@ namespace AppBTS.Presentacion
     {
         Articulo articulo;
         TipoArticulo oTipo = new TipoArticulo();
+        private ArticuloService miGestor = new ArticuloService();
+        private TipoArticuloService miGestorTipoArticulo = new TipoArticuloService();
         public frmModificarArticulo(Articulo seleccionado)
         {
             InitializeComponent();
@@ -25,8 +28,8 @@ namespace AppBTS.Presentacion
         //Carga el nombre del artículo en el textbox de nombre y su precio en el textbox de precio.
         private void frmModificarArticulo_Load(object sender, EventArgs e)
         {
-            CargarCombo(cboTipo, oTipo.RecuperarTodos());
-            string targetValue = oTipo.RecuperarPorId(articulo.IdTipoArticulo);
+            CargarCombo(cboTipo, miGestorTipoArticulo.RecuperarTodos());
+            string targetValue = miGestorTipoArticulo.RecuperarPorId(articulo.IdTipoArticulo);
             string value = "";
             while (value != targetValue)
             {
@@ -53,7 +56,7 @@ namespace AppBTS.Presentacion
         //Muestra el artículo cargado para modificación en una grilla de 1 fila.
         private void CargarGrilla(DataGridView grilla, Articulo art)
         {
-            grilla.Rows.Add(art.IdArticulo, art.Nombre, art.PrecioUnitario, oTipo.RecuperarPorId(art.IdTipoArticulo));
+            grilla.Rows.Add(art.IdArticulo, art.Nombre, art.PrecioUnitario, miGestorTipoArticulo.RecuperarPorId(art.IdTipoArticulo));
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -125,10 +128,10 @@ namespace AppBTS.Presentacion
                 }
                 if (cboTipo.Enabled == true)
                 {
-                    articulo.IdTipoArticulo = oTipo.RecuperarPorNombre(cboTipo.Text);
+                    articulo.IdTipoArticulo = miGestorTipoArticulo.RecuperarPorNombre(cboTipo.Text);
                     mTipo = true;
                 }
-                articulo.Modificar(mNombre, mPrecio, mTipo);
+                miGestor.Modificar(mNombre, mPrecio, mTipo, articulo);
                 MessageBox.Show("Cambios registrados con éxito.", "Modificar artículo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

@@ -1,4 +1,5 @@
 ﻿using AppBTS.Negocio;
+using AppBTS.Servicios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,36 +15,43 @@ namespace AppBTS.Presentacion
     public partial class frmConsultaReservas : Form
     {
         Reservas oReservas = new Reservas();
-        Mesas oMesas= new Mesas();
+        Mesas oMesas = new Mesas();
         Usuario oUsuario = new Usuario();
+        private ReservaService miGestorReservas = new ReservaService();
+        MesasService miGestorMesas = new MesasService();
 
 
         public frmConsultaReservas()
         {
             InitializeComponent();
         }
-        
+
         public class Global
         {
             private static string idReserva;
             public static string IdReserva { get => idReserva; set => idReserva = value; }
         }
 
-        
+
         private void frmConsultaReservas_Load(object sender, EventArgs e)
         {
-            
+
             limpiar();
             // TODO: esta línea de código carga datos en la tabla 'masterDataSet.Bugs' Puede moverla o quitarla según sea necesario.
             this.dtpFechaDesde.Value = DateTime.Today.AddYears(-1);
             this.dtpFechaHasta.Value = DateTime.Today;
+            this.dtpHoraDesde.Format = DateTimePickerFormat.Custom;
+            this.dtpHoraDesde.CustomFormat = "HH':'mm";
+            this.dtpHoraDesde.ShowUpDown = true;
+            this.dtpHoraHasta.Format = DateTimePickerFormat.Custom;
+            this.dtpHoraHasta.CustomFormat = "HH':'mm";
+            this.dtpHoraHasta.ShowUpDown = true;
 
-            this.CargarCombo(cboNroReserva, oReservas.RecuperarTodosConParametro("nroReserva"));
-            this.CargarCombo(cboNroMesa, oMesas.RecuperarTodos());
-            this.CargarCombo(cboNombreCliente, oReservas.RecuperarTodosConParametro("nombreCliente"));
-            this.CargarCombo(cboTelefono, oReservas.RecuperarTodosConParametro("telefono"));
-            this.CargarCombo(cboComensales, oReservas.RecuperarTodosConParametro("cantidadComensales"));
-            this.CargarCombo(cboHora, oReservas.RecuperarTodosConParametro("horaReserva"));
+            this.CargarCombo(cboNroReserva, miGestorReservas.RecuperarTodosConParametro("nroReserva"));
+            this.CargarCombo(cboNroMesa, miGestorMesas.RecuperarTodos());
+            this.CargarCombo(cboNombreCliente, miGestorReservas.RecuperarTodosConParametro("nombreCliente"));
+            this.CargarCombo(cboTelefono, miGestorReservas.RecuperarTodosConParametro("telefono"));
+            this.CargarCombo(cboComensales, miGestorReservas.RecuperarTodosConParametro("cantidadComensales"));
 
             this.btnConsultar.Enabled = true;
             this.btnNuevo.Enabled = true;
@@ -70,7 +78,7 @@ namespace AppBTS.Presentacion
                                 tabla.Rows[i]["telefono"],
                                 tabla.Rows[i]["cantidadComensales"]);
             }
-            
+
         }
 
         private void CargarCombo(ComboBox combo, DataTable tabla)
@@ -78,14 +86,6 @@ namespace AppBTS.Presentacion
             combo.DataSource = tabla;
             combo.DisplayMember = tabla.Columns[0].ColumnName;
             combo.ValueMember = tabla.Columns[0].ColumnName;
-            combo.SelectedIndex = -1;
-            combo.DropDownStyle = ComboBoxStyle.DropDownList;
-        }
-        private void CargarCombo(ComboBox combo, DataTable tabla,string campoMostrar,string campoValor)
-        {
-            combo.DataSource = tabla;
-            combo.DisplayMember = campoMostrar;
-            combo.ValueMember = campoValor;
             combo.SelectedIndex = -1;
             combo.DropDownStyle = ComboBoxStyle.DropDownList;
         }
@@ -113,17 +113,23 @@ namespace AppBTS.Presentacion
                 _nroMesa = cboNroMesa.SelectedValue.ToString();
             if (cboNombreCliente.SelectedIndex != -1)
                 _nombreCliente = cboNombreCliente.SelectedValue.ToString();
-            if (cboHora.SelectedIndex != -1)
-                _horaReserva = cboHora.SelectedValue.ToString();
+            if (dtpHoraDesde.Value > dtpHoraHasta.Value)
+            {
+                MessageBox.Show("Horas erroneas!!!");
+                dtpHoraDesde.Focus();
+                return;
+            }
 
-            this.CargarGrilla(dgvReservas, oReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
+            this.CargarGrilla(dgvReservas, miGestorReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
                                                               dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
                                                               _nroReserva,
                                                               _nroMesa,
                                                               _telefono,
                                                               _cantidadComensales,
                                                               _nombreCliente,
-                                                              _horaReserva));
+                                                              dtpHoraDesde.Value.ToString("HH:mm"),
+                                                              dtpHoraHasta.Value.ToString("HH:mm")));
+            limpiar();
         }
 
         private void limpiar()
@@ -134,12 +140,11 @@ namespace AppBTS.Presentacion
             this.cboTelefono.SelectedIndex = -1;
             this.cboComensales.SelectedIndex = -1;
             this.cboNombreCliente.SelectedIndex = -1;
-            this.cboHora.SelectedIndex = -1;
         }
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            
+
             frmDetalleReserva far = new frmDetalleReserva();
             far.Tipos = "New";
             far.ShowDialog();
@@ -157,8 +162,8 @@ namespace AppBTS.Presentacion
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Esta seguro de eliminar esta reserva?", "CONFIRMACION", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes) 
-                oReservas.Borrar(Global.IdReserva);
+            if (MessageBox.Show("Esta seguro de eliminar esta reserva?", "CONFIRMACION", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
+                miGestorReservas.Borrar(Global.IdReserva);
                 btnBorrar.Enabled = false;
                 btnEditar.Enabled = false;
                 btnDetalle.Enabled = false;
@@ -181,18 +186,22 @@ namespace AppBTS.Presentacion
                 _nroMesa = cboNroMesa.SelectedValue.ToString();
             if (cboNombreCliente.SelectedIndex != -1)
                 _nombreCliente = cboNombreCliente.SelectedValue.ToString();
-            if (cboHora.SelectedIndex != -1)
-                _horaReserva = cboHora.SelectedValue.ToString();
+            if (dtpHoraDesde.Value > dtpHoraHasta.Value)
+            {
+                MessageBox.Show("Horas erroneas!!!");
+                dtpHoraDesde.Focus();
+                return;
+            }
 
-            this.CargarGrilla(dgvReservas, oReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
+            this.CargarGrilla(dgvReservas, miGestorReservas.RecuperarFiltrados(dtpFechaDesde.Value.ToString("yyyy/MM/dd"),
                                                               dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
                                                               _nroReserva,
                                                               _nroMesa,
                                                               _telefono,
                                                               _cantidadComensales,
                                                               _nombreCliente,
-                                                              _horaReserva));
-
+                                                              dtpHoraDesde.Value.ToString("HH:mm"),
+                                                              dtpHoraHasta.Value.ToString("HH:mm")));
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

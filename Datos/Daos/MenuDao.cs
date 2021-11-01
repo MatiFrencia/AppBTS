@@ -1,50 +1,51 @@
-﻿using System;
+﻿using AppBTS.Datos.Interfaces;
+using AppBTS.Negocio;
+using AppBTS.Servicios;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
-using AppBTS.Datos;
-using System.Data;
 using System.Threading.Tasks;
 
-namespace AppBTS.Negocio
+namespace AppBTS.Datos.Daos
 {
-    public class Menus
+    class MenuDao : IMenu
     {
-        public int IdMenu { get; set; }
-        public string Nombre { get; set; }
-        public double PrecioUnitario { get; set; }
-        public bool Borrado { get; set; }
-        public DetalleMenu[] DetallesMenu { get; set; }
-
-        public void Registrar()
+        private DetalleMenuService miGestor = new DetalleMenuService();
+        public void Registrar(Menus menu)
         {
-            string alta = "INSERT INTO Menus VALUES(@idMenu,@nombre,@pcioUnitario,@borrado)";
-            BDHelper oAlta = new BDHelper();
-            oAlta.insertarMenu(this, alta);
-            foreach (DetalleMenu detalle in DetallesMenu)
+            string alta = "INSERT INTO [dbo].[Menus]([idMenu],[nombre],[pcioUnitario],[borrado]) " +
+                "VALUES (" + menu.IdMenu.ToString() + ",'" 
+                           + menu.Nombre + "'," 
+                           + menu.PrecioUnitario.ToString() 
+                           + ",0)";
+            //BDHelper oAlta = new BDHelper();
+            BDHelper.obtenerInstancia().actualizar(alta);
+            foreach (DetalleMenu detalle in menu.DetallesMenu)
             {
-                detalle.Registrar();
+                miGestor.Registrar(detalle);
             }
         }
         public int IdSiguiente()
         {
             string consulta = "SELECT MAX(idMenu) AS MaxId FROM Menus";
-            BDHelper oDatos = new BDHelper();
-            int maxId = oDatos.consultaSumaria(consulta);
+            //BDHelper oDatos = new BDHelper();
+            int maxId = BDHelper.obtenerInstancia().consultaSumaria(consulta);
             return maxId + 1;
         }
         public DataTable RecuperarTodos()
         {
             string consulta = "SELECT m.idMenu,m.nombre,m.pcioUnitario FROM Menus m WHERE m.borrado=0";
-            BDHelper oDatos = new BDHelper();
-            DataTable tabla = oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
             return tabla;
         }
         public DataTable RecuperarFiltrados(string idMenu, string nombre, string idTipoArticulo, string idArticulo)
         {
             string consulta = "SELECT DISTINCT m.idMenu,m.nombre,m.pcioUnitario";
             if (idArticulo != "")
-                consulta += " FROM Menus m INNER JOIN DetallesMenu d ON m.idMenu=d.idMenu WHERE m.borrado=0";
+                consulta += " FROM Menus m INNER JOIN DetallesMenu d ON m.idMenu=d.idMenu WHERE m.borrado=0 AND idArticulo = " + idArticulo;
             else
             {
                 if (idTipoArticulo != "")
@@ -63,22 +64,22 @@ namespace AppBTS.Negocio
                 else
                     consulta += " AND a.idTipoArticulo=" + idTipoArticulo;
             }
-            BDHelper oDatos = new BDHelper();
-            DataTable tabla = oDatos.consultar(consulta);
+            //BDHelper oDatos = new BDHelper();
+            DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
             return tabla;
         }
 
-        public void Eliminar()
+        public void Eliminar(Menus menu)
         {
-            string baja = "UPDATE Menus SET borrado = 1 WHERE idMenu=" + IdMenu.ToString();
-            BDHelper oBaja = new BDHelper();
-            oBaja.actualizar(baja);
+            string baja = "UPDATE Menus SET borrado = 1 WHERE idMenu=" + menu.IdMenu.ToString();
+            //BDHelper oBaja = new BDHelper();
+            BDHelper.obtenerInstancia().actualizar(baja);
         }
         public void Modificar(int idMenu, string nombre, int pcioUnitario)
         {
             string modificacion = "UPDATE Menus SET nombre = '" + nombre + "', pcioUnitario = " + pcioUnitario.ToString() + " WHERE idMenu = " + idMenu.ToString();
-            BDHelper oModificacion = new BDHelper();
-            oModificacion.actualizar(modificacion);
+            //BDHelper oModificacion = new BDHelper();
+            BDHelper.obtenerInstancia().actualizar(modificacion);
         }
     }
 }

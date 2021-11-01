@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppBTS.Negocio;
+using AppBTS.Servicios;
 
 namespace AppBTS.Presentacion
 {
@@ -15,6 +16,8 @@ namespace AppBTS.Presentacion
     {
         TipoArticulo oTipo = new TipoArticulo();
         Articulo oArticulo = new Articulo();
+        private ArticuloService miGestor = new ArticuloService();
+        private TipoArticuloService miGestorTipoArticulo = new TipoArticuloService();
         public frmRegistrarArticulo()
         {
             InitializeComponent();
@@ -22,7 +25,7 @@ namespace AppBTS.Presentacion
 
         private void frmRegistrarArticulo_Load(object sender, EventArgs e)
         {
-            CargarCombo(cboTipo, oTipo.RecuperarTodos());
+            CargarCombo(cboTipo, miGestorTipoArticulo.RecuperarTodos());
             
             btnGuardar.Enabled = false;
         }
@@ -57,7 +60,8 @@ namespace AppBTS.Presentacion
                 oArticulo.Nombre = nombre;
                 oArticulo.PrecioUnitario = Convert.ToDouble(precio);
                 oArticulo.IdTipoArticulo = Convert.ToInt32(cboTipo.SelectedValue);
-                oArticulo.Registrar();
+                oArticulo.IdArticulo = miGestor.IdSiguiente();
+                miGestor.Registrar(oArticulo);
                 MessageBox.Show("Artículo registrado con éxito.", "Nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Limpiar();
             }

@@ -35,7 +35,6 @@
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.lblFechaHasta = new System.Windows.Forms.Label();
             this.txtHora = new System.Windows.Forms.Label();
-            this.cboHora = new System.Windows.Forms.ComboBox();
             this.dgvReservas = new System.Windows.Forms.DataGridView();
             this.nroReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nroMesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,6 +70,9 @@
             this.btnBorrar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnDetalle = new System.Windows.Forms.Button();
+            this.dtpHoraDesde = new System.Windows.Forms.DateTimePicker();
+            this.label8 = new System.Windows.Forms.Label();
+            this.dtpHoraHasta = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bugsBindingSource)).BeginInit();
@@ -80,11 +82,13 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Tan;
+            this.groupBox1.Controls.Add(this.dtpHoraHasta);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.dtpHoraDesde);
             this.groupBox1.Controls.Add(this.btnClear);
             this.groupBox1.Controls.Add(this.lblFechaDesde);
             this.groupBox1.Controls.Add(this.lblFechaHasta);
             this.groupBox1.Controls.Add(this.txtHora);
-            this.groupBox1.Controls.Add(this.cboHora);
             this.groupBox1.Controls.Add(this.dgvReservas);
             this.groupBox1.Controls.Add(this.btnConsultar);
             this.groupBox1.Controls.Add(this.cboComensales);
@@ -106,7 +110,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(894, 494);
+            this.groupBox1.Size = new System.Drawing.Size(894, 546);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Criterios";
@@ -117,7 +121,7 @@
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(845, 178);
+            this.btnClear.Location = new System.Drawing.Point(845, 229);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(36, 35);
             this.btnClear.TabIndex = 22;
@@ -146,24 +150,12 @@
             // txtHora
             // 
             this.txtHora.AutoSize = true;
-            this.txtHora.Location = new System.Drawing.Point(652, 149);
+            this.txtHora.Location = new System.Drawing.Point(611, 149);
             this.txtHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtHora.Name = "txtHora";
-            this.txtHora.Size = new System.Drawing.Size(41, 16);
+            this.txtHora.Size = new System.Drawing.Size(85, 16);
             this.txtHora.TabIndex = 17;
-            this.txtHora.Text = "Hora:";
-            // 
-            // cboHora
-            // 
-            this.cboHora.BackColor = System.Drawing.Color.Tan;
-            this.cboHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cboHora.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.cboHora.FormattingEnabled = true;
-            this.cboHora.Location = new System.Drawing.Point(704, 146);
-            this.cboHora.Margin = new System.Windows.Forms.Padding(4);
-            this.cboHora.Name = "cboHora";
-            this.cboHora.Size = new System.Drawing.Size(177, 24);
-            this.cboHora.TabIndex = 7;
+            this.txtHora.Text = "Hora Desde:";
             // 
             // dgvReservas
             // 
@@ -181,7 +173,7 @@
             this.telefono,
             this.cantidadComensales,
             this.borrado});
-            this.dgvReservas.Location = new System.Drawing.Point(13, 220);
+            this.dgvReservas.Location = new System.Drawing.Point(13, 271);
             this.dgvReservas.Name = "dgvReservas";
             this.dgvReservas.ReadOnly = true;
             this.dgvReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -250,7 +242,7 @@
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(704, 178);
+            this.btnConsultar.Location = new System.Drawing.Point(704, 229);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(134, 35);
@@ -421,7 +413,7 @@
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(22, 558);
+            this.btnNuevo.Location = new System.Drawing.Point(21, 595);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(72, 56);
@@ -463,7 +455,7 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(818, 566);
+            this.btnSalir.Location = new System.Drawing.Point(840, 603);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(53, 40);
             this.btnSalir.TabIndex = 5;
@@ -477,7 +469,7 @@
             this.btnBorrar.FlatAppearance.BorderSize = 0;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Image = global::AppBTS.Properties.Resources.delete_exit;
-            this.btnBorrar.Location = new System.Drawing.Point(251, 566);
+            this.btnBorrar.Location = new System.Drawing.Point(251, 606);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(0);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(53, 40);
@@ -490,7 +482,7 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.Color.Tan;
             this.btnEditar.Image = global::AppBTS.Properties.Resources.documentediting;
-            this.btnEditar.Location = new System.Drawing.Point(135, 565);
+            this.btnEditar.Location = new System.Drawing.Point(135, 603);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(53, 40);
             this.btnEditar.TabIndex = 2;
@@ -502,19 +494,47 @@
             this.btnDetalle.FlatAppearance.BorderSize = 0;
             this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalle.Image = global::AppBTS.Properties.Resources.search_file;
-            this.btnDetalle.Location = new System.Drawing.Point(446, 565);
+            this.btnDetalle.Location = new System.Drawing.Point(446, 603);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(53, 40);
             this.btnDetalle.TabIndex = 4;
             this.btnDetalle.UseVisualStyleBackColor = false;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
+            // dtpHoraDesde
+            // 
+            this.dtpHoraDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHoraDesde.Location = new System.Drawing.Point(704, 149);
+            this.dtpHoraDesde.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpHoraDesde.Name = "dtpHoraDesde";
+            this.dtpHoraDesde.Size = new System.Drawing.Size(177, 22);
+            this.dtpHoraDesde.TabIndex = 23;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(611, 182);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 16);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Hora Hasta:";
+            // 
+            // dtpHoraHasta
+            // 
+            this.dtpHoraHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHoraHasta.Location = new System.Drawing.Point(704, 182);
+            this.dtpHoraHasta.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpHoraHasta.Name = "dtpHoraHasta";
+            this.dtpHoraHasta.Size = new System.Drawing.Size(177, 22);
+            this.dtpHoraHasta.TabIndex = 25;
+            // 
             // frmConsultaReservas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(914, 624);
+            this.ClientSize = new System.Drawing.Size(914, 655);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnBorrar);
@@ -569,7 +589,6 @@
         private System.Windows.Forms.BindingSource bugsBindingSource;
         private masterDataSetTableAdapters.BugsTableAdapter bugsTableAdapter;
         private System.Windows.Forms.Label txtHora;
-        private System.Windows.Forms.ComboBox cboHora;
         private System.Windows.Forms.Label lbTitle;
         private System.Windows.Forms.DataGridViewCheckBoxColumn borrado;
         private System.Windows.Forms.Label lblFechaHasta;
@@ -583,5 +602,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadComensales;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.DateTimePicker dtpHoraDesde;
+        private System.Windows.Forms.DateTimePicker dtpHoraHasta;
+        private System.Windows.Forms.Label label8;
     }
 }

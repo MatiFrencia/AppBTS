@@ -8,16 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AppBTS.Negocio;
+using AppBTS.Servicios;
+
 namespace AppBTS.Presentacion
 {
     public partial class frmAltaMesa : Form
     {
         Mesas oMesas = new Mesas();
         frmMesas ofrmMesas = new frmMesas();
+        MesasService miGestorMesas = new MesasService();
         public frmAltaMesa()
         {
             InitializeComponent();
-            nmrNroMesa.Text = oMesas.IdSiguiente().ToString();
+            nmrNroMesa.Text = miGestorMesas.IdSiguiente().ToString();
         }
 
         private void btnCancelarMesa_Click(object sender, EventArgs e)
@@ -30,7 +33,7 @@ namespace AppBTS.Presentacion
 
         private void btnConfirmarMesa_Click(object sender, EventArgs e)
         {
-            string nroMesa = oMesas.IdSiguiente().ToString();
+            string nroMesa = miGestorMesas.IdSiguiente().ToString();
             string nroSillas = nmrNroSillas.Text;
             if (nroMesa == "" || nroSillas == "")
                 MessageBox.Show("Por favor, complete todos los campos requeridos.", "Datos faltantes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -39,7 +42,7 @@ namespace AppBTS.Presentacion
             {
                 oMesas.NroMesa = Convert.ToInt32(nroMesa);
                 oMesas.CantidadSillas = nroSillas;
-                oMesas.AgregarMesa(nroMesa.ToString());
+                miGestorMesas.AgregarMesa(oMesas);
                 MessageBox.Show("Mesa registrada con éxito.", "Nuevo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.DialogResult = DialogResult.OK;
                 this.Close();

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AppBTS.Negocio;
 using System.Windows.Forms;
+using AppBTS.Servicios;
 
 namespace AppBTS.Presentacion
 {
@@ -15,13 +16,15 @@ namespace AppBTS.Presentacion
     {
         Articulo oArticulo = new Articulo();
         TipoArticulo oTipo = new TipoArticulo();
+        private ArticuloService miGestor = new ArticuloService();
+        private TipoArticuloService miGestorTipoArticulo = new TipoArticuloService();
         public frmConsultarArticulo()
         {
             InitializeComponent();
         }
         private void frmConsultarArticulo_Load(object sender, EventArgs e)
         {
-            CargarCombo(cboTipo, oTipo.RecuperarTodos());
+            CargarCombo(cboTipo, miGestorTipoArticulo.RecuperarTodos());
             btnEliminar.Enabled = false;
             btnModificar.Enabled = false;
         }
@@ -43,7 +46,7 @@ namespace AppBTS.Presentacion
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             if (chkTodos.Checked)
-                CargarGrilla(dgvArticulos, oArticulo.RecuperarTodos());
+                CargarGrilla(dgvArticulos, miGestor.RecuperarTodos());
             else
             {
                 string idArticulo = txtIdArtículo.Text;
@@ -51,7 +54,7 @@ namespace AppBTS.Presentacion
                 string idTipoArticulo = "";
                 if (cboTipo.SelectedIndex != -1)
                     idTipoArticulo = cboTipo.SelectedValue.ToString();
-                CargarGrilla(dgvArticulos, oArticulo.RecuperarFiltrados(idArticulo, nombre, idTipoArticulo));
+                CargarGrilla(dgvArticulos, miGestor.RecuperarFiltrados(idArticulo, nombre, idTipoArticulo));
                 cboTipo.SelectedIndex = -1;
             }
         }
@@ -91,7 +94,7 @@ namespace AppBTS.Presentacion
             seleccionado.Nombre = dgvArticulos.SelectedCells[1].Value.ToString();
             seleccionado.PrecioUnitario = Convert.ToDouble(dgvArticulos.SelectedCells[2].Value);
             string tipoId = dgvArticulos.SelectedCells[3].Value.ToString();
-            seleccionado.IdTipoArticulo = oTipo.RecuperarPorNombre(tipoId);
+            seleccionado.IdTipoArticulo = miGestorTipoArticulo.RecuperarPorNombre(tipoId);
             frmModificarArticulo fma = new frmModificarArticulo(seleccionado);
             fma.ShowDialog();
             fma.Dispose();
@@ -124,7 +127,7 @@ namespace AppBTS.Presentacion
                 MessageBoxButtons.YesNo,MessageBoxIcon.Question,MessageBoxDefaultButton.Button1) == DialogResult.Yes)
             {
                 seleccionado.IdArticulo = Convert.ToInt32(dgvArticulos.SelectedCells[0].Value);
-                seleccionado.Eliminar();
+                miGestor.Eliminar(seleccionado.IdArticulo);
                 MessageBox.Show("'" + nombre + "' eliminado con éxito.");
             }
         }
