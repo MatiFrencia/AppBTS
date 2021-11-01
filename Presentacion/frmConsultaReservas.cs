@@ -244,5 +244,10 @@ namespace AppBTS.Presentacion
         {
             limpiar();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -110,6 +110,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblNroMesa);
             this.Controls.Add(this.btnCancelarMesa);
             this.Controls.Add(this.btnConfirmarMesa);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "frmAltaMesa";
             this.Text = "Añadir Mesa";
             ((System.ComponentModel.ISupportInitialize)(this.nmrNroSillas)).EndInit();
