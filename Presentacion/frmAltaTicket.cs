@@ -29,7 +29,6 @@ namespace AppBTS.Presentacion
             CargarCombo(cboMesas, miGestorMesas.RecuperarTodos(), 0);
             CargarCombo(cboMozos, miGestorMozos.traerTodos(), 1);
             CargarCombo(cboTipoPago, miGestorTpago.RecuperarTodos(), 1);
-
         }
         private MenuService miGestorMenus = new MenuService();
         private TipoPagoService miGestorTpago = new TipoPagoService();

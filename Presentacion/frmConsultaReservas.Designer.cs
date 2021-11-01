@@ -144,6 +144,34 @@
             this.dtpHoraDesde.Size = new System.Drawing.Size(177, 22);
             this.dtpHoraDesde.TabIndex = 23;
             // 
+            // dtpHoraHasta
+            // 
+            this.dtpHoraHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHoraHasta.Location = new System.Drawing.Point(705, 64);
+            this.dtpHoraHasta.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpHoraHasta.Name = "dtpHoraHasta";
+            this.dtpHoraHasta.Size = new System.Drawing.Size(177, 22);
+            this.dtpHoraHasta.TabIndex = 25;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(612, 64);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 16);
+            this.label8.TabIndex = 24;
+            this.label8.Text = "Hora Hasta:";
+            // 
+            // dtpHoraDesde
+            // 
+            this.dtpHoraDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpHoraDesde.Location = new System.Drawing.Point(201, 64);
+            this.dtpHoraDesde.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpHoraDesde.Name = "dtpHoraDesde";
+            this.dtpHoraDesde.Size = new System.Drawing.Size(177, 22);
+            this.dtpHoraDesde.TabIndex = 23;
+            // 
             // btnClear
             // 
             this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
@@ -179,7 +207,7 @@
             // txtHora
             // 
             this.txtHora.AutoSize = true;
-            this.txtHora.Location = new System.Drawing.Point(611, 149);
+            this.txtHora.Location = new System.Drawing.Point(108, 64);
             this.txtHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(85, 16);
@@ -286,7 +314,7 @@
             this.cboComensales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboComensales.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboComensales.FormattingEnabled = true;
-            this.cboComensales.Location = new System.Drawing.Point(704, 112);
+            this.cboComensales.Location = new System.Drawing.Point(704, 137);
             this.cboComensales.Margin = new System.Windows.Forms.Padding(4);
             this.cboComensales.Name = "cboComensales";
             this.cboComensales.Size = new System.Drawing.Size(177, 24);
@@ -298,7 +326,7 @@
             this.cboTelefono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboTelefono.FormattingEnabled = true;
-            this.cboTelefono.Location = new System.Drawing.Point(704, 74);
+            this.cboTelefono.Location = new System.Drawing.Point(704, 96);
             this.cboTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.cboTelefono.Name = "cboTelefono";
             this.cboTelefono.Size = new System.Drawing.Size(177, 24);
@@ -310,7 +338,7 @@
             this.cboNombreCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNombreCliente.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNombreCliente.FormattingEnabled = true;
-            this.cboNombreCliente.Location = new System.Drawing.Point(201, 165);
+            this.cboNombreCliente.Location = new System.Drawing.Point(201, 169);
             this.cboNombreCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cboNombreCliente.Name = "cboNombreCliente";
             this.cboNombreCliente.Size = new System.Drawing.Size(177, 24);
@@ -322,7 +350,7 @@
             this.cboNroMesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroMesa.FormattingEnabled = true;
-            this.cboNroMesa.Location = new System.Drawing.Point(201, 121);
+            this.cboNroMesa.Location = new System.Drawing.Point(201, 137);
             this.cboNroMesa.Margin = new System.Windows.Forms.Padding(4);
             this.cboNroMesa.Name = "cboNroMesa";
             this.cboNroMesa.Size = new System.Drawing.Size(177, 24);
@@ -334,7 +362,7 @@
             this.cboNroReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroReserva.FormattingEnabled = true;
-            this.cboNroReserva.Location = new System.Drawing.Point(201, 76);
+            this.cboNroReserva.Location = new System.Drawing.Point(201, 96);
             this.cboNroReserva.Margin = new System.Windows.Forms.Padding(4);
             this.cboNroReserva.Name = "cboNroReserva";
             this.cboNroReserva.Size = new System.Drawing.Size(177, 24);
@@ -362,7 +390,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(606, 116);
+            this.label7.Location = new System.Drawing.Point(606, 141);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 16);
@@ -372,7 +400,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(627, 80);
+            this.label6.Location = new System.Drawing.Point(627, 102);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 16);
@@ -382,7 +410,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(91, 169);
+            this.label5.Location = new System.Drawing.Point(91, 173);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 16);
@@ -392,7 +420,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(139, 124);
+            this.label4.Location = new System.Drawing.Point(139, 140);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 16);
@@ -402,7 +430,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(120, 80);
+            this.label3.Location = new System.Drawing.Point(120, 100);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 16);
