@@ -116,6 +116,13 @@ namespace AppBTS
             frt.ShowDialog();
             frt.Dispose();
         }
+
+        private void menusToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteMenus frm = new frmReporteMenus();
+            frm.ShowDialog();
+            frm.Dispose();
+        }
     }
  }
 
