@@ -123,6 +123,21 @@ namespace AppBTS
             frm.ShowDialog();
             frm.Dispose();
         }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No disponible");
+        }
+
+        private void estadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No disponible");
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No disponible");
+        }
     }
  }
 
