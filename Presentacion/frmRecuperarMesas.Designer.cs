@@ -47,7 +47,7 @@ namespace AppBTS.Presentacion
             this.nroMesa,
             this.cantidadSillas,
             this.borrado});
-            this.dgvMesasBorradas.Location = new System.Drawing.Point(18, 150);
+            this.dgvMesasBorradas.Location = new System.Drawing.Point(18, 77);
             this.dgvMesasBorradas.Name = "dgvMesasBorradas";
             this.dgvMesasBorradas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMesasBorradas.Size = new System.Drawing.Size(341, 220);
@@ -81,17 +81,16 @@ namespace AppBTS.Presentacion
             // 
             // lblDescripcion
             // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(12, 75);
+            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescripcion.Location = new System.Drawing.Point(7, 300);
             this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(416, 50);
+            this.lblDescripcion.Size = new System.Drawing.Size(363, 48);
             this.lblDescripcion.TabIndex = 2;
-            this.lblDescripcion.Text = "Seleccione la mesa que desee recuperar, \r\ny luego presione el botón \"RECUPERAR\"";
+            this.lblDescripcion.Text = "Seleccione la mesa que desee recuperar y luego presione el botón \"RECUPERAR\"";
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(284, 415);
+            this.btnCancelar.Location = new System.Drawing.Point(271, 325);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 3;
@@ -101,7 +100,7 @@ namespace AppBTS.Presentacion
             // 
             // btnRecuperar
             // 
-            this.btnRecuperar.Location = new System.Drawing.Point(203, 415);
+            this.btnRecuperar.Location = new System.Drawing.Point(190, 325);
             this.btnRecuperar.Name = "btnRecuperar";
             this.btnRecuperar.Size = new System.Drawing.Size(75, 23);
             this.btnRecuperar.TabIndex = 4;
@@ -114,12 +113,13 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Sienna;
-            this.ClientSize = new System.Drawing.Size(382, 450);
+            this.ClientSize = new System.Drawing.Size(377, 363);
             this.Controls.Add(this.btnRecuperar);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblMesasBorradas);
             this.Controls.Add(this.dgvMesasBorradas);
+            this.Controls.Add(this.lblDescripcion);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRecuperarMesas";
             this.Text = "frmRecuperarMesas";
             this.Load += new System.EventHandler(this.frmRecuperarMesas_Load);

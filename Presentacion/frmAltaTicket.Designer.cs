@@ -268,7 +268,7 @@ namespace AppBTS.Presentacion
             // btnCancelar
             // 
             this.btnCancelar.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnCancelar.Location = new System.Drawing.Point(674, 399);
+            this.btnCancelar.Location = new System.Drawing.Point(696, 399);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(39, 39);
             this.btnCancelar.TabIndex = 36;
@@ -278,7 +278,7 @@ namespace AppBTS.Presentacion
             // btnGuardar
             // 
             this.btnGuardar.Image = global::AppBTS.Properties.Resources.grabar2;
-            this.btnGuardar.Location = new System.Drawing.Point(606, 399);
+            this.btnGuardar.Location = new System.Drawing.Point(645, 399);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(45, 39);
             this.btnGuardar.TabIndex = 35;
@@ -310,7 +310,7 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(754, 450);
+            this.ClientSize = new System.Drawing.Size(744, 450);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cboMesas);

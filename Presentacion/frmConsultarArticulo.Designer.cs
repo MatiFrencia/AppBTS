@@ -156,10 +156,10 @@ namespace AppBTS.Presentacion
             // 
             // btnSalir
             // 
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
             this.btnSalir.Location = new System.Drawing.Point(12, 468);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(61, 35);
+            this.btnSalir.Size = new System.Drawing.Size(61, 44);
             this.btnSalir.TabIndex = 8;
             this.toolTip1.SetToolTip(this.btnSalir, "Salir");
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -170,7 +170,7 @@ namespace AppBTS.Presentacion
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.Location = new System.Drawing.Point(462, 468);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(61, 35);
+            this.btnNuevo.Size = new System.Drawing.Size(61, 44);
             this.btnNuevo.TabIndex = 9;
             this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo");
             this.btnNuevo.UseVisualStyleBackColor = true;
@@ -181,7 +181,7 @@ namespace AppBTS.Presentacion
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.Location = new System.Drawing.Point(395, 468);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(61, 35);
+            this.btnModificar.Size = new System.Drawing.Size(61, 44);
             this.btnModificar.TabIndex = 10;
             this.toolTip1.SetToolTip(this.btnModificar, "Editar");
             this.btnModificar.UseVisualStyleBackColor = true;
@@ -192,7 +192,7 @@ namespace AppBTS.Presentacion
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(328, 468);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(61, 35);
+            this.btnEliminar.Size = new System.Drawing.Size(61, 44);
             this.btnEliminar.TabIndex = 11;
             this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar");
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -214,7 +214,7 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(535, 515);
+            this.ClientSize = new System.Drawing.Size(535, 524);
             this.Controls.Add(this.chkTodos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);

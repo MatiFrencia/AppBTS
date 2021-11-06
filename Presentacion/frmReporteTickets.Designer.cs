@@ -30,8 +30,8 @@ namespace AppBTS.Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource15 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource16 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteTickets));
             this.dtTicketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsTickets = new AppBTS.Reportes.dsTickets();
@@ -81,12 +81,12 @@ namespace AppBTS.Presentacion
             // 
             // reportViewer1
             // 
-            reportDataSource15.Name = "DataSet1";
-            reportDataSource15.Value = this.dtTicketsBindingSource;
-            reportDataSource16.Name = "DataSet2";
-            reportDataSource16.Value = this.dtTicketsBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource15);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource16);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dtTicketsBindingSource;
+            reportDataSource2.Name = "DataSet2";
+            reportDataSource2.Value = this.dtTicketsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppBTS.Reportes.rptTickets.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 269);
             this.reportViewer1.Name = "reportViewer1";
@@ -359,7 +359,7 @@ namespace AppBTS.Presentacion
             // 
             // btnPerso
             // 
-            this.btnPerso.Location = new System.Drawing.Point(464, 45);
+            this.btnPerso.Location = new System.Drawing.Point(343, 49);
             this.btnPerso.Name = "btnPerso";
             this.btnPerso.Size = new System.Drawing.Size(87, 23);
             this.btnPerso.TabIndex = 70;
@@ -369,7 +369,7 @@ namespace AppBTS.Presentacion
             // 
             // btnDia
             // 
-            this.btnDia.Location = new System.Drawing.Point(383, 45);
+            this.btnDia.Location = new System.Drawing.Point(262, 49);
             this.btnDia.Name = "btnDia";
             this.btnDia.Size = new System.Drawing.Size(75, 23);
             this.btnDia.TabIndex = 69;
@@ -379,7 +379,7 @@ namespace AppBTS.Presentacion
             // 
             // btnSemana
             // 
-            this.btnSemana.Location = new System.Drawing.Point(302, 45);
+            this.btnSemana.Location = new System.Drawing.Point(181, 49);
             this.btnSemana.Name = "btnSemana";
             this.btnSemana.Size = new System.Drawing.Size(75, 23);
             this.btnSemana.TabIndex = 68;
@@ -389,7 +389,7 @@ namespace AppBTS.Presentacion
             // 
             // btnMes
             // 
-            this.btnMes.Location = new System.Drawing.Point(219, 45);
+            this.btnMes.Location = new System.Drawing.Point(98, 49);
             this.btnMes.Name = "btnMes";
             this.btnMes.Size = new System.Drawing.Size(75, 23);
             this.btnMes.TabIndex = 67;
@@ -399,7 +399,7 @@ namespace AppBTS.Presentacion
             // 
             // btnAño
             // 
-            this.btnAño.Location = new System.Drawing.Point(138, 45);
+            this.btnAño.Location = new System.Drawing.Point(17, 49);
             this.btnAño.Name = "btnAño";
             this.btnAño.Size = new System.Drawing.Size(75, 23);
             this.btnAño.TabIndex = 66;
