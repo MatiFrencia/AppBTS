@@ -47,7 +47,7 @@ namespace AppBTS.Presentacion
             this.nroMesa,
             this.cantidadSillas,
             this.borrado});
-            this.dgvMesasBorradas.Location = new System.Drawing.Point(18, 77);
+            this.dgvMesasBorradas.Location = new System.Drawing.Point(18, 60);
             this.dgvMesasBorradas.Name = "dgvMesasBorradas";
             this.dgvMesasBorradas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMesasBorradas.Size = new System.Drawing.Size(341, 220);
@@ -73,7 +73,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblMesasBorradas.AutoSize = true;
             this.lblMesasBorradas.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMesasBorradas.Location = new System.Drawing.Point(12, 28);
+            this.lblMesasBorradas.Location = new System.Drawing.Point(12, 9);
             this.lblMesasBorradas.Name = "lblMesasBorradas";
             this.lblMesasBorradas.Size = new System.Drawing.Size(241, 33);
             this.lblMesasBorradas.TabIndex = 1;
@@ -112,7 +112,7 @@ namespace AppBTS.Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Sienna;
+            this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(377, 363);
             this.Controls.Add(this.btnRecuperar);
             this.Controls.Add(this.btnCancelar);

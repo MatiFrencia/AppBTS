@@ -156,8 +156,10 @@ namespace AppBTS.Presentacion
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.Color.Tan;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(12, 329);
+            this.btnCancelar.Location = new System.Drawing.Point(12, 311);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(89, 33);
             this.btnCancelar.TabIndex = 8;
@@ -167,8 +169,10 @@ namespace AppBTS.Presentacion
             // 
             // btnGuardar
             // 
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.Tan;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(439, 329);
+            this.btnGuardar.Location = new System.Drawing.Point(439, 311);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(89, 33);
             this.btnGuardar.TabIndex = 9;
@@ -211,7 +215,7 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(540, 380);
+            this.ClientSize = new System.Drawing.Size(540, 356);
             this.Controls.Add(this.btnEditarTipo);
             this.Controls.Add(this.btnEditarPrecio);
             this.Controls.Add(this.btnEditarNombre);

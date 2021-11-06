@@ -218,6 +218,8 @@ namespace AppBTS.Presentacion
             // 
             // btnAgregar
             // 
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.Color.Tan;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
             this.btnAgregar.Location = new System.Drawing.Point(576, 110);
             this.btnAgregar.Name = "btnAgregar";
@@ -228,7 +230,9 @@ namespace AppBTS.Presentacion
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Image = global::AppBTS.Properties.Resources.delete_exit;
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.ForeColor = System.Drawing.Color.Tan;
+            this.btnBorrar.Image = global::AppBTS.Properties.Resources.Cancelar3;
             this.btnBorrar.Location = new System.Drawing.Point(611, 110);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(29, 28);
@@ -258,6 +262,8 @@ namespace AppBTS.Presentacion
             // 
             // btnSalir
             // 
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.Tan;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
             this.btnSalir.Location = new System.Drawing.Point(38, 339);
             this.btnSalir.Name = "btnSalir";
@@ -268,6 +274,8 @@ namespace AppBTS.Presentacion
             // 
             // btnGuardar
             // 
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.Tan;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.Location = new System.Drawing.Point(593, 339);
             this.btnGuardar.Name = "btnGuardar";

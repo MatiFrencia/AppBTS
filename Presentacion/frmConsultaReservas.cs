@@ -129,7 +129,6 @@ namespace AppBTS.Presentacion
                                                               _nombreCliente,
                                                               dtpHoraDesde.Value.ToString("HH:mm"),
                                                               dtpHoraHasta.Value.ToString("HH:mm")));
-            limpiar();
         }
 
         private void limpiar()

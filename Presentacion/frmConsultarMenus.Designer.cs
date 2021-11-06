@@ -172,6 +172,8 @@ namespace AppBTS.Presentacion
             // 
             // btnConsultar
             // 
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.ForeColor = System.Drawing.Color.Tan;
             this.btnConsultar.Image = global::AppBTS.Properties.Resources.buscar1;
             this.btnConsultar.Location = new System.Drawing.Point(967, 60);
             this.btnConsultar.Name = "btnConsultar";
@@ -225,6 +227,8 @@ namespace AppBTS.Presentacion
             // 
             // btnSalir
             // 
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.Tan;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
             this.btnSalir.Location = new System.Drawing.Point(12, 337);
             this.btnSalir.Name = "btnSalir";
@@ -235,6 +239,8 @@ namespace AppBTS.Presentacion
             // 
             // btnEliminar
             // 
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.Tan;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(236, 337);
             this.btnEliminar.Name = "btnEliminar";
@@ -245,6 +251,8 @@ namespace AppBTS.Presentacion
             // 
             // btnModificar
             // 
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.ForeColor = System.Drawing.Color.Tan;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.Location = new System.Drawing.Point(307, 337);
             this.btnModificar.Name = "btnModificar";
@@ -255,6 +263,8 @@ namespace AppBTS.Presentacion
             // 
             // btnNuevo
             // 
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.ForeColor = System.Drawing.Color.Tan;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.Location = new System.Drawing.Point(378, 337);
             this.btnNuevo.Name = "btnNuevo";

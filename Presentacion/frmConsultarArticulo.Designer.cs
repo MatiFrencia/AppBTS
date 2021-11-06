@@ -145,6 +145,7 @@ namespace AppBTS.Presentacion
             // 
             // btnConsultar
             // 
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.Location = new System.Drawing.Point(488, 177);
             this.btnConsultar.Name = "btnConsultar";
@@ -156,6 +157,7 @@ namespace AppBTS.Presentacion
             // 
             // btnSalir
             // 
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
             this.btnSalir.Location = new System.Drawing.Point(12, 468);
             this.btnSalir.Name = "btnSalir";
@@ -167,6 +169,7 @@ namespace AppBTS.Presentacion
             // 
             // btnNuevo
             // 
+            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.Location = new System.Drawing.Point(462, 468);
             this.btnNuevo.Name = "btnNuevo";
@@ -178,6 +181,7 @@ namespace AppBTS.Presentacion
             // 
             // btnModificar
             // 
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
             this.btnModificar.Location = new System.Drawing.Point(395, 468);
             this.btnModificar.Name = "btnModificar";
@@ -189,6 +193,7 @@ namespace AppBTS.Presentacion
             // 
             // btnEliminar
             // 
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.Location = new System.Drawing.Point(328, 468);
             this.btnEliminar.Name = "btnEliminar";
