@@ -11,6 +11,7 @@ namespace AppBTS.Datos.Interfaces
     interface IDetallesTicket
     {
         DataTable RecuperarTodos();
+        DataTable RecuperarTodosConParametros(string idMenu, string fechaDesde, string fechaHasta);
         void Registrar(DetallesTicket detallesTicket);
     }
 }

@@ -25,5 +25,9 @@ namespace AppBTS.Servicios
         {
             return dao.RecuperarTodos();
         }
+        public DataTable RecuperarTodosConParametros(string _idMenu, string fechaDesde, string fechaHasta)
+        {
+            return dao.RecuperarTodosConParametros(_idMenu, fechaDesde, fechaHasta);
+        }
     }
 }

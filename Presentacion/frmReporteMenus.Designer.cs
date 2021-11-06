@@ -29,32 +29,46 @@ namespace AppBTS.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteMenus));
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.lblFechaHasta = new System.Windows.Forms.Label();
             this.dtpFechaHasta = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaDesde = new System.Windows.Forms.DateTimePicker();
-            this.txtHasta = new System.Windows.Forms.TextBox();
-            this.txtDesde = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cboMenu = new System.Windows.Forms.ComboBox();
+            this.btnAño = new System.Windows.Forms.Button();
+            this.btnMes = new System.Windows.Forms.Button();
+            this.btnSemana = new System.Windows.Forms.Button();
+            this.btnDia = new System.Windows.Forms.Button();
+            this.btnPerso = new System.Windows.Forms.Button();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dsDetallesTicket = new AppBTS.Reportes.dsDetallesTicket();
+            this.dsDetallesTicketBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dsDetallesTicket)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDetallesTicketBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 26);
+            this.label1.Location = new System.Drawing.Point(23, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(246, 37);
+            this.label1.Size = new System.Drawing.Size(308, 37);
             this.label1.TabIndex = 47;
-            this.label1.Text = "Reporte Menus";
+            this.label1.Text = "Menú Más Vendido";
             // 
             // lblFechaDesde
             // 
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.lblFechaDesde.Location = new System.Drawing.Point(27, 80);
+            this.lblFechaDesde.Location = new System.Drawing.Point(28, 95);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(93, 16);
             this.lblFechaDesde.TabIndex = 51;
@@ -64,7 +78,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.lblFechaHasta.Location = new System.Drawing.Point(408, 80);
+            this.lblFechaHasta.Location = new System.Drawing.Point(330, 95);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(88, 16);
             this.lblFechaHasta.TabIndex = 50;
@@ -73,8 +87,9 @@ namespace AppBTS.Presentacion
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.dtpFechaHasta.Enabled = false;
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(503, 76);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(425, 91);
             this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(177, 20);
@@ -82,60 +97,171 @@ namespace AppBTS.Presentacion
             // 
             // dtpFechaDesde
             // 
+            this.dtpFechaDesde.Enabled = false;
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(128, 76);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(129, 91);
             this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(177, 20);
             this.dtpFechaDesde.TabIndex = 48;
             // 
-            // txtHasta
+            // label6
             // 
-            this.txtHasta.Location = new System.Drawing.Point(503, 110);
-            this.txtHasta.Name = "txtHasta";
-            this.txtHasta.Size = new System.Drawing.Size(177, 20);
-            this.txtHasta.TabIndex = 56;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
+            this.label6.Location = new System.Drawing.Point(643, 91);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(44, 16);
+            this.label6.TabIndex = 59;
+            this.label6.Text = "Menú:";
             // 
-            // txtDesde
+            // cboMenu
             // 
-            this.txtDesde.Location = new System.Drawing.Point(129, 110);
-            this.txtDesde.Name = "txtDesde";
-            this.txtDesde.Size = new System.Drawing.Size(176, 20);
-            this.txtDesde.TabIndex = 55;
+            this.cboMenu.BackColor = System.Drawing.Color.Tan;
+            this.cboMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cboMenu.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.cboMenu.FormattingEnabled = true;
+            this.cboMenu.Location = new System.Drawing.Point(707, 90);
+            this.cboMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.cboMenu.Name = "cboMenu";
+            this.cboMenu.Size = new System.Drawing.Size(177, 21);
+            this.cboMenu.TabIndex = 60;
             // 
-            // label2
+            // btnAño
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(439, 115);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 16);
-            this.label2.TabIndex = 54;
-            this.label2.Text = "$ Hasta:";
+            this.btnAño.Location = new System.Drawing.Point(46, 49);
+            this.btnAño.Name = "btnAño";
+            this.btnAño.Size = new System.Drawing.Size(75, 23);
+            this.btnAño.TabIndex = 61;
+            this.btnAño.Text = "Año";
+            this.btnAño.UseVisualStyleBackColor = true;
+            this.btnAño.Click += new System.EventHandler(this.btnAño_Click);
             // 
-            // label7
+            // btnMes
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label7.Location = new System.Drawing.Point(58, 115);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(62, 16);
-            this.label7.TabIndex = 53;
-            this.label7.Text = "$ Desde:";
+            this.btnMes.Location = new System.Drawing.Point(127, 49);
+            this.btnMes.Name = "btnMes";
+            this.btnMes.Size = new System.Drawing.Size(75, 23);
+            this.btnMes.TabIndex = 62;
+            this.btnMes.Text = "Mes";
+            this.btnMes.UseVisualStyleBackColor = true;
+            this.btnMes.Click += new System.EventHandler(this.btnMes_Click);
+            // 
+            // btnSemana
+            // 
+            this.btnSemana.Location = new System.Drawing.Point(210, 49);
+            this.btnSemana.Name = "btnSemana";
+            this.btnSemana.Size = new System.Drawing.Size(75, 23);
+            this.btnSemana.TabIndex = 63;
+            this.btnSemana.Text = "Semana";
+            this.btnSemana.UseVisualStyleBackColor = true;
+            this.btnSemana.Click += new System.EventHandler(this.btnSemana_Click);
+            // 
+            // btnDia
+            // 
+            this.btnDia.Location = new System.Drawing.Point(291, 49);
+            this.btnDia.Name = "btnDia";
+            this.btnDia.Size = new System.Drawing.Size(75, 23);
+            this.btnDia.TabIndex = 64;
+            this.btnDia.Text = "Dia";
+            this.btnDia.UseVisualStyleBackColor = true;
+            this.btnDia.Click += new System.EventHandler(this.btnDia_Click);
+            // 
+            // btnPerso
+            // 
+            this.btnPerso.Location = new System.Drawing.Point(372, 49);
+            this.btnPerso.Name = "btnPerso";
+            this.btnPerso.Size = new System.Drawing.Size(87, 23);
+            this.btnPerso.TabIndex = 65;
+            this.btnPerso.Text = "Personalizado:";
+            this.btnPerso.UseVisualStyleBackColor = true;
+            this.btnPerso.Click += new System.EventHandler(this.btnPerso_Click);
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.BackColor = System.Drawing.Color.Tan;
+            this.btnConsultar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
+            this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConsultar.Location = new System.Drawing.Point(707, 135);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(134, 35);
+            this.btnConsultar.TabIndex = 66;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // btnClear
+            // 
+            this.btnClear.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnClear.BackgroundImage")));
+            this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnClear.FlatAppearance.BorderSize = 0;
+            this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClear.Location = new System.Drawing.Point(848, 135);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(36, 35);
+            this.btnClear.TabIndex = 67;
+            this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.BackColor = System.Drawing.Color.Tan;
+            this.btnSalir.FlatAppearance.BorderSize = 0;
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
+            this.btnSalir.Location = new System.Drawing.Point(859, 524);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(53, 40);
+            this.btnSalir.TabIndex = 68;
+            this.btnSalir.UseVisualStyleBackColor = false;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // reportViewer1
+            // 
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dsDetallesTicketBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppBTS.Reportes.rptDetallesTicket.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(12, 176);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(900, 342);
+            this.reportViewer1.TabIndex = 69;
+            // 
+            // dsDetallesTicket
+            // 
+            this.dsDetallesTicket.DataSetName = "dsDetallesTicket";
+            this.dsDetallesTicket.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dsDetallesTicketBindingSource
+            // 
+            this.dsDetallesTicketBindingSource.DataSource = this.dsDetallesTicket;
+            this.dsDetallesTicketBindingSource.Position = 0;
             // 
             // frmReporteMenus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(693, 450);
+            this.ClientSize = new System.Drawing.Size(924, 576);
             this.ControlBox = false;
-            this.Controls.Add(this.txtHasta);
-            this.Controls.Add(this.txtDesde);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.reportViewer1);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnConsultar);
+            this.Controls.Add(this.btnPerso);
+            this.Controls.Add(this.btnDia);
+            this.Controls.Add(this.btnSemana);
+            this.Controls.Add(this.btnMes);
+            this.Controls.Add(this.btnAño);
+            this.Controls.Add(this.cboMenu);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.lblFechaDesde);
             this.Controls.Add(this.lblFechaHasta);
             this.Controls.Add(this.dtpFechaHasta);
@@ -146,6 +272,9 @@ namespace AppBTS.Presentacion
             this.Name = "frmReporteMenus";
             this.ShowIcon = false;
             this.Text = "ReporteMenus";
+            this.Load += new System.EventHandler(this.frmReporteMenus_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dsDetallesTicket)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDetallesTicketBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -158,9 +287,18 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.Label lblFechaHasta;
         private System.Windows.Forms.DateTimePicker dtpFechaHasta;
         private System.Windows.Forms.DateTimePicker dtpFechaDesde;
-        private System.Windows.Forms.TextBox txtHasta;
-        private System.Windows.Forms.TextBox txtDesde;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cboMenu;
+        private System.Windows.Forms.Button btnAño;
+        private System.Windows.Forms.Button btnMes;
+        private System.Windows.Forms.Button btnSemana;
+        private System.Windows.Forms.Button btnDia;
+        private System.Windows.Forms.Button btnPerso;
+        private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnSalir;
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private System.Windows.Forms.BindingSource dsDetallesTicketBindingSource;
+        private Reportes.dsDetallesTicket dsDetallesTicket;
     }
 }

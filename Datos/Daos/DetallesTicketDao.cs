@@ -28,7 +28,19 @@ namespace AppBTS.Datos.Daos
         public DataTable RecuperarTodos()
         {
             string consulta = "SELECT d.nroTicket,d.orden,d.idMenu, d.cantidad, d.pcioUnitario, d.borrado, d.descuento FROM DetallesTicket d ";
-            //BDHelper oDatos = new BDHelper();
+            DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
+            return tabla;
+        }
+        public DataTable RecuperarTodosConParametros(string idMenu, string fechaDesde, string fechaHasta)
+        {
+            string consulta = "SELECT t.fecha as fechaT,d.orden,m.nombre as nombreM, d.cantidad, d.pcioUnitario, d.borrado, d.descuento " +
+                " FROM DetallesTicket d, Tickets t, Menus m" +
+                " WHERE d.nroTicket = t.nroTicket" +
+                " AND d.idMenu = m.idMenu";
+            consulta += " AND t.fecha BETWEEN '" + fechaDesde + "' AND '" + fechaHasta + "'";
+            if (idMenu != "")
+                consulta += " AND d.idMenu=" + idMenu;
+            consulta += " ORDER BY d.nroTicket DESC";
             DataTable tabla = BDHelper.obtenerInstancia().consultar(consulta);
             return tabla;
         }

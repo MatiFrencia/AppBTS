@@ -330,6 +330,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <Content Include="Fonts\Dutch801 XBd BT Extra Bold.ttf" />
+    <EmbeddedResource Include="Reportes\rptDetallesTicket.rdlc" />
     <EmbeddedResource Include="Reportes\rptTickets.rdlc" />
     <None Include="BAR_PAVDataSet.xsc">
       <DependentUpon>BAR_PAVDataSet.xsd</DependentUpon>
