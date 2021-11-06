@@ -249,6 +249,8 @@
     <Compile Include="Servicios\TipoPagoService.cs" />
     <Compile Include="Servicios\UsuarioService.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <None Include="Imagenes\MesaLibre.jpg" />
+    <None Include="Imagenes\MesaOcupada.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

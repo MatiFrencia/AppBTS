@@ -24,22 +24,23 @@ namespace AppBTS.Presentacion
         MesasService miGestorMesas = new MesasService();
         ReservaService miGestorReservas = new ReservaService();
 
-        public void AsignarColor()
+        public Image AsignarColor(string idMesa)
         {
-            DataTable reservas = miGestorReservas.RecuperarFiltrados(DateTime.Today.AddDays(-1).ToString("dd/MM/yyyy"),
-                                                         DateTime.Today.ToString("dd/MM/yyyy"),
-                                                         "", "", "", "", "", "00:00", "23:59");
+            DataTable reservas = miGestorReservas.RecuperarFiltrados(DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd"),
+                                                         DateTime.Today.ToString("yyyy-MM-dd"),
+                                                         "", idMesa, "", "", "", "00:00", "23:59");
+            
             for (int i = 0; i < reservas.Rows.Count; i++)
-            { 
-                MessageBox.Show(Convert.ToDateTime(reservas.Rows[i]["horaReserva"]).ToString("HH:mm"));
-                MessageBox.Show(DateTime.Today.AddHours(2).ToString("HH:mm"));
-                MessageBox.Show(DateTime.Today.AddMinutes(-20).ToString("HH:mm"));
-                if (Convert.ToDateTime(reservas.Rows[i]["horaReserva"]) <= DateTime.Today.AddHours(2) && 
-                        Convert.ToDateTime(reservas.Rows[i]["horaReserva"]) >= DateTime.Today.AddMinutes(-20))
-                    {
-                    
-                    }
+            {
+                DateTime horaReserva = Convert.ToDateTime(reservas.Rows[i]["horaReserva"].ToString());
+                
+                if ( horaReserva <= DateTime.Now.AddHours(2) &&
+                       horaReserva >= DateTime.Now.AddMinutes(-20))
+                {
+                    return AppBTS.Properties.Resources.MesaOcupada;
+                }
             }
+            return AppBTS.Properties.Resources.MesaLibre;
         }
         public void ActualizarMesas()
         {
@@ -47,7 +48,7 @@ namespace AppBTS.Presentacion
             Button[,] boton = new Button[10, 10];
             Mesas oMesa = new Mesas();
             DataTable tabla = miGestorMesas.RecuperarTodos();
-            AsignarColor();
+            
             //string nroMesa = tabla.Rows[i]["nroMesa"].ToString;
             int cantMesas = tabla.Rows.Count;
             int cantFilas = cantMesas / 3;
@@ -62,10 +63,10 @@ namespace AppBTS.Presentacion
                 {
                     if (cantBotones < cantMesas)
                     {
-                        
+                        Image imgMesa = AsignarColor(tabla.Rows[cantBotones]["nroMesa"].ToString());
                         boton[i, j] = new Button
                         {
-                            Image = AppBTS.Properties.Resources.Mesa1,
+                            Image = imgMesa,
                             Width = 221,
                             Height = 176,
                             Text = tabla.Rows[cantBotones]["nroMesa"].ToString(),
@@ -155,6 +156,14 @@ namespace AppBTS.Presentacion
                 InitializeComponent();
                 ActualizarMesas();
             }
+        }
+
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            InitializeComponent();
+            this.ActualizarMesas();
+            
         }
     }
 }
