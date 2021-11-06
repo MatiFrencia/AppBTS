@@ -34,8 +34,8 @@ namespace AppBTS.Presentacion
             {
                 DateTime horaReserva = Convert.ToDateTime(reservas.Rows[i]["horaReserva"].ToString());
                 
-                if ( horaReserva <= DateTime.Now.AddHours(2) &&
-                       horaReserva >= DateTime.Now.AddMinutes(-20))
+                if ( horaReserva <= DateTime.Now.AddMinutes(10) &&
+                       horaReserva >= DateTime.Now.AddHours(-2))
                 {
                     return AppBTS.Properties.Resources.MesaOcupada;
                 }
@@ -44,7 +44,6 @@ namespace AppBTS.Presentacion
         }
         public void ActualizarMesas()
         {
-            
             Button[,] boton = new Button[10, 10];
             Mesas oMesa = new Mesas();
             DataTable tabla = miGestorMesas.RecuperarTodos();
