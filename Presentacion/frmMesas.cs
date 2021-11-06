@@ -22,12 +22,32 @@ namespace AppBTS.Presentacion
         public string NroMesa { get; set; }
         public string BotonClickeado { get; set; }
         MesasService miGestorMesas = new MesasService();
+        ReservaService miGestorReservas = new ReservaService();
+
+        public void AsignarColor()
+        {
+            DataTable reservas = miGestorReservas.RecuperarFiltrados(DateTime.Today.AddDays(-1).ToString("dd/MM/yyyy"),
+                                                         DateTime.Today.ToString("dd/MM/yyyy"),
+                                                         "", "", "", "", "", "00:00", "23:59");
+            for (int i = 0; i < reservas.Rows.Count; i++)
+            { 
+                MessageBox.Show(Convert.ToDateTime(reservas.Rows[i]["horaReserva"]).ToString("HH:mm"));
+                MessageBox.Show(DateTime.Today.AddHours(2).ToString("HH:mm"));
+                MessageBox.Show(DateTime.Today.AddMinutes(-20).ToString("HH:mm"));
+                if (Convert.ToDateTime(reservas.Rows[i]["horaReserva"]) <= DateTime.Today.AddHours(2) && 
+                        Convert.ToDateTime(reservas.Rows[i]["horaReserva"]) >= DateTime.Today.AddMinutes(-20))
+                    {
+                    
+                    }
+            }
+        }
         public void ActualizarMesas()
         {
             
             Button[,] boton = new Button[10, 10];
             Mesas oMesa = new Mesas();
             DataTable tabla = miGestorMesas.RecuperarTodos();
+            AsignarColor();
             //string nroMesa = tabla.Rows[i]["nroMesa"].ToString;
             int cantMesas = tabla.Rows.Count;
             int cantFilas = cantMesas / 3;
@@ -42,6 +62,7 @@ namespace AppBTS.Presentacion
                 {
                     if (cantBotones < cantMesas)
                     {
+                        
                         boton[i, j] = new Button
                         {
                             Image = AppBTS.Properties.Resources.Mesa1,
