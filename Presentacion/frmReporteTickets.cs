@@ -63,6 +63,7 @@ namespace AppBTS.Presentacion
             this.cboTipoPago.SelectedIndex = -1;
             this.cboMozo.SelectedIndex = -1;
             this.txtDesde.Text = "0";
+            this.txtHasta.Text = "0";
         }
         private void btnSalir_Click_1(object sender, EventArgs e)
         {
@@ -106,6 +107,13 @@ namespace AppBTS.Presentacion
                 txtDesde.Focus();
                 return;
             }
+
+            if (Convert.ToInt32(txtHasta.Text) == 0)
+            {
+                MessageBox.Show("Valores $ erroneos!!!");
+                txtDesde.Focus();
+                return;
+            }
             this.dtTicketsBindingSource.DataSource = miGestorTickets.RecuperarTodosConParametros(_nroTicket,
                                                     dtpFechaDesde.Value.ToString("yyyy/MM/dd"), dtpFechaHasta.Value.ToString("yyyy/MM/dd"),
                                                     dtpHoraDesde.Value.ToString("HH:mm"),dtpHoraHasta.Value.ToString("HH:mm"),
@@ -113,6 +121,44 @@ namespace AppBTS.Presentacion
                                                     txtDesde.Text.ToString(),txtHasta.Text.ToString());
             this.reportViewer1.RefreshReport();
             limpiar();
+        }
+
+        private void btnAño_Click(object sender, EventArgs e)
+        {
+            this.dtpFechaDesde.Enabled = false;
+            this.dtpFechaHasta.Enabled = false;
+            this.dtpFechaDesde.Value = DateTime.Today.AddYears(-1);
+            this.dtpFechaHasta.Value = DateTime.Today;
+        }
+
+        private void btnMes_Click(object sender, EventArgs e)
+        {
+            this.dtpFechaDesde.Enabled = false;
+            this.dtpFechaHasta.Enabled = false;
+            this.dtpFechaDesde.Value = DateTime.Today.AddMonths(-1);
+            this.dtpFechaHasta.Value = DateTime.Today;
+        }
+
+        private void btnSemana_Click(object sender, EventArgs e)
+        {
+            this.dtpFechaDesde.Enabled = false;
+            this.dtpFechaHasta.Enabled = false;
+            this.dtpFechaDesde.Value = DateTime.Today.AddDays(-7);
+            this.dtpFechaHasta.Value = DateTime.Today;
+        }
+
+        private void btnDia_Click(object sender, EventArgs e)
+        {
+            this.dtpFechaDesde.Enabled = false;
+            this.dtpFechaHasta.Enabled = false;
+            this.dtpFechaDesde.Value = DateTime.Today.AddDays(-1);
+            this.dtpFechaHasta.Value = DateTime.Today;
+        }
+
+        private void btnPerso_Click(object sender, EventArgs e)
+        {
+            this.dtpFechaDesde.Enabled = true;
+            this.dtpFechaHasta.Enabled = true;
         }
     }
 }

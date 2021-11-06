@@ -30,8 +30,8 @@ namespace AppBTS.Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource15 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource16 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteTickets));
             this.dtTicketsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsTickets = new AppBTS.Reportes.dsTickets();
@@ -60,6 +60,11 @@ namespace AppBTS.Presentacion
             this.btnSalir = new System.Windows.Forms.Button();
             this.txtDesde = new System.Windows.Forms.TextBox();
             this.txtHasta = new System.Windows.Forms.TextBox();
+            this.btnPerso = new System.Windows.Forms.Button();
+            this.btnDia = new System.Windows.Forms.Button();
+            this.btnSemana = new System.Windows.Forms.Button();
+            this.btnMes = new System.Windows.Forms.Button();
+            this.btnAño = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtTicketsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsTickets)).BeginInit();
             this.SuspendLayout();
@@ -76,14 +81,14 @@ namespace AppBTS.Presentacion
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.dtTicketsBindingSource;
-            reportDataSource2.Name = "DataSet2";
-            reportDataSource2.Value = this.dtTicketsBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource15.Name = "DataSet1";
+            reportDataSource15.Value = this.dtTicketsBindingSource;
+            reportDataSource16.Name = "DataSet2";
+            reportDataSource16.Value = this.dtTicketsBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource15);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource16);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppBTS.Reportes.rptTickets.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 259);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 269);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(690, 371);
@@ -92,7 +97,7 @@ namespace AppBTS.Presentacion
             // dtpHoraHasta
             // 
             this.dtpHoraHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHoraHasta.Location = new System.Drawing.Point(505, 96);
+            this.dtpHoraHasta.Location = new System.Drawing.Point(505, 106);
             this.dtpHoraHasta.Margin = new System.Windows.Forms.Padding(4);
             this.dtpHoraHasta.Name = "dtpHoraHasta";
             this.dtpHoraHasta.Size = new System.Drawing.Size(177, 20);
@@ -102,7 +107,7 @@ namespace AppBTS.Presentacion
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label8.Location = new System.Drawing.Point(412, 96);
+            this.label8.Location = new System.Drawing.Point(412, 106);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 16);
@@ -112,7 +117,7 @@ namespace AppBTS.Presentacion
             // dtpHoraDesde
             // 
             this.dtpHoraDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHoraDesde.Location = new System.Drawing.Point(125, 96);
+            this.dtpHoraDesde.Location = new System.Drawing.Point(117, 106);
             this.dtpHoraDesde.Margin = new System.Windows.Forms.Padding(4);
             this.dtpHoraDesde.Name = "dtpHoraDesde";
             this.dtpHoraDesde.Size = new System.Drawing.Size(177, 20);
@@ -124,7 +129,7 @@ namespace AppBTS.Presentacion
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(646, 218);
+            this.btnClear.Location = new System.Drawing.Point(646, 228);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(36, 35);
             this.btnClear.TabIndex = 42;
@@ -136,7 +141,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.lblFechaDesde.Location = new System.Drawing.Point(24, 72);
+            this.lblFechaDesde.Location = new System.Drawing.Point(16, 82);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(93, 16);
             this.lblFechaDesde.TabIndex = 41;
@@ -146,7 +151,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.lblFechaHasta.Location = new System.Drawing.Point(405, 72);
+            this.lblFechaHasta.Location = new System.Drawing.Point(405, 82);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(88, 16);
             this.lblFechaHasta.TabIndex = 40;
@@ -156,7 +161,7 @@ namespace AppBTS.Presentacion
             // 
             this.txtHora.AutoSize = true;
             this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtHora.Location = new System.Drawing.Point(32, 96);
+            this.txtHora.Location = new System.Drawing.Point(24, 106);
             this.txtHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(85, 16);
@@ -171,7 +176,7 @@ namespace AppBTS.Presentacion
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(505, 217);
+            this.btnConsultar.Location = new System.Drawing.Point(505, 227);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(134, 35);
@@ -186,7 +191,7 @@ namespace AppBTS.Presentacion
             this.cboTipoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboTipoPago.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboTipoPago.FormattingEnabled = true;
-            this.cboTipoPago.Location = new System.Drawing.Point(505, 154);
+            this.cboTipoPago.Location = new System.Drawing.Point(505, 164);
             this.cboTipoPago.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoPago.Name = "cboTipoPago";
             this.cboTipoPago.Size = new System.Drawing.Size(177, 21);
@@ -198,7 +203,7 @@ namespace AppBTS.Presentacion
             this.cboMozo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboMozo.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboMozo.FormattingEnabled = true;
-            this.cboMozo.Location = new System.Drawing.Point(505, 188);
+            this.cboMozo.Location = new System.Drawing.Point(505, 198);
             this.cboMozo.Margin = new System.Windows.Forms.Padding(4);
             this.cboMozo.Name = "cboMozo";
             this.cboMozo.Size = new System.Drawing.Size(177, 21);
@@ -210,7 +215,7 @@ namespace AppBTS.Presentacion
             this.cboNroMesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroMesa.FormattingEnabled = true;
-            this.cboNroMesa.Location = new System.Drawing.Point(125, 189);
+            this.cboNroMesa.Location = new System.Drawing.Point(117, 199);
             this.cboNroMesa.Margin = new System.Windows.Forms.Padding(4);
             this.cboNroMesa.Name = "cboNroMesa";
             this.cboNroMesa.Size = new System.Drawing.Size(177, 21);
@@ -222,7 +227,7 @@ namespace AppBTS.Presentacion
             this.cboNroTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroTicket.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroTicket.FormattingEnabled = true;
-            this.cboNroTicket.Location = new System.Drawing.Point(125, 154);
+            this.cboNroTicket.Location = new System.Drawing.Point(117, 164);
             this.cboNroTicket.Margin = new System.Windows.Forms.Padding(4);
             this.cboNroTicket.Name = "cboNroTicket";
             this.cboNroTicket.Size = new System.Drawing.Size(177, 21);
@@ -231,8 +236,9 @@ namespace AppBTS.Presentacion
             // dtpFechaHasta
             // 
             this.dtpFechaHasta.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
+            this.dtpFechaHasta.Enabled = false;
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(505, 68);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(505, 78);
             this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(177, 20);
@@ -240,8 +246,9 @@ namespace AppBTS.Presentacion
             // 
             // dtpFechaDesde
             // 
+            this.dtpFechaDesde.Enabled = false;
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(125, 68);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(117, 78);
             this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(177, 20);
@@ -251,7 +258,7 @@ namespace AppBTS.Presentacion
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label7.Location = new System.Drawing.Point(54, 127);
+            this.label7.Location = new System.Drawing.Point(46, 137);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(62, 16);
@@ -262,7 +269,7 @@ namespace AppBTS.Presentacion
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label6.Location = new System.Drawing.Point(399, 159);
+            this.label6.Location = new System.Drawing.Point(399, 169);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 16);
@@ -273,7 +280,7 @@ namespace AppBTS.Presentacion
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label5.Location = new System.Drawing.Point(448, 189);
+            this.label5.Location = new System.Drawing.Point(448, 199);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 16);
@@ -284,7 +291,7 @@ namespace AppBTS.Presentacion
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label4.Location = new System.Drawing.Point(60, 194);
+            this.label4.Location = new System.Drawing.Point(52, 204);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 16);
@@ -295,7 +302,7 @@ namespace AppBTS.Presentacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label3.Location = new System.Drawing.Point(54, 159);
+            this.label3.Location = new System.Drawing.Point(46, 169);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 16);
@@ -316,7 +323,7 @@ namespace AppBTS.Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(435, 127);
+            this.label2.Location = new System.Drawing.Point(435, 137);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 16);
@@ -329,7 +336,7 @@ namespace AppBTS.Presentacion
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(646, 639);
+            this.btnSalir.Location = new System.Drawing.Point(646, 649);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(53, 40);
             this.btnSalir.TabIndex = 50;
@@ -338,17 +345,67 @@ namespace AppBTS.Presentacion
             // 
             // txtDesde
             // 
-            this.txtDesde.Location = new System.Drawing.Point(125, 122);
+            this.txtDesde.Location = new System.Drawing.Point(117, 132);
             this.txtDesde.Name = "txtDesde";
             this.txtDesde.Size = new System.Drawing.Size(177, 20);
             this.txtDesde.TabIndex = 51;
             // 
             // txtHasta
             // 
-            this.txtHasta.Location = new System.Drawing.Point(505, 122);
+            this.txtHasta.Location = new System.Drawing.Point(505, 132);
             this.txtHasta.Name = "txtHasta";
             this.txtHasta.Size = new System.Drawing.Size(177, 20);
             this.txtHasta.TabIndex = 52;
+            // 
+            // btnPerso
+            // 
+            this.btnPerso.Location = new System.Drawing.Point(464, 45);
+            this.btnPerso.Name = "btnPerso";
+            this.btnPerso.Size = new System.Drawing.Size(87, 23);
+            this.btnPerso.TabIndex = 70;
+            this.btnPerso.Text = "Personalizado:";
+            this.btnPerso.UseVisualStyleBackColor = true;
+            this.btnPerso.Click += new System.EventHandler(this.btnPerso_Click);
+            // 
+            // btnDia
+            // 
+            this.btnDia.Location = new System.Drawing.Point(383, 45);
+            this.btnDia.Name = "btnDia";
+            this.btnDia.Size = new System.Drawing.Size(75, 23);
+            this.btnDia.TabIndex = 69;
+            this.btnDia.Text = "Dia";
+            this.btnDia.UseVisualStyleBackColor = true;
+            this.btnDia.Click += new System.EventHandler(this.btnDia_Click);
+            // 
+            // btnSemana
+            // 
+            this.btnSemana.Location = new System.Drawing.Point(302, 45);
+            this.btnSemana.Name = "btnSemana";
+            this.btnSemana.Size = new System.Drawing.Size(75, 23);
+            this.btnSemana.TabIndex = 68;
+            this.btnSemana.Text = "Semana";
+            this.btnSemana.UseVisualStyleBackColor = true;
+            this.btnSemana.Click += new System.EventHandler(this.btnSemana_Click);
+            // 
+            // btnMes
+            // 
+            this.btnMes.Location = new System.Drawing.Point(219, 45);
+            this.btnMes.Name = "btnMes";
+            this.btnMes.Size = new System.Drawing.Size(75, 23);
+            this.btnMes.TabIndex = 67;
+            this.btnMes.Text = "Mes";
+            this.btnMes.UseVisualStyleBackColor = true;
+            this.btnMes.Click += new System.EventHandler(this.btnMes_Click);
+            // 
+            // btnAño
+            // 
+            this.btnAño.Location = new System.Drawing.Point(138, 45);
+            this.btnAño.Name = "btnAño";
+            this.btnAño.Size = new System.Drawing.Size(75, 23);
+            this.btnAño.TabIndex = 66;
+            this.btnAño.Text = "Año";
+            this.btnAño.UseVisualStyleBackColor = true;
+            this.btnAño.Click += new System.EventHandler(this.btnAño_Click);
             // 
             // frmReporteTickets
             // 
@@ -356,6 +413,11 @@ namespace AppBTS.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
             this.ClientSize = new System.Drawing.Size(714, 691);
+            this.Controls.Add(this.btnPerso);
+            this.Controls.Add(this.btnDia);
+            this.Controls.Add(this.btnSemana);
+            this.Controls.Add(this.btnMes);
+            this.Controls.Add(this.btnAño);
             this.Controls.Add(this.txtHasta);
             this.Controls.Add(this.txtDesde);
             this.Controls.Add(this.btnSalir);
@@ -421,5 +483,10 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.BindingSource dtTicketsBindingSource;
         private System.Windows.Forms.TextBox txtDesde;
         private System.Windows.Forms.TextBox txtHasta;
+        private System.Windows.Forms.Button btnPerso;
+        private System.Windows.Forms.Button btnDia;
+        private System.Windows.Forms.Button btnSemana;
+        private System.Windows.Forms.Button btnMes;
+        private System.Windows.Forms.Button btnAño;
     }
 }
