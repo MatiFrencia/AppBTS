@@ -399,7 +399,7 @@ namespace AppBTS.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public dtHorasRow AdddtHorasRow(string hora, string cantidadTickets, string porcentajeTickets, string ventasTotales, string porcentajeVentas) {
+            public dtHorasRow AdddtHorasRow(System.TimeSpan hora, int cantidadTickets, double porcentajeTickets, int ventasTotales, double porcentajeVentas) {
                 dtHorasRow rowdtHorasRow = ((dtHorasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         hora,
@@ -439,15 +439,15 @@ namespace AppBTS.Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnhora = new global::System.Data.DataColumn("hora", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnhora = new global::System.Data.DataColumn("hora", typeof(global::System.TimeSpan), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnhora);
-                this.columncantidadTickets = new global::System.Data.DataColumn("cantidadTickets", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columncantidadTickets = new global::System.Data.DataColumn("cantidadTickets", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columncantidadTickets);
-                this.columnporcentajeTickets = new global::System.Data.DataColumn("porcentajeTickets", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnporcentajeTickets = new global::System.Data.DataColumn("porcentajeTickets", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnporcentajeTickets);
-                this.columnventasTotales = new global::System.Data.DataColumn("ventasTotales", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnventasTotales = new global::System.Data.DataColumn("ventasTotales", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnventasTotales);
-                this.columnporcentajeVentas = new global::System.Data.DataColumn("porcentajeVentas", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnporcentajeVentas = new global::System.Data.DataColumn("porcentajeVentas", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnporcentajeVentas);
             }
             
@@ -591,10 +591,10 @@ namespace AppBTS.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string hora {
+            public System.TimeSpan hora {
                 get {
                     try {
-                        return ((string)(this[this.tabledtHoras.horaColumn]));
+                        return ((global::System.TimeSpan)(this[this.tabledtHoras.horaColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'hora\' de la tabla \'dtHoras\' es DBNull.", e);
@@ -607,10 +607,10 @@ namespace AppBTS.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string cantidadTickets {
+            public int cantidadTickets {
                 get {
                     try {
-                        return ((string)(this[this.tabledtHoras.cantidadTicketsColumn]));
+                        return ((int)(this[this.tabledtHoras.cantidadTicketsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidadTickets\' de la tabla \'dtHoras\' es DBNull.", e);
@@ -623,10 +623,10 @@ namespace AppBTS.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string porcentajeTickets {
+            public double porcentajeTickets {
                 get {
                     try {
-                        return ((string)(this[this.tabledtHoras.porcentajeTicketsColumn]));
+                        return ((double)(this[this.tabledtHoras.porcentajeTicketsColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'porcentajeTickets\' de la tabla \'dtHoras\' es DBNull.", e);
@@ -639,10 +639,10 @@ namespace AppBTS.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string ventasTotales {
+            public int ventasTotales {
                 get {
                     try {
-                        return ((string)(this[this.tabledtHoras.ventasTotalesColumn]));
+                        return ((int)(this[this.tabledtHoras.ventasTotalesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'ventasTotales\' de la tabla \'dtHoras\' es DBNull.", e);
@@ -655,10 +655,10 @@ namespace AppBTS.Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string porcentajeVentas {
+            public double porcentajeVentas {
                 get {
                     try {
-                        return ((string)(this[this.tabledtHoras.porcentajeVentasColumn]));
+                        return ((double)(this[this.tabledtHoras.porcentajeVentasColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'porcentajeVentas\' de la tabla \'dtHoras\' es DBNull.", e);

@@ -41,10 +41,10 @@ namespace AppBTS.Presentacion
         {
             DataTable tabla = new DataTable();
             tabla.Columns.Add("hora");
-            tabla.Columns.Add("q_tickets");
-            tabla.Columns.Add("porc_tickets");
-            tabla.Columns.Add("ventas");
-            tabla.Columns.Add("porc_ventas");
+            tabla.Columns.Add("cantidadTickets");
+            tabla.Columns.Add("porcentajeTickets");
+            tabla.Columns.Add("ventasTotales");
+            tabla.Columns.Add("porcentajeVentas");
             int q_tickets_total = 0;
             double ventas_total = 0;
             for (int i = 0; i < 24; i++)
@@ -66,11 +66,11 @@ namespace AppBTS.Presentacion
                         hora_hasta = (i + 1).ToString() + ":00";
                 }
                 fila["hora"] = hora;
-                int q_tickets = miGestorTickets.CantidadTicketsPorHorario(hora, hora_hasta, dtpFechaDesde.Value.ToString(), dtpFechaHasta.Value.ToString());
-                fila["q_tickets"] = q_tickets;
+                int q_tickets = miGestorTickets.CantidadTicketsPorHorario(hora, hora_hasta, dtpFechaDesde.Value.ToString("yyyy-MM-dd"), dtpFechaHasta.Value.ToString("yyyy-MM-dd"));
+                fila["cantidadTickets"] = q_tickets;
                 q_tickets_total += q_tickets;
-                double ventas = miGestorTickets.VentasPorHorario(hora, hora_hasta, dtpFechaDesde.Value.ToString(), dtpFechaHasta.Value.ToString());
-                fila["ventas"] = ventas;
+                double ventas = miGestorTickets.VentasPorHorario(hora, hora_hasta, dtpFechaDesde.Value.ToString("yyyy-MM-dd"), dtpFechaHasta.Value.ToString("yyyy-MM-dd"));
+                fila["ventasTotales"] = ventas;
                 ventas_total += ventas;
                 tabla.Rows.Add(fila);
             }
@@ -78,8 +78,8 @@ namespace AppBTS.Presentacion
             {
                 if (q_tickets_total != 0)
                 {
-                    fila["porc_tickets"] = Math.Round((decimal)Convert.ToInt32(fila["q_tickets"]) * 100 / q_tickets_total, 2).ToString() + "%";
-                    fila["porc_ventas"] = Math.Round(Convert.ToDouble(fila["ventas"]) * 100 / ventas_total, 2) + "%";
+                    fila["porcentajeTickets"] = Math.Round((decimal)Convert.ToInt32(fila["cantidadTickets"]) * 100 / q_tickets_total, 2);
+                    fila["porcentajeVentas"] = Math.Round(Convert.ToDouble(fila["ventasTotales"]) * 100 / ventas_total, 2);
                 }
             }
             return tabla;

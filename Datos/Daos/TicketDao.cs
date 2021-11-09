@@ -148,7 +148,7 @@ namespace AppBTS.Datos.Daos
                                 + fechaDesde + "' AND '" + fechaHasta + "'";
             BDHelper dm = BDHelper.obtenerInstancia();
             dm.Open();
-            int valor = (int)dm.ConsultaSQLScalar(consulta);
+            int valor = (int)dm.consultar(consulta).Rows[0][0];
             dm.Close();
             return valor;
         }
@@ -158,9 +158,9 @@ namespace AppBTS.Datos.Daos
             string consulta = "SELECT SUM(total) FROM Tickets WHERE hora BETWEEN '" + horaDesde + "' AND '" + horaHasta + "' AND fecha BETWEEN '"
                                 + fechaDesde + "' AND '" + fechaHasta + "'";
             double valor;
-            if (BDHelper.obtenerInstancia().ConsultaSQLScalar(consulta).ToString() != "")
+            if (BDHelper.obtenerInstancia().consultar(consulta).Rows[0][0].ToString() != "")
             {
-                valor = (double)BDHelper.obtenerInstancia().ConsultaSQLScalar(consulta);
+                valor = Convert.ToDouble(BDHelper.obtenerInstancia().consultar(consulta).Rows[0][0]);
             }
             else
             {

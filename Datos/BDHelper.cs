@@ -49,7 +49,10 @@ namespace AppBTS.Datos
         public void Open()
         {
             if (conexion.State != ConnectionState.Open)
+            {
+                conexion.ConnectionString = cadenaConexion;
                 conexion.Open();
+            }
         }
 
         public void Close()
@@ -61,31 +64,28 @@ namespace AppBTS.Datos
         public DataTable consultar(string consultaSQL)
         {
             DataTable tabla = new DataTable();
-            conexion.ConnectionString = cadenaConexion;
-            conexion.Open();
+            this.Open();
 
             comando.Connection = conexion;
             comando.CommandType = CommandType.Text;
             comando.CommandText = consultaSQL;
             tabla.Load(comando.ExecuteReader());
-            
-            
-            conexion.Close();
+
+
+            this.Close();
             return tabla;
         }
         public object ConsultaSQLScalar(string strSql)
         {
             SqlCommand cmd = new SqlCommand();
             try
-            {
-                this.Open();
+            {;
                 cmd.Connection = conexion;
                 cmd.Transaction = dbTransaction;
                 cmd.CommandType = CommandType.Text;
                 // Establece la instrucción a ejecutar
                 cmd.CommandText = strSql;
-                object scalar = cmd.ExecuteScalar();
-                this.Close();
+                object scalar = cmd.ExecuteScalar();;
                 return scalar;
 
             }
