@@ -31,7 +31,9 @@ namespace AppBTS.Presentacion
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteMenus));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.dsDetallesTicketBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsDetallesTicket = new AppBTS.Reportes.dsDetallesTicket();
             this.label1 = new System.Windows.Forms.Label();
             this.lblFechaDesde = new System.Windows.Forms.Label();
             this.lblFechaHasta = new System.Windows.Forms.Label();
@@ -48,11 +50,19 @@ namespace AppBTS.Presentacion
             this.btnClear = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dsDetallesTicket = new AppBTS.Reportes.dsDetallesTicket();
-            this.dsDetallesTicketBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dsDetallesTicket)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDetallesTicketBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDetallesTicket)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dsDetallesTicketBindingSource
+            // 
+            this.dsDetallesTicketBindingSource.DataSource = this.dsDetallesTicket;
+            this.dsDetallesTicketBindingSource.Position = 0;
+            // 
+            // dsDetallesTicket
+            // 
+            this.dsDetallesTicket.DataSetName = "dsDetallesTicket";
+            this.dsDetallesTicket.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -224,25 +234,15 @@ namespace AppBTS.Presentacion
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.dsDetallesTicketBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource2.Name = "DataSet1";
+            reportDataSource2.Value = this.dsDetallesTicketBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppBTS.Reportes.rptDetallesTicket.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 176);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(900, 342);
             this.reportViewer1.TabIndex = 69;
-            // 
-            // dsDetallesTicket
-            // 
-            this.dsDetallesTicket.DataSetName = "dsDetallesTicket";
-            this.dsDetallesTicket.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dsDetallesTicketBindingSource
-            // 
-            this.dsDetallesTicketBindingSource.DataSource = this.dsDetallesTicket;
-            this.dsDetallesTicketBindingSource.Position = 0;
             // 
             // frmReporteMenus
             // 
@@ -273,8 +273,8 @@ namespace AppBTS.Presentacion
             this.ShowIcon = false;
             this.Text = "ReporteMenus";
             this.Load += new System.EventHandler(this.frmReporteMenus_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsDetallesTicket)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsDetallesTicketBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsDetallesTicket)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -93,6 +93,12 @@
     <Compile Include="Datos\Interfaces\ITipoArticulo.cs" />
     <Compile Include="Datos\Interfaces\ITipoPago.cs" />
     <Compile Include="Datos\Interfaces\IUsuario.cs" />
+    <Compile Include="Presentacion\frmReporteHoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmReporteHoras.Designer.cs">
+      <DependentUpon>frmReporteHoras.cs</DependentUpon>
+    </Compile>
     <Compile Include="Presentacion\frmReporteTickets.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dsDetallesTicket.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dsHoras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHoras.xsd</DependentUpon>
     </Compile>
     <Compile Include="Reportes\dsTickets.cs">
       <DependentUpon>dsTickets.xsd</DependentUpon>
@@ -318,6 +329,9 @@
     <EmbeddedResource Include="Presentacion\frmRegistrarArticulo.resx">
       <DependentUpon>frmRegistrarArticulo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmReporteHoras.resx">
+      <DependentUpon>frmReporteHoras.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Presentacion\frmReporteTickets.resx">
       <DependentUpon>frmReporteTickets.cs</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +345,7 @@
     </EmbeddedResource>
     <Content Include="Fonts\Dutch801 XBd BT Extra Bold.ttf" />
     <EmbeddedResource Include="Reportes\rptDetallesTicket.rdlc" />
+    <EmbeddedResource Include="Reportes\rptHoras.rdlc" />
     <EmbeddedResource Include="Reportes\rptTickets.rdlc" />
     <None Include="BAR_PAVDataSet.xsc">
       <DependentUpon>BAR_PAVDataSet.xsd</DependentUpon>
@@ -353,6 +368,17 @@
     </None>
     <None Include="Reportes\dsDetallesTicket.xss">
       <DependentUpon>dsDetallesTicket.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsHoras.xsc">
+      <DependentUpon>dsHoras.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsHoras.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHoras.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\dsHoras.xss">
+      <DependentUpon>dsHoras.xsd</DependentUpon>
     </None>
     <None Include="Reportes\dsTickets.xsc">
       <DependentUpon>dsTickets.xsd</DependentUpon>

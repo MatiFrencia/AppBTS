@@ -29,5 +29,13 @@ namespace AppBTS.Servicios
         {
             return dao.RecuperarTodosConParametros(nroTicket, fechaDesde, fechaHasta, horaDesde, horaHasta, idMozo, nroMesa, idTipoPago, Totaldesde, Totalhasta);
         }
+        public int CantidadTicketsPorHorario(string horaDesde, string horaHasta, string fechaDesde, string fechaHasta)
+        {
+            return dao.CantidadTicketsPorHorario(horaDesde, horaHasta, fechaDesde, fechaHasta); 
+        }
+        public double VentasPorHorario(string horaDesde, string horaHasta, string fechaDesde, string fechaHasta)
+        {
+            return dao.VentasPorHorario(horaDesde, horaHasta, fechaDesde, fechaHasta);
+        }
     }
 }

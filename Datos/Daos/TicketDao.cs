@@ -141,5 +141,19 @@ namespace AppBTS.Datos.Daos
             consulta += " ORDER BY t.fecha DESC";
             return BDHelper.obtenerInstancia().consultar(consulta);
         }
+        
+        public int CantidadTicketsPorHorario(string horaDesde, string horaHasta, string fechaDesde, string fechaHasta)
+        {
+            string consulta = "SELECT COUNT(nroTicket) FROM Tickets WHERE hora BETWEEN '" + horaDesde + "' AND '" + horaHasta + "' AND fecha BETWEEN '"
+                                + fechaDesde + "' AND '" + fechaHasta + "'";
+            return (int)BDHelper.obtenerInstancia().ConsultaSQLScalar(consulta);
+        }
+
+        public double VentasPorHorario(string horaDesde, string horaHasta, string fechaDesde, string fechaHasta)
+        {
+            string consulta = "SELECT SUM(total) FROM Tickets WHERE hora BETWEEN '" + horaDesde + "' AND '" + horaHasta + "' AND fecha BETWEEN '"
+                                + fechaDesde + "' AND '" + fechaHasta + "'";
+            return (double)BDHelper.obtenerInstancia().ConsultaSQLScalar(consulta);
+        }
     }
 }

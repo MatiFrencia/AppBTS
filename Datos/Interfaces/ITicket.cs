@@ -15,5 +15,7 @@ namespace AppBTS.Datos.Interfaces
         void Registrar(Ticket ticket);
 
         DataTable RecuperarTodosConParametros(string nroTicket, string fechaDesde, string fechaHasta, string horaDesde, string horaHasta, string idMozo, string nroMesa, string idTipoPago, string Totaldesde, string Totalhasta);
+        int CantidadTicketsPorHorario(string horaDesde, string horaHasta, string fechaDesde, string fechaHasta);
+        double VentasPorHorario(string horaDesde, string horaHasta, string fechaDesde, string fechaHasta);
     }
 }

@@ -123,6 +123,13 @@ namespace AppBTS
             frm.ShowDialog();
             frm.Dispose();
         }
+
+        private void horariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteHoras frh = new frmReporteHoras();
+            frh.ShowDialog();
+            frh.Dispose();
+        }
     }
  }
 
