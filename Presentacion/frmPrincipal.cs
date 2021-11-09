@@ -124,6 +124,21 @@ namespace AppBTS
             frm.Dispose();
         }
 
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No disponible");
+        }
+
+        private void estadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No disponible");
+        }
+
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("No disponible");
+        }
+
         private void horariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmReporteHoras frh = new frmReporteHoras();

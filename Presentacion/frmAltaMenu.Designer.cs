@@ -61,7 +61,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblNombre.Location = new System.Drawing.Point(51, 49);
+            this.lblNombre.Location = new System.Drawing.Point(35, 38);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(52, 15);
             this.lblNombre.TabIndex = 0;
@@ -69,7 +69,7 @@ namespace AppBTS.Presentacion
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(109, 48);
+            this.txtNombre.Location = new System.Drawing.Point(93, 37);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(153, 20);
             this.txtNombre.TabIndex = 1;
@@ -78,7 +78,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblPrecio.Location = new System.Drawing.Point(467, 341);
+            this.lblPrecio.Location = new System.Drawing.Point(457, 314);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(42, 15);
             this.lblPrecio.TabIndex = 2;
@@ -86,7 +86,7 @@ namespace AppBTS.Presentacion
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(515, 340);
+            this.txtPrecio.Location = new System.Drawing.Point(505, 313);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 3;
@@ -95,7 +95,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblTitulo.Location = new System.Drawing.Point(12, 17);
+            this.lblTitulo.Location = new System.Drawing.Point(12, 12);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(111, 22);
             this.lblTitulo.TabIndex = 4;
@@ -105,7 +105,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblTituloArticulos.AutoSize = true;
             this.lblTituloArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblTituloArticulos.Location = new System.Drawing.Point(29, 93);
+            this.lblTituloArticulos.Location = new System.Drawing.Point(13, 82);
             this.lblTituloArticulos.Name = "lblTituloArticulos";
             this.lblTituloArticulos.Size = new System.Drawing.Size(65, 18);
             this.lblTituloArticulos.TabIndex = 5;
@@ -115,7 +115,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblArticulo.AutoSize = true;
             this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblArticulo.Location = new System.Drawing.Point(51, 125);
+            this.lblArticulo.Location = new System.Drawing.Point(35, 114);
             this.lblArticulo.Name = "lblArticulo";
             this.lblArticulo.Size = new System.Drawing.Size(47, 15);
             this.lblArticulo.TabIndex = 6;
@@ -124,7 +124,7 @@ namespace AppBTS.Presentacion
             // cboTipo
             // 
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(109, 124);
+            this.cboTipo.Location = new System.Drawing.Point(93, 113);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(121, 21);
             this.cboTipo.TabIndex = 7;
@@ -133,7 +133,7 @@ namespace AppBTS.Presentacion
             // cboArticulos
             // 
             this.cboArticulos.FormattingEnabled = true;
-            this.cboArticulos.Location = new System.Drawing.Point(249, 124);
+            this.cboArticulos.Location = new System.Drawing.Point(233, 113);
             this.cboArticulos.Name = "cboArticulos";
             this.cboArticulos.Size = new System.Drawing.Size(145, 21);
             this.cboArticulos.TabIndex = 8;
@@ -143,7 +143,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblCantidad.Location = new System.Drawing.Point(453, 125);
+            this.lblCantidad.Location = new System.Drawing.Point(437, 114);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(56, 15);
             this.lblCantidad.TabIndex = 9;
@@ -151,7 +151,7 @@ namespace AppBTS.Presentacion
             // 
             // nudCantidad
             // 
-            this.nudCantidad.Location = new System.Drawing.Point(515, 125);
+            this.nudCantidad.Location = new System.Drawing.Point(499, 114);
             this.nudCantidad.Minimum = new decimal(new int[] {
             1,
             0,
@@ -175,7 +175,7 @@ namespace AppBTS.Presentacion
             this.PrecioUnitario,
             this.Cantidad,
             this.Subtotal});
-            this.dgvDetallesMenu.Location = new System.Drawing.Point(54, 164);
+            this.dgvDetallesMenu.Location = new System.Drawing.Point(38, 153);
             this.dgvDetallesMenu.Name = "dgvDetallesMenu";
             this.dgvDetallesMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDetallesMenu.Size = new System.Drawing.Size(619, 154);
@@ -218,8 +218,10 @@ namespace AppBTS.Presentacion
             // 
             // btnAgregar
             // 
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.Color.Tan;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(592, 121);
+            this.btnAgregar.Location = new System.Drawing.Point(576, 110);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(29, 28);
             this.btnAgregar.TabIndex = 12;
@@ -228,8 +230,10 @@ namespace AppBTS.Presentacion
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Image = global::AppBTS.Properties.Resources.delete_exit;
-            this.btnBorrar.Location = new System.Drawing.Point(627, 121);
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.ForeColor = System.Drawing.Color.Tan;
+            this.btnBorrar.Image = global::AppBTS.Properties.Resources.Cancelar3;
+            this.btnBorrar.Location = new System.Drawing.Point(611, 110);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(29, 28);
             this.btnBorrar.TabIndex = 13;
@@ -240,7 +244,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblSinPromocion.AutoSize = true;
             this.lblSinPromocion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblSinPromocion.Location = new System.Drawing.Point(51, 341);
+            this.lblSinPromocion.Location = new System.Drawing.Point(41, 314);
             this.lblSinPromocion.Name = "lblSinPromocion";
             this.lblSinPromocion.Size = new System.Drawing.Size(139, 15);
             this.lblSinPromocion.TabIndex = 14;
@@ -250,7 +254,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblTotal.Location = new System.Drawing.Point(196, 341);
+            this.lblTotal.Location = new System.Drawing.Point(186, 314);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(41, 15);
             this.lblTotal.TabIndex = 15;
@@ -258,8 +262,10 @@ namespace AppBTS.Presentacion
             // 
             // btnSalir
             // 
+            this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.Tan;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(54, 375);
+            this.btnSalir.Location = new System.Drawing.Point(38, 339);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(64, 42);
             this.btnSalir.TabIndex = 16;
@@ -268,8 +274,10 @@ namespace AppBTS.Presentacion
             // 
             // btnGuardar
             // 
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.Tan;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(592, 375);
+            this.btnGuardar.Location = new System.Drawing.Point(593, 339);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(64, 42);
             this.btnGuardar.TabIndex = 17;
@@ -281,7 +289,7 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(729, 435);
+            this.ClientSize = new System.Drawing.Size(666, 390);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblTotal);

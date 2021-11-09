@@ -46,7 +46,7 @@ namespace AppBTS.Presentacion
             this.lbTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbTitulo.Location = new System.Drawing.Point(12, 18);
+            this.lbTitulo.Location = new System.Drawing.Point(12, 9);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(128, 25);
             this.lbTitulo.TabIndex = 18;
@@ -55,21 +55,21 @@ namespace AppBTS.Presentacion
             // txtbIdMenu
             // 
             this.txtbIdMenu.Enabled = false;
-            this.txtbIdMenu.Location = new System.Drawing.Point(124, 88);
+            this.txtbIdMenu.Location = new System.Drawing.Point(118, 56);
             this.txtbIdMenu.Name = "txtbIdMenu";
             this.txtbIdMenu.Size = new System.Drawing.Size(100, 20);
             this.txtbIdMenu.TabIndex = 19;
             // 
             // txtbNombre
             // 
-            this.txtbNombre.Location = new System.Drawing.Point(124, 132);
+            this.txtbNombre.Location = new System.Drawing.Point(118, 100);
             this.txtbNombre.Name = "txtbNombre";
             this.txtbNombre.Size = new System.Drawing.Size(100, 20);
             this.txtbNombre.TabIndex = 20;
             // 
             // txtbPrecio
             // 
-            this.txtbPrecio.Location = new System.Drawing.Point(124, 170);
+            this.txtbPrecio.Location = new System.Drawing.Point(118, 138);
             this.txtbPrecio.Name = "txtbPrecio";
             this.txtbPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtbPrecio.TabIndex = 21;
@@ -77,7 +77,7 @@ namespace AppBTS.Presentacion
             // lblIdMenu
             // 
             this.lblIdMenu.AutoSize = true;
-            this.lblIdMenu.Location = new System.Drawing.Point(36, 91);
+            this.lblIdMenu.Location = new System.Drawing.Point(30, 59);
             this.lblIdMenu.Name = "lblIdMenu";
             this.lblIdMenu.Size = new System.Drawing.Size(47, 13);
             this.lblIdMenu.TabIndex = 22;
@@ -86,7 +86,7 @@ namespace AppBTS.Presentacion
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(39, 132);
+            this.lblNombre.Location = new System.Drawing.Point(33, 100);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 23;
@@ -95,7 +95,7 @@ namespace AppBTS.Presentacion
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(42, 170);
+            this.lblPrecio.Location = new System.Drawing.Point(36, 138);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(37, 13);
             this.lblPrecio.TabIndex = 24;
@@ -103,7 +103,7 @@ namespace AppBTS.Presentacion
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(39, 217);
+            this.btnAceptar.Location = new System.Drawing.Point(33, 185);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
             this.btnAceptar.TabIndex = 25;
@@ -113,7 +113,7 @@ namespace AppBTS.Presentacion
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(149, 217);
+            this.btnCancelar.Location = new System.Drawing.Point(143, 185);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 26;
@@ -126,7 +126,7 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(263, 252);
+            this.ClientSize = new System.Drawing.Size(242, 225);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblPrecio);

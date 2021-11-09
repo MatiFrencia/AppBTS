@@ -22,12 +22,32 @@ namespace AppBTS.Presentacion
         public string NroMesa { get; set; }
         public string BotonClickeado { get; set; }
         MesasService miGestorMesas = new MesasService();
+        ReservaService miGestorReservas = new ReservaService();
+
+        public Image AsignarColor(string idMesa)
+        {
+            DataTable reservas = miGestorReservas.RecuperarFiltrados(DateTime.Today.AddDays(-1).ToString("yyyy-MM-dd"),
+                                                         DateTime.Today.ToString("yyyy-MM-dd"),
+                                                         "", idMesa, "", "", "", "00:00", "23:59");
+            
+            for (int i = 0; i < reservas.Rows.Count; i++)
+            {
+                DateTime horaReserva = Convert.ToDateTime(reservas.Rows[i]["horaReserva"].ToString());
+                
+                if ( horaReserva <= DateTime.Now.AddMinutes(10) &&
+                       horaReserva >= DateTime.Now.AddHours(-2))
+                {
+                    return AppBTS.Properties.Resources.MesaOcupada;
+                }
+            }
+            return AppBTS.Properties.Resources.MesaLibre;
+        }
         public void ActualizarMesas()
         {
-            
             Button[,] boton = new Button[10, 10];
             Mesas oMesa = new Mesas();
             DataTable tabla = miGestorMesas.RecuperarTodos();
+            
             //string nroMesa = tabla.Rows[i]["nroMesa"].ToString;
             int cantMesas = tabla.Rows.Count;
             int cantFilas = cantMesas / 3;
@@ -42,9 +62,10 @@ namespace AppBTS.Presentacion
                 {
                     if (cantBotones < cantMesas)
                     {
+                        Image imgMesa = AsignarColor(tabla.Rows[cantBotones]["nroMesa"].ToString());
                         boton[i, j] = new Button
                         {
-                            Image = AppBTS.Properties.Resources.Mesa1,
+                            Image = imgMesa,
                             Width = 221,
                             Height = 176,
                             Text = tabla.Rows[cantBotones]["nroMesa"].ToString(),
@@ -134,6 +155,14 @@ namespace AppBTS.Presentacion
                 InitializeComponent();
                 ActualizarMesas();
             }
+        }
+
+        private void actualizarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Controls.Clear();
+            InitializeComponent();
+            this.ActualizarMesas();
+            
         }
     }
 }

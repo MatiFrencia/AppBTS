@@ -120,45 +120,44 @@ namespace AppBTS.Presentacion
                                                     _idMozo, _nroMesa, _idTipoPago,
                                                     txtDesde.Text.ToString(),txtHasta.Text.ToString());
             this.reportViewer1.RefreshReport();
-            limpiar();
         }
 
         private void btnAño_Click(object sender, EventArgs e)
         {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
+            visualizar(false);
             this.dtpFechaDesde.Value = DateTime.Today.AddYears(-1);
             this.dtpFechaHasta.Value = DateTime.Today;
         }
 
         private void btnMes_Click(object sender, EventArgs e)
         {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
+            visualizar(false);
             this.dtpFechaDesde.Value = DateTime.Today.AddMonths(-1);
             this.dtpFechaHasta.Value = DateTime.Today;
         }
 
         private void btnSemana_Click(object sender, EventArgs e)
         {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
+            visualizar(false);
             this.dtpFechaDesde.Value = DateTime.Today.AddDays(-7);
             this.dtpFechaHasta.Value = DateTime.Today;
         }
 
         private void btnDia_Click(object sender, EventArgs e)
         {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
+            visualizar(false);
             this.dtpFechaDesde.Value = DateTime.Today.AddDays(-1);
             this.dtpFechaHasta.Value = DateTime.Today;
         }
 
         private void btnPerso_Click(object sender, EventArgs e)
         {
-            this.dtpFechaDesde.Enabled = true;
-            this.dtpFechaHasta.Enabled = true;
+            visualizar(true);
+        }
+        private void visualizar(bool x) {
+            this.dtpFechaDesde.Enabled = x;
+            this.dtpFechaHasta.Enabled = x;
+
         }
     }
 }

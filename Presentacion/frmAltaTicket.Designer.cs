@@ -217,7 +217,7 @@ namespace AppBTS.Presentacion
             // lblMozo
             // 
             this.lblMozo.AutoSize = true;
-            this.lblMozo.Location = new System.Drawing.Point(28, 361);
+            this.lblMozo.Location = new System.Drawing.Point(25, 345);
             this.lblMozo.Name = "lblMozo";
             this.lblMozo.Size = new System.Drawing.Size(36, 13);
             this.lblMozo.TabIndex = 26;
@@ -226,7 +226,7 @@ namespace AppBTS.Presentacion
             // lblMesa
             // 
             this.lblMesa.AutoSize = true;
-            this.lblMesa.Location = new System.Drawing.Point(218, 361);
+            this.lblMesa.Location = new System.Drawing.Point(215, 345);
             this.lblMesa.Name = "lblMesa";
             this.lblMesa.Size = new System.Drawing.Size(46, 13);
             this.lblMesa.TabIndex = 27;
@@ -235,7 +235,7 @@ namespace AppBTS.Presentacion
             // lblTipoPago
             // 
             this.lblTipoPago.AutoSize = true;
-            this.lblTipoPago.Location = new System.Drawing.Point(402, 361);
+            this.lblTipoPago.Location = new System.Drawing.Point(399, 345);
             this.lblTipoPago.Name = "lblTipoPago";
             this.lblTipoPago.Size = new System.Drawing.Size(74, 13);
             this.lblTipoPago.TabIndex = 28;
@@ -244,7 +244,7 @@ namespace AppBTS.Presentacion
             // cboMozos
             // 
             this.cboMozos.FormattingEnabled = true;
-            this.cboMozos.Location = new System.Drawing.Point(67, 358);
+            this.cboMozos.Location = new System.Drawing.Point(64, 342);
             this.cboMozos.Name = "cboMozos";
             this.cboMozos.Size = new System.Drawing.Size(121, 21);
             this.cboMozos.TabIndex = 32;
@@ -252,7 +252,7 @@ namespace AppBTS.Presentacion
             // cboTipoPago
             // 
             this.cboTipoPago.FormattingEnabled = true;
-            this.cboTipoPago.Location = new System.Drawing.Point(479, 358);
+            this.cboTipoPago.Location = new System.Drawing.Point(476, 342);
             this.cboTipoPago.Name = "cboTipoPago";
             this.cboTipoPago.Size = new System.Drawing.Size(121, 21);
             this.cboTipoPago.TabIndex = 33;
@@ -260,15 +260,17 @@ namespace AppBTS.Presentacion
             // cboMesas
             // 
             this.cboMesas.FormattingEnabled = true;
-            this.cboMesas.Location = new System.Drawing.Point(267, 358);
+            this.cboMesas.Location = new System.Drawing.Point(264, 342);
             this.cboMesas.Name = "cboMesas";
             this.cboMesas.Size = new System.Drawing.Size(103, 21);
             this.cboMesas.TabIndex = 34;
             // 
             // btnCancelar
             // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.Color.Tan;
             this.btnCancelar.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnCancelar.Location = new System.Drawing.Point(674, 399);
+            this.btnCancelar.Location = new System.Drawing.Point(693, 375);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(39, 39);
             this.btnCancelar.TabIndex = 36;
@@ -277,8 +279,10 @@ namespace AppBTS.Presentacion
             // 
             // btnGuardar
             // 
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.Tan;
             this.btnGuardar.Image = global::AppBTS.Properties.Resources.grabar2;
-            this.btnGuardar.Location = new System.Drawing.Point(606, 399);
+            this.btnGuardar.Location = new System.Drawing.Point(629, 375);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(45, 39);
             this.btnGuardar.TabIndex = 35;
@@ -287,20 +291,24 @@ namespace AppBTS.Presentacion
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Image = global::AppBTS.Properties.Resources.delete_exit;
-            this.btnBorrar.Location = new System.Drawing.Point(490, 62);
+            this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrar.ForeColor = System.Drawing.Color.Tan;
+            this.btnBorrar.Image = global::AppBTS.Properties.Resources.Cancelar3;
+            this.btnBorrar.Location = new System.Drawing.Point(487, 61);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(29, 28);
+            this.btnBorrar.Size = new System.Drawing.Size(38, 29);
             this.btnBorrar.TabIndex = 20;
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
             // btnAgregar
             // 
+            this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregar.ForeColor = System.Drawing.Color.Tan;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(446, 62);
+            this.btnAgregar.Location = new System.Drawing.Point(435, 61);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(29, 28);
+            this.btnAgregar.Size = new System.Drawing.Size(38, 29);
             this.btnAgregar.TabIndex = 19;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -310,7 +318,7 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(754, 450);
+            this.ClientSize = new System.Drawing.Size(744, 426);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.cboMesas);

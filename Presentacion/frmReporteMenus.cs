@@ -21,45 +21,41 @@ namespace AppBTS.Presentacion
         DetallesTicketService miGestorDtickets = new DetallesTicketService();
         private void frmReporteMenus_Load(object sender, EventArgs e)
         {
+            visualizar(true);
             CargarCombo(cboMenu, miGestorMenus.RecuperarTodos(), 1);
             this.reportViewer1.RefreshReport();
         }
         private void btnAño_Click(object sender, EventArgs e)
         {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
+            visualizar(false);
             this.dtpFechaDesde.Value = DateTime.Today.AddYears(-1);
             this.dtpFechaHasta.Value = DateTime.Today;
         }
 
         private void btnMes_Click(object sender, EventArgs e)
         {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
+            visualizar(false);
             this.dtpFechaDesde.Value = DateTime.Today.AddMonths(-1);
             this.dtpFechaHasta.Value = DateTime.Today;
         }
 
         private void btnSemana_Click(object sender, EventArgs e)
         {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
+            visualizar(false);
             this.dtpFechaDesde.Value = DateTime.Today.AddDays(-7);
             this.dtpFechaHasta.Value = DateTime.Today;
         }
 
         private void btnDia_Click(object sender, EventArgs e)
         {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
+            visualizar(false);
             this.dtpFechaDesde.Value = DateTime.Today.AddDays(-1);
             this.dtpFechaHasta.Value = DateTime.Today;
         }
 
         private void btnPerso_Click(object sender, EventArgs e)
         {
-            this.dtpFechaDesde.Enabled = true;
-            this.dtpFechaHasta.Enabled = true;
+            visualizar(true);
         }
 
         private void CargarCombo(ComboBox combo, DataTable tabla, int i)
@@ -75,6 +71,11 @@ namespace AppBTS.Presentacion
         {
             this.dtpFechaHasta.Value = DateTime.Today;
             this.cboMenu.SelectedIndex = -1;
+        }
+        private void visualizar(bool x)
+        {
+            this.dtpFechaDesde.Enabled = x;
+            this.dtpFechaHasta.Enabled = x;
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
@@ -92,8 +93,6 @@ namespace AppBTS.Presentacion
             this.dsDetallesTicketBindingSource.DataSource = miGestorDtickets.RecuperarTodosConParametros(_nroMenu,
                                                     dtpFechaDesde.Value.ToString("yyyy/MM/dd"), dtpFechaHasta.Value.ToString("yyyy/MM/dd"));
             this.reportViewer1.RefreshReport();
-            limpiar();
-
         }
 
         private void btnClear_Click(object sender, EventArgs e)

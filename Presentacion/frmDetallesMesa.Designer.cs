@@ -78,7 +78,7 @@ namespace AppBTS.Presentacion
             this.telefono,
             this.cantidadComensales,
             this.borrado});
-            this.dgvReservasMesa.Location = new System.Drawing.Point(12, 119);
+            this.dgvReservasMesa.Location = new System.Drawing.Point(12, 56);
             this.dgvReservasMesa.Name = "dgvReservasMesa";
             this.dgvReservasMesa.ReadOnly = true;
             this.dgvReservasMesa.Size = new System.Drawing.Size(820, 318);
@@ -136,7 +136,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblTituloDetallesMesa.AutoSize = true;
             this.lblTituloDetallesMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloDetallesMesa.Location = new System.Drawing.Point(12, 52);
+            this.lblTituloDetallesMesa.Location = new System.Drawing.Point(12, 19);
             this.lblTituloDetallesMesa.Name = "lblTituloDetallesMesa";
             this.lblTituloDetallesMesa.Size = new System.Drawing.Size(460, 25);
             this.lblTituloDetallesMesa.TabIndex = 1;
@@ -144,7 +144,7 @@ namespace AppBTS.Presentacion
             // 
             // btnOkey
             // 
-            this.btnOkey.Location = new System.Drawing.Point(738, 479);
+            this.btnOkey.Location = new System.Drawing.Point(746, 393);
             this.btnOkey.Name = "btnOkey";
             this.btnOkey.Size = new System.Drawing.Size(68, 27);
             this.btnOkey.TabIndex = 2;
@@ -154,7 +154,7 @@ namespace AppBTS.Presentacion
             // 
             // btnBorrarMesa
             // 
-            this.btnBorrarMesa.Location = new System.Drawing.Point(28, 479);
+            this.btnBorrarMesa.Location = new System.Drawing.Point(36, 393);
             this.btnBorrarMesa.Name = "btnBorrarMesa";
             this.btnBorrarMesa.Size = new System.Drawing.Size(75, 23);
             this.btnBorrarMesa.TabIndex = 3;
@@ -167,13 +167,13 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(844, 531);
+            this.ClientSize = new System.Drawing.Size(844, 438);
             this.Controls.Add(this.btnBorrarMesa);
             this.Controls.Add(this.btnOkey);
             this.Controls.Add(this.lblTituloDetallesMesa);
             this.Controls.Add(this.dgvReservasMesa);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDetallesMesa";
-            this.Text = "frmDetallesMesa";
             this.Load += new System.EventHandler(this.frmDetallesMesa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bAR_PAVDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservasBindingSource)).EndInit();

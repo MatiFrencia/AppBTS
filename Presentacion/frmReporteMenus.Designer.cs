@@ -31,7 +31,7 @@ namespace AppBTS.Presentacion
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteMenus));
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.dsDetallesTicketBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsDetallesTicket = new AppBTS.Reportes.dsDetallesTicket();
             this.label1 = new System.Windows.Forms.Label();
@@ -140,7 +140,7 @@ namespace AppBTS.Presentacion
             // 
             // btnAño
             // 
-            this.btnAño.Location = new System.Drawing.Point(46, 49);
+            this.btnAño.Location = new System.Drawing.Point(30, 61);
             this.btnAño.Name = "btnAño";
             this.btnAño.Size = new System.Drawing.Size(75, 23);
             this.btnAño.TabIndex = 61;
@@ -150,7 +150,7 @@ namespace AppBTS.Presentacion
             // 
             // btnMes
             // 
-            this.btnMes.Location = new System.Drawing.Point(127, 49);
+            this.btnMes.Location = new System.Drawing.Point(111, 61);
             this.btnMes.Name = "btnMes";
             this.btnMes.Size = new System.Drawing.Size(75, 23);
             this.btnMes.TabIndex = 62;
@@ -160,7 +160,7 @@ namespace AppBTS.Presentacion
             // 
             // btnSemana
             // 
-            this.btnSemana.Location = new System.Drawing.Point(210, 49);
+            this.btnSemana.Location = new System.Drawing.Point(194, 61);
             this.btnSemana.Name = "btnSemana";
             this.btnSemana.Size = new System.Drawing.Size(75, 23);
             this.btnSemana.TabIndex = 63;
@@ -170,7 +170,7 @@ namespace AppBTS.Presentacion
             // 
             // btnDia
             // 
-            this.btnDia.Location = new System.Drawing.Point(291, 49);
+            this.btnDia.Location = new System.Drawing.Point(275, 61);
             this.btnDia.Name = "btnDia";
             this.btnDia.Size = new System.Drawing.Size(75, 23);
             this.btnDia.TabIndex = 64;
@@ -180,7 +180,7 @@ namespace AppBTS.Presentacion
             // 
             // btnPerso
             // 
-            this.btnPerso.Location = new System.Drawing.Point(372, 49);
+            this.btnPerso.Location = new System.Drawing.Point(356, 61);
             this.btnPerso.Name = "btnPerso";
             this.btnPerso.Size = new System.Drawing.Size(87, 23);
             this.btnPerso.TabIndex = 65;
@@ -196,7 +196,7 @@ namespace AppBTS.Presentacion
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(707, 135);
+            this.btnConsultar.Location = new System.Drawing.Point(707, 125);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(134, 35);
@@ -211,7 +211,7 @@ namespace AppBTS.Presentacion
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(848, 135);
+            this.btnClear.Location = new System.Drawing.Point(848, 125);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(36, 35);
             this.btnClear.TabIndex = 67;

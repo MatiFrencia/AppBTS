@@ -41,7 +41,7 @@ namespace AppBTS.Presentacion
             // 
             // btnConfirmarMesa
             // 
-            this.btnConfirmarMesa.Location = new System.Drawing.Point(12, 151);
+            this.btnConfirmarMesa.Location = new System.Drawing.Point(10, 115);
             this.btnConfirmarMesa.Name = "btnConfirmarMesa";
             this.btnConfirmarMesa.Size = new System.Drawing.Size(75, 23);
             this.btnConfirmarMesa.TabIndex = 4;
@@ -51,7 +51,7 @@ namespace AppBTS.Presentacion
             // 
             // btnCancelarMesa
             // 
-            this.btnCancelarMesa.Location = new System.Drawing.Point(108, 151);
+            this.btnCancelarMesa.Location = new System.Drawing.Point(106, 115);
             this.btnCancelarMesa.Name = "btnCancelarMesa";
             this.btnCancelarMesa.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarMesa.TabIndex = 5;
@@ -103,7 +103,7 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(203, 186);
+            this.ClientSize = new System.Drawing.Size(203, 155);
             this.Controls.Add(this.nmrNroMesa);
             this.Controls.Add(this.nmrNroSillas);
             this.Controls.Add(this.lblNroSillas);
