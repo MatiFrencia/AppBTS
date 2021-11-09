@@ -24,43 +24,6 @@ namespace AppBTS.Presentacion
 
             this.reportViewer1.RefreshReport();
         }
-        private void btnAño_Click(object sender, EventArgs e)
-        {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
-            this.dtpFechaDesde.Value = DateTime.Today.AddYears(-1);
-            this.dtpFechaHasta.Value = DateTime.Today;
-        }
-
-        private void btnMes_Click(object sender, EventArgs e)
-        {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
-            this.dtpFechaDesde.Value = DateTime.Today.AddMonths(-1);
-            this.dtpFechaHasta.Value = DateTime.Today;
-        }
-
-        private void btnSemana_Click(object sender, EventArgs e)
-        {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
-            this.dtpFechaDesde.Value = DateTime.Today.AddDays(-7);
-            this.dtpFechaHasta.Value = DateTime.Today;
-        }
-
-        private void btnDia_Click(object sender, EventArgs e)
-        {
-            this.dtpFechaDesde.Enabled = false;
-            this.dtpFechaHasta.Enabled = false;
-            this.dtpFechaDesde.Value = DateTime.Today.AddDays(-1);
-            this.dtpFechaHasta.Value = DateTime.Today;
-        }
-
-        private void btnPerso_Click(object sender, EventArgs e)
-        {
-            this.dtpFechaDesde.Enabled = true;
-            this.dtpFechaHasta.Enabled = true;
-        }
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
@@ -113,8 +76,11 @@ namespace AppBTS.Presentacion
             }
             foreach (DataRow fila in tabla.Rows)
             {
-                fila["porc_tickets"] = Math.Round((decimal)Convert.ToInt32(fila["q_tickets"]) * 100 / q_tickets_total, 2).ToString() + "%";
-                fila["porc_ventas"] = Math.Round(Convert.ToDouble(fila["ventas"]) * 100 / ventas_total, 2) + "%";
+                if (q_tickets_total != 0)
+                {
+                    fila["porc_tickets"] = Math.Round((decimal)Convert.ToInt32(fila["q_tickets"]) * 100 / q_tickets_total, 2).ToString() + "%";
+                    fila["porc_ventas"] = Math.Round(Convert.ToDouble(fila["ventas"]) * 100 / ventas_total, 2) + "%";
+                }
             }
             return tabla;
         }
@@ -124,5 +90,42 @@ namespace AppBTS.Presentacion
             this.Close();
         }
 
+        private void btnAño_Click(object sender, EventArgs e)
+        {
+            this.dtpFechaDesde.Enabled = false;
+            this.dtpFechaHasta.Enabled = false;
+            this.dtpFechaDesde.Value = DateTime.Today.AddYears(-1);
+            this.dtpFechaHasta.Value = DateTime.Today;
+        }
+
+        private void btnMes_Click(object sender, EventArgs e)
+        {
+            this.dtpFechaDesde.Enabled = false;
+            this.dtpFechaHasta.Enabled = false;
+            this.dtpFechaDesde.Value = DateTime.Today.AddMonths(-1);
+            this.dtpFechaHasta.Value = DateTime.Today;
+        }
+
+        private void btnSemana_Click(object sender, EventArgs e)
+        {
+            this.dtpFechaDesde.Enabled = false;
+            this.dtpFechaHasta.Enabled = false;
+            this.dtpFechaDesde.Value = DateTime.Today.AddDays(-7);
+            this.dtpFechaHasta.Value = DateTime.Today;
+        }
+
+        private void btnDia_Click(object sender, EventArgs e)
+        {
+            this.dtpFechaDesde.Enabled = false;
+            this.dtpFechaHasta.Enabled = false;
+            this.dtpFechaDesde.Value = DateTime.Today.AddDays(-1);
+            this.dtpFechaHasta.Value = DateTime.Today;
+        }
+
+        private void btnPerso_Click(object sender, EventArgs e)
+        {
+            this.dtpFechaDesde.Enabled = true;
+            this.dtpFechaHasta.Enabled = true;
+        }
     }
 }

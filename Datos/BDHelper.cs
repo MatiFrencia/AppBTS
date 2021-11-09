@@ -20,8 +20,8 @@ namespace AppBTS.Datos
         {
             conexion = new SqlConnection();
             comando = new SqlCommand();
-            //cadenaConexion = @"Data Source=DESKTOP-LK4PK50\SQLEXPRESS;Initial Catalog=BAR_PAV;Integrated Security=True";
-            cadenaConexion = @"Data Source=localhost;Initial Catalog=BAR_PAV;Integrated Security=True";
+            cadenaConexion = @"Data Source=DESKTOP-LK4PK50\SQLEXPRESS;Initial Catalog=BAR_PAV;Integrated Security=True";
+            //cadenaConexion = @"Data Source=localhost;Initial Catalog=BAR_PAV;Integrated Security=True";
             //cadenaConexion = @"Data Source=DESKTOP-GO2FK90;Initial Catalog=BAR_PAV;Integrated Security=True";
         }
         public static BDHelper obtenerInstancia()
@@ -78,12 +78,16 @@ namespace AppBTS.Datos
             SqlCommand cmd = new SqlCommand();
             try
             {
+                this.Open();
                 cmd.Connection = conexion;
                 cmd.Transaction = dbTransaction;
                 cmd.CommandType = CommandType.Text;
                 // Establece la instrucción a ejecutar
                 cmd.CommandText = strSql;
-                return cmd.ExecuteScalar();
+                object scalar = cmd.ExecuteScalar();
+                this.Close();
+                return scalar;
+
             }
             catch (SqlException ex)
             {

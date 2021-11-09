@@ -30,8 +30,10 @@ namespace AppBTS.Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteHoras));
+            this.dsHorasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dsHoras = new AppBTS.Reportes.dsHoras();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPerso = new System.Windows.Forms.Button();
             this.btnDia = new System.Windows.Forms.Button();
@@ -45,11 +47,19 @@ namespace AppBTS.Presentacion
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.btnConsultar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.dsHoras = new AppBTS.Reportes.dsHoras();
-            this.dsHorasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dsHoras)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsHorasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsHoras)).BeginInit();
             this.SuspendLayout();
+            // 
+            // dsHorasBindingSource
+            // 
+            this.dsHorasBindingSource.DataSource = this.dsHoras;
+            this.dsHorasBindingSource.Position = 0;
+            // 
+            // dsHoras
+            // 
+            this.dsHoras.DataSetName = "dsHoras";
+            this.dsHoras.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // label1
             // 
@@ -69,6 +79,7 @@ namespace AppBTS.Presentacion
             this.btnPerso.TabIndex = 74;
             this.btnPerso.Text = "Personalizado:";
             this.btnPerso.UseVisualStyleBackColor = true;
+            this.btnPerso.Click += new System.EventHandler(this.btnPerso_Click);
             // 
             // btnDia
             // 
@@ -78,6 +89,7 @@ namespace AppBTS.Presentacion
             this.btnDia.TabIndex = 73;
             this.btnDia.Text = "Dia";
             this.btnDia.UseVisualStyleBackColor = true;
+            this.btnDia.Click += new System.EventHandler(this.btnDia_Click);
             // 
             // btnSemana
             // 
@@ -87,6 +99,7 @@ namespace AppBTS.Presentacion
             this.btnSemana.TabIndex = 72;
             this.btnSemana.Text = "Semana";
             this.btnSemana.UseVisualStyleBackColor = true;
+            this.btnSemana.Click += new System.EventHandler(this.btnSemana_Click);
             // 
             // btnMes
             // 
@@ -96,6 +109,7 @@ namespace AppBTS.Presentacion
             this.btnMes.TabIndex = 71;
             this.btnMes.Text = "Mes";
             this.btnMes.UseVisualStyleBackColor = true;
+            this.btnMes.Click += new System.EventHandler(this.btnMes_Click);
             // 
             // btnAño
             // 
@@ -105,6 +119,7 @@ namespace AppBTS.Presentacion
             this.btnAño.TabIndex = 70;
             this.btnAño.Text = "Año";
             this.btnAño.UseVisualStyleBackColor = true;
+            this.btnAño.Click += new System.EventHandler(this.btnAño_Click);
             // 
             // lblFechaDesde
             // 
@@ -149,9 +164,9 @@ namespace AppBTS.Presentacion
             // 
             // reportViewer1
             // 
-            reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.dsHorasBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            reportDataSource5.Name = "DataSet1";
+            reportDataSource5.Value = this.dsHorasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppBTS.Reportes.rptHoras.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(29, 149);
             this.reportViewer1.Name = "reportViewer1";
@@ -189,16 +204,6 @@ namespace AppBTS.Presentacion
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // dsHoras
-            // 
-            this.dsHoras.DataSetName = "dsHoras";
-            this.dsHoras.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dsHorasBindingSource
-            // 
-            this.dsHorasBindingSource.DataSource = this.dsHoras;
-            this.dsHorasBindingSource.Position = 0;
-            // 
             // frmReporteHoras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,8 +230,8 @@ namespace AppBTS.Presentacion
             this.ShowIcon = false;
             this.Text = "Reporte Pedidos por Hora";
             this.Load += new System.EventHandler(this.frmReporteHoras_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dsHoras)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsHorasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dsHoras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -146,14 +146,28 @@ namespace AppBTS.Datos.Daos
         {
             string consulta = "SELECT COUNT(nroTicket) FROM Tickets WHERE hora BETWEEN '" + horaDesde + "' AND '" + horaHasta + "' AND fecha BETWEEN '"
                                 + fechaDesde + "' AND '" + fechaHasta + "'";
-            return (int)BDHelper.obtenerInstancia().ConsultaSQLScalar(consulta);
+            BDHelper dm = BDHelper.obtenerInstancia();
+            dm.Open();
+            int valor = (int)dm.ConsultaSQLScalar(consulta);
+            dm.Close();
+            return valor;
         }
 
         public double VentasPorHorario(string horaDesde, string horaHasta, string fechaDesde, string fechaHasta)
         {
             string consulta = "SELECT SUM(total) FROM Tickets WHERE hora BETWEEN '" + horaDesde + "' AND '" + horaHasta + "' AND fecha BETWEEN '"
                                 + fechaDesde + "' AND '" + fechaHasta + "'";
-            return (double)BDHelper.obtenerInstancia().ConsultaSQLScalar(consulta);
+            double valor;
+            if (BDHelper.obtenerInstancia().ConsultaSQLScalar(consulta).ToString() != "")
+            {
+                valor = (double)BDHelper.obtenerInstancia().ConsultaSQLScalar(consulta);
+            }
+            else
+            {
+                valor = 0;
+            }
+
+            return valor;
         }
     }
 }
