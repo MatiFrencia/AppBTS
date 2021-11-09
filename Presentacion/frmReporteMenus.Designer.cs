@@ -234,9 +234,9 @@ namespace AppBTS.Presentacion
             // 
             // reportViewer1
             // 
-            reportDataSource2.Name = "DataSet1";
-            reportDataSource2.Value = this.dsDetallesTicketBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dsDetallesTicketBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppBTS.Reportes.rptDetallesTicket.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(12, 176);
             this.reportViewer1.Name = "reportViewer1";
