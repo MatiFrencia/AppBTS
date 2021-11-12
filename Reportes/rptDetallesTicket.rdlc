@@ -673,9 +673,8 @@
             </TablixRowHierarchy>
             <DataSetName>DataSet1</DataSetName>
             <Top>0.98933cm</Top>
-            <Left>0cm</Left>
             <Height>2.46146cm</Height>
-            <Width>19.47333cm</Width>
+            <Width>19.47334cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1030,8 +1029,8 @@
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
             <Top>3.9262cm</Top>
-            <Height>5.76729cm</Height>
-            <Width>9.73326cm</Width>
+            <Height>8.94229cm</Height>
+            <Width>18.11104cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1077,7 +1076,7 @@
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style>
-                          <Format>'$'0.00;('$'0.00)</Format>
+                          <Format>'$'0;('$'0)</Format>
                           <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
                         </Style>
                         <UseValueAsLabel>true</UseValueAsLabel>
@@ -1395,10 +1394,9 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DataSet1</DataSetName>
-            <Top>3.9262cm</Top>
-            <Left>9.38734cm</Left>
-            <Height>7.20486cm</Height>
-            <Width>10.08599cm</Width>
+            <Top>13.18662cm</Top>
+            <Height>9.05694cm</Height>
+            <Width>18.11104cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -1410,7 +1408,7 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>4.45175in</Height>
+        <Height>8.75731in</Height>
         <Style />
       </Body>
       <Width>7.66667in</Width>
@@ -1460,7 +1458,6 @@
               </ReportItems>
               <KeepTogether>true</KeepTogether>
               <Top>0.84667cm</Top>
-              <Left>0cm</Left>
               <Height>3.135cm</Height>
               <Width>19.47333cm</Width>
               <Style>

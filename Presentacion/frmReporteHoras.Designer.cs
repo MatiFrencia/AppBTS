@@ -30,7 +30,7 @@ namespace AppBTS.Presentacion
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteHoras));
             this.dsHorasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dsHoras = new AppBTS.Reportes.dsHoras();
@@ -125,7 +125,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.lblFechaDesde.Location = new System.Drawing.Point(26, 95);
+            this.lblFechaDesde.Location = new System.Drawing.Point(24, 83);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(93, 16);
             this.lblFechaDesde.TabIndex = 69;
@@ -135,7 +135,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.lblFechaHasta.Location = new System.Drawing.Point(328, 95);
+            this.lblFechaHasta.Location = new System.Drawing.Point(326, 83);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(88, 16);
             this.lblFechaHasta.TabIndex = 68;
@@ -146,7 +146,7 @@ namespace AppBTS.Presentacion
             this.dtpFechaHasta.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
             this.dtpFechaHasta.Enabled = false;
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(423, 91);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(421, 79);
             this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(177, 20);
@@ -156,7 +156,7 @@ namespace AppBTS.Presentacion
             // 
             this.dtpFechaDesde.Enabled = false;
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(127, 91);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(125, 79);
             this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(177, 20);
@@ -164,14 +164,14 @@ namespace AppBTS.Presentacion
             // 
             // reportViewer1
             // 
-            reportDataSource5.Name = "DataSet1";
-            reportDataSource5.Value = this.dsHorasBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
+            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Value = this.dsHorasBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppBTS.Reportes.rptHoras.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(29, 149);
+            this.reportViewer1.Location = new System.Drawing.Point(12, 149);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(1048, 406);
+            this.reportViewer1.Size = new System.Drawing.Size(704, 406);
             this.reportViewer1.TabIndex = 75;
             // 
             // btnConsultar
@@ -182,7 +182,7 @@ namespace AppBTS.Presentacion
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(943, 107);
+            this.btnConsultar.Location = new System.Drawing.Point(464, 107);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(134, 35);
@@ -197,7 +197,7 @@ namespace AppBTS.Presentacion
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(1024, 561);
+            this.btnSalir.Location = new System.Drawing.Point(663, 561);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(53, 40);
             this.btnSalir.TabIndex = 77;
@@ -209,7 +209,7 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(1102, 602);
+            this.ClientSize = new System.Drawing.Size(728, 602);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnConsultar);
@@ -228,6 +228,7 @@ namespace AppBTS.Presentacion
             this.HelpButton = true;
             this.Name = "frmReporteHoras";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Reporte Pedidos por Hora";
             this.Load += new System.EventHandler(this.frmReporteHoras_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsHorasBindingSource)).EndInit();

@@ -472,7 +472,7 @@
                                 <TextRun>
                                   <Value>=Fields!total.Value</Value>
                                   <Style>
-                                    <Format>'$'0.00;('$'0.00)</Format>
+                                    <Format>'$'0;('$'0)</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -492,6 +492,7 @@
                             <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -1276,7 +1277,7 @@
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style>
-                          <Format>'$'0.00;('$'0.00)</Format>
+                          <Format>'$'0;('$'0)</Format>
                           <rd:FormatSymbolCulture>es-AR</rd:FormatSymbolCulture>
                         </Style>
                         <UseValueAsLabel>true</UseValueAsLabel>
@@ -1710,6 +1711,7 @@
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
             <Line Name="Line1">
+              <Top>0cm</Top>
               <Left>0.05163cm</Left>
               <Height>0cm</Height>
               <Width>14.6554cm</Width>
