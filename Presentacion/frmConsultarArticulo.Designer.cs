@@ -32,10 +32,6 @@ namespace AppBTS.Presentacion
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarArticulo));
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
-            this.IdArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblIdArticulo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
@@ -49,55 +45,36 @@ namespace AppBTS.Presentacion
             this.btnEliminar = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.chkTodos = new System.Windows.Forms.CheckBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.IdArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvArticulos
             // 
+            this.dgvArticulos.AllowUserToAddRows = false;
+            this.dgvArticulos.AllowUserToDeleteRows = false;
             this.dgvArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvArticulos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdArticulo,
             this.Nombre,
             this.PrecioUnitario,
             this.TipoArticulo});
-            this.dgvArticulos.Location = new System.Drawing.Point(12, 227);
+            this.dgvArticulos.Location = new System.Drawing.Point(12, 230);
             this.dgvArticulos.Name = "dgvArticulos";
+            this.dgvArticulos.ReadOnly = true;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(511, 223);
+            this.dgvArticulos.Size = new System.Drawing.Size(495, 223);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellClick);
-            // 
-            // IdArticulo
-            // 
-            this.IdArticulo.HeaderText = "Id del Artículo";
-            this.IdArticulo.Name = "IdArticulo";
-            this.IdArticulo.ReadOnly = true;
-            this.IdArticulo.Width = 50;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Artículo";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Width = 150;
-            // 
-            // PrecioUnitario
-            // 
-            this.PrecioUnitario.HeaderText = "Precio";
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
-            // 
-            // TipoArticulo
-            // 
-            this.TipoArticulo.HeaderText = "Tipo de Artículo";
-            this.TipoArticulo.Name = "TipoArticulo";
-            this.TipoArticulo.ReadOnly = true;
-            this.TipoArticulo.Width = 150;
             // 
             // lblIdArticulo
             // 
             this.lblIdArticulo.AutoSize = true;
-            this.lblIdArticulo.Location = new System.Drawing.Point(30, 126);
+            this.lblIdArticulo.Location = new System.Drawing.Point(31, 158);
             this.lblIdArticulo.Name = "lblIdArticulo";
             this.lblIdArticulo.Size = new System.Drawing.Size(71, 13);
             this.lblIdArticulo.TabIndex = 1;
@@ -106,7 +83,7 @@ namespace AppBTS.Presentacion
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(30, 77);
+            this.lblNombre.Location = new System.Drawing.Point(31, 109);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 2;
@@ -115,7 +92,7 @@ namespace AppBTS.Presentacion
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(30, 28);
+            this.lblTipo.Location = new System.Drawing.Point(31, 60);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(83, 13);
             this.lblTipo.TabIndex = 3;
@@ -124,21 +101,21 @@ namespace AppBTS.Presentacion
             // cboTipo
             // 
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(175, 24);
+            this.cboTipo.Location = new System.Drawing.Point(176, 56);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(163, 21);
             this.cboTipo.TabIndex = 4;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(175, 74);
+            this.txtNombre.Location = new System.Drawing.Point(176, 106);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(163, 20);
             this.txtNombre.TabIndex = 5;
             // 
             // txtIdArtículo
             // 
-            this.txtIdArtículo.Location = new System.Drawing.Point(175, 123);
+            this.txtIdArtículo.Location = new System.Drawing.Point(176, 155);
             this.txtIdArtículo.Name = "txtIdArtículo";
             this.txtIdArtículo.Size = new System.Drawing.Size(163, 20);
             this.txtIdArtículo.TabIndex = 6;
@@ -146,8 +123,9 @@ namespace AppBTS.Presentacion
             // btnConsultar
             // 
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.ForeColor = System.Drawing.Color.Tan;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
-            this.btnConsultar.Location = new System.Drawing.Point(488, 177);
+            this.btnConsultar.Location = new System.Drawing.Point(472, 180);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(35, 35);
             this.btnConsultar.TabIndex = 7;
@@ -158,8 +136,9 @@ namespace AppBTS.Presentacion
             // btnSalir
             // 
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalir.ForeColor = System.Drawing.Color.Tan;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(12, 468);
+            this.btnSalir.Location = new System.Drawing.Point(12, 459);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(61, 44);
             this.btnSalir.TabIndex = 8;
@@ -170,8 +149,9 @@ namespace AppBTS.Presentacion
             // btnNuevo
             // 
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNuevo.ForeColor = System.Drawing.Color.Tan;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(462, 468);
+            this.btnNuevo.Location = new System.Drawing.Point(446, 459);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(61, 44);
             this.btnNuevo.TabIndex = 9;
@@ -182,8 +162,9 @@ namespace AppBTS.Presentacion
             // btnModificar
             // 
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.ForeColor = System.Drawing.Color.Tan;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(395, 468);
+            this.btnModificar.Location = new System.Drawing.Point(379, 459);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(61, 44);
             this.btnModificar.TabIndex = 10;
@@ -194,8 +175,9 @@ namespace AppBTS.Presentacion
             // btnEliminar
             // 
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.Tan;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(328, 468);
+            this.btnEliminar.Location = new System.Drawing.Point(312, 459);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(61, 44);
             this.btnEliminar.TabIndex = 11;
@@ -206,7 +188,7 @@ namespace AppBTS.Presentacion
             // chkTodos
             // 
             this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(33, 187);
+            this.chkTodos.Location = new System.Drawing.Point(12, 198);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(94, 17);
             this.chkTodos.TabIndex = 12;
@@ -214,12 +196,54 @@ namespace AppBTS.Presentacion
             this.chkTodos.UseVisualStyleBackColor = true;
             this.chkTodos.CheckedChanged += new System.EventHandler(this.chkTodos_CheckedChanged);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblTitulo.Location = new System.Drawing.Point(9, 18);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(79, 22);
+            this.lblTitulo.TabIndex = 13;
+            this.lblTitulo.Text = "Artículos";
+            // 
+            // IdArticulo
+            // 
+            this.IdArticulo.HeaderText = "Id del Artículo";
+            this.IdArticulo.Name = "IdArticulo";
+            this.IdArticulo.ReadOnly = true;
+            this.IdArticulo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.IdArticulo.Width = 50;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Artículo";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombre.Width = 150;
+            // 
+            // PrecioUnitario
+            // 
+            this.PrecioUnitario.HeaderText = "Precio";
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
+            this.PrecioUnitario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TipoArticulo
+            // 
+            this.TipoArticulo.HeaderText = "Tipo de Artículo";
+            this.TipoArticulo.Name = "TipoArticulo";
+            this.TipoArticulo.ReadOnly = true;
+            this.TipoArticulo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TipoArticulo.Width = 150;
+            // 
             // frmConsultarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(535, 524);
+            this.ClientSize = new System.Drawing.Size(520, 513);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.chkTodos);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
@@ -233,7 +257,9 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.lblIdArticulo);
             this.Controls.Add(this.dgvArticulos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmConsultarArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Artículos";
             this.Load += new System.EventHandler(this.frmConsultarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
@@ -245,10 +271,6 @@ namespace AppBTS.Presentacion
         #endregion
 
         private System.Windows.Forms.DataGridView dgvArticulos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdArticulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
         private System.Windows.Forms.Label lblIdArticulo;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.Label lblTipo;
@@ -262,5 +284,10 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.CheckBox chkTodos;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdArticulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
     }
 }

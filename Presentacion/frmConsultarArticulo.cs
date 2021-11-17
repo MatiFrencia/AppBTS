@@ -43,10 +43,11 @@ namespace AppBTS.Presentacion
         }
 
         //Cuando se hace click en el botón de consultar. Si se marcó la opción de ver todos, trae todos los artículos. Si no, filtra por los parámetros ingresados.
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-            if (chkTodos.Checked)
+        private void consultar() {
+            if (this.chkTodos.Checked)
+            {
                 CargarGrilla(dgvArticulos, miGestor.RecuperarTodos());
+            }
             else
             {
                 string idArticulo = txtIdArtículo.Text;
@@ -55,8 +56,12 @@ namespace AppBTS.Presentacion
                 if (cboTipo.SelectedIndex != -1)
                     idTipoArticulo = cboTipo.SelectedValue.ToString();
                 CargarGrilla(dgvArticulos, miGestor.RecuperarFiltrados(idArticulo, nombre, idTipoArticulo));
-                cboTipo.SelectedIndex = -1;
             }
+        }
+
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            consultar();
         }
 
         private void CargarGrilla(DataGridView grilla, DataTable tabla)
@@ -77,6 +82,7 @@ namespace AppBTS.Presentacion
             frmRegistrarArticulo fra = new frmRegistrarArticulo();
             fra.ShowDialog();
             fra.Dispose();
+            consultar();
         }
 
         //Permite eliminar o modificar un artículo una vez que se lo selecciona en la grilla.
@@ -98,6 +104,7 @@ namespace AppBTS.Presentacion
             frmModificarArticulo fma = new frmModificarArticulo(seleccionado);
             fma.ShowDialog();
             fma.Dispose();
+            consultar();
         }
 
         //Habilita o deshabilita los combo y textbox según si se marca o desmarca la opción de Ver todos, ya que si se eligen ver todos los artículos, no se va a
@@ -129,6 +136,7 @@ namespace AppBTS.Presentacion
                 seleccionado.IdArticulo = Convert.ToInt32(dgvArticulos.SelectedCells[0].Value);
                 miGestor.Eliminar(seleccionado.IdArticulo);
                 MessageBox.Show("'" + nombre + "' eliminado con éxito.");
+                consultar();
             }
         }
     }

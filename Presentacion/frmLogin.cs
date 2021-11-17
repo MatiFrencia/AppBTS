@@ -51,6 +51,8 @@ namespace AppBTS
 
             this.miUsuario.Nombre = this.txtUsuario.Text.Replace('\'', ' ');
             this.miUsuario.Password = this.txtClave.Text.Replace('\'', ' ');
+            //this.miUsuario.Nombre = this.txtUsuario.ToString();
+            //this.miUsuario.Password = this.txtClave.ToString();
 
             this.miUsuario.Id_usuario = this.miGestorUsuarios.validarUsuario(miUsuario.Nombre, miUsuario.Password);
 

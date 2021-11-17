@@ -41,12 +41,6 @@ namespace AppBTS
             fcb.ShowDialog();
             fcb.Dispose();
         }
-
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (MessageBox.Show("Está seguro que desea Salir?", "ATENCION", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
@@ -55,95 +49,64 @@ namespace AppBTS
                 e.Cancel = true;
         }
 
-        private void mesasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnMesas_Click(object sender, EventArgs e)
         {
             frmMesas fcb = new frmMesas();
             fcb.ShowDialog();
             fcb.Dispose();
         }
-        private void articuloToolStripMenuItem1_Click(object sender, EventArgs e)
+
+        private void btnArticulos_Click(object sender, EventArgs e)
         {
-            frmRegistrarArticulo fra = new frmRegistrarArticulo();
+            frmConsultarArticulo fra = new frmConsultarArticulo();
             fra.ShowDialog();
             fra.Dispose();
         }
 
-        private void artículosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmConsultarArticulo fca = new frmConsultarArticulo();
-            fca.ShowDialog();
-            fca.Dispose();
-        }
-
-        private void menúsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnMenu_Click(object sender, EventArgs e)
         {
             frmConsultarMenus fcm = new frmConsultarMenus();
             fcm.ShowDialog();
             fcm.Dispose();
         }
 
-        private void menúToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmAltaMenu fam = new frmAltaMenu();
-            fam.ShowDialog();
-            fam.Dispose();
-        }
-
-        private void mozosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnMozos_Click(object sender, EventArgs e)
         {
             frmMozos fm = new frmMozos();
             fm.ShowDialog();
             fm.Dispose();
         }
 
-        private void reservasToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnReservas_Click(object sender, EventArgs e)
         {
             frmConsultaReservas fcb = new frmConsultaReservas();
             fcb.ShowDialog();
             fcb.Dispose();
         }
 
-        private void cobrarToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCobrar_Click(object sender, EventArgs e)
         {
             frmAgregarDetalles fat = new frmAgregarDetalles();
             fat.ShowDialog();
             fat.Dispose();
         }
 
-        private void ticketsToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnReportes_Click(object sender, EventArgs e)
         {
-            frmReporteTickets frt = new frmReporteTickets();
-            frt.ShowDialog();
-            frt.Dispose();
+            MessageBox.Show("Reportes");
+            //frmReporteTickets frt = new frmReporteTickets();
+            //frt.ShowDialog();
+            //frt.Dispose();
+            //frmReporteMenus frm = new frmReporteMenus();
+            //frm.ShowDialog();
+            //frm.Dispose();
+            //frmReporteHoras frh = new frmReporteHoras();
+            //frh.ShowDialog();
+            //frh.Dispose();
         }
-
-        private void menusToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnSalir_Click(object sender, EventArgs e)
         {
-            frmReporteMenus frm = new frmReporteMenus();
-            frm.ShowDialog();
-            frm.Dispose();
-        }
-
-        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("No disponible");
-        }
-
-        private void estadosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("No disponible");
-        }
-
-        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("No disponible");
-        }
-
-        private void horariosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmReporteHoras frh = new frmReporteHoras();
-            frh.ShowDialog();
-            frh.Dispose();
+            this.Close();
         }
     }
  }
