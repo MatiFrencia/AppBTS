@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D828DE2A-4275-4CD1-9B52-5FCB4B355494}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>AppBTS</RootNamespace>
+    <AssemblyName>AppBTS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BAR_PAVDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BAR_PAVDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Datos\BDHelper.cs" />
+    <Compile Include="Datos\Daos\ArticuloDao.cs" />
+    <Compile Include="Datos\Daos\DetalleMenuDao.cs" />
+    <Compile Include="Datos\Daos\DetallesTicketDao.cs" />
+    <Compile Include="Datos\Daos\MenuDao.cs" />
+    <Compile Include="Datos\Daos\MesasDao.cs" />
+    <Compile Include="Datos\Daos\MozoDao.cs" />
+    <Compile Include="Datos\Daos\ReservaDao.cs" />
+    <Compile Include="Datos\Daos\TicketDao.cs" />
+    <Compile Include="Datos\Daos\TipoArticuloDao.cs" />
+    <Compile Include="Datos\Daos\TipoPagoDao.cs" />
+    <Compile Include="Datos\Daos\UsuarioDao.cs" />
+    <Compile Include="Datos\Interfaces\IArticulo.cs" />
+    <Compile Include="Datos\Interfaces\IDetalleMenu.cs" />
+    <Compile Include="Datos\Interfaces\IDetallesTicket.cs" />
+    <Compile Include="Datos\Interfaces\IMenu.cs" />
+    <Compile Include="Datos\Interfaces\IMesas.cs" />
+    <Compile Include="Datos\Interfaces\IMozo.cs" />
+    <Compile Include="Datos\Interfaces\IReserva.cs" />
+    <Compile Include="Datos\Interfaces\ITicket.cs" />
+    <Compile Include="Datos\Interfaces\ITipoArticulo.cs" />
+    <Compile Include="Datos\Interfaces\ITipoPago.cs" />
+    <Compile Include="Datos\Interfaces\IUsuario.cs" />
+    <Compile Include="Presentacion\frmReporteHoras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmReporteHoras.Designer.cs">
+      <DependentUpon>frmReporteHoras.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmReporteTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmReporteTickets.Designer.cs">
+      <DependentUpon>frmReporteTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmReporteMenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmReporteMenus.Designer.cs">
+      <DependentUpon>frmReporteMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dsDetallesTicket.cs">
+      <DependentUpon>dsDetallesTicket.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dsDetallesTicket.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsDetallesTicket.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dsHoras.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsHoras.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dsTickets.cs">
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\dsTickets.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\DetallesTicket.cs" />
+    <Compile Include="Entidades\Ticket.cs" />
+    <Compile Include="Entidades\TipoPago.cs" />
+    <Compile Include="masterDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\DetalleMenu.cs" />
+    <Compile Include="Entidades\Menu.cs" />
+    <Compile Include="Entidades\Mesas.cs" />
+    <Compile Include="Entidades\Mozo.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Presentacion\frmAltaMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAltaMenu.Designer.cs">
+      <DependentUpon>frmAltaMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAltaMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAltaMesa.Designer.cs">
+      <DependentUpon>frmAltaMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmAltaTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmAltaTicket.Designer.cs">
+      <DependentUpon>frmAltaTicket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultarMenus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultarMenus.Designer.cs">
+      <DependentUpon>frmConsultarMenus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmDetalleMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmDetalleMenu.Designer.cs">
+      <DependentUpon>frmDetalleMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmDetallesMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmDetallesMesa.Designer.cs">
+      <DependentUpon>frmDetallesMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmMesas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmMesas.Designer.cs">
+      <DependentUpon>frmMesas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmDetalleReserva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmDetalleReserva.Designer.cs">
+      <DependentUpon>frmDetalleReserva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\Articulo.cs" />
+    <Compile Include="Entidades\Reservas.cs" />
+    <Compile Include="Entidades\Mesas.cs" />
+    <Compile Include="Entidades\TipoArticulo.cs" />
+    <Compile Include="Entidades\Usuario.cs" />
+    <Compile Include="Presentacion\frmConsultarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultarArticulo.Designer.cs">
+      <DependentUpon>frmConsultarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmConsultaReservas.Designer.cs">
+      <DependentUpon>frmConsultaReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmLogin.designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmModificarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmModificarArticulo.Designer.cs">
+      <DependentUpon>frmModificarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmMozos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmMozos.Designer.cs">
+      <DependentUpon>frmMozos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmRecuperarMesas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRecuperarMesas.Designer.cs">
+      <DependentUpon>frmRecuperarMesas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistrarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistrarArticulo.Designer.cs">
+      <DependentUpon>frmRegistrarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Servicios\ArticuloService.cs" />
+    <Compile Include="Servicios\DetalleMenuService.cs" />
+    <Compile Include="Servicios\DetallesTicketService.cs" />
+    <Compile Include="Servicios\MenuService.cs" />
+    <Compile Include="Servicios\MesasService.cs" />
+    <Compile Include="Servicios\MozoService.cs" />
+    <Compile Include="Servicios\ReservaService.cs" />
+    <Compile Include="Servicios\TicketService.cs" />
+    <Compile Include="Servicios\TipoArticuloService.cs" />
+    <Compile Include="Servicios\TipoPagoService.cs" />
+    <Compile Include="Servicios\UsuarioService.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <None Include="Imagenes\MesaLibre.jpg" />
+    <None Include="Imagenes\MesaOcupada.jpg" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Presentacion\frmAltaMenu.resx">
+      <DependentUpon>frmAltaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmAltaMesa.resx">
+      <DependentUpon>frmAltaMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmAltaTicket.resx">
+      <DependentUpon>frmAltaTicket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmConsultarMenus.resx">
+      <DependentUpon>frmConsultarMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmDetalleMenu.resx">
+      <DependentUpon>frmDetalleMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmDetallesMesa.resx">
+      <DependentUpon>frmDetallesMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmMesas.resx">
+      <DependentUpon>frmMesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmDetalleReserva.resx">
+      <DependentUpon>frmDetalleReserva.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Presentacion\frmRegistrarArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Presentacion\frmRegistrarArticulo.Designer.cs">
+      <DependentUpon>frmRegistrarArticulo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Presentacion\frmConsultarArticulo.resx">
+      <DependentUpon>frmConsultarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmConsultaReservas.resx">
+      <DependentUpon>frmConsultaReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmModificarArticulo.resx">
+      <DependentUpon>frmModificarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmMozos.resx">
+      <DependentUpon>frmMozos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmRecuperarMesas.resx">
+      <DependentUpon>frmRecuperarMesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmRegistrarArticulo.resx">
+      <DependentUpon>frmRegistrarArticulo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmReporteHoras.resx">
+      <DependentUpon>frmReporteHoras.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmReporteTickets.resx">
+      <DependentUpon>frmReporteTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Presentacion\frmReporteMenus.resx">
+      <DependentUpon>frmReporteMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Content Include="Fonts\Dutch801 XBd BT Extra Bold.ttf" />
+    <EmbeddedResource Include="Reportes\rptDetallesTicket.rdlc" />
+    <EmbeddedResource Include="Reportes\rptHoras.rdlc" />
+    <EmbeddedResource Include="Reportes\rptTickets.rdlc" />
+    <None Include="BAR_PAVDataSet.xsc">
+      <DependentUpon>BAR_PAVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="BAR_PAVDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>BAR_PAVDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="BAR_PAVDataSet.xss">
+      <DependentUpon>BAR_PAVDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsDetallesTicket.xsc">
+      <DependentUpon>dsDetallesTicket.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsDetallesTicket.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsDetallesTicket.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\dsDetallesTicket.xss">
+      <DependentUpon>dsDetallesTicket.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsHoras.xsc">
+      <DependentUpon>dsHoras.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsHoras.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsHoras.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\dsHoras.xss">
+      <DependentUpon>dsHoras.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsTickets.xsc">
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsTickets.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsTickets.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\dsTickets.xss">
+      <DependentUpon>dsTickets.xsd</DependentUpon>
+    </None>
+    <None Include="masterDataSet.xsc">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="masterDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>masterDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="masterDataSet.xss">
+      <DependentUpon>masterDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\actualizar.png" />
+    <Content Include="Imagenes\buscar1.png" />
+    <Content Include="Imagenes\buscar2.png" />
+    <Content Include="Imagenes\buscar3.png" />
+    <Content Include="Imagenes\cancelar1.png" />
+    <Content Include="Imagenes\cancelar2.png" />
+    <Content Include="Imagenes\Cancelar3.png" />
+    <Content Include="Imagenes\cancelar4.png" />
+    <Content Include="Imagenes\candado.png" />
+    <Content Include="Imagenes\configuration.png" />
+    <Content Include="Imagenes\delete_exit.png" />
+    <Content Include="Imagenes\edit_file.png" />
+    <Content Include="Imagenes\logout_door.png" />
+    <None Include="Imagenes\Mesa1.jpg" />
+    <Content Include="Imagenes\new_add_user.png" />
+    <Content Include="Imagenes\ok_accept.png" />
+    <None Include="Imagenes\search-file.png" />
+    <None Include="Imagenes\documentediting.png" />
+    <None Include="Imagenes\new-file.png" />
+    <Content Include="Imagenes\Excel1.ico" />
+    <Content Include="Imagenes\excel3.ico" />
+    <Content Include="Imagenes\excel4.bmp" />
+    <Content Include="Imagenes\grabar1.png" />
+    <Content Include="Imagenes\grabar2.png" />
+    <Content Include="Imagenes\grabar3.png" />
+    <Content Include="Imagenes\grabar4.png" />
+    <Content Include="Imagenes\i-info.jpg" />
+    <Content Include="Imagenes\i-info2.jpg" />
+    <Content Include="Imagenes\nuevo1.png" />
+    <Content Include="Imagenes\nuevo2.png" />
+    <Content Include="Imagenes\pregunta.jpg" />
+    <Content Include="Imagenes\preview1.png" />
+    <Content Include="Imagenes\preview2.png" />
+    <Content Include="Imagenes\print1.png" />
+    <Content Include="Imagenes\print2.png" />
+    <Content Include="Imagenes\print3.png" />
+    <Content Include="Imagenes\print4.png" />
+    <Content Include="Imagenes\puerta2.bmp" />
+    <Content Include="Imagenes\salir1.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
