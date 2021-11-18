@@ -59,9 +59,7 @@ namespace AppBTS
             //if (this.txtUsuario.Text==this.user && this.txtClave.Text==this.pass)
             if (miUsuario.Id_usuario!=0)
             {
-                MessageBox.Show("Inicio de sesion satisfactorio!", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
-
             }
             else
             {

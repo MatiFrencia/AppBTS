@@ -50,6 +50,9 @@
             this.user = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.asd = new System.Windows.Forms.Label();
+            this.btnRHorarios = new System.Windows.Forms.Button();
+            this.btnRMenus = new System.Windows.Forms.Button();
+            this.btnRTickets = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
@@ -75,7 +78,9 @@
             // 
             // splitContainer1
             // 
+            this.splitContainer1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.IsSplitterFixed = true;
             this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             // 
@@ -105,10 +110,13 @@
             // 
             this.splitContainer1.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel2.BackgroundImage")));
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.splitContainer1.Panel2.Controls.Add(this.btnRHorarios);
+            this.splitContainer1.Panel2.Controls.Add(this.btnRMenus);
+            this.splitContainer1.Panel2.Controls.Add(this.btnRTickets);
             this.splitContainer1.Panel2.Controls.Add(this.btnSalir);
             this.splitContainer1.Panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.splitContainer1.Size = new System.Drawing.Size(1686, 982);
-            this.splitContainer1.SplitterDistance = 159;
+            this.splitContainer1.SplitterDistance = 153;
             this.splitContainer1.TabIndex = 1;
             // 
             // label7
@@ -336,6 +344,55 @@
             this.asd.TabIndex = 2;
             this.asd.Text = "Bienvenid@";
             // 
+            // btnRHorarios
+            // 
+            this.btnRHorarios.BackColor = System.Drawing.Color.Transparent;
+            this.btnRHorarios.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRHorarios.BackgroundImage")));
+            this.btnRHorarios.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRHorarios.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRHorarios.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRHorarios.Location = new System.Drawing.Point(42, 947);
+            this.btnRHorarios.Name = "btnRHorarios";
+            this.btnRHorarios.Size = new System.Drawing.Size(80, 57);
+            this.btnRHorarios.TabIndex = 21;
+            this.toolTip1.SetToolTip(this.btnRHorarios, "Reporte de Horarios.");
+            this.btnRHorarios.UseVisualStyleBackColor = false;
+            this.btnRHorarios.Click += new System.EventHandler(this.btnRHorarios_Click);
+            // 
+            // btnRMenus
+            // 
+            this.btnRMenus.BackColor = System.Drawing.Color.Transparent;
+            this.btnRMenus.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRMenus.BackgroundImage")));
+            this.btnRMenus.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRMenus.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRMenus.ForeColor = System.Drawing.Color.Transparent;
+            this.btnRMenus.Location = new System.Drawing.Point(42, 883);
+            this.btnRMenus.Name = "btnRMenus";
+            this.btnRMenus.Size = new System.Drawing.Size(80, 57);
+            this.btnRMenus.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.btnRMenus, "Reporte de Menús.");
+            this.btnRMenus.UseVisualStyleBackColor = false;
+            this.btnRMenus.Click += new System.EventHandler(this.btnRMenus_Click);
+            // 
+            // btnRTickets
+            // 
+            this.btnRTickets.BackColor = System.Drawing.Color.Transparent;
+            this.btnRTickets.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRTickets.BackgroundImage")));
+            this.btnRTickets.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRTickets.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnRTickets.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRTickets.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnRTickets.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRTickets.Location = new System.Drawing.Point(42, 819);
+            this.btnRTickets.Name = "btnRTickets";
+            this.btnRTickets.Size = new System.Drawing.Size(80, 57);
+            this.btnRTickets.TabIndex = 19;
+            this.btnRTickets.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRTickets.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTip1.SetToolTip(this.btnRTickets, "Reporte de Artículos.");
+            this.btnRTickets.UseVisualStyleBackColor = false;
+            this.btnRTickets.Click += new System.EventHandler(this.btnRTickets_Click);
+            // 
             // btnSalir
             // 
             this.btnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -346,7 +403,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(1448, 923);
+            this.btnSalir.Location = new System.Drawing.Point(1452, 921);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(63, 47);
             this.btnSalir.TabIndex = 18;
@@ -406,6 +463,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnRHorarios;
+        private System.Windows.Forms.Button btnRMenus;
+        private System.Windows.Forms.Button btnRTickets;
     }
 }
 

@@ -23,7 +23,7 @@ namespace AppBTS.Presentacion
         {
             visualizar(true);
             CargarCombo(cboMenu, miGestorMenus.RecuperarTodos(), 1);
-            this.reportViewer1.RefreshReport();
+            //this.reportViewer1.RefreshReport();
         }
         private void btnAño_Click(object sender, EventArgs e)
         {

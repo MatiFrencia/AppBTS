@@ -18,13 +18,13 @@ namespace AppBTS
             InitializeComponent();
             this.Opacity = 0;
         }
-
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            botonesReports(false);
             frmLogin fl;
             fl = new frmLogin();
             fl.ShowDialog();
-
+            
             if (fl.MiUsuario.Id_usuario == 0) {
                 this.Dispose();
             }
@@ -93,20 +93,47 @@ namespace AppBTS
 
         private void btnReportes_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Reportes");
-            //frmReporteTickets frt = new frmReporteTickets();
-            //frt.ShowDialog();
-            //frt.Dispose();
-            //frmReporteMenus frm = new frmReporteMenus();
-            //frm.ShowDialog();
-            //frm.Dispose();
-            //frmReporteHoras frh = new frmReporteHoras();
-            //frh.ShowDialog();
-            //frh.Dispose();
+            if (btnRTickets.Visible.Equals(false))
+            {
+                botonesReports(true);
+            }
+            else
+            {
+                botonesReports(false);
+            }
         }
+        private void botonesReports(bool x) {
+            this.btnRTickets.Visible = x;
+            this.btnRMenus.Visible = x;
+            this.btnRHorarios.Visible = x;
+        } 
         private void btnSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnRTickets_Click(object sender, EventArgs e)
+        {
+            frmReporteTickets frt = new frmReporteTickets();
+            frt.ShowDialog();
+            frt.Dispose();
+            botonesReports(false);
+        }
+
+        private void btnRMenus_Click(object sender, EventArgs e)
+        {
+            frmReporteMenus frm = new frmReporteMenus();
+            frm.ShowDialog();
+            frm.Dispose();
+            botonesReports(false);
+        }
+
+        private void btnRHorarios_Click(object sender, EventArgs e)
+        {
+            frmReporteHoras frh = new frmReporteHoras();
+            frh.ShowDialog();
+            frh.Dispose();
+            botonesReports(false);
         }
     }
  }

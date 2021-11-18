@@ -23,7 +23,7 @@ namespace AppBTS.Presentacion
         private void frmReporteTickets_Load(object sender, EventArgs e)
         {
             limpiar();
-            this.dtpFechaDesde.Value = DateTime.Today.AddYears(-1);
+            this.dtpFechaDesde.Value = DateTime.Today.AddYears(-20);
             this.dtpFechaHasta.Value = DateTime.Today;
             this.dtpHoraDesde.Format = DateTimePickerFormat.Custom;
             this.dtpHoraDesde.CustomFormat = "HH':'mm";
@@ -77,13 +77,11 @@ namespace AppBTS.Presentacion
 
         private void btnConsultar_Click_1(object sender, EventArgs e)
         {
-            
-
             string _nroTicket, _nroMesa, _idMozo, _idTipoPago;
             _nroTicket = _nroMesa = _idMozo = _idTipoPago = string.Empty;
             if (dtpFechaDesde.Value > dtpFechaHasta.Value)
             {
-                MessageBox.Show("Fechas erroneas!!!");
+                MessageBox.Show("Fechas erroneas.");
                 dtpFechaDesde.Focus();
                 return;
             }
@@ -97,20 +95,20 @@ namespace AppBTS.Presentacion
                 _nroMesa = cboNroMesa.SelectedValue.ToString();
             if (dtpHoraDesde.Value > dtpHoraHasta.Value)
             {
-                MessageBox.Show("Horas erroneas!!!");
+                MessageBox.Show("Horas erroneas.");
                 dtpHoraDesde.Focus();
                 return;
             }
             if (Convert.ToInt32(txtDesde.Text) > Convert.ToInt32(txtHasta.Text))
             {
-                MessageBox.Show("Valores $ erroneos!!!");
+                MessageBox.Show("Valores $ erroneos.");
                 txtDesde.Focus();
                 return;
             }
 
             if (Convert.ToInt32(txtHasta.Text) == 0)
             {
-                MessageBox.Show("Valores $ erroneos!!!");
+                MessageBox.Show("Valores $ erroneos.");
                 txtDesde.Focus();
                 return;
             }
@@ -157,7 +155,6 @@ namespace AppBTS.Presentacion
         private void visualizar(bool x) {
             this.dtpFechaDesde.Enabled = x;
             this.dtpFechaHasta.Enabled = x;
-
         }
     }
 }

@@ -21,8 +21,7 @@ namespace AppBTS.Presentacion
 
         private void frmReporteHoras_Load(object sender, EventArgs e)
         {
-
-            this.reportViewer1.RefreshReport();
+            //this.reportViewer1.RefreshReport();
         }
 
         private void btnConsultar_Click(object sender, EventArgs e)
