@@ -17,7 +17,8 @@ namespace AppBTS
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmPrincipal());
-            //Application.Run(new AppBTS.Presentacion.frmReporteMenus());
+            //Application.Run(new AppBTS.Presentacion.frmConsultaReservas());
+            //Application.Run(new AppBTS.Presentacion.frmConsultarArticulo());
             //Application.Run(new AppBTS.Presentacion.frmReporteTickets());
             //Application.Run(new AppBTS.Presentacion.frmMesas());
             //Application.Run(new AppBTS.Presentacion.frmConsultarArticulo());

@@ -33,6 +33,7 @@ namespace AppBTS.Presentacion
             this.añadirMesaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.recuperarMesasBorradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.actualizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +42,8 @@ namespace AppBTS.Presentacion
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.añadirMesaToolStripMenuItem,
             this.recuperarMesasBorradaToolStripMenuItem,
-            this.actualizarToolStripMenuItem});
+            this.actualizarToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -69,15 +71,24 @@ namespace AppBTS.Presentacion
             this.actualizarToolStripMenuItem.Text = "Actualizar";
             this.actualizarToolStripMenuItem.Click += new System.EventHandler(this.actualizarToolStripMenuItem_Click);
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // frmMesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(800, 633);
+            this.ClientSize = new System.Drawing.Size(800, 900);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmMesas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Mesas";
             this.Load += new System.EventHandler(this.frmMesas_Load);
             this.menuStrip1.ResumeLayout(false);
@@ -92,5 +103,6 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.ToolStripMenuItem añadirMesaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem recuperarMesasBorradaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem actualizarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }

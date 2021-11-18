@@ -29,6 +29,7 @@ namespace AppBTS.Presentacion
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarMenus));
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -53,6 +54,10 @@ namespace AppBTS.Presentacion
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnNuevo = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalles)).BeginInit();
             this.SuspendLayout();
@@ -60,7 +65,7 @@ namespace AppBTS.Presentacion
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(12, 31);
+            this.lblNombre.Location = new System.Drawing.Point(14, 44);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(44, 13);
             this.lblNombre.TabIndex = 0;
@@ -68,7 +73,7 @@ namespace AppBTS.Presentacion
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(62, 28);
+            this.txtNombre.Location = new System.Drawing.Point(64, 41);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(127, 20);
             this.txtNombre.TabIndex = 1;
@@ -76,7 +81,7 @@ namespace AppBTS.Presentacion
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(239, 31);
+            this.lblTipo.Location = new System.Drawing.Point(200, 45);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(120, 13);
             this.lblTipo.TabIndex = 2;
@@ -85,7 +90,7 @@ namespace AppBTS.Presentacion
             // cboTipo
             // 
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(365, 27);
+            this.cboTipo.Location = new System.Drawing.Point(326, 41);
             this.cboTipo.Name = "cboTipo";
             this.cboTipo.Size = new System.Drawing.Size(127, 21);
             this.cboTipo.TabIndex = 3;
@@ -94,7 +99,7 @@ namespace AppBTS.Presentacion
             // lblArticulo
             // 
             this.lblArticulo.AutoSize = true;
-            this.lblArticulo.Location = new System.Drawing.Point(542, 31);
+            this.lblArticulo.Location = new System.Drawing.Point(503, 45);
             this.lblArticulo.Name = "lblArticulo";
             this.lblArticulo.Size = new System.Drawing.Size(81, 13);
             this.lblArticulo.TabIndex = 4;
@@ -103,7 +108,7 @@ namespace AppBTS.Presentacion
             // cboArticulo
             // 
             this.cboArticulo.FormattingEnabled = true;
-            this.cboArticulo.Location = new System.Drawing.Point(629, 27);
+            this.cboArticulo.Location = new System.Drawing.Point(590, 41);
             this.cboArticulo.Name = "cboArticulo";
             this.cboArticulo.Size = new System.Drawing.Size(127, 21);
             this.cboArticulo.TabIndex = 5;
@@ -111,7 +116,7 @@ namespace AppBTS.Presentacion
             // chkTodos
             // 
             this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(12, 69);
+            this.chkTodos.Location = new System.Drawing.Point(14, 82);
             this.chkTodos.Name = "chkTodos";
             this.chkTodos.Size = new System.Drawing.Size(94, 17);
             this.chkTodos.TabIndex = 6;
@@ -121,15 +126,18 @@ namespace AppBTS.Presentacion
             // 
             // dgvMenus
             // 
+            this.dgvMenus.AllowUserToAddRows = false;
+            this.dgvMenus.AllowUserToDeleteRows = false;
             this.dgvMenus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMenus.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdMenu,
             this.NombreMenu,
             this.PcioUnitario});
-            this.dgvMenus.Location = new System.Drawing.Point(12, 124);
+            this.dgvMenus.Location = new System.Drawing.Point(14, 137);
             this.dgvMenus.Name = "dgvMenus";
+            this.dgvMenus.ReadOnly = true;
             this.dgvMenus.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMenus.Size = new System.Drawing.Size(431, 188);
+            this.dgvMenus.Size = new System.Drawing.Size(418, 188);
             this.dgvMenus.TabIndex = 7;
             this.dgvMenus.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenus_CellClick);
             // 
@@ -157,7 +165,7 @@ namespace AppBTS.Presentacion
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(806, 31);
+            this.lblId.Location = new System.Drawing.Point(767, 45);
             this.lblId.Name = "lblId";
             this.lblId.Size = new System.Drawing.Size(61, 13);
             this.lblId.TabIndex = 8;
@@ -165,7 +173,7 @@ namespace AppBTS.Presentacion
             // 
             // txtIdMenu
             // 
-            this.txtIdMenu.Location = new System.Drawing.Point(873, 27);
+            this.txtIdMenu.Location = new System.Drawing.Point(834, 41);
             this.txtIdMenu.Name = "txtIdMenu";
             this.txtIdMenu.Size = new System.Drawing.Size(127, 20);
             this.txtIdMenu.TabIndex = 9;
@@ -175,7 +183,7 @@ namespace AppBTS.Presentacion
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.ForeColor = System.Drawing.Color.Tan;
             this.btnConsultar.Image = global::AppBTS.Properties.Resources.buscar1;
-            this.btnConsultar.Location = new System.Drawing.Point(967, 60);
+            this.btnConsultar.Location = new System.Drawing.Point(928, 73);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(33, 33);
             this.btnConsultar.TabIndex = 10;
@@ -184,24 +192,31 @@ namespace AppBTS.Presentacion
             // 
             // btnVisualizar
             // 
+            this.btnVisualizar.BackColor = System.Drawing.Color.Tan;
+            this.btnVisualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVisualizar.ForeColor = System.Drawing.Color.Tan;
             this.btnVisualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizar.Image")));
-            this.btnVisualizar.Location = new System.Drawing.Point(489, 206);
+            this.btnVisualizar.Location = new System.Drawing.Point(465, 207);
             this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.Size = new System.Drawing.Size(33, 33);
+            this.btnVisualizar.Size = new System.Drawing.Size(50, 49);
             this.btnVisualizar.TabIndex = 11;
-            this.btnVisualizar.UseVisualStyleBackColor = true;
+            this.toolTip1.SetToolTip(this.btnVisualizar, "Inspeccionar Articulos del Menú seleccionado.");
+            this.btnVisualizar.UseVisualStyleBackColor = false;
             this.btnVisualizar.Click += new System.EventHandler(this.btnVisualizar_Click);
             // 
             // dgvDetalles
             // 
+            this.dgvDetalles.AllowUserToAddRows = false;
+            this.dgvDetalles.AllowUserToDeleteRows = false;
             this.dgvDetalles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetalles.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TipoArticulo,
             this.NombreArticulo,
             this.Cantidad});
-            this.dgvDetalles.Location = new System.Drawing.Point(568, 124);
+            this.dgvDetalles.Location = new System.Drawing.Point(547, 137);
             this.dgvDetalles.Name = "dgvDetalles";
-            this.dgvDetalles.Size = new System.Drawing.Size(431, 188);
+            this.dgvDetalles.ReadOnly = true;
+            this.dgvDetalles.Size = new System.Drawing.Size(424, 188);
             this.dgvDetalles.TabIndex = 12;
             // 
             // TipoArticulo
@@ -223,14 +238,14 @@ namespace AppBTS.Presentacion
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
-            this.Cantidad.Width = 50;
+            this.Cantidad.Width = 55;
             // 
             // btnSalir
             // 
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.Tan;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(12, 337);
+            this.btnSalir.Location = new System.Drawing.Point(906, 331);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(65, 39);
             this.btnSalir.TabIndex = 13;
@@ -242,7 +257,7 @@ namespace AppBTS.Presentacion
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.Tan;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(236, 337);
+            this.btnEliminar.Location = new System.Drawing.Point(223, 331);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(65, 39);
             this.btnEliminar.TabIndex = 14;
@@ -254,7 +269,7 @@ namespace AppBTS.Presentacion
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.ForeColor = System.Drawing.Color.Tan;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(307, 337);
+            this.btnModificar.Location = new System.Drawing.Point(294, 331);
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(65, 39);
             this.btnModificar.TabIndex = 15;
@@ -266,19 +281,52 @@ namespace AppBTS.Presentacion
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.ForeColor = System.Drawing.Color.Tan;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(378, 337);
+            this.btnNuevo.Location = new System.Drawing.Point(365, 331);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(65, 39);
             this.btnNuevo.TabIndex = 16;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.lblTitulo.Location = new System.Drawing.Point(12, 9);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(145, 22);
+            this.lblTitulo.TabIndex = 17;
+            this.lblTitulo.Text = "Consultar Menús";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(556, 115);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 18);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Artículos:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 115);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(57, 18);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "Menús:";
+            // 
             // frmConsultarMenus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(1014, 388);
+            this.ClientSize = new System.Drawing.Size(982, 378);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnEliminar);
@@ -296,7 +344,10 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(300, 100);
             this.Name = "frmConsultarMenus";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmConsultarMenus";
             this.Load += new System.EventHandler(this.frmConsultarMenus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).EndInit();
@@ -328,8 +379,12 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn IdMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreMenu;
         private System.Windows.Forms.DataGridViewTextBoxColumn PcioUnitario;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoArticulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreArticulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }

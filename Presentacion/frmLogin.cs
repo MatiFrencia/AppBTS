@@ -51,15 +51,15 @@ namespace AppBTS
 
             this.miUsuario.Nombre = this.txtUsuario.Text.Replace('\'', ' ');
             this.miUsuario.Password = this.txtClave.Text.Replace('\'', ' ');
+            //this.miUsuario.Nombre = this.txtUsuario.ToString();
+            //this.miUsuario.Password = this.txtClave.ToString();
 
             this.miUsuario.Id_usuario = this.miGestorUsuarios.validarUsuario(miUsuario.Nombre, miUsuario.Password);
 
             //if (this.txtUsuario.Text==this.user && this.txtClave.Text==this.pass)
             if (miUsuario.Id_usuario!=0)
             {
-                MessageBox.Show("Inicio de sesion satisfactorio!", "Ingreso al Sistema", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Dispose();
-
             }
             else
             {

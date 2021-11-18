@@ -101,28 +101,51 @@ namespace AppBTS.Presentacion
             this.txtbTelefono.Text = "";
             this.txtbCantidadComensales.Text = "";
         }
+
+        private bool validar() {
+            if (this.txtbNumeroMesa.Text != "" && this.txtbCliente.Text != "" && this.txtbTelefono.Text != "" && this.txtbCantidadComensales.Text != "") {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void btnAceptar_Click_1(object sender, EventArgs e)
         {
-            if (tipos == "Edit")
+            if (validar()) {
+                if (Convert.ToInt32(this.txtbCantidadComensales.Text) > 0)
+                {
+                    if (tipos == "Edit")
+                    {
+                        miGestorReservas.Modificar(numReserva, Convert.ToInt32(txtbNumeroMesa.Text), dtpFechaReserva.Value.ToString("yyyy-MM-dd"), dtpHoraReserva.Value.ToString("HH:mm:ss"),
+                                           txtbCliente.Text, txtbTelefono.Text, Convert.ToInt32(txtbCantidadComensales.Text));
+                    }
+
+                    if (tipos == "New")
+                    {
+                        oReserva.NroReserva = Convert.ToInt32(txtbNumeroReserva.Text);
+                        oReserva.NroMesa = Convert.ToInt32(txtbNumeroMesa.Text);
+                        oReserva.FechaReserva = dtpFechaReserva.Value;
+                        oReserva.HoraReserva = TimeSpan.Parse(dtpHoraReserva.Value.ToString("HH:mm"));
+                        oReserva.NombreCliente = txtbCliente.Text;
+                        oReserva.Telefono = txtbTelefono.Text;
+                        oReserva.CantidadComensales = Convert.ToInt32(txtbCantidadComensales.Text);
+                        numReserva = Convert.ToInt32(txtbNumeroReserva.Text);
+                        miGestorReservas.AgregarReserva(oReserva);
+                    }
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("La cantidad de comensales debe ser como minimo 1.");
+                }
+            }
+            else
             {
-                miGestorReservas.Modificar(numReserva,Convert.ToInt32(txtbNumeroMesa.Text),dtpFechaReserva.Value.ToString("yyyy-MM-dd"), dtpHoraReserva.Value.ToString("HH:mm:ss"),
-                                   txtbCliente.Text,txtbTelefono.Text,Convert.ToInt32(txtbCantidadComensales.Text));
+                MessageBox.Show("Complete todos los campos para poder continuar.");
             }
 
-            if (tipos == "New")
-            {
-                oReserva.NroReserva = Convert.ToInt32(txtbNumeroReserva.Text);
-                oReserva.NroMesa = Convert.ToInt32(txtbNumeroMesa.Text);
-                oReserva.FechaReserva = dtpFechaReserva.Value;
-                oReserva.HoraReserva = TimeSpan.Parse(dtpHoraReserva.Value.ToString("HH:mm"));
-                oReserva.NombreCliente = txtbCliente.Text;
-                oReserva.Telefono = txtbTelefono.Text;
-                oReserva.CantidadComensales = Convert.ToInt32(txtbCantidadComensales.Text);
-                numReserva = Convert.ToInt32(txtbNumeroReserva.Text);
-                miGestorReservas.AgregarReserva(oReserva);
-            }
-
-            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

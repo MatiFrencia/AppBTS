@@ -79,12 +79,24 @@ namespace AppBTS.Presentacion
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
-            if (tipos == "Edit")
-            {
-                miGestorMenus.Modificar(idMenu, txtbNombre.Text, Convert.ToInt32(txtbPrecio.Text));
+            if (this.txtbIdMenu.Text != "" && this.txtbNombre.Text != "" && this.txtbPrecio.Text != "") {
+                if (Convert.ToInt32(this.txtbPrecio.Text) > 0) {
+                    if (tipos == "Edit")
+                    {
+                        miGestorMenus.Modificar(idMenu, txtbNombre.Text, Convert.ToInt32(txtbPrecio.Text));
+                    }
+
+                    this.Close();
+                }
+                else {
+                    MessageBox.Show("El precio debe ser mayor a 0");
+                }
+
+            }
+            else {
+                MessageBox.Show("Debe completar todos los campos para continuar.");
             }
 
-            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

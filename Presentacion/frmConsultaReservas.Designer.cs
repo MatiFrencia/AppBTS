@@ -114,7 +114,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Criterios";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dtpHoraHasta
             // 
@@ -202,11 +201,11 @@
             this.telefono,
             this.cantidadComensales,
             this.borrado});
-            this.dgvReservas.Location = new System.Drawing.Point(16, 236);
+            this.dgvReservas.Location = new System.Drawing.Point(5, 226);
             this.dgvReservas.Name = "dgvReservas";
             this.dgvReservas.ReadOnly = true;
             this.dgvReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvReservas.Size = new System.Drawing.Size(874, 267);
+            this.dgvReservas.Size = new System.Drawing.Size(887, 267);
             this.dgvReservas.TabIndex = 15;
             this.dgvReservas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReservas_CellClick);
             // 
@@ -215,6 +214,7 @@
             this.nroReserva.HeaderText = "# Reserva";
             this.nroReserva.Name = "nroReserva";
             this.nroReserva.ReadOnly = true;
+            this.nroReserva.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.nroReserva.Width = 80;
             // 
             // nroMesa
@@ -222,6 +222,7 @@
             this.nroMesa.HeaderText = "# Mesa";
             this.nroMesa.Name = "nroMesa";
             this.nroMesa.ReadOnly = true;
+            this.nroMesa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.nroMesa.Width = 80;
             // 
             // fechaReserva
@@ -229,12 +230,14 @@
             this.fechaReserva.HeaderText = "Fecha de Reserva";
             this.fechaReserva.Name = "fechaReserva";
             this.fechaReserva.ReadOnly = true;
+            this.fechaReserva.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // horaReserva
             // 
             this.horaReserva.HeaderText = "Hora de Reserva";
             this.horaReserva.Name = "horaReserva";
             this.horaReserva.ReadOnly = true;
+            this.horaReserva.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // nombreCliente
             // 
@@ -245,9 +248,10 @@
             // 
             // telefono
             // 
-            this.telefono.HeaderText = "telefono";
+            this.telefono.HeaderText = "Telefono";
             this.telefono.Name = "telefono";
             this.telefono.ReadOnly = true;
+            this.telefono.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.telefono.Width = 150;
             // 
             // cantidadComensales
@@ -255,12 +259,14 @@
             this.cantidadComensales.HeaderText = "Comensales";
             this.cantidadComensales.Name = "cantidadComensales";
             this.cantidadComensales.ReadOnly = true;
+            this.cantidadComensales.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // borrado
             // 
             this.borrado.HeaderText = "Borrado";
             this.borrado.Name = "borrado";
             this.borrado.ReadOnly = true;
+            this.borrado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.borrado.Width = 80;
             // 
             // btnConsultar
@@ -545,7 +551,7 @@
             this.Controls.Add(this.groupBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(180, 128);
+            this.Location = new System.Drawing.Point(300, 100);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmConsultaReservas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -591,9 +597,13 @@
         private masterDataSetTableAdapters.BugsTableAdapter bugsTableAdapter;
         private System.Windows.Forms.Label txtHora;
         private System.Windows.Forms.Label lbTitle;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn borrado;
         private System.Windows.Forms.Label lblFechaHasta;
         private System.Windows.Forms.Label lblFechaDesde;
+        private System.Windows.Forms.Button btnBorrar;
+        private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.DateTimePicker dtpHoraDesde;
+        private System.Windows.Forms.DateTimePicker dtpHoraHasta;
+        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridViewTextBoxColumn nroReserva;
         private System.Windows.Forms.DataGridViewTextBoxColumn nroMesa;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaReserva;
@@ -601,10 +611,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nombreCliente;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadComensales;
-        private System.Windows.Forms.Button btnBorrar;
-        private System.Windows.Forms.Button btnClear;
-        private System.Windows.Forms.DateTimePicker dtpHoraDesde;
-        private System.Windows.Forms.DateTimePicker dtpHoraHasta;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn borrado;
     }
 }

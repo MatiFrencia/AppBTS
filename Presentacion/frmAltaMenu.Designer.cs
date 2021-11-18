@@ -78,7 +78,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblPrecio.Location = new System.Drawing.Point(457, 314);
+            this.lblPrecio.Location = new System.Drawing.Point(383, 314);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(42, 15);
             this.lblPrecio.TabIndex = 2;
@@ -86,7 +86,7 @@ namespace AppBTS.Presentacion
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(505, 313);
+            this.txtPrecio.Location = new System.Drawing.Point(431, 313);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(100, 20);
             this.txtPrecio.TabIndex = 3;
@@ -143,7 +143,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblCantidad.Location = new System.Drawing.Point(437, 114);
+            this.lblCantidad.Location = new System.Drawing.Point(392, 98);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(56, 15);
             this.lblCantidad.TabIndex = 9;
@@ -151,14 +151,14 @@ namespace AppBTS.Presentacion
             // 
             // nudCantidad
             // 
-            this.nudCantidad.Location = new System.Drawing.Point(499, 114);
+            this.nudCantidad.Location = new System.Drawing.Point(400, 114);
             this.nudCantidad.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(48, 20);
+            this.nudCantidad.Size = new System.Drawing.Size(40, 20);
             this.nudCantidad.TabIndex = 10;
             this.nudCantidad.Value = new decimal(new int[] {
             1,
@@ -168,6 +168,8 @@ namespace AppBTS.Presentacion
             // 
             // dgvDetallesMenu
             // 
+            this.dgvDetallesMenu.AllowUserToAddRows = false;
+            this.dgvDetallesMenu.AllowUserToDeleteRows = false;
             this.dgvDetallesMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDetallesMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdArticulo,
@@ -177,8 +179,9 @@ namespace AppBTS.Presentacion
             this.Subtotal});
             this.dgvDetallesMenu.Location = new System.Drawing.Point(38, 153);
             this.dgvDetallesMenu.Name = "dgvDetallesMenu";
+            this.dgvDetallesMenu.ReadOnly = true;
             this.dgvDetallesMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetallesMenu.Size = new System.Drawing.Size(619, 154);
+            this.dgvDetallesMenu.Size = new System.Drawing.Size(493, 154);
             this.dgvDetallesMenu.TabIndex = 11;
             // 
             // IdArticulo
@@ -186,20 +189,24 @@ namespace AppBTS.Presentacion
             this.IdArticulo.HeaderText = "Id del Articulo";
             this.IdArticulo.Name = "IdArticulo";
             this.IdArticulo.ReadOnly = true;
-            this.IdArticulo.Width = 50;
+            this.IdArticulo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.IdArticulo.Visible = false;
+            this.IdArticulo.Width = 126;
             // 
             // NombreArticulo
             // 
             this.NombreArticulo.HeaderText = "Artículo";
             this.NombreArticulo.Name = "NombreArticulo";
             this.NombreArticulo.ReadOnly = true;
-            this.NombreArticulo.Width = 200;
+            this.NombreArticulo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.NombreArticulo.Width = 125;
             // 
             // PrecioUnitario
             // 
             this.PrecioUnitario.HeaderText = "Precio Unitario";
             this.PrecioUnitario.Name = "PrecioUnitario";
             this.PrecioUnitario.ReadOnly = true;
+            this.PrecioUnitario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.PrecioUnitario.Width = 125;
             // 
             // Cantidad
@@ -207,6 +214,7 @@ namespace AppBTS.Presentacion
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.Name = "Cantidad";
             this.Cantidad.ReadOnly = true;
+            this.Cantidad.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Cantidad.Width = 75;
             // 
             // Subtotal
@@ -214,6 +222,7 @@ namespace AppBTS.Presentacion
             this.Subtotal.HeaderText = "Subtotal";
             this.Subtotal.Name = "Subtotal";
             this.Subtotal.ReadOnly = true;
+            this.Subtotal.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.Subtotal.Width = 125;
             // 
             // btnAgregar
@@ -221,9 +230,9 @@ namespace AppBTS.Presentacion
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.Tan;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(576, 110);
+            this.btnAgregar.Location = new System.Drawing.Point(468, 114);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(29, 28);
+            this.btnAgregar.Size = new System.Drawing.Size(28, 28);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -233,9 +242,9 @@ namespace AppBTS.Presentacion
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.ForeColor = System.Drawing.Color.Tan;
             this.btnBorrar.Image = global::AppBTS.Properties.Resources.Cancelar3;
-            this.btnBorrar.Location = new System.Drawing.Point(611, 110);
+            this.btnBorrar.Location = new System.Drawing.Point(503, 114);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(29, 28);
+            this.btnBorrar.Size = new System.Drawing.Size(28, 28);
             this.btnBorrar.TabIndex = 13;
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
@@ -277,7 +286,7 @@ namespace AppBTS.Presentacion
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.Tan;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(593, 339);
+            this.btnGuardar.Location = new System.Drawing.Point(467, 339);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(64, 42);
             this.btnGuardar.TabIndex = 17;
@@ -289,7 +298,7 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(666, 390);
+            this.ClientSize = new System.Drawing.Size(551, 382);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblTotal);
@@ -309,7 +318,9 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(300, 500);
             this.Name = "frmAltaMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Crear Nuevo Menú";
             this.Load += new System.EventHandler(this.frmAltaMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
@@ -333,16 +344,16 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.Label lblCantidad;
         private System.Windows.Forms.NumericUpDown nudCantidad;
         private System.Windows.Forms.DataGridView dgvDetallesMenu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IdArticulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreArticulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label lblSinPromocion;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdArticulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn NombreArticulo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PrecioUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Subtotal;
     }
 }

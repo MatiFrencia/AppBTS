@@ -43,6 +43,7 @@ namespace AppBTS.Presentacion
             this.dtpHoraDesde.Format = DateTimePickerFormat.Custom;
             this.dtpHoraDesde.CustomFormat = "HH':'mm";
             this.dtpHoraDesde.ShowUpDown = true;
+            this.dtpHoraDesde.Value = Convert.ToDateTime("00:00");
             this.dtpHoraHasta.Format = DateTimePickerFormat.Custom;
             this.dtpHoraHasta.CustomFormat = "HH':'mm";
             this.dtpHoraHasta.ShowUpDown = true;
@@ -53,12 +54,10 @@ namespace AppBTS.Presentacion
             this.CargarCombo(cboTelefono, miGestorReservas.RecuperarTodosConParametro("telefono"));
             this.CargarCombo(cboComensales, miGestorReservas.RecuperarTodosConParametro("cantidadComensales"));
 
+            botones(false);
             this.btnConsultar.Enabled = true;
             this.btnNuevo.Enabled = true;
-            this.btnBorrar.Enabled = false;
             this.btnAsignar.Enabled = false;
-            this.btnEditar.Enabled = false;
-            this.btnDetalle.Enabled = false;
             this.btnSalir.Enabled = true;
             //deshabilitado para no retardar la carga de formulario (profe)
             //this.CargarGrilla(dgvReservas, oReservas.RecuperarTodos());
@@ -92,9 +91,12 @@ namespace AppBTS.Presentacion
 
         private void btnConsultar_Click(object sender, EventArgs e)
         {
-            btnBorrar.Enabled = false;
-            btnEditar.Enabled = false;
-            btnDetalle.Enabled = false;
+            consultar();
+        }
+
+        private void consultar()
+        {
+            botones(false);
             string _nroReserva, _nroMesa, _telefono, _cantidadComensales, _nombreCliente, _horaReserva;
             _nroReserva = _nroMesa = _cantidadComensales = _telefono = _nombreCliente = _horaReserva = string.Empty;
             if (dtpFechaDesde.Value > dtpFechaHasta.Value)
@@ -148,24 +150,28 @@ namespace AppBTS.Presentacion
             far.Tipos = "New";
             far.ShowDialog();
             far.Dispose();
+            consultar();
         }
 
-
+        private void botones(bool x) {
+            btnBorrar.Enabled = x;
+            btnEditar.Enabled = x;
+            btnDetalle.Enabled = x;
+        }
         private void dgvReservas_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Global.IdReserva = dgvReservas.Rows[e.RowIndex].Cells[0].Value.ToString();
-            btnBorrar.Enabled = true;
-            btnEditar.Enabled = true;
-            btnDetalle.Enabled = true;
+            if (dgvReservas.Rows.Count != 0)
+            {
+                Global.IdReserva = dgvReservas.SelectedCells[0].Value.ToString();
+                botones(true);
+            }
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
             if (MessageBox.Show("Esta seguro de eliminar esta reserva?", "CONFIRMACION", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1) == DialogResult.Yes)
                 miGestorReservas.Borrar(Global.IdReserva);
-                btnBorrar.Enabled = false;
-                btnEditar.Enabled = false;
-                btnDetalle.Enabled = false;
+                botones(false);
             string _nroReserva, _nroMesa, _telefono, _cantidadComensales, _nombreCliente, _horaReserva;
             _nroReserva = _nroMesa = _cantidadComensales = _telefono = _nombreCliente = _horaReserva = string.Empty;
             if (dtpFechaDesde.Value > dtpFechaHasta.Value)
@@ -222,6 +228,7 @@ namespace AppBTS.Presentacion
             far.CantComensales = (int)dgvReservas.CurrentRow.Cells[6].Value;
             far.ShowDialog();
             far.Dispose();
+            consultar();
         }
 
         private void btnDetalle_Click(object sender, EventArgs e)
@@ -242,11 +249,6 @@ namespace AppBTS.Presentacion
         private void btnClear_Click(object sender, EventArgs e)
         {
             limpiar();
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

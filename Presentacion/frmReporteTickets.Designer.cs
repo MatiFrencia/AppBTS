@@ -445,6 +445,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmReporteTickets";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmReporteTickets";
             this.Load += new System.EventHandler(this.frmReporteTickets_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtTicketsBindingSource)).EndInit();

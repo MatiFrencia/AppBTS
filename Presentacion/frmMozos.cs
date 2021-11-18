@@ -105,13 +105,17 @@ namespace AppBTS.Presentacion
                 miGestorMozos.Eliminar((int)this.numeric.Value);
                 CargarGrilla(dgvMozos, miGestorMozos.traerTodos());
             }
+            else
+            {
+                vista(false);
+            }
             
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             buttons(true);
-            vista(false);
+            //vista(false);
             campos(false);
             //validar
             if (txtNombre.Text == string.Empty)

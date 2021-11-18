@@ -230,6 +230,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblNombre);
             this.Name = "frmModificarArticulo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Editar Artículo";
             this.Load += new System.EventHandler(this.frmModificarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();

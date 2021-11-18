@@ -271,6 +271,7 @@ namespace AppBTS.Presentacion
             this.HelpButton = true;
             this.Name = "frmReporteMenus";
             this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "ReporteMenus";
             this.Load += new System.EventHandler(this.frmReporteMenus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dsDetallesTicketBindingSource)).EndInit();

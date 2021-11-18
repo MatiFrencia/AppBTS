@@ -137,22 +137,29 @@ namespace AppBTS.Presentacion
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Desea confirmar esta operación?", "Registrar Cobro",
-                       MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            if (dgvDetalleTicket.RowCount != 0 && cboMozos.SelectedIndex != -1 && cboMesas.SelectedIndex != -1 && cboTipoPago.SelectedIndex != -1)
             {
-                Ticket ticket = new Ticket();
-                ticket.Fecha = DateTime.Today.ToString("yyyy-MM-dd");
-                ticket.Hora = DateTime.Now.ToString("T");
+                if (MessageBox.Show("Desea confirmar esta operación?", "Registrar Cobro", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+                {
+                    Ticket ticket = new Ticket();
+                    ticket.Fecha = DateTime.Today.ToString("yyyy-MM-dd");
+                    ticket.Hora = DateTime.Now.ToString("T");
 
-                ticket.IdMozo = Convert.ToInt32(cboMozos.SelectedValue);
-                ticket.NroMesa = Convert.ToInt32(cboMesas.SelectedValue);
-                ticket.Borrado = false;
-                ticket.IdTipoPago = Convert.ToInt32(cboTipoPago.SelectedValue);
-                ticket.Total = Convert.ToInt32(lblTotalCD.Text);
-                ticket.DetallesTickets = listaDetallesTickets;
-                miGestorTickets.Registrar(ticket);
-                Limpiar();
+                    ticket.IdMozo = Convert.ToInt32(cboMozos.SelectedValue);
+                    ticket.NroMesa = Convert.ToInt32(cboMesas.SelectedValue);
+                    ticket.Borrado = false;
+                    ticket.IdTipoPago = Convert.ToInt32(cboTipoPago.SelectedValue);
+                    ticket.Total = Convert.ToInt32(lblTotalCD.Text);
+                    ticket.DetallesTickets = listaDetallesTickets;
+                    miGestorTickets.Registrar(ticket);
+                    Limpiar();
+                }
             }
+            else
+            {
+                MessageBox.Show("Debe completar todos los campos para continuar.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

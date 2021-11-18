@@ -74,6 +74,7 @@ namespace AppBTS.Presentacion
                             Left = j * 221 + 70,
                             Name = Text,
                         };
+                        boton[i, j].Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
                         boton[i, j].Click += new System.EventHandler(this.buttonMesa_Click);
                         this.Controls.Add(boton[i, j]);
                         NroMesa = boton[i,j].Name;
@@ -163,6 +164,11 @@ namespace AppBTS.Presentacion
             InitializeComponent();
             this.ActualizarMesas();
             
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

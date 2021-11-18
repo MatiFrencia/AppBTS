@@ -119,6 +119,10 @@ namespace AppBTS.Presentacion
                         double subtotal = Convert.ToDouble(row.Cells["Subtotal"].Value);
                         dgvDetallesMenu.Rows.Remove(row);
                         lblTotal.Text = (Convert.ToDouble(lblTotal.Text) - subtotal).ToString();
+                        if (dgvDetallesMenu.RowCount == 1) { 
+                            btnGuardar.Enabled = false;
+                            btnBorrar.Enabled = false;
+                        }
                     }
                 }
             }
@@ -132,15 +136,9 @@ namespace AppBTS.Presentacion
         //Hace validaciones y si todo está en orden, guarda el menú creado.
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            if (ValidarNombre())
+            if (ValidarNombre() && ValidarGrilla() && ValidarPrecio())
             {
-                if (ValidarGrilla())
-                {
-                    if (ValidarPrecio())
-                    {
-                        GuardarMenu();
-                    }
-                }
+                GuardarMenu();
             }
         }
 
@@ -232,5 +230,6 @@ namespace AppBTS.Presentacion
             btnGuardar.Enabled = false;
             dgvDetallesMenu.Rows.Clear();
         }
+
     }
 }
