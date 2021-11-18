@@ -137,7 +137,9 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.txtbIdMenu);
             this.Controls.Add(this.lbTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(500, 500);
             this.Name = "frmDetalleMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmDetalleMenu";
             this.Load += new System.EventHandler(this.frmDetalleMenu_Load);
             this.ResumeLayout(false);

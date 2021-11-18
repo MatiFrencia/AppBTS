@@ -34,7 +34,6 @@ namespace AppBTS.Presentacion
             this.cantidadSillas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borrado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.lblMesasBorradas = new System.Windows.Forms.Label();
-            this.lblDescripcion = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnRecuperar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMesasBorradas)).BeginInit();
@@ -79,18 +78,9 @@ namespace AppBTS.Presentacion
             this.lblMesasBorradas.TabIndex = 1;
             this.lblMesasBorradas.Text = "Mesas Borradas";
             // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDescripcion.Location = new System.Drawing.Point(7, 300);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(363, 48);
-            this.lblDescripcion.TabIndex = 2;
-            this.lblDescripcion.Text = "Seleccione la mesa que desee recuperar y luego presione el botón \"RECUPERAR\"";
-            // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(271, 325);
+            this.btnCancelar.Location = new System.Drawing.Point(284, 297);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
             this.btnCancelar.TabIndex = 3;
@@ -100,7 +90,7 @@ namespace AppBTS.Presentacion
             // 
             // btnRecuperar
             // 
-            this.btnRecuperar.Location = new System.Drawing.Point(190, 325);
+            this.btnRecuperar.Location = new System.Drawing.Point(203, 297);
             this.btnRecuperar.Name = "btnRecuperar";
             this.btnRecuperar.Size = new System.Drawing.Size(75, 23);
             this.btnRecuperar.TabIndex = 4;
@@ -113,14 +103,14 @@ namespace AppBTS.Presentacion
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(377, 363);
+            this.ClientSize = new System.Drawing.Size(377, 335);
             this.Controls.Add(this.btnRecuperar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lblMesasBorradas);
             this.Controls.Add(this.dgvMesasBorradas);
-            this.Controls.Add(this.lblDescripcion);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmRecuperarMesas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmRecuperarMesas";
             this.Load += new System.EventHandler(this.frmRecuperarMesas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMesasBorradas)).EndInit();
@@ -136,7 +126,6 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadSillas;
         private System.Windows.Forms.DataGridViewCheckBoxColumn borrado;
         private System.Windows.Forms.Label lblMesasBorradas;
-        private System.Windows.Forms.Label lblDescripcion;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnRecuperar;
     }

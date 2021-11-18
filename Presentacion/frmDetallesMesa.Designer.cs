@@ -174,6 +174,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.dgvReservasMesa);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDetallesMesa";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Load += new System.EventHandler(this.frmDetallesMesa_Load);
             ((System.ComponentModel.ISupportInitialize)(this.bAR_PAVDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservasBindingSource)).EndInit();

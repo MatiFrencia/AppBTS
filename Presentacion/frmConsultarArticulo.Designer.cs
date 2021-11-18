@@ -32,6 +32,10 @@ namespace AppBTS.Presentacion
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmConsultarArticulo));
             this.dgvArticulos = new System.Windows.Forms.DataGridView();
+            this.IdArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblIdArticulo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblTipo = new System.Windows.Forms.Label();
@@ -46,10 +50,6 @@ namespace AppBTS.Presentacion
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.chkTodos = new System.Windows.Forms.CheckBox();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.IdArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PrecioUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoArticulo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -70,6 +70,37 @@ namespace AppBTS.Presentacion
             this.dgvArticulos.Size = new System.Drawing.Size(495, 223);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvArticulos_CellClick);
+            // 
+            // IdArticulo
+            // 
+            this.IdArticulo.HeaderText = "Id del Artículo";
+            this.IdArticulo.Name = "IdArticulo";
+            this.IdArticulo.ReadOnly = true;
+            this.IdArticulo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.IdArticulo.Width = 50;
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Artículo";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombre.Width = 150;
+            // 
+            // PrecioUnitario
+            // 
+            this.PrecioUnitario.HeaderText = "Precio";
+            this.PrecioUnitario.Name = "PrecioUnitario";
+            this.PrecioUnitario.ReadOnly = true;
+            this.PrecioUnitario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // TipoArticulo
+            // 
+            this.TipoArticulo.HeaderText = "Tipo de Artículo";
+            this.TipoArticulo.Name = "TipoArticulo";
+            this.TipoArticulo.ReadOnly = true;
+            this.TipoArticulo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TipoArticulo.Width = 150;
             // 
             // lblIdArticulo
             // 
@@ -206,37 +237,6 @@ namespace AppBTS.Presentacion
             this.lblTitulo.TabIndex = 13;
             this.lblTitulo.Text = "Artículos";
             // 
-            // IdArticulo
-            // 
-            this.IdArticulo.HeaderText = "Id del Artículo";
-            this.IdArticulo.Name = "IdArticulo";
-            this.IdArticulo.ReadOnly = true;
-            this.IdArticulo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.IdArticulo.Width = 50;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Artículo";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Nombre.Width = 150;
-            // 
-            // PrecioUnitario
-            // 
-            this.PrecioUnitario.HeaderText = "Precio";
-            this.PrecioUnitario.Name = "PrecioUnitario";
-            this.PrecioUnitario.ReadOnly = true;
-            this.PrecioUnitario.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // TipoArticulo
-            // 
-            this.TipoArticulo.HeaderText = "Tipo de Artículo";
-            this.TipoArticulo.Name = "TipoArticulo";
-            this.TipoArticulo.ReadOnly = true;
-            this.TipoArticulo.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TipoArticulo.Width = 150;
-            // 
             // frmConsultarArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,8 +258,9 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblIdArticulo);
             this.Controls.Add(this.dgvArticulos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(300, 100);
             this.Name = "frmConsultarArticulo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Artículos";
             this.Load += new System.EventHandler(this.frmConsultarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();

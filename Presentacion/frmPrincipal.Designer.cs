@@ -103,11 +103,12 @@
             // 
             // splitContainer1.Panel2
             // 
+            this.splitContainer1.Panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("splitContainer1.Panel2.BackgroundImage")));
             this.splitContainer1.Panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.splitContainer1.Panel2.Controls.Add(this.btnSalir);
             this.splitContainer1.Panel2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.splitContainer1.Size = new System.Drawing.Size(1686, 982);
-            this.splitContainer1.SplitterDistance = 198;
+            this.splitContainer1.SplitterDistance = 159;
             this.splitContainer1.TabIndex = 1;
             // 
             // label7
@@ -345,7 +346,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.ForeColor = System.Drawing.Color.Black;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(1409, 923);
+            this.btnSalir.Location = new System.Drawing.Point(1448, 923);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(63, 47);
             this.btnSalir.TabIndex = 18;

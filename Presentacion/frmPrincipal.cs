@@ -29,7 +29,7 @@ namespace AppBTS
                 this.Dispose();
             }
             else { 
-                this.Text += " - Usuario: " + fl.MiUsuario.Nombre;
+                this.user.Text = fl.MiUsuario.Nombre;
                 fl.Dispose();
                 this.Opacity = 100;
             }

@@ -343,6 +343,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblTicket);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmAgregarDetalles";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ticket";
             this.Load += new System.EventHandler(this.frmAltaTicket_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDetalleTicket)).EndInit();

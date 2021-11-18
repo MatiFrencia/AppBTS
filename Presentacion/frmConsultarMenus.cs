@@ -85,8 +85,8 @@ namespace AppBTS.Presentacion
             }
         }
 
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
+        private void consultar() {
+            dgvDetalles.Rows.Clear();
             if (chkTodos.Checked)
                 CargarGrillaMenus(dgvMenus, miGestorMenus.RecuperarTodos());
             else
@@ -103,6 +103,10 @@ namespace AppBTS.Presentacion
                 cboTipo.SelectedIndex = -1;
                 cboArticulo.SelectedIndex = -1;
             }
+        }
+        private void btnConsultar_Click(object sender, EventArgs e)
+        {
+            consultar();
         }
         private void CargarGrillaMenus(DataGridView grilla, DataTable tabla)
         {
@@ -128,9 +132,13 @@ namespace AppBTS.Presentacion
 
         private void dgvMenus_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnEliminar.Enabled = true;
-            btnModificar.Enabled = true;
-            btnVisualizar.Enabled = true;
+            if (dgvMenus.RowCount != 0) {
+                dgvDetalles.Rows.Clear();
+                btnEliminar.Enabled = true;
+                btnModificar.Enabled = true;
+                btnVisualizar.Enabled = true;
+            }
+
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
@@ -143,6 +151,7 @@ namespace AppBTS.Presentacion
                 seleccionado.IdMenu = Convert.ToInt32(dgvMenus.SelectedCells[0].Value);
                 miGestorMenus.Eliminar(seleccionado);
                 MessageBox.Show("'" + nombre + "' eliminado con éxito.");
+                consultar();
             }
         }
 
@@ -151,6 +160,7 @@ namespace AppBTS.Presentacion
             frmAltaMenu fam = new frmAltaMenu();
             fam.ShowDialog();
             fam.Dispose();
+            consultar();
         }
 
         private void btnModificar_Click(object sender, EventArgs e)
@@ -162,6 +172,7 @@ namespace AppBTS.Presentacion
             fdm.Tipos = "Edit";
             fdm.ShowDialog();
             fdm.Dispose();
+            consultar();
         }
     }
 }

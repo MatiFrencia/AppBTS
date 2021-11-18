@@ -318,8 +318,9 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(300, 500);
             this.Name = "frmAltaMenu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Crear Nuevo Menú";
             this.Load += new System.EventHandler(this.frmAltaMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.nudCantidad)).EndInit();
