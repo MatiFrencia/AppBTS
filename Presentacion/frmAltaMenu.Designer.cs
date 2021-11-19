@@ -61,7 +61,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblNombre.Location = new System.Drawing.Point(35, 38);
+            this.lblNombre.Location = new System.Drawing.Point(30, 44);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(52, 15);
             this.lblNombre.TabIndex = 0;
@@ -69,33 +69,33 @@ namespace AppBTS.Presentacion
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(93, 37);
+            this.txtNombre.Location = new System.Drawing.Point(88, 41);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(153, 20);
+            this.txtNombre.Size = new System.Drawing.Size(178, 21);
             this.txtNombre.TabIndex = 1;
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
             this.lblPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblPrecio.Location = new System.Drawing.Point(383, 314);
+            this.lblPrecio.Location = new System.Drawing.Point(376, 322);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(42, 15);
+            this.lblPrecio.Size = new System.Drawing.Size(45, 15);
             this.lblPrecio.TabIndex = 2;
-            this.lblPrecio.Text = "Precio";
+            this.lblPrecio.Text = "Precio:";
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(431, 313);
+            this.txtPrecio.Location = new System.Drawing.Point(422, 319);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(116, 21);
             this.txtPrecio.TabIndex = 3;
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblTitulo.Location = new System.Drawing.Point(12, 12);
+            this.lblTitulo.Location = new System.Drawing.Point(14, 14);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(111, 22);
             this.lblTitulo.TabIndex = 4;
@@ -105,7 +105,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblTituloArticulos.AutoSize = true;
             this.lblTituloArticulos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.lblTituloArticulos.Location = new System.Drawing.Point(13, 82);
+            this.lblTituloArticulos.Location = new System.Drawing.Point(15, 76);
             this.lblTituloArticulos.Name = "lblTituloArticulos";
             this.lblTituloArticulos.Size = new System.Drawing.Size(65, 18);
             this.lblTituloArticulos.TabIndex = 5;
@@ -115,7 +115,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblArticulo.AutoSize = true;
             this.lblArticulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblArticulo.Location = new System.Drawing.Point(35, 114);
+            this.lblArticulo.Location = new System.Drawing.Point(33, 105);
             this.lblArticulo.Name = "lblArticulo";
             this.lblArticulo.Size = new System.Drawing.Size(47, 15);
             this.lblArticulo.TabIndex = 6;
@@ -124,18 +124,18 @@ namespace AppBTS.Presentacion
             // cboTipo
             // 
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(93, 113);
+            this.cboTipo.Location = new System.Drawing.Point(88, 103);
             this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(121, 21);
+            this.cboTipo.Size = new System.Drawing.Size(140, 23);
             this.cboTipo.TabIndex = 7;
             this.cboTipo.SelectedIndexChanged += new System.EventHandler(this.cboTipo_SelectedIndexChanged);
             // 
             // cboArticulos
             // 
             this.cboArticulos.FormattingEnabled = true;
-            this.cboArticulos.Location = new System.Drawing.Point(233, 113);
+            this.cboArticulos.Location = new System.Drawing.Point(239, 103);
             this.cboArticulos.Name = "cboArticulos";
-            this.cboArticulos.Size = new System.Drawing.Size(145, 21);
+            this.cboArticulos.Size = new System.Drawing.Size(168, 23);
             this.cboArticulos.TabIndex = 8;
             this.cboArticulos.SelectedIndexChanged += new System.EventHandler(this.cboArticulos_SelectedIndexChanged);
             // 
@@ -143,7 +143,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblCantidad.AutoSize = true;
             this.lblCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblCantidad.Location = new System.Drawing.Point(392, 98);
+            this.lblCantidad.Location = new System.Drawing.Point(409, 86);
             this.lblCantidad.Name = "lblCantidad";
             this.lblCantidad.Size = new System.Drawing.Size(56, 15);
             this.lblCantidad.TabIndex = 9;
@@ -151,14 +151,14 @@ namespace AppBTS.Presentacion
             // 
             // nudCantidad
             // 
-            this.nudCantidad.Location = new System.Drawing.Point(400, 114);
+            this.nudCantidad.Location = new System.Drawing.Point(414, 105);
             this.nudCantidad.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
             this.nudCantidad.Name = "nudCantidad";
-            this.nudCantidad.Size = new System.Drawing.Size(40, 20);
+            this.nudCantidad.Size = new System.Drawing.Size(47, 21);
             this.nudCantidad.TabIndex = 10;
             this.nudCantidad.Value = new decimal(new int[] {
             1,
@@ -177,11 +177,11 @@ namespace AppBTS.Presentacion
             this.PrecioUnitario,
             this.Cantidad,
             this.Subtotal});
-            this.dgvDetallesMenu.Location = new System.Drawing.Point(38, 153);
+            this.dgvDetallesMenu.Location = new System.Drawing.Point(18, 135);
             this.dgvDetallesMenu.Name = "dgvDetallesMenu";
             this.dgvDetallesMenu.ReadOnly = true;
             this.dgvDetallesMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDetallesMenu.Size = new System.Drawing.Size(493, 154);
+            this.dgvDetallesMenu.Size = new System.Drawing.Size(520, 178);
             this.dgvDetallesMenu.TabIndex = 11;
             // 
             // IdArticulo
@@ -230,9 +230,9 @@ namespace AppBTS.Presentacion
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregar.ForeColor = System.Drawing.Color.Tan;
             this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
-            this.btnAgregar.Location = new System.Drawing.Point(468, 114);
+            this.btnAgregar.Location = new System.Drawing.Point(467, 99);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(28, 28);
+            this.btnAgregar.Size = new System.Drawing.Size(33, 32);
             this.btnAgregar.TabIndex = 12;
             this.btnAgregar.UseVisualStyleBackColor = true;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -242,9 +242,9 @@ namespace AppBTS.Presentacion
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.ForeColor = System.Drawing.Color.Tan;
             this.btnBorrar.Image = global::AppBTS.Properties.Resources.Cancelar3;
-            this.btnBorrar.Location = new System.Drawing.Point(503, 114);
+            this.btnBorrar.Location = new System.Drawing.Point(505, 99);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(28, 28);
+            this.btnBorrar.Size = new System.Drawing.Size(33, 32);
             this.btnBorrar.TabIndex = 13;
             this.btnBorrar.UseVisualStyleBackColor = true;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
@@ -253,7 +253,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblSinPromocion.AutoSize = true;
             this.lblSinPromocion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblSinPromocion.Location = new System.Drawing.Point(41, 314);
+            this.lblSinPromocion.Location = new System.Drawing.Point(33, 322);
             this.lblSinPromocion.Name = "lblSinPromocion";
             this.lblSinPromocion.Size = new System.Drawing.Size(139, 15);
             this.lblSinPromocion.TabIndex = 14;
@@ -263,7 +263,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblTotal.Location = new System.Drawing.Point(186, 314);
+            this.lblTotal.Location = new System.Drawing.Point(171, 322);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(41, 15);
             this.lblTotal.TabIndex = 15;
@@ -274,9 +274,9 @@ namespace AppBTS.Presentacion
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.Tan;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(38, 339);
+            this.btnSalir.Location = new System.Drawing.Point(18, 340);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(64, 42);
+            this.btnSalir.Size = new System.Drawing.Size(95, 45);
             this.btnSalir.TabIndex = 16;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -286,19 +286,19 @@ namespace AppBTS.Presentacion
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.Tan;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(467, 339);
+            this.btnGuardar.Location = new System.Drawing.Point(443, 340);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(64, 42);
+            this.btnGuardar.Size = new System.Drawing.Size(95, 45);
             this.btnGuardar.TabIndex = 17;
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // frmAltaMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(551, 382);
+            this.ClientSize = new System.Drawing.Size(556, 392);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.lblTotal);
@@ -317,8 +317,9 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(300, 500);
+            this.Location = new System.Drawing.Point(300, 600);
             this.Name = "frmAltaMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Crear Nuevo Menú";

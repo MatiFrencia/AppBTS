@@ -116,7 +116,7 @@ namespace AppBTS.Presentacion
             this.btnAdd.FlatAppearance.BorderSize = 0;
             this.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(13, 307);
+            this.btnAdd.Location = new System.Drawing.Point(121, 307);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(76, 68);
@@ -133,7 +133,7 @@ namespace AppBTS.Presentacion
             this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDelete.FlatAppearance.BorderSize = 0;
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.Location = new System.Drawing.Point(181, 307);
+            this.btnDelete.Location = new System.Drawing.Point(289, 307);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(76, 68);
@@ -150,7 +150,7 @@ namespace AppBTS.Presentacion
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEdit.Location = new System.Drawing.Point(97, 307);
+            this.btnEdit.Location = new System.Drawing.Point(205, 307);
             this.btnEdit.Margin = new System.Windows.Forms.Padding(4);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(76, 68);
@@ -249,7 +249,7 @@ namespace AppBTS.Presentacion
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExit.FlatAppearance.BorderSize = 0;
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Location = new System.Drawing.Point(282, 307);
+            this.btnExit.Location = new System.Drawing.Point(18, 307);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(76, 68);
@@ -274,7 +274,7 @@ namespace AppBTS.Presentacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(264, 314);
+            this.label1.Location = new System.Drawing.Point(101, 314);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(13, 18);
             this.label1.TabIndex = 20;
@@ -283,7 +283,7 @@ namespace AppBTS.Presentacion
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(264, 350);
+            this.label2.Location = new System.Drawing.Point(101, 350);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(13, 18);
             this.label2.TabIndex = 21;
@@ -292,7 +292,7 @@ namespace AppBTS.Presentacion
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(264, 332);
+            this.label3.Location = new System.Drawing.Point(101, 332);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(13, 18);
             this.label3.TabIndex = 22;

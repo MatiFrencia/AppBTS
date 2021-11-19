@@ -46,7 +46,7 @@ namespace AppBTS.Presentacion
             this.lbTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbTitulo.Location = new System.Drawing.Point(12, 9);
+            this.lbTitulo.Location = new System.Drawing.Point(14, 10);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(128, 25);
             this.lbTitulo.TabIndex = 18;
@@ -55,78 +55,82 @@ namespace AppBTS.Presentacion
             // txtbIdMenu
             // 
             this.txtbIdMenu.Enabled = false;
-            this.txtbIdMenu.Location = new System.Drawing.Point(118, 56);
+            this.txtbIdMenu.Location = new System.Drawing.Point(92, 49);
             this.txtbIdMenu.Name = "txtbIdMenu";
-            this.txtbIdMenu.Size = new System.Drawing.Size(100, 20);
+            this.txtbIdMenu.Size = new System.Drawing.Size(116, 21);
             this.txtbIdMenu.TabIndex = 19;
             // 
             // txtbNombre
             // 
-            this.txtbNombre.Location = new System.Drawing.Point(118, 100);
+            this.txtbNombre.Location = new System.Drawing.Point(92, 96);
             this.txtbNombre.Name = "txtbNombre";
-            this.txtbNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtbNombre.Size = new System.Drawing.Size(116, 21);
             this.txtbNombre.TabIndex = 20;
             // 
             // txtbPrecio
             // 
-            this.txtbPrecio.Location = new System.Drawing.Point(118, 138);
+            this.txtbPrecio.Location = new System.Drawing.Point(92, 145);
             this.txtbPrecio.Name = "txtbPrecio";
-            this.txtbPrecio.Size = new System.Drawing.Size(100, 20);
+            this.txtbPrecio.Size = new System.Drawing.Size(116, 21);
             this.txtbPrecio.TabIndex = 21;
             // 
             // lblIdMenu
             // 
             this.lblIdMenu.AutoSize = true;
-            this.lblIdMenu.Location = new System.Drawing.Point(30, 59);
+            this.lblIdMenu.Location = new System.Drawing.Point(25, 52);
             this.lblIdMenu.Name = "lblIdMenu";
-            this.lblIdMenu.Size = new System.Drawing.Size(47, 13);
+            this.lblIdMenu.Size = new System.Drawing.Size(54, 15);
             this.lblIdMenu.TabIndex = 22;
             this.lblIdMenu.Text = "ID menú";
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(33, 100);
+            this.lblNombre.Location = new System.Drawing.Point(25, 99);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(52, 15);
             this.lblNombre.TabIndex = 23;
             this.lblNombre.Text = "Nombre";
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(36, 138);
+            this.lblPrecio.Location = new System.Drawing.Point(35, 145);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
+            this.lblPrecio.Size = new System.Drawing.Size(42, 15);
             this.lblPrecio.TabIndex = 24;
             this.lblPrecio.Text = "Precio";
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(33, 185);
+            this.btnAceptar.BackColor = System.Drawing.Color.Tan;
+            this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAceptar.Location = new System.Drawing.Point(34, 185);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(70, 27);
             this.btnAceptar.TabIndex = 25;
             this.btnAceptar.Text = "Aceptar";
-            this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.UseVisualStyleBackColor = false;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(143, 185);
+            this.btnCancelar.BackColor = System.Drawing.Color.Tan;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Location = new System.Drawing.Point(127, 185);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(70, 27);
             this.btnCancelar.TabIndex = 26;
             this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmDetalleMenu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(242, 225);
+            this.ClientSize = new System.Drawing.Size(237, 238);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.lblPrecio);
@@ -136,8 +140,9 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.txtbNombre);
             this.Controls.Add(this.txtbIdMenu);
             this.Controls.Add(this.lbTitulo);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Location = new System.Drawing.Point(500, 500);
+            this.Location = new System.Drawing.Point(500, 600);
             this.Name = "frmDetalleMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "frmDetalleMenu";

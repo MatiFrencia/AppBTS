@@ -119,7 +119,7 @@ namespace AppBTS.Datos.Daos
         }
         public DataTable RecuperarTodosConParametros(string nroTicket, string fechaDesde, string fechaHasta, string horaDesde, string horaHasta, string idMozo, string nroMesa, string idTipoPago, string Totaldesde, string Totalhasta)
         {
-            string consulta = "SELECT t.nroTicket,t.fecha,t.hora,o.nombre as nombreM,m.nroMesa,p.nombre as nombreP,t.total"
+            string consulta = "SET DATEFORMAT 'YMD' \nSELECT t.nroTicket,t.fecha,t.hora,o.nombre as nombreM,m.nroMesa,p.nombre as nombreP,t.total"
                                         + " FROM Tickets t, Mesas m, TipoPago p, Mozos o"
                                         + " WHERE t.nroTicket=t.nroTicket"
                                         + " AND t.nroMesa=m.nroMesa"
@@ -144,7 +144,7 @@ namespace AppBTS.Datos.Daos
         
         public int CantidadTicketsPorHorario(string horaDesde, string horaHasta, string fechaDesde, string fechaHasta)
         {
-            string consulta = "SELECT COUNT(nroTicket) FROM Tickets WHERE hora BETWEEN '" + horaDesde + "' AND '" + horaHasta + "' AND fecha BETWEEN '"
+            string consulta = "SET DATEFORMAT 'YMD' \nSELECT COUNT(nroTicket) FROM Tickets WHERE hora BETWEEN '" + horaDesde + "' AND '" + horaHasta + "' AND fecha BETWEEN '"
                                 + fechaDesde + "' AND '" + fechaHasta + "'";
             BDHelper dm = BDHelper.obtenerInstancia();
             dm.Open();

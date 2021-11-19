@@ -46,50 +46,50 @@ namespace AppBTS.Presentacion
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(61, 102);
+            this.lblNombre.Location = new System.Drawing.Point(73, 103);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(52, 15);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(29, 147);
+            this.lblPrecio.Location = new System.Drawing.Point(37, 155);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(76, 13);
+            this.lblPrecio.Size = new System.Drawing.Size(88, 15);
             this.lblPrecio.TabIndex = 1;
             this.lblPrecio.Text = "Precio Unitario";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(132, 99);
+            this.txtNombre.Location = new System.Drawing.Point(131, 101);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(129, 20);
+            this.txtNombre.Size = new System.Drawing.Size(150, 21);
             this.txtNombre.TabIndex = 2;
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(132, 144);
+            this.txtPrecio.Location = new System.Drawing.Point(131, 153);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(129, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(150, 21);
             this.txtPrecio.TabIndex = 3;
             // 
             // lblTipoArticulo
             // 
             this.lblTipoArticulo.AutoSize = true;
-            this.lblTipoArticulo.Location = new System.Drawing.Point(22, 56);
+            this.lblTipoArticulo.Location = new System.Drawing.Point(34, 50);
             this.lblTipoArticulo.Name = "lblTipoArticulo";
-            this.lblTipoArticulo.Size = new System.Drawing.Size(83, 13);
+            this.lblTipoArticulo.Size = new System.Drawing.Size(91, 15);
             this.lblTipoArticulo.TabIndex = 4;
             this.lblTipoArticulo.Text = "Tipo de Artículo";
             // 
             // cboTipo
             // 
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(132, 53);
+            this.cboTipo.Location = new System.Drawing.Point(131, 47);
             this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(128, 21);
+            this.cboTipo.Size = new System.Drawing.Size(149, 23);
             this.cboTipo.TabIndex = 5;
             this.cboTipo.SelectedIndexChanged += new System.EventHandler(this.cboTipo_SelectedIndexChanged);
             // 
@@ -98,9 +98,9 @@ namespace AppBTS.Presentacion
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.Tan;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(32, 178);
+            this.btnCancelar.Location = new System.Drawing.Point(44, 190);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(98, 33);
+            this.btnCancelar.Size = new System.Drawing.Size(114, 38);
             this.btnCancelar.TabIndex = 6;
             this.toolTip1.SetToolTip(this.btnCancelar, "Cancelar");
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -111,9 +111,9 @@ namespace AppBTS.Presentacion
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.Tan;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(136, 178);
+            this.btnGuardar.Location = new System.Drawing.Point(166, 190);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(98, 33);
+            this.btnGuardar.Size = new System.Drawing.Size(114, 38);
             this.btnGuardar.TabIndex = 7;
             this.toolTip1.SetToolTip(this.btnGuardar, "Guardar");
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -125,7 +125,7 @@ namespace AppBTS.Presentacion
             this.lbTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbTitulo.Location = new System.Drawing.Point(12, 9);
+            this.lbTitulo.Location = new System.Drawing.Point(14, 10);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(177, 25);
             this.lbTitulo.TabIndex = 19;
@@ -133,10 +133,10 @@ namespace AppBTS.Presentacion
             // 
             // frmRegistrarArticulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(279, 221);
+            this.ClientSize = new System.Drawing.Size(310, 241);
             this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnCancelar);
@@ -146,6 +146,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblNombre);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(900, 100);
             this.Name = "frmRegistrarArticulo";

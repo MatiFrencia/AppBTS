@@ -21,6 +21,7 @@ namespace AppBTS.Presentacion
 
         private void frmReporteHoras_Load(object sender, EventArgs e)
         {
+            //no debe cargarlo al iniciar el frm para optimizar el tiempo de carga del mismo
             //this.reportViewer1.RefreshReport();
         }
 
@@ -28,7 +29,7 @@ namespace AppBTS.Presentacion
         {
             if (dtpFechaDesde.Value > dtpFechaHasta.Value)
             {
-                MessageBox.Show("Fechas erroneas!!!");
+                MessageBox.Show("Fechas erroneas.");
                 dtpFechaDesde.Focus();
                 return;
             }

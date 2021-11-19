@@ -65,60 +65,60 @@ namespace AppBTS.Presentacion
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(14, 44);
+            this.lblNombre.Location = new System.Drawing.Point(16, 51);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(52, 15);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(64, 41);
+            this.txtNombre.Location = new System.Drawing.Point(75, 48);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(127, 20);
+            this.txtNombre.Size = new System.Drawing.Size(129, 21);
             this.txtNombre.TabIndex = 1;
             // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(200, 45);
+            this.lblTipo.Location = new System.Drawing.Point(210, 51);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(120, 13);
+            this.lblTipo.Size = new System.Drawing.Size(132, 15);
             this.lblTipo.TabIndex = 2;
             this.lblTipo.Text = "Incluye Tipo de Artículo";
             // 
             // cboTipo
             // 
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(326, 41);
+            this.cboTipo.Location = new System.Drawing.Point(348, 47);
             this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(127, 21);
+            this.cboTipo.Size = new System.Drawing.Size(133, 23);
             this.cboTipo.TabIndex = 3;
             this.cboTipo.SelectedIndexChanged += new System.EventHandler(this.cboTipo_SelectedIndexChanged);
             // 
             // lblArticulo
             // 
             this.lblArticulo.AutoSize = true;
-            this.lblArticulo.Location = new System.Drawing.Point(503, 45);
+            this.lblArticulo.Location = new System.Drawing.Point(487, 51);
             this.lblArticulo.Name = "lblArticulo";
-            this.lblArticulo.Size = new System.Drawing.Size(81, 13);
+            this.lblArticulo.Size = new System.Drawing.Size(88, 15);
             this.lblArticulo.TabIndex = 4;
             this.lblArticulo.Text = "Incluye Artículo";
             // 
             // cboArticulo
             // 
             this.cboArticulo.FormattingEnabled = true;
-            this.cboArticulo.Location = new System.Drawing.Point(590, 41);
+            this.cboArticulo.Location = new System.Drawing.Point(581, 47);
             this.cboArticulo.Name = "cboArticulo";
-            this.cboArticulo.Size = new System.Drawing.Size(127, 21);
+            this.cboArticulo.Size = new System.Drawing.Size(140, 23);
             this.cboArticulo.TabIndex = 5;
             // 
             // chkTodos
             // 
             this.chkTodos.AutoSize = true;
-            this.chkTodos.Location = new System.Drawing.Point(14, 82);
+            this.chkTodos.Location = new System.Drawing.Point(16, 84);
             this.chkTodos.Name = "chkTodos";
-            this.chkTodos.Size = new System.Drawing.Size(94, 17);
+            this.chkTodos.Size = new System.Drawing.Size(105, 19);
             this.chkTodos.TabIndex = 6;
             this.chkTodos.Text = "Mostrar Todos";
             this.chkTodos.UseVisualStyleBackColor = true;
@@ -133,11 +133,11 @@ namespace AppBTS.Presentacion
             this.IdMenu,
             this.NombreMenu,
             this.PcioUnitario});
-            this.dgvMenus.Location = new System.Drawing.Point(14, 137);
+            this.dgvMenus.Location = new System.Drawing.Point(10, 140);
             this.dgvMenus.Name = "dgvMenus";
             this.dgvMenus.ReadOnly = true;
             this.dgvMenus.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMenus.Size = new System.Drawing.Size(418, 188);
+            this.dgvMenus.Size = new System.Drawing.Size(488, 217);
             this.dgvMenus.TabIndex = 7;
             this.dgvMenus.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvMenus_CellClick);
             // 
@@ -165,17 +165,17 @@ namespace AppBTS.Presentacion
             // lblId
             // 
             this.lblId.AutoSize = true;
-            this.lblId.Location = new System.Drawing.Point(767, 45);
+            this.lblId.Location = new System.Drawing.Point(727, 51);
             this.lblId.Name = "lblId";
-            this.lblId.Size = new System.Drawing.Size(61, 13);
+            this.lblId.Size = new System.Drawing.Size(69, 15);
             this.lblId.TabIndex = 8;
             this.lblId.Text = "Id de Menú";
             // 
             // txtIdMenu
             // 
-            this.txtIdMenu.Location = new System.Drawing.Point(834, 41);
+            this.txtIdMenu.Location = new System.Drawing.Point(805, 48);
             this.txtIdMenu.Name = "txtIdMenu";
-            this.txtIdMenu.Size = new System.Drawing.Size(127, 20);
+            this.txtIdMenu.Size = new System.Drawing.Size(36, 21);
             this.txtIdMenu.TabIndex = 9;
             // 
             // btnConsultar
@@ -183,10 +183,11 @@ namespace AppBTS.Presentacion
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.ForeColor = System.Drawing.Color.Tan;
             this.btnConsultar.Image = global::AppBTS.Properties.Resources.buscar1;
-            this.btnConsultar.Location = new System.Drawing.Point(928, 73);
+            this.btnConsultar.Location = new System.Drawing.Point(127, 74);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(33, 33);
+            this.btnConsultar.Size = new System.Drawing.Size(38, 38);
             this.btnConsultar.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.btnConsultar, "Realizar consulta.");
             this.btnConsultar.UseVisualStyleBackColor = true;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
@@ -196,9 +197,9 @@ namespace AppBTS.Presentacion
             this.btnVisualizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnVisualizar.ForeColor = System.Drawing.Color.Tan;
             this.btnVisualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizar.Image")));
-            this.btnVisualizar.Location = new System.Drawing.Point(465, 207);
+            this.btnVisualizar.Location = new System.Drawing.Point(504, 217);
             this.btnVisualizar.Name = "btnVisualizar";
-            this.btnVisualizar.Size = new System.Drawing.Size(50, 49);
+            this.btnVisualizar.Size = new System.Drawing.Size(58, 57);
             this.btnVisualizar.TabIndex = 11;
             this.toolTip1.SetToolTip(this.btnVisualizar, "Inspeccionar Articulos del Menú seleccionado.");
             this.btnVisualizar.UseVisualStyleBackColor = false;
@@ -213,10 +214,10 @@ namespace AppBTS.Presentacion
             this.TipoArticulo,
             this.NombreArticulo,
             this.Cantidad});
-            this.dgvDetalles.Location = new System.Drawing.Point(547, 137);
+            this.dgvDetalles.Location = new System.Drawing.Point(568, 140);
             this.dgvDetalles.Name = "dgvDetalles";
             this.dgvDetalles.ReadOnly = true;
-            this.dgvDetalles.Size = new System.Drawing.Size(424, 188);
+            this.dgvDetalles.Size = new System.Drawing.Size(495, 217);
             this.dgvDetalles.TabIndex = 12;
             // 
             // TipoArticulo
@@ -245,10 +246,11 @@ namespace AppBTS.Presentacion
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.Tan;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(906, 331);
+            this.btnSalir.Location = new System.Drawing.Point(12, 361);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(65, 39);
+            this.btnSalir.Size = new System.Drawing.Size(76, 45);
             this.btnSalir.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.btnSalir, "Volver.");
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -257,10 +259,11 @@ namespace AppBTS.Presentacion
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.Tan;
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
-            this.btnEliminar.Location = new System.Drawing.Point(223, 331);
+            this.btnEliminar.Location = new System.Drawing.Point(254, 364);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(65, 39);
+            this.btnEliminar.Size = new System.Drawing.Size(76, 45);
             this.btnEliminar.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.btnEliminar, "Eliminar Menu seleccionado.");
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
@@ -269,10 +272,11 @@ namespace AppBTS.Presentacion
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificar.ForeColor = System.Drawing.Color.Tan;
             this.btnModificar.Image = ((System.Drawing.Image)(resources.GetObject("btnModificar.Image")));
-            this.btnModificar.Location = new System.Drawing.Point(294, 331);
+            this.btnModificar.Location = new System.Drawing.Point(337, 364);
             this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(65, 39);
+            this.btnModificar.Size = new System.Drawing.Size(76, 45);
             this.btnModificar.TabIndex = 15;
+            this.toolTip1.SetToolTip(this.btnModificar, "Editar Menu seleccionado.");
             this.btnModificar.UseVisualStyleBackColor = true;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
@@ -281,10 +285,11 @@ namespace AppBTS.Presentacion
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.ForeColor = System.Drawing.Color.Tan;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(365, 331);
+            this.btnNuevo.Location = new System.Drawing.Point(420, 364);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(65, 39);
+            this.btnNuevo.Size = new System.Drawing.Size(76, 45);
             this.btnNuevo.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo Menu.");
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -292,7 +297,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblTitulo.Location = new System.Drawing.Point(12, 9);
+            this.lblTitulo.Location = new System.Drawing.Point(14, 10);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(145, 22);
             this.lblTitulo.TabIndex = 17;
@@ -302,7 +307,7 @@ namespace AppBTS.Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(556, 115);
+            this.label1.Location = new System.Drawing.Point(572, 115);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 18);
             this.label1.TabIndex = 18;
@@ -312,7 +317,7 @@ namespace AppBTS.Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 115);
+            this.label2.Location = new System.Drawing.Point(16, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 18);
             this.label2.TabIndex = 19;
@@ -320,10 +325,10 @@ namespace AppBTS.Presentacion
             // 
             // frmConsultarMenus
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(982, 378);
+            this.ClientSize = new System.Drawing.Size(1077, 418);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTitulo);
@@ -344,6 +349,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(300, 100);
             this.Name = "frmConsultarMenus";

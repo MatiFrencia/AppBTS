@@ -65,6 +65,8 @@ namespace AppBTS.Presentacion
             this.btnSemana = new System.Windows.Forms.Button();
             this.btnMes = new System.Windows.Forms.Button();
             this.btnAño = new System.Windows.Forms.Button();
+            this.btnNow = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtTicketsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsTickets)).BeginInit();
             this.SuspendLayout();
@@ -88,7 +90,7 @@ namespace AppBTS.Presentacion
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppBTS.Reportes.rptTickets.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 269);
+            this.reportViewer1.Location = new System.Drawing.Point(15, 234);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(690, 371);
@@ -97,17 +99,17 @@ namespace AppBTS.Presentacion
             // dtpHoraHasta
             // 
             this.dtpHoraHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHoraHasta.Location = new System.Drawing.Point(505, 106);
+            this.dtpHoraHasta.Location = new System.Drawing.Point(334, 107);
             this.dtpHoraHasta.Margin = new System.Windows.Forms.Padding(4);
             this.dtpHoraHasta.Name = "dtpHoraHasta";
-            this.dtpHoraHasta.Size = new System.Drawing.Size(177, 20);
+            this.dtpHoraHasta.Size = new System.Drawing.Size(96, 20);
             this.dtpHoraHasta.TabIndex = 45;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label8.Location = new System.Drawing.Point(412, 106);
+            this.label8.Location = new System.Drawing.Point(241, 109);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 16);
@@ -117,10 +119,10 @@ namespace AppBTS.Presentacion
             // dtpHoraDesde
             // 
             this.dtpHoraDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHoraDesde.Location = new System.Drawing.Point(117, 106);
+            this.dtpHoraDesde.Location = new System.Drawing.Point(117, 107);
             this.dtpHoraDesde.Margin = new System.Windows.Forms.Padding(4);
             this.dtpHoraDesde.Name = "dtpHoraDesde";
-            this.dtpHoraDesde.Size = new System.Drawing.Size(177, 20);
+            this.dtpHoraDesde.Size = new System.Drawing.Size(96, 20);
             this.dtpHoraDesde.TabIndex = 43;
             // 
             // btnClear
@@ -129,11 +131,12 @@ namespace AppBTS.Presentacion
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(646, 228);
+            this.btnClear.Location = new System.Drawing.Point(669, 173);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(36, 35);
             this.btnClear.TabIndex = 42;
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTip1.SetToolTip(this.btnClear, "Limpiar filtros.");
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click_1);
             // 
@@ -151,7 +154,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.lblFechaHasta.Location = new System.Drawing.Point(405, 82);
+            this.lblFechaHasta.Location = new System.Drawing.Point(234, 82);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(88, 16);
             this.lblFechaHasta.TabIndex = 40;
@@ -161,7 +164,7 @@ namespace AppBTS.Presentacion
             // 
             this.txtHora.AutoSize = true;
             this.txtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.txtHora.Location = new System.Drawing.Point(24, 106);
+            this.txtHora.Location = new System.Drawing.Point(24, 109);
             this.txtHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(85, 16);
@@ -176,12 +179,13 @@ namespace AppBTS.Presentacion
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(505, 227);
+            this.btnConsultar.Location = new System.Drawing.Point(528, 172);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(134, 35);
             this.btnConsultar.TabIndex = 38;
             this.btnConsultar.Text = "Consultar";
+            this.toolTip1.SetToolTip(this.btnConsultar, "Realizar Consulta.");
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click_1);
             // 
@@ -191,7 +195,7 @@ namespace AppBTS.Presentacion
             this.cboTipoPago.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboTipoPago.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboTipoPago.FormattingEnabled = true;
-            this.cboTipoPago.Location = new System.Drawing.Point(505, 164);
+            this.cboTipoPago.Location = new System.Drawing.Point(334, 164);
             this.cboTipoPago.Margin = new System.Windows.Forms.Padding(4);
             this.cboTipoPago.Name = "cboTipoPago";
             this.cboTipoPago.Size = new System.Drawing.Size(177, 21);
@@ -203,7 +207,7 @@ namespace AppBTS.Presentacion
             this.cboMozo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboMozo.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboMozo.FormattingEnabled = true;
-            this.cboMozo.Location = new System.Drawing.Point(505, 198);
+            this.cboMozo.Location = new System.Drawing.Point(334, 195);
             this.cboMozo.Margin = new System.Windows.Forms.Padding(4);
             this.cboMozo.Name = "cboMozo";
             this.cboMozo.Size = new System.Drawing.Size(177, 21);
@@ -215,10 +219,10 @@ namespace AppBTS.Presentacion
             this.cboNroMesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroMesa.FormattingEnabled = true;
-            this.cboNroMesa.Location = new System.Drawing.Point(117, 199);
+            this.cboNroMesa.Location = new System.Drawing.Point(117, 195);
             this.cboNroMesa.Margin = new System.Windows.Forms.Padding(4);
             this.cboNroMesa.Name = "cboNroMesa";
-            this.cboNroMesa.Size = new System.Drawing.Size(177, 21);
+            this.cboNroMesa.Size = new System.Drawing.Size(96, 21);
             this.cboNroMesa.TabIndex = 30;
             // 
             // cboNroTicket
@@ -230,7 +234,7 @@ namespace AppBTS.Presentacion
             this.cboNroTicket.Location = new System.Drawing.Point(117, 164);
             this.cboNroTicket.Margin = new System.Windows.Forms.Padding(4);
             this.cboNroTicket.Name = "cboNroTicket";
-            this.cboNroTicket.Size = new System.Drawing.Size(177, 21);
+            this.cboNroTicket.Size = new System.Drawing.Size(96, 21);
             this.cboNroTicket.TabIndex = 29;
             // 
             // dtpFechaHasta
@@ -238,20 +242,20 @@ namespace AppBTS.Presentacion
             this.dtpFechaHasta.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
             this.dtpFechaHasta.Enabled = false;
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(505, 78);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(334, 80);
             this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(177, 20);
+            this.dtpFechaHasta.Size = new System.Drawing.Size(96, 20);
             this.dtpFechaHasta.TabIndex = 27;
             // 
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.Enabled = false;
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(117, 78);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(117, 80);
             this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(177, 20);
+            this.dtpFechaDesde.Size = new System.Drawing.Size(96, 20);
             this.dtpFechaDesde.TabIndex = 26;
             // 
             // label7
@@ -269,7 +273,7 @@ namespace AppBTS.Presentacion
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label6.Location = new System.Drawing.Point(399, 169);
+            this.label6.Location = new System.Drawing.Point(228, 166);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(94, 16);
@@ -280,7 +284,7 @@ namespace AppBTS.Presentacion
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label5.Location = new System.Drawing.Point(448, 199);
+            this.label5.Location = new System.Drawing.Point(277, 197);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 16);
@@ -291,7 +295,7 @@ namespace AppBTS.Presentacion
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label4.Location = new System.Drawing.Point(52, 204);
+            this.label4.Location = new System.Drawing.Point(52, 197);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 16);
@@ -302,7 +306,7 @@ namespace AppBTS.Presentacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label3.Location = new System.Drawing.Point(46, 169);
+            this.label3.Location = new System.Drawing.Point(46, 166);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 16);
@@ -323,7 +327,7 @@ namespace AppBTS.Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label2.Location = new System.Drawing.Point(435, 137);
+            this.label2.Location = new System.Drawing.Point(264, 137);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 16);
@@ -336,30 +340,34 @@ namespace AppBTS.Presentacion
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(646, 649);
+            this.btnSalir.Location = new System.Drawing.Point(19, 611);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(53, 40);
+            this.btnSalir.Size = new System.Drawing.Size(56, 50);
             this.btnSalir.TabIndex = 50;
+            this.toolTip1.SetToolTip(this.btnSalir, "Volver.");
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click_1);
             // 
             // txtDesde
             // 
-            this.txtDesde.Location = new System.Drawing.Point(117, 132);
+            this.txtDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesde.Location = new System.Drawing.Point(117, 135);
             this.txtDesde.Name = "txtDesde";
-            this.txtDesde.Size = new System.Drawing.Size(177, 20);
+            this.txtDesde.Size = new System.Drawing.Size(96, 21);
             this.txtDesde.TabIndex = 51;
+            this.toolTip1.SetToolTip(this.txtDesde, "Monto minimo.");
             // 
             // txtHasta
             // 
-            this.txtHasta.Location = new System.Drawing.Point(505, 132);
+            this.txtHasta.Location = new System.Drawing.Point(334, 135);
             this.txtHasta.Name = "txtHasta";
-            this.txtHasta.Size = new System.Drawing.Size(177, 20);
+            this.txtHasta.Size = new System.Drawing.Size(96, 20);
             this.txtHasta.TabIndex = 52;
+            this.toolTip1.SetToolTip(this.txtHasta, "Monto maximo.");
             // 
             // btnPerso
             // 
-            this.btnPerso.Location = new System.Drawing.Point(343, 49);
+            this.btnPerso.Location = new System.Drawing.Point(353, 49);
             this.btnPerso.Name = "btnPerso";
             this.btnPerso.Size = new System.Drawing.Size(87, 23);
             this.btnPerso.TabIndex = 70;
@@ -369,7 +377,7 @@ namespace AppBTS.Presentacion
             // 
             // btnDia
             // 
-            this.btnDia.Location = new System.Drawing.Point(262, 49);
+            this.btnDia.Location = new System.Drawing.Point(272, 49);
             this.btnDia.Name = "btnDia";
             this.btnDia.Size = new System.Drawing.Size(75, 23);
             this.btnDia.TabIndex = 69;
@@ -379,7 +387,7 @@ namespace AppBTS.Presentacion
             // 
             // btnSemana
             // 
-            this.btnSemana.Location = new System.Drawing.Point(181, 49);
+            this.btnSemana.Location = new System.Drawing.Point(191, 49);
             this.btnSemana.Name = "btnSemana";
             this.btnSemana.Size = new System.Drawing.Size(75, 23);
             this.btnSemana.TabIndex = 68;
@@ -389,7 +397,7 @@ namespace AppBTS.Presentacion
             // 
             // btnMes
             // 
-            this.btnMes.Location = new System.Drawing.Point(98, 49);
+            this.btnMes.Location = new System.Drawing.Point(108, 49);
             this.btnMes.Name = "btnMes";
             this.btnMes.Size = new System.Drawing.Size(75, 23);
             this.btnMes.TabIndex = 67;
@@ -399,7 +407,7 @@ namespace AppBTS.Presentacion
             // 
             // btnAño
             // 
-            this.btnAño.Location = new System.Drawing.Point(17, 49);
+            this.btnAño.Location = new System.Drawing.Point(27, 49);
             this.btnAño.Name = "btnAño";
             this.btnAño.Size = new System.Drawing.Size(75, 23);
             this.btnAño.TabIndex = 66;
@@ -407,12 +415,30 @@ namespace AppBTS.Presentacion
             this.btnAño.UseVisualStyleBackColor = true;
             this.btnAño.Click += new System.EventHandler(this.btnAño_Click);
             // 
+            // btnNow
+            // 
+            this.btnNow.BackColor = System.Drawing.Color.Tan;
+            this.btnNow.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnNow.BackgroundImage")));
+            this.btnNow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnNow.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNow.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNow.ForeColor = System.Drawing.Color.Tan;
+            this.btnNow.Location = new System.Drawing.Point(431, 107);
+            this.btnNow.Name = "btnNow";
+            this.btnNow.Size = new System.Drawing.Size(26, 20);
+            this.btnNow.TabIndex = 71;
+            this.toolTip1.SetToolTip(this.btnNow, "Hora actual.");
+            this.btnNow.UseVisualStyleBackColor = false;
+            this.btnNow.Click += new System.EventHandler(this.btnNow_Click);
+            // 
             // frmReporteTickets
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(714, 691);
+            this.ClientSize = new System.Drawing.Size(721, 665);
+            this.Controls.Add(this.dtpHoraHasta);
+            this.Controls.Add(this.btnNow);
             this.Controls.Add(this.btnPerso);
             this.Controls.Add(this.btnDia);
             this.Controls.Add(this.btnSemana);
@@ -423,7 +449,6 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dtpHoraHasta);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dtpHoraDesde);
             this.Controls.Add(this.btnClear);
@@ -489,5 +514,7 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.Button btnSemana;
         private System.Windows.Forms.Button btnMes;
         private System.Windows.Forms.Button btnAño;
+        private System.Windows.Forms.Button btnNow;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

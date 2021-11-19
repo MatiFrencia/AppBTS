@@ -114,26 +114,26 @@ namespace AppBTS
 
         private void btnRTickets_Click(object sender, EventArgs e)
         {
+            botonesReports(false);
             frmReporteTickets frt = new frmReporteTickets();
             frt.ShowDialog();
             frt.Dispose();
-            botonesReports(false);
         }
 
         private void btnRMenus_Click(object sender, EventArgs e)
         {
+            botonesReports(false);
             frmReporteMenus frm = new frmReporteMenus();
             frm.ShowDialog();
             frm.Dispose();
-            botonesReports(false);
         }
 
         private void btnRHorarios_Click(object sender, EventArgs e)
         {
+            botonesReports(false);
             frmReporteHoras frh = new frmReporteHoras();
             frh.ShowDialog();
             frh.Dispose();
-            botonesReports(false);
         }
     }
  }

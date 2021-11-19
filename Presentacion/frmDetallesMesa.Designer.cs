@@ -34,6 +34,9 @@ namespace AppBTS.Presentacion
             this.reservasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.reservasTableAdapter = new AppBTS.BAR_PAVDataSetTableAdapters.ReservasTableAdapter();
             this.dgvReservasMesa = new System.Windows.Forms.DataGridView();
+            this.lblTituloDetallesMesa = new System.Windows.Forms.Label();
+            this.btnOkey = new System.Windows.Forms.Button();
+            this.btnBorrarMesa = new System.Windows.Forms.Button();
             this.nroReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nroMesa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fechaReserva = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,9 +45,6 @@ namespace AppBTS.Presentacion
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cantidadComensales = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.borrado = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.lblTituloDetallesMesa = new System.Windows.Forms.Label();
-            this.btnOkey = new System.Windows.Forms.Button();
-            this.btnBorrarMesa = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.bAR_PAVDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.reservasBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReservasMesa)).BeginInit();
@@ -78,65 +78,17 @@ namespace AppBTS.Presentacion
             this.telefono,
             this.cantidadComensales,
             this.borrado});
-            this.dgvReservasMesa.Location = new System.Drawing.Point(12, 56);
+            this.dgvReservasMesa.Location = new System.Drawing.Point(14, 65);
             this.dgvReservasMesa.Name = "dgvReservasMesa";
             this.dgvReservasMesa.ReadOnly = true;
-            this.dgvReservasMesa.Size = new System.Drawing.Size(820, 318);
+            this.dgvReservasMesa.Size = new System.Drawing.Size(823, 367);
             this.dgvReservasMesa.TabIndex = 0;
-            // 
-            // nroReserva
-            // 
-            this.nroReserva.HeaderText = "# Reserva";
-            this.nroReserva.Name = "nroReserva";
-            this.nroReserva.ReadOnly = true;
-            // 
-            // nroMesa
-            // 
-            this.nroMesa.HeaderText = "# Mesa";
-            this.nroMesa.Name = "nroMesa";
-            this.nroMesa.ReadOnly = true;
-            // 
-            // fechaReserva
-            // 
-            this.fechaReserva.HeaderText = "Fecha de Reserva";
-            this.fechaReserva.Name = "fechaReserva";
-            this.fechaReserva.ReadOnly = true;
-            // 
-            // horaReserva
-            // 
-            this.horaReserva.HeaderText = "Hora de Reserva";
-            this.horaReserva.Name = "horaReserva";
-            this.horaReserva.ReadOnly = true;
-            // 
-            // nombreCliente
-            // 
-            this.nombreCliente.HeaderText = "Cliente";
-            this.nombreCliente.Name = "nombreCliente";
-            this.nombreCliente.ReadOnly = true;
-            // 
-            // telefono
-            // 
-            this.telefono.HeaderText = "Teléfono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            // 
-            // cantidadComensales
-            // 
-            this.cantidadComensales.HeaderText = "Comensales";
-            this.cantidadComensales.Name = "cantidadComensales";
-            this.cantidadComensales.ReadOnly = true;
-            // 
-            // borrado
-            // 
-            this.borrado.HeaderText = "Borrado";
-            this.borrado.Name = "borrado";
-            this.borrado.ReadOnly = true;
             // 
             // lblTituloDetallesMesa
             // 
             this.lblTituloDetallesMesa.AutoSize = true;
             this.lblTituloDetallesMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTituloDetallesMesa.Location = new System.Drawing.Point(12, 19);
+            this.lblTituloDetallesMesa.Location = new System.Drawing.Point(14, 22);
             this.lblTituloDetallesMesa.Name = "lblTituloDetallesMesa";
             this.lblTituloDetallesMesa.Size = new System.Drawing.Size(460, 25);
             this.lblTituloDetallesMesa.TabIndex = 1;
@@ -144,34 +96,96 @@ namespace AppBTS.Presentacion
             // 
             // btnOkey
             // 
-            this.btnOkey.Location = new System.Drawing.Point(746, 393);
+            this.btnOkey.BackColor = System.Drawing.Color.Tan;
+            this.btnOkey.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOkey.Location = new System.Drawing.Point(742, 443);
             this.btnOkey.Name = "btnOkey";
-            this.btnOkey.Size = new System.Drawing.Size(68, 27);
+            this.btnOkey.Size = new System.Drawing.Size(79, 31);
             this.btnOkey.TabIndex = 2;
-            this.btnOkey.Text = "OK";
-            this.btnOkey.UseVisualStyleBackColor = true;
+            this.btnOkey.Text = "Volver";
+            this.btnOkey.UseVisualStyleBackColor = false;
             this.btnOkey.Click += new System.EventHandler(this.btnOkey_Click);
             // 
             // btnBorrarMesa
             // 
-            this.btnBorrarMesa.Location = new System.Drawing.Point(36, 393);
+            this.btnBorrarMesa.BackColor = System.Drawing.Color.Tan;
+            this.btnBorrarMesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBorrarMesa.Location = new System.Drawing.Point(40, 447);
             this.btnBorrarMesa.Name = "btnBorrarMesa";
-            this.btnBorrarMesa.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrarMesa.Size = new System.Drawing.Size(87, 27);
             this.btnBorrarMesa.TabIndex = 3;
             this.btnBorrarMesa.Text = "Borrar Mesa";
-            this.btnBorrarMesa.UseVisualStyleBackColor = true;
+            this.btnBorrarMesa.UseVisualStyleBackColor = false;
             this.btnBorrarMesa.Click += new System.EventHandler(this.btnBorrarMesa_Click);
+            // 
+            // nroReserva
+            // 
+            this.nroReserva.HeaderText = "# Reserva";
+            this.nroReserva.Name = "nroReserva";
+            this.nroReserva.ReadOnly = true;
+            this.nroReserva.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nroMesa
+            // 
+            this.nroMesa.HeaderText = "# Mesa";
+            this.nroMesa.Name = "nroMesa";
+            this.nroMesa.ReadOnly = true;
+            this.nroMesa.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.nroMesa.Width = 80;
+            // 
+            // fechaReserva
+            // 
+            this.fechaReserva.HeaderText = "Fecha de Reserva";
+            this.fechaReserva.Name = "fechaReserva";
+            this.fechaReserva.ReadOnly = true;
+            this.fechaReserva.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // horaReserva
+            // 
+            this.horaReserva.HeaderText = "Hora de Reserva";
+            this.horaReserva.Name = "horaReserva";
+            this.horaReserva.ReadOnly = true;
+            this.horaReserva.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // nombreCliente
+            // 
+            this.nombreCliente.HeaderText = "Cliente";
+            this.nombreCliente.Name = "nombreCliente";
+            this.nombreCliente.ReadOnly = true;
+            this.nombreCliente.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // telefono
+            // 
+            this.telefono.HeaderText = "Teléfono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            this.telefono.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // cantidadComensales
+            // 
+            this.cantidadComensales.HeaderText = "Comensales";
+            this.cantidadComensales.Name = "cantidadComensales";
+            this.cantidadComensales.ReadOnly = true;
+            this.cantidadComensales.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // borrado
+            // 
+            this.borrado.HeaderText = "Borrado";
+            this.borrado.Name = "borrado";
+            this.borrado.ReadOnly = true;
+            this.borrado.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
             // frmDetallesMesa
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(844, 438);
+            this.ClientSize = new System.Drawing.Size(858, 489);
             this.Controls.Add(this.btnBorrarMesa);
             this.Controls.Add(this.btnOkey);
             this.Controls.Add(this.lblTituloDetallesMesa);
             this.Controls.Add(this.dgvReservasMesa);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDetallesMesa";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
@@ -189,6 +203,9 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.BindingSource reservasBindingSource;
         private BAR_PAVDataSetTableAdapters.ReservasTableAdapter reservasTableAdapter;
         private System.Windows.Forms.DataGridView dgvReservasMesa;
+        private System.Windows.Forms.Label lblTituloDetallesMesa;
+        private System.Windows.Forms.Button btnOkey;
+        private System.Windows.Forms.Button btnBorrarMesa;
         private System.Windows.Forms.DataGridViewTextBoxColumn nroReserva;
         private System.Windows.Forms.DataGridViewTextBoxColumn nroMesa;
         private System.Windows.Forms.DataGridViewTextBoxColumn fechaReserva;
@@ -197,8 +214,5 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn cantidadComensales;
         private System.Windows.Forms.DataGridViewCheckBoxColumn borrado;
-        private System.Windows.Forms.Label lblTituloDetallesMesa;
-        private System.Windows.Forms.Button btnOkey;
-        private System.Windows.Forms.Button btnBorrarMesa;
     }
 }

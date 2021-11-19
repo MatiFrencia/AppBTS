@@ -23,6 +23,7 @@ namespace AppBTS.Presentacion
         {
             visualizar(true);
             CargarCombo(cboMenu, miGestorMenus.RecuperarTodos(), 1);
+            //no debe cargarlo al iniciar el frm para optimizar el tiempo de carga del mismo
             //this.reportViewer1.RefreshReport();
         }
         private void btnAño_Click(object sender, EventArgs e)

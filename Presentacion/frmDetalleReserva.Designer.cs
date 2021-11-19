@@ -51,70 +51,70 @@ namespace AppBTS.Presentacion
             // lblNroReserva
             // 
             this.lblNroReserva.AutoSize = true;
-            this.lblNroReserva.Location = new System.Drawing.Point(118, 53);
+            this.lblNroReserva.Location = new System.Drawing.Point(118, 48);
             this.lblNroReserva.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNroReserva.Name = "lblNroReserva";
-            this.lblNroReserva.Size = new System.Drawing.Size(85, 20);
+            this.lblNroReserva.Size = new System.Drawing.Size(79, 18);
             this.lblNroReserva.TabIndex = 0;
             this.lblNroReserva.Text = "# Reserva:";
             // 
             // lblNroMesa
             // 
             this.lblNroMesa.AutoSize = true;
-            this.lblNroMesa.Location = new System.Drawing.Point(138, 105);
+            this.lblNroMesa.Location = new System.Drawing.Point(136, 95);
             this.lblNroMesa.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNroMesa.Name = "lblNroMesa";
-            this.lblNroMesa.Size = new System.Drawing.Size(65, 20);
+            this.lblNroMesa.Size = new System.Drawing.Size(61, 18);
             this.lblNroMesa.TabIndex = 1;
             this.lblNroMesa.Text = "# Mesa:";
             // 
             // lblFechaReserva
             // 
             this.lblFechaReserva.AutoSize = true;
-            this.lblFechaReserva.Location = new System.Drawing.Point(60, 157);
+            this.lblFechaReserva.Location = new System.Drawing.Point(65, 138);
             this.lblFechaReserva.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFechaReserva.Name = "lblFechaReserva";
-            this.lblFechaReserva.Size = new System.Drawing.Size(143, 20);
+            this.lblFechaReserva.Size = new System.Drawing.Size(132, 18);
             this.lblFechaReserva.TabIndex = 2;
             this.lblFechaReserva.Text = "Fecha de Reserva:";
             // 
             // lblHoraReserva
             // 
             this.lblHoraReserva.AutoSize = true;
-            this.lblHoraReserva.Location = new System.Drawing.Point(70, 209);
+            this.lblHoraReserva.Location = new System.Drawing.Point(73, 180);
             this.lblHoraReserva.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblHoraReserva.Name = "lblHoraReserva";
-            this.lblHoraReserva.Size = new System.Drawing.Size(133, 20);
+            this.lblHoraReserva.Size = new System.Drawing.Size(124, 18);
             this.lblHoraReserva.TabIndex = 3;
             this.lblHoraReserva.Text = "Hora de Reserva:";
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Location = new System.Drawing.Point(56, 261);
+            this.lblCliente.Location = new System.Drawing.Point(59, 224);
             this.lblCliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(147, 20);
+            this.lblCliente.Size = new System.Drawing.Size(138, 18);
             this.lblCliente.TabIndex = 4;
             this.lblCliente.Text = "Nombre del Cliente:";
             // 
             // lblTelefono
             // 
             this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(128, 313);
+            this.lblTelefono.Location = new System.Drawing.Point(127, 271);
             this.lblTelefono.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(75, 20);
+            this.lblTelefono.Size = new System.Drawing.Size(70, 18);
             this.lblTelefono.TabIndex = 5;
             this.lblTelefono.Text = "Telefono:";
             // 
             // lblCantidadComensales
             // 
             this.lblCantidadComensales.AutoSize = true;
-            this.lblCantidadComensales.Location = new System.Drawing.Point(15, 365);
+            this.lblCantidadComensales.Location = new System.Drawing.Point(22, 318);
             this.lblCantidadComensales.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCantidadComensales.Name = "lblCantidadComensales";
-            this.lblCantidadComensales.Size = new System.Drawing.Size(188, 20);
+            this.lblCantidadComensales.Size = new System.Drawing.Size(175, 18);
             this.lblCantidadComensales.TabIndex = 6;
             this.lblCantidadComensales.Text = "Cantidad de comensales:";
             // 
@@ -123,10 +123,10 @@ namespace AppBTS.Presentacion
             this.txtbCantidadComensales.BackColor = System.Drawing.Color.Tan;
             this.txtbCantidadComensales.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbCantidadComensales.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtbCantidadComensales.Location = new System.Drawing.Point(207, 362);
-            this.txtbCantidadComensales.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbCantidadComensales.Location = new System.Drawing.Point(207, 315);
+            this.txtbCantidadComensales.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbCantidadComensales.Name = "txtbCantidadComensales";
-            this.txtbCantidadComensales.Size = new System.Drawing.Size(28, 26);
+            this.txtbCantidadComensales.Size = new System.Drawing.Size(28, 24);
             this.txtbCantidadComensales.TabIndex = 6;
             // 
             // txtbTelefono
@@ -134,10 +134,10 @@ namespace AppBTS.Presentacion
             this.txtbTelefono.BackColor = System.Drawing.Color.Tan;
             this.txtbTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbTelefono.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtbTelefono.Location = new System.Drawing.Point(207, 310);
-            this.txtbTelefono.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbTelefono.Location = new System.Drawing.Point(207, 268);
+            this.txtbTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbTelefono.Name = "txtbTelefono";
-            this.txtbTelefono.Size = new System.Drawing.Size(106, 26);
+            this.txtbTelefono.Size = new System.Drawing.Size(106, 24);
             this.txtbTelefono.TabIndex = 5;
             // 
             // txtbCliente
@@ -145,10 +145,10 @@ namespace AppBTS.Presentacion
             this.txtbCliente.BackColor = System.Drawing.Color.Tan;
             this.txtbCliente.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbCliente.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtbCliente.Location = new System.Drawing.Point(207, 258);
-            this.txtbCliente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbCliente.Location = new System.Drawing.Point(207, 221);
+            this.txtbCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbCliente.Name = "txtbCliente";
-            this.txtbCliente.Size = new System.Drawing.Size(148, 26);
+            this.txtbCliente.Size = new System.Drawing.Size(148, 24);
             this.txtbCliente.TabIndex = 4;
             // 
             // txtbNumeroMesa
@@ -156,10 +156,10 @@ namespace AppBTS.Presentacion
             this.txtbNumeroMesa.BackColor = System.Drawing.Color.Tan;
             this.txtbNumeroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbNumeroMesa.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtbNumeroMesa.Location = new System.Drawing.Point(207, 102);
-            this.txtbNumeroMesa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbNumeroMesa.Location = new System.Drawing.Point(207, 92);
+            this.txtbNumeroMesa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbNumeroMesa.Name = "txtbNumeroMesa";
-            this.txtbNumeroMesa.Size = new System.Drawing.Size(28, 26);
+            this.txtbNumeroMesa.Size = new System.Drawing.Size(28, 24);
             this.txtbNumeroMesa.TabIndex = 1;
             // 
             // txtbNumeroReserva
@@ -167,20 +167,20 @@ namespace AppBTS.Presentacion
             this.txtbNumeroReserva.BackColor = System.Drawing.Color.Tan;
             this.txtbNumeroReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.txtbNumeroReserva.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.txtbNumeroReserva.Location = new System.Drawing.Point(207, 50);
-            this.txtbNumeroReserva.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtbNumeroReserva.Location = new System.Drawing.Point(207, 45);
+            this.txtbNumeroReserva.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtbNumeroReserva.Name = "txtbNumeroReserva";
-            this.txtbNumeroReserva.Size = new System.Drawing.Size(41, 26);
+            this.txtbNumeroReserva.Size = new System.Drawing.Size(41, 24);
             this.txtbNumeroReserva.TabIndex = 0;
             // 
             // btnAceptar
             // 
             this.btnAceptar.BackColor = System.Drawing.Color.Tan;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAceptar.Location = new System.Drawing.Point(60, 432);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnAceptar.Location = new System.Drawing.Point(68, 370);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(112, 35);
+            this.btnAceptar.Size = new System.Drawing.Size(95, 32);
             this.btnAceptar.TabIndex = 7;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = false;
@@ -192,7 +192,7 @@ namespace AppBTS.Presentacion
             this.lbTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbTitulo.Location = new System.Drawing.Point(13, 9);
+            this.lbTitulo.Location = new System.Drawing.Point(14, 8);
             this.lbTitulo.Name = "lbTitulo";
             this.lbTitulo.Size = new System.Drawing.Size(165, 25);
             this.lbTitulo.TabIndex = 17;
@@ -202,9 +202,10 @@ namespace AppBTS.Presentacion
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(207, 432);
+            this.btnCancelar.Location = new System.Drawing.Point(218, 370);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(112, 35);
+            this.btnCancelar.Size = new System.Drawing.Size(95, 32);
             this.btnCancelar.TabIndex = 18;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -213,25 +214,27 @@ namespace AppBTS.Presentacion
             // dtpFechaReserva
             // 
             this.dtpFechaReserva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaReserva.Location = new System.Drawing.Point(207, 157);
+            this.dtpFechaReserva.Location = new System.Drawing.Point(207, 135);
+            this.dtpFechaReserva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpFechaReserva.Name = "dtpFechaReserva";
-            this.dtpFechaReserva.Size = new System.Drawing.Size(148, 26);
+            this.dtpFechaReserva.Size = new System.Drawing.Size(148, 24);
             this.dtpFechaReserva.TabIndex = 19;
             // 
             // dtpHoraReserva
             // 
             this.dtpHoraReserva.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHoraReserva.Location = new System.Drawing.Point(207, 209);
+            this.dtpHoraReserva.Location = new System.Drawing.Point(207, 177);
+            this.dtpHoraReserva.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dtpHoraReserva.Name = "dtpHoraReserva";
-            this.dtpHoraReserva.Size = new System.Drawing.Size(148, 26);
+            this.dtpHoraReserva.Size = new System.Drawing.Size(148, 24);
             this.dtpHoraReserva.TabIndex = 20;
             // 
             // frmDetalleReserva
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(371, 491);
+            this.ClientSize = new System.Drawing.Size(371, 432);
             this.Controls.Add(this.dtpHoraReserva);
             this.Controls.Add(this.dtpFechaReserva);
             this.Controls.Add(this.btnCancelar);
@@ -249,10 +252,10 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblFechaReserva);
             this.Controls.Add(this.lblNroMesa);
             this.Controls.Add(this.lblNroReserva);
-            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Location = new System.Drawing.Point(1400, 100);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmDetalleReserva";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

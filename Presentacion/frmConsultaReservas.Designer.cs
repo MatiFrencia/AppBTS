@@ -110,7 +110,7 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox1.Size = new System.Drawing.Size(894, 517);
+            this.groupBox1.Size = new System.Drawing.Size(894, 467);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Criterios";
@@ -118,7 +118,7 @@
             // dtpHoraHasta
             // 
             this.dtpHoraHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHoraHasta.Location = new System.Drawing.Point(705, 64);
+            this.dtpHoraHasta.Location = new System.Drawing.Point(648, 53);
             this.dtpHoraHasta.Margin = new System.Windows.Forms.Padding(4);
             this.dtpHoraHasta.Name = "dtpHoraHasta";
             this.dtpHoraHasta.Size = new System.Drawing.Size(177, 22);
@@ -127,7 +127,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(612, 64);
+            this.label8.Location = new System.Drawing.Point(555, 56);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(80, 16);
@@ -137,7 +137,7 @@
             // dtpHoraDesde
             // 
             this.dtpHoraDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpHoraDesde.Location = new System.Drawing.Point(201, 64);
+            this.dtpHoraDesde.Location = new System.Drawing.Point(145, 53);
             this.dtpHoraDesde.Margin = new System.Windows.Forms.Padding(4);
             this.dtpHoraDesde.Name = "dtpHoraDesde";
             this.dtpHoraDesde.Size = new System.Drawing.Size(177, 22);
@@ -149,18 +149,19 @@
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(828, 184);
+            this.btnClear.Location = new System.Drawing.Point(828, 151);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(36, 35);
             this.btnClear.TabIndex = 22;
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolTip1.SetToolTip(this.btnClear, "Limpiar filtros.");
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // lblFechaDesde
             // 
             this.lblFechaDesde.AutoSize = true;
-            this.lblFechaDesde.Location = new System.Drawing.Point(100, 38);
+            this.lblFechaDesde.Location = new System.Drawing.Point(43, 26);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(93, 16);
             this.lblFechaDesde.TabIndex = 21;
@@ -169,7 +170,7 @@
             // lblFechaHasta
             // 
             this.lblFechaHasta.AutoSize = true;
-            this.lblFechaHasta.Location = new System.Drawing.Point(604, 38);
+            this.lblFechaHasta.Location = new System.Drawing.Point(547, 26);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(88, 16);
             this.lblFechaHasta.TabIndex = 20;
@@ -178,7 +179,7 @@
             // txtHora
             // 
             this.txtHora.AutoSize = true;
-            this.txtHora.Location = new System.Drawing.Point(108, 64);
+            this.txtHora.Location = new System.Drawing.Point(51, 56);
             this.txtHora.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txtHora.Name = "txtHora";
             this.txtHora.Size = new System.Drawing.Size(85, 16);
@@ -201,7 +202,7 @@
             this.telefono,
             this.cantidadComensales,
             this.borrado});
-            this.dgvReservas.Location = new System.Drawing.Point(5, 226);
+            this.dgvReservas.Location = new System.Drawing.Point(3, 193);
             this.dgvReservas.Name = "dgvReservas";
             this.dgvReservas.ReadOnly = true;
             this.dgvReservas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -277,12 +278,13 @@
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(687, 184);
+            this.btnConsultar.Location = new System.Drawing.Point(687, 151);
             this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(134, 35);
             this.btnConsultar.TabIndex = 14;
             this.btnConsultar.Text = "Consultar";
+            this.toolTip1.SetToolTip(this.btnConsultar, "Realizar consulta.");
             this.btnConsultar.UseVisualStyleBackColor = false;
             this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
             // 
@@ -292,7 +294,7 @@
             this.cboComensales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboComensales.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboComensales.FormattingEnabled = true;
-            this.cboComensales.Location = new System.Drawing.Point(704, 137);
+            this.cboComensales.Location = new System.Drawing.Point(647, 115);
             this.cboComensales.Margin = new System.Windows.Forms.Padding(4);
             this.cboComensales.Name = "cboComensales";
             this.cboComensales.Size = new System.Drawing.Size(177, 24);
@@ -304,7 +306,7 @@
             this.cboTelefono.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboTelefono.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboTelefono.FormattingEnabled = true;
-            this.cboTelefono.Location = new System.Drawing.Point(704, 96);
+            this.cboTelefono.Location = new System.Drawing.Point(647, 83);
             this.cboTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.cboTelefono.Name = "cboTelefono";
             this.cboTelefono.Size = new System.Drawing.Size(177, 24);
@@ -316,7 +318,7 @@
             this.cboNombreCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNombreCliente.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNombreCliente.FormattingEnabled = true;
-            this.cboNombreCliente.Location = new System.Drawing.Point(201, 169);
+            this.cboNombreCliente.Location = new System.Drawing.Point(146, 147);
             this.cboNombreCliente.Margin = new System.Windows.Forms.Padding(4);
             this.cboNombreCliente.Name = "cboNombreCliente";
             this.cboNombreCliente.Size = new System.Drawing.Size(177, 24);
@@ -328,7 +330,7 @@
             this.cboNroMesa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroMesa.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroMesa.FormattingEnabled = true;
-            this.cboNroMesa.Location = new System.Drawing.Point(201, 137);
+            this.cboNroMesa.Location = new System.Drawing.Point(145, 115);
             this.cboNroMesa.Margin = new System.Windows.Forms.Padding(4);
             this.cboNroMesa.Name = "cboNroMesa";
             this.cboNroMesa.Size = new System.Drawing.Size(177, 24);
@@ -340,7 +342,7 @@
             this.cboNroReserva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboNroReserva.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboNroReserva.FormattingEnabled = true;
-            this.cboNroReserva.Location = new System.Drawing.Point(201, 96);
+            this.cboNroReserva.Location = new System.Drawing.Point(145, 83);
             this.cboNroReserva.Margin = new System.Windows.Forms.Padding(4);
             this.cboNroReserva.Name = "cboNroReserva";
             this.cboNroReserva.Size = new System.Drawing.Size(177, 24);
@@ -350,7 +352,7 @@
             // 
             this.dtpFechaHasta.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(704, 32);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(647, 23);
             this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
             this.dtpFechaHasta.Size = new System.Drawing.Size(177, 22);
@@ -359,7 +361,7 @@
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(201, 34);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(144, 23);
             this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
             this.dtpFechaDesde.Size = new System.Drawing.Size(177, 22);
@@ -368,7 +370,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(606, 141);
+            this.label7.Location = new System.Drawing.Point(549, 119);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 16);
@@ -378,7 +380,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(627, 102);
+            this.label6.Location = new System.Drawing.Point(570, 87);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(65, 16);
@@ -388,7 +390,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(91, 173);
+            this.label5.Location = new System.Drawing.Point(34, 151);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(104, 16);
@@ -398,7 +400,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(139, 140);
+            this.label4.Location = new System.Drawing.Point(82, 119);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 16);
@@ -408,7 +410,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(120, 100);
+            this.label3.Location = new System.Drawing.Point(63, 87);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 16);
@@ -426,7 +428,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(94, 39);
+            this.label1.Location = new System.Drawing.Point(37, 28);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(0, 16);
@@ -448,12 +450,12 @@
             this.btnNuevo.FlatAppearance.BorderSize = 0;
             this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
-            this.btnNuevo.Location = new System.Drawing.Point(21, 566);
+            this.btnNuevo.Location = new System.Drawing.Point(853, 524);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(72, 56);
+            this.btnNuevo.Size = new System.Drawing.Size(53, 40);
             this.btnNuevo.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.btnNuevo, "Nuevo");
+            this.toolTip1.SetToolTip(this.btnNuevo, "Nueva Reserva.");
             this.btnNuevo.UseVisualStyleBackColor = false;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
@@ -490,10 +492,11 @@
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(840, 574);
+            this.btnSalir.Location = new System.Drawing.Point(15, 524);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(53, 40);
             this.btnSalir.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btnSalir, "Volver.");
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -504,11 +507,12 @@
             this.btnBorrar.FlatAppearance.BorderSize = 0;
             this.btnBorrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrar.Image = global::AppBTS.Properties.Resources.delete_exit;
-            this.btnBorrar.Location = new System.Drawing.Point(251, 577);
+            this.btnBorrar.Location = new System.Drawing.Point(737, 524);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(0);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(53, 40);
             this.btnBorrar.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.btnBorrar, "Eliminar Reserva seleccionada.");
             this.btnBorrar.UseVisualStyleBackColor = false;
             this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
             // 
@@ -517,10 +521,11 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.Color.Tan;
             this.btnEditar.Image = global::AppBTS.Properties.Resources.documentediting;
-            this.btnEditar.Location = new System.Drawing.Point(135, 574);
+            this.btnEditar.Location = new System.Drawing.Point(793, 524);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(53, 40);
             this.btnEditar.TabIndex = 2;
+            this.toolTip1.SetToolTip(this.btnEditar, "Editar Reserva seleccionada.");
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
@@ -529,10 +534,11 @@
             this.btnDetalle.FlatAppearance.BorderSize = 0;
             this.btnDetalle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDetalle.Image = global::AppBTS.Properties.Resources.search_file;
-            this.btnDetalle.Location = new System.Drawing.Point(446, 574);
+            this.btnDetalle.Location = new System.Drawing.Point(627, 524);
             this.btnDetalle.Name = "btnDetalle";
             this.btnDetalle.Size = new System.Drawing.Size(53, 40);
             this.btnDetalle.TabIndex = 4;
+            this.toolTip1.SetToolTip(this.btnDetalle, "Consultar Reserva seleccionada.");
             this.btnDetalle.UseVisualStyleBackColor = false;
             this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
@@ -541,7 +547,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(914, 621);
+            this.ClientSize = new System.Drawing.Size(914, 577);
             this.Controls.Add(this.btnDetalle);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnBorrar);

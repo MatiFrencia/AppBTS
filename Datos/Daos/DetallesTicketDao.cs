@@ -33,7 +33,7 @@ namespace AppBTS.Datos.Daos
         }
         public DataTable RecuperarTodosConParametros(string idMenu, string fechaDesde, string fechaHasta)
         {
-            string consulta = "SELECT t.fecha as fechaT,d.orden,m.nombre as nombreM, d.cantidad, d.pcioUnitario, d.borrado, d.descuento " +
+            string consulta = "SET DATEFORMAT 'YMD' \nSELECT t.fecha as fechaT,d.orden,m.nombre as nombreM, d.cantidad, d.pcioUnitario, d.borrado, d.descuento " +
                 " FROM DetallesTicket d, Tickets t, Menus m" +
                 " WHERE d.nroTicket = t.nroTicket" +
                 " AND d.idMenu = m.idMenu";

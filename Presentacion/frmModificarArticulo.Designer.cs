@@ -49,58 +49,59 @@ namespace AppBTS.Presentacion
             this.btnEditarNombre = new System.Windows.Forms.Button();
             this.btnEditarPrecio = new System.Windows.Forms.Button();
             this.btnEditarTipo = new System.Windows.Forms.Button();
+            this.lbTitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(29, 29);
+            this.lblNombre.Location = new System.Drawing.Point(64, 58);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(44, 13);
+            this.lblNombre.Size = new System.Drawing.Size(52, 15);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre";
             // 
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(29, 79);
+            this.lblPrecio.Location = new System.Drawing.Point(28, 101);
             this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(76, 13);
+            this.lblPrecio.Size = new System.Drawing.Size(88, 15);
             this.lblPrecio.TabIndex = 1;
             this.lblPrecio.Text = "Precio Unitario";
             // 
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(29, 129);
+            this.lblTipo.Location = new System.Drawing.Point(25, 147);
             this.lblTipo.Name = "lblTipo";
-            this.lblTipo.Size = new System.Drawing.Size(83, 13);
+            this.lblTipo.Size = new System.Drawing.Size(91, 15);
             this.lblTipo.TabIndex = 2;
             this.lblTipo.Text = "Tipo de Artículo";
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(156, 27);
+            this.txtNombre.Location = new System.Drawing.Point(126, 55);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(138, 20);
+            this.txtNombre.Size = new System.Drawing.Size(160, 21);
             this.txtNombre.TabIndex = 3;
             this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(156, 76);
+            this.txtPrecio.Location = new System.Drawing.Point(126, 98);
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(138, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(160, 21);
             this.txtPrecio.TabIndex = 4;
             this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
             // 
             // cboTipo
             // 
             this.cboTipo.FormattingEnabled = true;
-            this.cboTipo.Location = new System.Drawing.Point(156, 125);
+            this.cboTipo.Location = new System.Drawing.Point(126, 143);
             this.cboTipo.Name = "cboTipo";
-            this.cboTipo.Size = new System.Drawing.Size(138, 21);
+            this.cboTipo.Size = new System.Drawing.Size(160, 23);
             this.cboTipo.TabIndex = 5;
             this.cboTipo.SelectedIndexChanged += new System.EventHandler(this.cboTipo_SelectedIndexChanged);
             // 
@@ -112,9 +113,9 @@ namespace AppBTS.Presentacion
             this.Nombre,
             this.Precio,
             this.TipoArticulo});
-            this.dgvArticulo.Location = new System.Drawing.Point(12, 221);
+            this.dgvArticulo.Location = new System.Drawing.Point(17, 180);
             this.dgvArticulo.Name = "dgvArticulo";
-            this.dgvArticulo.Size = new System.Drawing.Size(516, 84);
+            this.dgvArticulo.Size = new System.Drawing.Size(491, 97);
             this.dgvArticulo.TabIndex = 6;
             // 
             // IdArticulo
@@ -146,9 +147,9 @@ namespace AppBTS.Presentacion
             // 
             // btnPrevisualizar
             // 
-            this.btnPrevisualizar.Location = new System.Drawing.Point(412, 162);
+            this.btnPrevisualizar.Location = new System.Drawing.Point(402, 139);
             this.btnPrevisualizar.Name = "btnPrevisualizar";
-            this.btnPrevisualizar.Size = new System.Drawing.Size(114, 26);
+            this.btnPrevisualizar.Size = new System.Drawing.Size(91, 30);
             this.btnPrevisualizar.TabIndex = 7;
             this.btnPrevisualizar.Text = "Previsualizar";
             this.btnPrevisualizar.UseVisualStyleBackColor = true;
@@ -159,9 +160,9 @@ namespace AppBTS.Presentacion
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.Tan;
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
-            this.btnCancelar.Location = new System.Drawing.Point(12, 311);
+            this.btnCancelar.Location = new System.Drawing.Point(17, 283);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(89, 33);
+            this.btnCancelar.Size = new System.Drawing.Size(54, 38);
             this.btnCancelar.TabIndex = 8;
             this.toolTip1.SetToolTip(this.btnCancelar, "Cancelar");
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -172,9 +173,9 @@ namespace AppBTS.Presentacion
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.Tan;
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
-            this.btnGuardar.Location = new System.Drawing.Point(439, 311);
+            this.btnGuardar.Location = new System.Drawing.Point(454, 283);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(89, 33);
+            this.btnGuardar.Size = new System.Drawing.Size(54, 38);
             this.btnGuardar.TabIndex = 9;
             this.toolTip1.SetToolTip(this.btnGuardar, "Guardar cambios");
             this.btnGuardar.UseVisualStyleBackColor = true;
@@ -182,40 +183,62 @@ namespace AppBTS.Presentacion
             // 
             // btnEditarNombre
             // 
+            this.btnEditarNombre.BackColor = System.Drawing.Color.Tan;
+            this.btnEditarNombre.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarNombre.ForeColor = System.Drawing.Color.Tan;
             this.btnEditarNombre.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarNombre.Image")));
-            this.btnEditarNombre.Location = new System.Drawing.Point(300, 18);
+            this.btnEditarNombre.Location = new System.Drawing.Point(294, 45);
             this.btnEditarNombre.Name = "btnEditarNombre";
-            this.btnEditarNombre.Size = new System.Drawing.Size(34, 35);
+            this.btnEditarNombre.Size = new System.Drawing.Size(40, 40);
             this.btnEditarNombre.TabIndex = 10;
-            this.btnEditarNombre.UseVisualStyleBackColor = true;
+            this.btnEditarNombre.UseVisualStyleBackColor = false;
             this.btnEditarNombre.Click += new System.EventHandler(this.btnEditarNombre_Click);
             // 
             // btnEditarPrecio
             // 
+            this.btnEditarPrecio.BackColor = System.Drawing.Color.Tan;
+            this.btnEditarPrecio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarPrecio.ForeColor = System.Drawing.Color.Tan;
             this.btnEditarPrecio.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarPrecio.Image")));
-            this.btnEditarPrecio.Location = new System.Drawing.Point(300, 68);
+            this.btnEditarPrecio.Location = new System.Drawing.Point(294, 88);
             this.btnEditarPrecio.Name = "btnEditarPrecio";
-            this.btnEditarPrecio.Size = new System.Drawing.Size(34, 35);
+            this.btnEditarPrecio.Size = new System.Drawing.Size(40, 40);
             this.btnEditarPrecio.TabIndex = 11;
-            this.btnEditarPrecio.UseVisualStyleBackColor = true;
+            this.btnEditarPrecio.UseVisualStyleBackColor = false;
             this.btnEditarPrecio.Click += new System.EventHandler(this.btnEditarPrecio_Click);
             // 
             // btnEditarTipo
             // 
+            this.btnEditarTipo.BackColor = System.Drawing.Color.Tan;
+            this.btnEditarTipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditarTipo.ForeColor = System.Drawing.Color.Tan;
             this.btnEditarTipo.Image = ((System.Drawing.Image)(resources.GetObject("btnEditarTipo.Image")));
-            this.btnEditarTipo.Location = new System.Drawing.Point(300, 118);
+            this.btnEditarTipo.Location = new System.Drawing.Point(294, 134);
             this.btnEditarTipo.Name = "btnEditarTipo";
-            this.btnEditarTipo.Size = new System.Drawing.Size(34, 35);
+            this.btnEditarTipo.Size = new System.Drawing.Size(40, 40);
             this.btnEditarTipo.TabIndex = 12;
-            this.btnEditarTipo.UseVisualStyleBackColor = true;
+            this.btnEditarTipo.UseVisualStyleBackColor = false;
             this.btnEditarTipo.Click += new System.EventHandler(this.btnEditarTipo_Click);
+            // 
+            // lbTitulo
+            // 
+            this.lbTitulo.AutoSize = true;
+            this.lbTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitulo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbTitulo.Location = new System.Drawing.Point(12, 9);
+            this.lbTitulo.Name = "lbTitulo";
+            this.lbTitulo.Size = new System.Drawing.Size(146, 25);
+            this.lbTitulo.TabIndex = 19;
+            this.lbTitulo.Text = "Editar Artículo";
             // 
             // frmModificarArticulo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(540, 356);
+            this.ClientSize = new System.Drawing.Size(526, 326);
+            this.Controls.Add(this.lbTitulo);
             this.Controls.Add(this.btnEditarTipo);
             this.Controls.Add(this.btnEditarPrecio);
             this.Controls.Add(this.btnEditarNombre);
@@ -229,8 +252,11 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.lblTipo);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.lblNombre);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Location = new System.Drawing.Point(900, 100);
             this.Name = "frmModificarArticulo";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Editar Artículo";
             this.Load += new System.EventHandler(this.frmModificarArticulo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();
@@ -259,5 +285,6 @@ namespace AppBTS.Presentacion
         private System.Windows.Forms.Button btnEditarNombre;
         private System.Windows.Forms.Button btnEditarPrecio;
         private System.Windows.Forms.Button btnEditarTipo;
+        private System.Windows.Forms.Label lbTitulo;
     }
 }

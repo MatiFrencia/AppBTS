@@ -43,19 +43,36 @@ namespace AppBTS.Presentacion
         private void vista(bool x) {
             if (x)
             {
-                this.Width = 650;
-
-                //for (int i = 0; i < 276; i++)
-                //{
-                //    this.Width += 1;
-                //}
+                if (this.Width.Equals(374)) {
+                    this.lblApellido.Visible = !x;
+                    this.lblId.Visible = !x;
+                    this.lblNombre.Visible = !x;
+                    this.txtApellido.Visible = !x;
+                    this.txtNombre.Visible = !x;
+                    this.numeric.Visible = !x;
+                    for (int i = 0; i < 276; i+=2)
+                    {
+                        this.Width += 2;
+                    }
+                    this.lblApellido.Visible = x;
+                    this.lblId.Visible = x;
+                    this.lblNombre.Visible = x;
+                    this.txtApellido.Visible = x;
+                    this.txtNombre.Visible = x;
+                    this.numeric.Visible = x;
+                }
             }
             else
             {
-                //this.Width = 374;
-                for (int i = 0; i < 276; i++)
+                if (this.Width.Equals(650))
                 {
-                    this.Width -= 1;
+                    for (int i = 0; i < 276; i++)
+                    {
+                        this.Width -= 1;
+                    }
+                }
+                else {
+                    this.Width = 374;
                 }
             }
         }

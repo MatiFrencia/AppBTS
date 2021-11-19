@@ -68,7 +68,7 @@ namespace AppBTS.Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 9);
+            this.label1.Location = new System.Drawing.Point(12, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(308, 37);
             this.label1.TabIndex = 47;
@@ -78,7 +78,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblFechaDesde.AutoSize = true;
             this.lblFechaDesde.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.lblFechaDesde.Location = new System.Drawing.Point(28, 95);
+            this.lblFechaDesde.Location = new System.Drawing.Point(20, 95);
             this.lblFechaDesde.Name = "lblFechaDesde";
             this.lblFechaDesde.Size = new System.Drawing.Size(93, 16);
             this.lblFechaDesde.TabIndex = 51;
@@ -88,7 +88,7 @@ namespace AppBTS.Presentacion
             // 
             this.lblFechaHasta.AutoSize = true;
             this.lblFechaHasta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.lblFechaHasta.Location = new System.Drawing.Point(330, 95);
+            this.lblFechaHasta.Location = new System.Drawing.Point(261, 95);
             this.lblFechaHasta.Name = "lblFechaHasta";
             this.lblFechaHasta.Size = new System.Drawing.Size(88, 16);
             this.lblFechaHasta.TabIndex = 50;
@@ -99,28 +99,28 @@ namespace AppBTS.Presentacion
             this.dtpFechaHasta.CalendarMonthBackground = System.Drawing.SystemColors.WindowFrame;
             this.dtpFechaHasta.Enabled = false;
             this.dtpFechaHasta.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaHasta.Location = new System.Drawing.Point(425, 91);
-            this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaHasta.Location = new System.Drawing.Point(357, 93);
+            this.dtpFechaHasta.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dtpFechaHasta.Name = "dtpFechaHasta";
-            this.dtpFechaHasta.Size = new System.Drawing.Size(177, 20);
+            this.dtpFechaHasta.Size = new System.Drawing.Size(104, 21);
             this.dtpFechaHasta.TabIndex = 49;
             // 
             // dtpFechaDesde
             // 
             this.dtpFechaDesde.Enabled = false;
             this.dtpFechaDesde.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaDesde.Location = new System.Drawing.Point(129, 91);
-            this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaDesde.Location = new System.Drawing.Point(122, 93);
+            this.dtpFechaDesde.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.dtpFechaDesde.Name = "dtpFechaDesde";
-            this.dtpFechaDesde.Size = new System.Drawing.Size(177, 20);
+            this.dtpFechaDesde.Size = new System.Drawing.Size(104, 21);
             this.dtpFechaDesde.TabIndex = 48;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F);
-            this.label6.Location = new System.Drawing.Point(643, 91);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(495, 95);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 16);
             this.label6.TabIndex = 59;
@@ -132,17 +132,17 @@ namespace AppBTS.Presentacion
             this.cboMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cboMenu.ForeColor = System.Drawing.SystemColors.WindowText;
             this.cboMenu.FormattingEnabled = true;
-            this.cboMenu.Location = new System.Drawing.Point(707, 90);
-            this.cboMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.cboMenu.Location = new System.Drawing.Point(570, 92);
+            this.cboMenu.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.cboMenu.Name = "cboMenu";
-            this.cboMenu.Size = new System.Drawing.Size(177, 21);
+            this.cboMenu.Size = new System.Drawing.Size(206, 23);
             this.cboMenu.TabIndex = 60;
             // 
             // btnAño
             // 
-            this.btnAño.Location = new System.Drawing.Point(30, 61);
+            this.btnAño.Location = new System.Drawing.Point(35, 49);
             this.btnAño.Name = "btnAño";
-            this.btnAño.Size = new System.Drawing.Size(75, 23);
+            this.btnAño.Size = new System.Drawing.Size(87, 27);
             this.btnAño.TabIndex = 61;
             this.btnAño.Text = "Año";
             this.btnAño.UseVisualStyleBackColor = true;
@@ -150,9 +150,9 @@ namespace AppBTS.Presentacion
             // 
             // btnMes
             // 
-            this.btnMes.Location = new System.Drawing.Point(111, 61);
+            this.btnMes.Location = new System.Drawing.Point(129, 49);
             this.btnMes.Name = "btnMes";
-            this.btnMes.Size = new System.Drawing.Size(75, 23);
+            this.btnMes.Size = new System.Drawing.Size(87, 27);
             this.btnMes.TabIndex = 62;
             this.btnMes.Text = "Mes";
             this.btnMes.UseVisualStyleBackColor = true;
@@ -160,9 +160,9 @@ namespace AppBTS.Presentacion
             // 
             // btnSemana
             // 
-            this.btnSemana.Location = new System.Drawing.Point(194, 61);
+            this.btnSemana.Location = new System.Drawing.Point(226, 49);
             this.btnSemana.Name = "btnSemana";
-            this.btnSemana.Size = new System.Drawing.Size(75, 23);
+            this.btnSemana.Size = new System.Drawing.Size(87, 27);
             this.btnSemana.TabIndex = 63;
             this.btnSemana.Text = "Semana";
             this.btnSemana.UseVisualStyleBackColor = true;
@@ -170,9 +170,9 @@ namespace AppBTS.Presentacion
             // 
             // btnDia
             // 
-            this.btnDia.Location = new System.Drawing.Point(275, 61);
+            this.btnDia.Location = new System.Drawing.Point(321, 49);
             this.btnDia.Name = "btnDia";
-            this.btnDia.Size = new System.Drawing.Size(75, 23);
+            this.btnDia.Size = new System.Drawing.Size(87, 27);
             this.btnDia.TabIndex = 64;
             this.btnDia.Text = "Dia";
             this.btnDia.UseVisualStyleBackColor = true;
@@ -180,9 +180,9 @@ namespace AppBTS.Presentacion
             // 
             // btnPerso
             // 
-            this.btnPerso.Location = new System.Drawing.Point(356, 61);
+            this.btnPerso.Location = new System.Drawing.Point(415, 49);
             this.btnPerso.Name = "btnPerso";
-            this.btnPerso.Size = new System.Drawing.Size(87, 23);
+            this.btnPerso.Size = new System.Drawing.Size(101, 27);
             this.btnPerso.TabIndex = 65;
             this.btnPerso.Text = "Personalizado:";
             this.btnPerso.UseVisualStyleBackColor = true;
@@ -196,10 +196,10 @@ namespace AppBTS.Presentacion
             this.btnConsultar.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnConsultar.Image = ((System.Drawing.Image)(resources.GetObject("btnConsultar.Image")));
             this.btnConsultar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConsultar.Location = new System.Drawing.Point(707, 125);
-            this.btnConsultar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnConsultar.Location = new System.Drawing.Point(810, 83);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(134, 35);
+            this.btnConsultar.Size = new System.Drawing.Size(164, 40);
             this.btnConsultar.TabIndex = 66;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = false;
@@ -211,9 +211,9 @@ namespace AppBTS.Presentacion
             this.btnClear.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btnClear.FlatAppearance.BorderSize = 0;
             this.btnClear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnClear.Location = new System.Drawing.Point(848, 125);
+            this.btnClear.Location = new System.Drawing.Point(974, 83);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(36, 35);
+            this.btnClear.Size = new System.Drawing.Size(50, 40);
             this.btnClear.TabIndex = 67;
             this.btnClear.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnClear.UseVisualStyleBackColor = true;
@@ -225,9 +225,9 @@ namespace AppBTS.Presentacion
             this.btnSalir.FlatAppearance.BorderSize = 0;
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.Image = global::AppBTS.Properties.Resources.logout_door;
-            this.btnSalir.Location = new System.Drawing.Point(859, 524);
+            this.btnSalir.Location = new System.Drawing.Point(16, 542);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(53, 40);
+            this.btnSalir.Size = new System.Drawing.Size(62, 46);
             this.btnSalir.TabIndex = 68;
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
@@ -238,18 +238,18 @@ namespace AppBTS.Presentacion
             reportDataSource1.Value = this.dsDetallesTicketBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "AppBTS.Reportes.rptDetallesTicket.rdlc";
-            this.reportViewer1.Location = new System.Drawing.Point(12, 176);
+            this.reportViewer1.Location = new System.Drawing.Point(16, 142);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(900, 342);
+            this.reportViewer1.Size = new System.Drawing.Size(1050, 394);
             this.reportViewer1.TabIndex = 69;
             // 
             // frmReporteMenus
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tan;
-            this.ClientSize = new System.Drawing.Size(924, 576);
+            this.ClientSize = new System.Drawing.Size(1078, 599);
             this.ControlBox = false;
             this.Controls.Add(this.reportViewer1);
             this.Controls.Add(this.btnSalir);
@@ -267,6 +267,7 @@ namespace AppBTS.Presentacion
             this.Controls.Add(this.dtpFechaHasta);
             this.Controls.Add(this.dtpFechaDesde);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HelpButton = true;
             this.Name = "frmReporteMenus";

@@ -28,9 +28,13 @@ namespace AppBTS.Presentacion
             this.dtpHoraDesde.Format = DateTimePickerFormat.Custom;
             this.dtpHoraDesde.CustomFormat = "HH':'mm";
             this.dtpHoraDesde.ShowUpDown = true;
+            this.dtpHoraDesde.Value = Convert.ToDateTime("00:00");
             this.dtpHoraHasta.Format = DateTimePickerFormat.Custom;
             this.dtpHoraHasta.CustomFormat = "HH':'mm";
             this.dtpHoraHasta.ShowUpDown = true;
+            this.dtpHoraHasta.Value = Convert.ToDateTime("23:59");
+            this.txtDesde.Text = "0";
+            this.txtHasta.Text = "999999";
 
             this.CargarCombo(cboNroTicket, miGestorTickets.RecuperarTodos(),0);
             this.CargarCombo(cboNroMesa, miGestorMesas.RecuperarTodos(),0);
@@ -40,7 +44,8 @@ namespace AppBTS.Presentacion
             this.btnConsultar.Enabled = true;
             this.btnSalir.Enabled = true;
             this.dtTicketsBindingSource.DataSource = miGestorTickets.RecuperarTodos();
-            this.reportViewer1.RefreshReport();
+            //no debe cargarlo al iniciar el frm para optimizar el tiempo de carga del mismo
+            //this.reportViewer1.RefreshReport();
         }
         TicketService miGestorTickets = new TicketService();
         MesasService miGestorMesas = new MesasService();
@@ -155,6 +160,11 @@ namespace AppBTS.Presentacion
         private void visualizar(bool x) {
             this.dtpFechaDesde.Enabled = x;
             this.dtpFechaHasta.Enabled = x;
+        }
+
+        private void btnNow_Click(object sender, EventArgs e)
+        {
+            this.dtpHoraHasta.Value = DateTime.Now;
         }
     }
 }
